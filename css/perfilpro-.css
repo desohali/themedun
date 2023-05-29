@@ -1,0 +1,98 @@
+#hr-side{
+    margin: 15px 0px;
+}
+
+.ctn-fav{
+    display: flex;
+    margin: 0px;
+}
+
+#hearts{
+    font-size: 14px;
+    font-weight: bold;
+    color: #ff0000;
+    display: block;
+    text-align: center;
+    margin: 0px auto;
+}
+
+.heartfav{
+    display: block;
+    padding: 10px 20px;
+    transition: all 0.2s;
+    border-radius: 25px;
+    font-size: 25px;
+    cursor: pointer;
+    background: #ff0000;
+    border: 2px solid #ff0000;
+    color: white;
+    margin: 0 auto;
+}
+
+.heartfav:hover{
+    background: #fff;
+    color: #ff0000;
+    border: 2px solid #ff0000;
+}
+
+#comprob-coleg button{
+    width:100%;
+    padding: 10px;
+    font-size: 14px;
+    background: #0052D4;
+    border: 1px solid #0052d4;
+    transition: all 200ms;
+    font-weight: 500;
+    cursor: pointer;
+    color: white;
+    outline: none;
+    margin: 10px 0px;
+    border-radius: 5px;
+}
+
+#comprob-coleg button:hover{
+    background: #fff;
+    color: #0052D4;
+}
+
+#prog-cita button{
+    width:100%;
+    padding: 10px;
+    font-size: 14px;
+    background: #00d418;
+    border: 1px solid #00d418;
+    transition: all 200ms;
+    font-weight: 500;
+    cursor: pointer;
+    color: white;
+    outline: none;
+    border-radius: 5px;
+}
+
+#prog-cita button:hover{
+    background: #00ee1b;
+    border: 1px solid #00ee1b;
+}
+
+.filados{
+    padding-top:0px;
+}
+
+.ctn-pubperfil{
+    min-height: 245px;
+}
+
+@media screen and (max-width: 415px){
+    .filauno{
+        padding-top:168px;
+    }
+    #comprob-coleg button, #prog-cita button{
+        padding: 7px 10px;
+        font-size: 12px;
+        width:70%;
+        margin-left:15%;
+    }
+    #comprob-coleg button{
+        margin-top:15px;
+    }
+}

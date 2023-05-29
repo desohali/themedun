@@ -1,0 +1,1300 @@
+select, input[type="date"]{
+    cursor: pointer;
+    color: #777777;
+}
+
+textarea{
+    resize: vertical;
+    width: 100%;
+    padding: 10px;
+    margin: 10px auto;
+    border: 1px solid #e4e6eb;
+    background: #F0F2F5;
+    font-size: 14px;
+    outline: none;
+    border-radius:5px;
+    box-shadow: 0px 0px 3px 1px white;
+}
+
+textarea:focus{
+    border: 1px solid #F0F2F5;
+    box-shadow: 0px 0px 3px 1px #0052d4;
+}
+
+.filauno{
+    display: flex;
+    padding: 25px 7.5%;
+    padding-top:87px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#filapaciente{
+    padding: 14.5% 7.5%;
+    padding-top:87px;
+}
+
+.filatres{
+    padding: 0px 7.5% 25px 7.5%;
+}
+
+.ctn-sideperfil{
+    display: block;
+    align-items: center;
+    width: 21%;
+    height: 330px;
+    padding: 20px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+#sidepaciente{
+    height: 294px;
+}
+
+#sideperfil{
+    height: 300px;
+}
+
+.ctn-fotos{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+    background: white;
+    border-radius: 15px;
+    padding-bottom:0px;
+    box-shadow: 0px 0px 3px 1px #0052d4;
+}
+
+.boxfotos{
+    width:100%;
+}
+
+.ctn-fotoperfil, #previewperfil, .ctn-fototit, #previewtit, .ctn-fotofirma, #previewfirma, .ctn-fotohuella, #previewhuella{
+    width: 100%;
+    height: 200px;
+}
+
+#previewperfil, #previewtit, #previewfirma, #previewhuella{
+    margin-top: -200px;
+}
+
+#fppro{
+    width:200px;
+    height: 200px;
+    border: 1px solid #e4e6eb;
+    border-radius:10px;
+}
+
+.fotorevision, .ctn-previe, .ctn-fotoperfil, #previewperfil{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fotorevision img{
+    position: absolute;
+    height: 200px;
+    border: 1px solid #e4e6eb;
+    border-radius:10px;
+}
+
+#canvasPerfil{
+    cursor: pointer;
+}
+
+.ctn-sideperfil .ctn-editarfp label, .ctn-sideperfil .ctn-guardarfp input, .lblguardar{
+    display: block;
+    padding: 10px 0px;
+    font-size: 14px;
+    background: white;
+    border: 1px solid #0052d4;
+    transition: all 200ms;
+    font-weight: 500;
+    cursor: pointer;
+    color: #0052D4;
+    outline: none;
+    width: 100px;
+    margin: 20px 0px;
+    margin-left:25.5%;
+    text-align:center;
+    border-radius: 5px;
+}
+
+#bbfile, #editfoto{
+    margin-top:0px;
+}
+
+.lblguardar{
+    padding: 10px 20px;
+    width:100px;
+    margin:0px;
+    margin-left: 36.5%;
+    margin-top:20px;
+}
+
+.ctn-sideperfil .ctn-guardarfp .btnbloquear, .ctn-sideperfil .ctn-guardarfp .btndesbloquear{
+    width:100px;
+    margin-left:23.5%;
+}
+
+.ctn-sideperfil .ctn-guardarfp .btndesbloquear{
+    width:120px;
+    margin-left:20%;
+}
+
+#edithuella, #editfirma, #edittit{
+    margin-bottom:0px;
+}
+
+.ctn-fotos form{
+    width:100%;
+}
+
+.ctn-fotos form span{
+    display:block;
+    width:100%;
+    text-align:center;
+    font-size:14px;
+    font-weight:500;
+    margin-bottom:10px;
+}
+
+.observa #txtobserva, .txtobserva3{
+    width:98%;
+    margin:10px;
+    margin-bottom:0px;
+}
+
+#txtobserva{
+    margin-top:18px;
+}
+
+#ctn-editfoto, #bbfile2, #filetit, #filefirma, #filehuella{
+    display: none;
+}
+.ctn-sideperfil .ctn-editarfp label:hover, .ctn-sideperfil .ctn-guardarfp input:hover, .lblguardar:hover{
+    background: #0052d4;
+    color:white;
+    box-shadow: 0px 0px 3px 1px white;
+}
+
+.ctn-sideperfil .ctn-guardarfp input, .lblbtn{
+    background: #00d418;
+    border: 1px solid #00d418;
+    color: white;
+    margin-right:5px;
+    border-radius: 5px;
+}
+
+.ctn-sideperfil .ctn-guardarfp input:hover, .lblbtn:hover{
+    background: #00ee1b;
+    border: 1px solid #00ee1b;
+}
+
+.ctn-sideperfil .ctn-guardarfp .btnbloquear{
+    width:100px;
+    margin-left:23.5%;
+    background: #ff0000;
+}
+
+.ctn-sideperfil .ctn-guardarfp .btnbloquear:hover{
+    background: #e10800;
+}
+
+.ctn-sideperfil .ctn-guardarfp .btndesbloquear{
+    width:120px;
+    margin-left:20%;
+}
+
+.lblbtn{
+    display: none;
+}
+
+.ctn-perfil, .ctn-perfil2{
+    display: block;
+    align-items: center;
+    width: 75.6%;
+    height: 330px;
+    padding: 20px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.ctn-paciente{
+    height: 294px;
+}
+
+.primerperfil, .segundoperfil{
+    height: 300px;
+}
+
+.ctn-perfil2{
+    display: none;
+}
+
+.ctn-perfil .ctn-editarp, .ctn-perfil2 .ctn-editarp{
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 10px;
+}
+
+.ctn-perfil .ctn-editarp h2, .ctn-perfil2 .ctn-editarp h2{
+    margin-top:-3px;
+}
+
+.divinper{
+    display:flex;
+    justify-content: space-between;
+}
+
+.ctn-perfil .ctn-editarp label, .ctn-perfil2 .ctn-editarp label, .ctn-perfil2 .ctn-editarp .ctn-guardarip input, .observaciones .ctn-editarp .ctn-guardarip input{
+    display: block;
+    padding: 10px 20px;
+    font-size: 14px;
+    background: white;
+    border: 1px solid #0052d4;
+    transition: all 200ms;
+    font-weight: 500;
+    cursor: pointer;
+    color: #0052D4;
+    outline: none;
+    margin: -10px 0px 10px 0px;
+    text-align:center;
+    border-radius: 5px;
+    width:100px;
+}
+
+.ctn-perfil .ctn-editarp label:hover, .ctn-perfil2 .ctn-editarp label:hover{
+    background: #0052d4;
+    color: white;
+    box-shadow: 0px 0px 3px 1px white;
+}
+
+.ctn-perfil2 .ctn-editarp .ctn-guardarip input, .observaciones .ctn-editarp .ctn-guardarip input{
+    background: #00d418;
+    border: 1px solid #00d418;
+    color: white;
+    border-radius: 5px;
+}
+
+.ctn-perfil2 .ctn-editarp .ctn-guardarip input:hover, .observaciones .ctn-editarp .ctn-guardarip input:hover{
+    border: 1px solid #00ee1b;
+    background: #00ee1b;
+}
+
+.ctn-perfil .ctn-infbasica h2, .ctn-perfil2 .ctn-infbasica h2{
+    font-size: 24px;
+    padding: 10px;
+    font-weight: normal;
+    text-align: center;
+}
+
+.ctn-perfil2 .ctn-infbasica h2, .ctn-perfil2 .ctn-infbasica p{
+    padding: 7px 10px;
+}
+
+.ctn-perfil .ctn-infbasica p,.ctn-perfil2 .ctn-infbasica p{
+    padding: 10px;
+    font-size: 14px;
+    display: inline-block;
+}
+
+.ctn-perfil2 .ctn-infbasica p{
+    padding: 8px 10px;
+}
+
+.reviadmin .previ{
+    font-size: 14px;
+    font-weight: bolder;
+    text-align: center;
+}
+
+.reviadmin .previa{
+    font-size: 14px;
+    padding: 0px 10px;
+    text-align: center;
+}
+
+.reviadmin .previa a{
+    color: #0052D4;
+}
+
+.reviadmin a:hover{
+    text-decoration: underline;
+}
+
+#precioperfil, #colegiaturaperfil{
+    margin-top: 10px;
+    font-size: 19px;
+}
+
+.ctn-perfil .ctn-infbasica p span, .ctn-perfil2 .ctn-infbasica p span{
+    font-weight: 500;
+}
+
+.ctn-perfil2 .ctn-infbasica p span{
+    margin-right: 5px;
+}
+
+.ctn-infbasica input[type="date"], #peso, #talla, #idioma, #pais, #nombres, #apellidos, #sexo, #ciudad, #especialidad, #precio, #colegiatura{
+    border: 1px solid #e4e6eb;
+    background: #F0F2F5;
+    font-size: 14px;
+    outline: none;
+    border-radius:5px;
+    transition: all 200ms;
+}
+
+.ctn-infbasica input[type="date"]{
+    width: 43%;
+    padding: 2px 5px;
+}
+
+#sexo{
+    padding: 2px;
+}
+
+#pais{
+    width: 26%;
+    padding: 2px;
+    margin-right: 7px;
+}
+
+#idioma{
+    width: 19%;
+    padding: 2px;
+}
+
+#nombres, #apellidos{
+    width: 35%;
+    padding: 2px 5px;
+    font-size: 24px;
+    margin-left: 10px;
+}
+
+#ciudad{
+    width: 75%;
+    padding: 3.5px 5px;
+}
+
+#especialidad{
+    width: 65%;
+    padding: 2px;
+}
+
+#precio, #colegiatura{
+    width: 52%;
+    padding: 2px 7px;
+    font-size: 19px;
+}
+
+#sexoperfil, #tallaperfil, #tallaperfil2, #ciudadperfil, #ciudadperfil2, #especialidadperfil, #consultasperfil, #consultasperfil2, #colegiaturaperfil{
+    position: absolute;
+    left: 62%;
+}
+
+#paisperfil2, #ciudadperfil2, #pesoperfil2, #tallaperfil2, #enmudesde2, #consultasperfil2{
+    padding-top: 0px;
+}
+
+.ctn-infbasica input[type="date"]:focus, #peso:focus, #sexo:focus, #talla:focus, #idioma:focus, #pais:focus, #nombres:focus, #apellidos:focus, #ciudad:focus, #especialidad:focus, #precio:focus, #colegiatura:focus{
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.revision{
+    width:100%;
+    background: #FF0000;
+    text-align: center;
+    align-items: center;
+    padding: 15px 7.5%;
+    margin-bottom:25px;
+}
+
+.cuentarev{
+    background: #FFC107;
+}
+
+.revision h2, .revision p{
+    color: white;
+}
+
+#revipac{
+    margin-top:-12.5%;
+}
+
+.ctn-herramientasperfil{
+    display: block;
+    width: 100%;
+    padding: 0px 7.5%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.ctn-herramientasperfil a{
+    padding: 10px;
+    font-size: 14px;
+    background: #0052D4;
+    border: 1px solid #0052d4;
+    transition: all 200ms;
+    font-weight: 500;
+    cursor: pointer;
+    color: white;
+    outline: none;
+    width: 21%;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.ctn-herramientasperfil a:hover{
+    background: #fff;
+    color: #0052D4;
+}
+
+.filados{
+    display: flex;
+    padding: 25px 7.5%;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.ctn-valorcomment{
+    display: block;
+    align-items: center;
+    width: 21%;
+    padding: 14px 0px 4px 0px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.ctn-valorperfil{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 0px 15px;
+}
+
+.ctn-commentperfil{
+    padding: 0px 15px;
+}
+
+.verrespuesta{
+    font-size: 14px;
+    font-weight: 500;
+    color: #0052D4;
+}
+
+.verrespuesta:hover{
+    text-decoration: underline;
+}
+
+.ctn-starperfil{
+    width: 50%;
+}
+
+.ctn-barperfil{
+    width: 48%;
+}
+
+.box-comentario, #hrvc{
+    margin-bottom: 10px;
+}
+
+#hrpub{
+    margin: 0px 20px;
+}
+
+#comentario, .rescomentario{
+    resize: none;
+    padding: 5px;
+}
+
+.rescomentario{
+    width: 100%;
+    border: 1px solid #e4e6eb;
+    background: #F0F2F5;
+    font-size: 14px;
+    outline: none;
+    padding: 5px;
+    margin-top: 10px;
+    border-radius: 5px;
+    transition: all 0.2s;
+    box-shadow: 0px 0px 3px 1px white;
+}
+
+.rescomentario:focus{
+    border: 1px solid #F0F2F5;
+    box-shadow: 0px 0px 3px 1px #0052d4;
+}
+
+.ctn-comentario{
+    margin-bottom:10px;
+    font-size: 14px;
+    resize: none;
+    height: 100%;
+}
+
+.ctn-comentario span{
+    font-size: 11px;
+    color:#00d418;
+}
+
+#listaDeComentarios{
+    padding-left:15px;
+    padding-right:15px;
+    max-height: 430px;
+    overflow-y: scroll;
+    margin-top:10px;
+}
+
+.ctn-infprofesional3{
+    overflow-y: scroll;
+    padding:0px 20px;
+    max-height: 480px;
+}
+
+.ctn-infprofesional2{
+    overflow-y: scroll;
+    padding:0px 20px;
+    max-height: 600px;
+}
+
+.ctn-starperfil h2{
+    font-size: 45px;
+    font-weight: 300;
+    text-align: center;
+}
+
+#starsValoraciones, #rateYo{
+    z-index: 8;
+}
+
+.stars{
+    padding-bottom: 10px;
+    font-size: 85%;
+    text-align: center;
+}
+
+#star1, #star2, #star3, #star4{
+    color: #fff600;
+}
+
+#star5{
+    color: #e4e6eb;
+}
+
+.ctn-starperfil p{
+    font-size: 14px;
+    text-align: center;
+}
+
+.ctn-starperfil #nrovalor{
+    margin-top:1px;
+}
+
+.ctn-starperfil p #spantotal, .ctn-comentario strong{
+    font-weight: 500;
+}
+
+.ctn-barperfil p{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.ctn-barperfil progress{
+    margin-left: 5px;
+    height: 18px;
+}
+
+.ctn-barperfil p{
+    font-size: 14px;
+}
+
+.bar{
+    width: 75%;
+    height: 10px;
+    background: #e4e6eb;
+}
+
+#bar5, #bar4, #bar3, #bar2, #bar1{
+    height: 10px;
+    background: #0052D4;
+}
+
+#bar5{
+    width: 45px;
+}
+
+#bar4{
+    width: 9px;
+}
+
+#bar3{
+    width: 6px;
+}
+
+#bar2{
+    width: 6px;
+}
+
+#bar1{
+    width: 9px;
+}
+
+.ctn-pubperfil{
+    display: block;
+    align-items: center;
+    width: 75.6%;
+    padding: 20px 0px;
+    background: white;
+    border-radius: 15px;
+    min-height: 240px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.ctn-pubperfil .ctn-editarip{
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 20px;
+}
+
+.ctn-pubperfil .ctn-editarip h2{
+    margin-top:-3px;
+}
+
+.box-footer{
+    padding: 0px 20px 20px 20px;
+}
+
+.contpub{
+    display: flex;
+    align-items: flex-start;
+}
+
+.ctn-trayec, .ctn-imagend{
+    width:50%;
+    padding: 10px;
+    margin-bottom:-15px;
+}
+
+.form-control{
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #e4e6eb;
+    background: #F0F2F5;
+    outline: none;
+    border-radius: 5px;
+    transition: all 0.2s;
+    box-shadow: 0px 0px 3px 1px white;
+}
+
+#comentario{
+    margin-bottom:0px;
+}
+
+.form-control:focus{
+    border: 1px solid #F0F2F5;
+    box-shadow: 0px 0px 3px 1px #0052d4;
+}
+
+#comprobar{
+    margin-bottom: 10px;
+}
+
+#publicacion{
+    resize: vertical;
+}
+
+#previewimage{
+    height: 187px;
+    margin-bottom: -123.5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#labelimage{
+    border: 1px solid #e4e6eb;
+    border-radius: 15px;
+    background: #F0F2F5;
+    padding: 63.5px 43.3%;
+    font-size: 50px;
+    outline: none;
+    cursor: pointer;
+    transition: all 0.2s;
+    box-shadow: 0px 0px 3px 1px white;
+}
+
+#labelimage i{
+    color: gray;
+}
+
+#labelimage:hover{
+    border: 1px solid #F0F2F5;
+    box-shadow: 0px 0px 3px 1px #0052d4;
+}
+
+
+#file-1, #publicar{
+    display: none;
+}
+
+#guardar{
+    display:block;
+    text-align:center;
+    width:100px;
+    padding: 10px 20px;
+    font-size: 14px;
+    background: #00d418;
+    border: none;
+    transition: all 200ms;
+    font-weight: 500;
+    cursor: pointer;
+    color: white;
+    outline: none;
+    margin-left: 18%;
+    border-radius: 5px;
+}
+
+#guardar:hover{
+    border: none;
+    background: #00ee1b;
+}
+
+#labelequis{
+    position: relative;
+    font-size: 25px;
+    color: #ff0000;
+    transition: all 200ms;
+    cursor:pointer;
+}
+
+#labelx{
+    font-size: 14px;
+    color: #ff0000;
+    transition: all 200ms;
+    cursor:pointer;
+    margin-left: -15px;
+}
+
+#labelequis:hover, #labelx:hover{
+    color: #e10800;
+}
+
+#eliminar, .equis{
+    display: none;
+}
+
+.boxpubli{
+    display: flex;
+    align-items: center;
+}
+
+.boxpubli p{
+    width: 50%;
+    font-size: 14px;
+    padding: 30px;
+    text-align: center;
+}
+
+.ctn-imagepub{
+    width: 50%;
+    padding: 0px 10px;
+    margin: 17px 0px;
+    height: 182px;
+    justify-content: center;
+    align-items: center;
+}
+
+.box-body img{
+    width: 100%;
+    height: 182px;
+    object-fit: contain;
+    border-radius:5px;
+}
+
+#comprob-coleg button,#comprob-coleg2{
+    width:100%;
+    padding: 10px;
+    font-size: 14px;
+    background: #0052D4;
+    border: 1px solid #0052d4;
+    transition: all 200ms;
+    font-weight: 500;
+    cursor: pointer;
+    color: white;
+    outline: none;
+    margin: 10px 0px;
+    border-radius: 5px;
+}
+
+#comprob-coleg2{
+    display:block;
+    text-align:center;
+}
+
+#comprob-coleg button:hover,#comprob-coleg2:hover{
+    background: #fff;
+    color: #0052D4;
+}
+
+.observaciones{
+    width:100%;
+    margin-top:25px;
+    height:auto;
+    padding-bottom:10px;
+}
+
+.observaciones p{
+    padding: 10px;
+    font-size: 14px;
+    padding-bottom:0px;
+}
+
+.observaciones h2{
+    color:#FF0000;
+}
+
+.observa h2{
+    color:#FFC107;
+}
+
+.ctn-bloquear{
+    overflow-y: scroll;
+}
+
+.ctn-herramientasperfil #pagopro, .ctn-herramientasperfil #pagoadmin{
+    background: #ff0800;
+    box-shadow: 0px 0px 3px 1px #ecf0f1;
+}
+
+.ctn-herramientasperfil #pagopro:hover, .ctn-herramientasperfil #pagoadmin:hover{
+    color: #ff0800;
+    background: white;
+    box-shadow: 0px 0px 3px 1px #FF0800;
+}
+
+#revisionpac{
+    margin-top:-12.5%;
+}
+
+#paisperfil2 .paisperfil{
+    width: 69% ;
+}
+
+.observaciones{
+    box-shadow: 0px 0px 3px 1px #FF0000;
+}
+
+.observa{
+    box-shadow: 0px 0px 3px 1px #FFC107;
+}
+
+#filatrespro{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.filatres #herramientas{
+    width: 17% ;
+    margin-top:25px;
+    padding: 0px;
+}
+
+.filatres .observapro{
+    width: 79.5% ;
+}
+
+#herramientas a{
+    width: 100%;
+}
+
+.observaciones ul{
+    margin-left:30px;
+    padding-top:10px;
+}
+
+.observaciones ul,.observaciones #awsp,.observaciones #acorreo{
+    font-size:14px;
+}
+
+.observaciones #awsp:hover,.observaciones #acorreo:hover{
+    text-decoration:underline;
+}
+
+#anadir, #comprobar{
+    font-weight:500;
+    font-size:14px;
+}
+
+#labelfoto .labelbbfile,#ctn-editfoto .labeleditfoto{
+    margin-top:20px;
+}
+
+#edadperfil{
+    display:none;
+}
+
+#idedad{
+    font-weight:normal;
+}
+
+@media screen and (max-width: 415px){
+    .filauno{
+        display: block;
+        padding: 0px;
+        padding-top:122px;
+    }
+    #filapaciente, #filamedico{
+        display: block;
+        padding: 0px;
+        padding-top:178px;
+    }
+    #filapaciente{
+        padding-top:183px;
+    }
+    .ctn-sideperfil{
+        width: 90%;
+        padding: 20px 61.5px;
+        margin-left: 5%;
+        margin-bottom:25px;
+        height:320px;
+    }
+    #sidepaciente, #sidemedico{
+        height: auto;
+        padding: 20px;
+    }
+    #sideperfil{
+        height:290px;
+    }
+    #sidepaciente .ctn-guardarfp input, #sidemedico .ctn-guardarfp input, #sidemedico #comprob-coleg button{
+        width: 200px;
+        padding: 5px 10px;
+        margin: 0px auto;
+        margin-bottom: 10px;
+    }
+    #sidemedico #comprob-coleg button{
+        margin-top: 10px;
+        display: block;
+    }
+    .ctn-fotoperfil, #previewperfil, .ctn-fototit, #previewtit, .ctn-fotofirma, #previewfirma, .ctn-fotohuella, #previewhuella{
+        width: 100%;
+        height: 200px;
+    }
+    .ctn-perfil, .ctn-perfil2{
+        width: 90%;
+        height: auto;
+        padding: 10px;
+        margin-left: 5%;
+        margin-bottom:25px;
+    }
+    .ctnrev{
+        padding-bottom: 20px;
+    }
+    #perfilpro-, .perfilpro-{
+        padding-bottom: 20px;
+    }
+    .ctn-perfil2{
+        padding-bottom:0px;
+    }
+    .ctn-perfil .ctn-editarp, .ctn-perfil2 .ctn-editarp{
+        display: block;
+        padding: 0px 5px;
+    }
+    .ctn-perfil .ctn-editarp h2, .ctn-perfil2 .ctn-editarp h2{
+        margin-top:0px;
+        font-size: 16px;
+    }
+    .ctn-perfil .ctn-editarp label, .ctn-perfil2 .ctn-editarp label, .ctn-perfil2 .ctn-editarp .ctn-guardarip input{
+        padding: 7px 10px;
+        font-size: 12px;
+        margin: 5px 0px 10px 0px;
+        width:75px;
+    }
+    .ctn-perfil .ctn-infbasica h2, .ctn-perfil2 .ctn-infbasica h2{
+        font-size: 14px;
+        padding: 5px 0px;
+    }
+    .ctn-perfil2 .ctn-infbasica h2, .ctn-perfil2 .ctn-infbasica p{
+        padding: 2px 0px;
+    }
+    .ctn-perfil .ctn-infbasica p,.ctn-perfil2 .ctn-infbasica p{
+        padding: 5px;
+        font-size: 12px;
+        display: block;
+    }
+    .ctn-perfil2 .ctn-infbasica p{
+        padding: 4.3px;
+    }
+    #precioperfil, #colegiaturaperfil{
+        margin-top: 0px;
+        font-size: 14px;
+    }
+    .ctn-infbasica input[type="date"], #peso, #talla, #idioma, #pais, #nombres, #apellidos, #sexo, #ciudad, #especialidad, #precio, #colegiatura{
+        font-size: 90%;
+    }
+    .ctn-infbasica input[type="date"]{
+        width: 35%;
+    }
+    #paisperfil2 .paisperfil{
+        width: 45%;
+        margin-right: 5px;
+    }
+    #idioma{
+        width: 25%;
+    }
+    #nombres, #apellidos{
+        width: 40%;
+        font-size: 90%;
+        margin-left: 5px;
+    }
+    #ciudad{
+        width: 41%;
+    }
+    #especialidad{
+        width: 47%;
+    }
+    #precio, #colegiatura{
+        width: 40%;
+        padding: 2px 5px;
+        font-size: 90%;
+    }
+    #sexoperfil, #tallaperfil, #tallaperfil2, #ciudadperfil, #ciudadperfil2, #especialidadperfil, #consultasperfil, #consultasperfil2, #colegiaturaperfil{
+        position: static;
+        margin-bottom:-17px;
+    }
+    .ctn-herramientasperfil{
+        padding: 0px 5%;
+    }
+    .ctn-herramientasperfil a{
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        padding: 7px 10px;
+        font-size: 12px;
+        width: 30%;
+    }
+    .ctn-herramientasperfil #alibror{
+        width: 35%;
+    }
+    .ctn-herramientasperfil #alistapac, .ctn-herramientasperfil #alistaad, .ctn-herramientasperfil #pagopro, .ctn-herramientasperfil #pagoadmin{
+        width: 38%;
+    }
+    .filados{
+        display: block;
+        padding: 0px;
+    }
+    .ctn-valorcomment{
+        width: 90%;
+        padding:0px;
+        padding-top: 14px;
+        margin: 25px 0px 25px 5%;
+    }
+    .ctn-starperfil{
+        width: 48%;
+    }
+    .stars{
+        font-size: 100%;
+        padding-bottom:5px;
+        padding-left: 18% !important;
+    }
+    #starsValoraciones{
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+    }
+    .ctn-barperfil{
+        margin-right: 4%;
+    }
+    .ctn-barperfil p{
+        margin-right:5px;
+    }
+    .ctn-commentperfil{
+        margin-top: -5px;
+        margin-bottom: 10px;
+    }
+    #listaDeComentarios{
+        padding-left:15px;
+        padding-right:15px;
+    }
+    .box-comentario{
+        margin-bottom: 0px;
+    }
+    .divcomment{
+        margin-left: 15px;
+    }
+    .ctn-comentario{
+        margin-bottom: 10px;
+        font-size: 12px;
+        height: auto;
+    }
+    .rescomentario{
+        font-size:12px;
+    }
+    .ctn-infprofesional2, .ctn-infprofesional3{
+        padding: 0px 5px;
+    }
+    #hrpub{
+        margin: 0px 5px;
+    }
+    #publicacion{
+        margin: 0px auto;
+    }
+    .ctn-pubperfil{
+        width: 90%;
+        padding: 10px;
+        margin-left: 5%;
+        margin-bottom:25px;
+    }
+    .ctn-pubperfil .ctn-editarip{
+        display: block;
+        padding: 0px 5px;
+    }
+    .ctn-pubperfil .ctn-editarip h2{
+        margin-top:0px;
+        font-size: 16px;
+    }
+    .box-footer{
+        padding: 0px 0px 15px 0px;
+    }
+    .contpub{
+        display: block;
+        align-items: normal;
+    }
+    .ctn-trayec, .ctn-imagend{
+        width:100%;
+        padding: 5px;
+        margin-bottom:0px;
+    }
+    .ctn-imagend{
+        margin-bottom:55px;
+    }
+    .form-control{
+        width: 100%;
+        margin-bottom: 0px;
+        padding: 5px;
+        font-size: 12px;
+    }
+    #anadir, #comprobar{
+        margin-bottom: 5px;
+        font-size: 12px;
+    }
+    #comprobar{
+        margin-bottom: 10px;
+    }
+    #labelimage{
+        padding: 64.5px 41.5%;
+    }
+    #guardar{
+        padding: 7px 10px;
+        font-size: 12px;
+        margin-left: 38%;
+        width:24%;
+    }
+    #labelequis{
+        font-size: 20px;
+    }
+    .boxpubli{
+        display: block;
+        align-items: normal;
+    }
+    .boxpubli p{
+        width: 100%;
+        font-size: 12px;
+        padding: 20px;
+    }
+    .ctn-imagepub{
+        width: 100%;
+        padding: 0px;
+        margin: 0px;
+        margin-bottom:10px;
+    }
+    .revision{
+        padding: 15px 5%;
+        font-size: 12px;
+    }
+    #revipac{
+        margin-top:-0%;
+    }
+    .fotorevision img{
+        position: static;
+        height: auto;
+        max-width: 100%;
+        max-height: 100%;
+    }
+    .ctn-fotos{
+        display: block;
+        width: 90%;
+        margin-left: 5%;
+    }
+    .lblguardar{
+        width: 26%;
+        margin-left: 37%;
+        font-size: 12px;
+    }
+    .filatres{
+        padding: 0px;
+    }
+    .observaciones p,.observaciones ul, .observaciones #awsp, .observaciones #acorreo{
+        font-size: 12px;
+    }
+    #revisionpac{
+        margin-top:0px;
+    }
+    #filatrespro{
+        display:block;
+    }
+    .filatres #herramientas{
+        width: 90% ;
+        margin-top:25px;
+        margin-left:5%;
+    }
+    .filatres .observapro{
+        width: 90% ;
+    }
+    #herramientas a{
+        width: 100%;
+    }
+    #labelfoto .labelbbfile,#ctn-editfoto .labeleditfoto{
+        padding:7px 10px;
+        font-size:12px;
+        width:38%;
+        margin-left:31%;
+    }
+    #edadperfil{
+        display:block;
+    }
+    .spanedad{
+        display:none;
+    }
+    .revision h2{
+        font-size:16px;
+    }
+    #comprob-coleg2{
+        padding:7px 10px;
+        font-size:12px;
+        margin-top:15px;
+    }
+    #bbfile, #editfoto{
+        padding:7px 10px;
+        font-size:12px;
+        width:36%;
+        margin-left:32%;
+        
+    }
+    .ctn-fotos form span{
+        font-size:12px;
+    }
+    #ctnfotos{
+        margin-bottom:25px;
+    }
+}

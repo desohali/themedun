@@ -1,0 +1,235 @@
+#pagarTitle{
+    font-size: 22px;
+    font-weight: 500;
+    text-align: center;
+    color: #0052D4;
+    width:100%;
+}
+
+.columnastmu{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.columnasuno{
+    width:52%;
+}
+
+.columnasdos{
+    width:48%;
+}
+
+.filaregister ul{
+    margin-bottom:0px;
+}
+
+.historia4 p{
+    width:100%;
+    font-size:14px;
+}
+
+.historia4 .columnasuno p{
+    text-align:center;
+}
+
+.historia4 li{
+    font-size:14px;
+    list-style:none;
+}
+
+.columnasimg{
+    display:flex;
+    align-items:center;
+    justify-content: flex-end;
+}
+
+.columnasdos img{
+    width:94%;
+}
+
+.columnasdos #awsp,.columnasdos #acorreo{
+    font-size:14px;
+    padding-left:6%;
+    color:#0052d4;
+}
+
+.columnasdos #awsp:hover,.columnasdos #acorreo:hover{
+    color:#0052d4;
+}
+
+.formulario__register p{
+    text-align:center;
+}
+
+#hr-register{
+    margin-top:10px;
+    margin-bottom:10px;
+}
+
+.infodoble{
+    width:100%;
+    justify-content:space-between;
+}
+
+#bcfiled2{
+    width:auto;
+    padding: 10px 20px;
+    font-size: 14px;
+    background: #0052d4;
+    border: 1px solid #0052d4;
+    transition: all 200ms;
+    font-weight: 500;
+    cursor: pointer;
+    color: white;
+    outline: none;
+    border-radius: 5px;
+    box-shadow: 0px 0px 3px 1px white;
+}
+
+#bcfiled2:hover{
+    background: white;
+    color: #0052d4;
+    text-decoration:none;
+}
+
+.modpagar{
+    top:-28px;
+    padding-left:0px !important;
+    padding-right:0px !important;
+}
+
+.modsegundo{
+    height:95%;
+}
+
+.modtercero{
+    height:100%;
+}
+
+.historia4 .modpagar{
+    overflow-y:hidden;
+}
+
+.divfoot .hfoot{
+    font-size: 24px;
+    font-weight:bolder;
+}
+
+.divfoot .divicons a:hover{
+    text-decoration:none;
+}
+
+.infooter>:not(:last-child){
+    margin-right:0px !important;
+}
+
+@media screen and (max-width: 415px){
+    .ctn-fullc{
+        padding: 0px;
+        padding-top:168px;
+        width: 90%;
+        height: auto;
+        margin-left: 5%;
+        margin-bottom: 25px;
+    }
+    .ctn-fullc .container{
+        padding: 5px 10px 15px 10px;
+    }
+    .ctn-editarpc h2, .selhora #tituloEvento, .confirmarcita #tituloEvento, #exampleModal #titEvento, #pagarTitle{
+        font-size:16px;
+    }
+    .fc-left h2{
+        font-size:120%;
+        margin-top: 3px;
+    }
+    .fc-right,.selhora #descripcionEvento table, .selhora #descripcionEvento td, .selhora #descripcionEvento th{
+        font-size: 12px;
+    }
+    #tablaPrueba2 tr{
+        height: 20px;
+    }
+    #edit-pc, .fc-toolbar.fc-header-toolbar{
+        margin-bottom: 0.75rem;
+    }
+    .selhora hr, .confirmarcita hr{
+        margin-top: 0.5rem;
+        margin-bottom: 0.75rem;
+    }
+    .col-7{
+        min-width:100%;
+    }
+    .fc-day-grid-container{
+        height: auto !important;
+
+    }
+    .modal-body2{
+        display: block;
+    }
+    .selhora, #ModalEventos .confirmarcita{
+        width: 100%;
+    }
+    #ModalEventos .confirmarcita{
+        border: none;
+        margin-top: 15px;
+        margin-left: 0px;
+        padding-left: 0px;
+    }
+    .confirmarcita .close{
+        position: absolute;
+        top: 1%;
+        right: 4%;
+    }
+    .modal-selcon .modal-footer{
+        padding: 0px;
+        padding-top: 1rem;
+    }
+    #formInforme input[type="text"]{
+        width: 95%;
+    }
+    .formulario__register h2{
+        font-size: 120%;
+        margin-bottom: 20px;
+    }
+    .contenedorfc,.contenedorcita{
+        width: 90%;
+        height: auto;
+    }
+    .contenedorfc{
+        width: 100%;
+    }
+    .columnastmu{
+        display: block;
+    }
+    .columnasuno, .columnasdos{
+        width:100%;
+    }
+    .columnasdos{
+        display:none;
+    }
+    #descripcionEvento p,.infinterno, .historia4 li, .historia4 p{
+        font-size:12px;
+    }
+    #cancelarSolicitud, #btnpago, #aceptarcita, #rechazarcita, #btnenviar{
+        padding:7px 10px !important;
+        font-size:12px !important;
+    }
+    .mercadopago-button{
+        padding:9px 10px !important;
+        font-size:12px !important;
+    }
+    .modpagar{
+        top:0;
+    }
+    .modsegundo{
+        margin:0px;
+        height:100%;
+    }
+    #bcfiled2{
+        padding: 7px 10px;
+        font-size: 12px;
+    }
+    .confirmarcita{
+        font-size:12px;
+    }
+}

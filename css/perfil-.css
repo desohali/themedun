@@ -1,0 +1,506 @@
+.ctn-sideperfil{
+    display: block;
+    align-items: center;
+    width: 240px;
+    height: 284px;
+    top: 84px;
+    left: 100px;
+    border: 2px solid #0052D4;
+    padding: 20px 18px;
+    background: white;
+    position: absolute;
+    border-radius: 25px;
+}
+
+#fppro, #previewperfil{
+    width: 200px;
+    height: 200px;
+}
+
+#previewperfil{
+    position: absolute;
+    top: 20px;
+}
+
+#ctn-editfoto, #bbfile2{
+    display: none;
+}
+
+.ctn-sideperfil .ctn-editarfp label, .ctn-sideperfil .ctn-guardarfp input{
+    padding: 10px;
+    font-size: 14px;
+    background: white;
+    border: 2px solid white;
+    transition: all 200ms;
+    font-weight: 600;
+    cursor: pointer;
+    color: #0052D4;
+    outline: none;
+    width: 38%;
+    margin-top: 200px;
+    margin-left: -12px;
+}
+
+.ctn-sideperfil .ctn-guardarfp input{
+    margin-top: 230px;
+    margin-left: 97px;
+    width: 44%;
+}
+
+.ctn-sideperfil .ctn-editarfp label:hover, .ctn-sideperfil .ctn-guardarfp input:hover{
+    background: #fff;
+    border: 2px solid #0052D4;
+}
+
+.ctn-sideperfil .ctn-guardarfp input{
+    background: #00d418;
+    border: 2px solid #00d418;
+    color: white;
+}
+
+.ctn-sideperfil .ctn-guardarfp input:hover{
+    border: 2px solid #00ee1b;
+    background: #00ee1b;
+}
+
+#editfoto{
+    position: absolute;
+    top: 0px;
+}
+
+#bbfile{
+    position: absolute;
+    top: 30px;
+    left: 30px;
+}
+
+.ctn-fav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0px 20px;
+}
+
+.heartfav{
+    display: block;
+    padding: 10px 20px;
+    transition: all 0.2s;
+    border-radius: 25px;
+    font-size: 25px;
+    cursor: pointer;
+    width: 43%;
+    background: #ff0800;
+    border: 2px solid #ff0800;
+    color: white;
+}
+
+.heartfav:hover{
+    background: #fff;
+    color: #ff0800;
+    border: 2px solid #ff0800;
+}
+
+.menfav{
+    display: block;
+    padding: 10px 20px;
+    transition: all 0.2s;
+    border-radius: 25px;
+    font-size: 25px;
+    cursor: pointer;
+    width: 43%;
+    background: #0052D4;
+    border: 2px solid #0052D4;
+    color: white;
+}
+
+.menfav:hover{
+    background: #fff;
+    color: #0052D4;
+    border: 2px solid #0052D4;
+}
+
+.ctn-perfil{
+    display: block;
+    align-items: center;
+    width: 875px;
+    height: 284px;
+    top: 84px;
+    left: 390px;
+    border: 2px solid #0052D4;
+    padding: 20px;
+    background: white;
+    position: absolute;
+    border-radius: 25px;
+}
+
+.ctn-perfil .ctn-editarp{
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 10px;
+}
+
+.ctn-perfil .ctn-editarp h2{
+    padding: 7px 0px;
+}
+
+.ctn-perfil .ctn-editarp label{
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    font-size: 14px;
+    background: white;
+    border: 2px solid white;
+    transition: all 200ms;
+    font-weight: 600;
+    cursor: pointer;
+    color: #0052D4;
+    outline: none;
+    width: 17.3%;
+}
+
+.ctn-perfil .ctn-editarp label:hover{
+    background: #fff;
+    border: 2px solid #0052D4;
+}
+
+.ctn-perfil .ctn-infbasica h2{
+    font-size: 24px;
+    padding: 10px;
+    font-weight: normal;
+    text-align: center;
+}
+
+.ctn-perfil .ctn-infbasica p{
+    padding: 10px;
+    font-size: 14px;
+    display: inline-block;
+}
+
+#precioperfil{
+    padding: 15px;
+    font-size: 24px;
+    margin-top: 7px;
+    left: 135px;
+    position: absolute;
+}
+
+.ctn-perfil .ctn-infbasica input{
+    padding: 10px;
+    margin-top: 17.5px;
+    margin-left: 555px;
+    font-size: 14px;
+    background: #00d418;
+    border: 2px solid #00d418;
+    transition: all 200ms;
+    font-weight: 600;
+    cursor: pointer;
+    color: white;
+    outline: none;
+    width: 18%;
+}
+
+.ctn-perfil .ctn-infbasica input:hover{
+    border: 2px solid #00ee1b;
+    background: #00ee1b;
+}
+
+.ctn-perfil .ctn-infbasica p span{
+    font-weight: bolder;
+}
+
+#sexoperfil, #ciudadperfil, #especialidadperfil, #consultasperfil{
+    position: absolute;
+    left: 430px;
+}
+
+.ctn-herramientasperfil{
+    display: block;
+    width: 1165px;
+    margin: 0px 100px;
+    top: 393px;
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+}
+
+.ctn-herramientasperfil input{
+    padding: 10px;
+    border: none;
+    font-size: 14px;
+    background: #0052D4;
+    border: 2px solid #0052D4;
+    transition: all 200ms;
+    font-weight: 600;
+    cursor: pointer;
+    color: white;
+    outline: none;
+    width: 19.3%;
+}
+
+.ctn-herramientasperfil input:hover{
+    background: #fff;
+    color: #0052D4;
+    border: 2px solid #0052D4;
+}
+
+.ctn-valorcomment{
+    display: block;
+    align-items: center;
+    width: 240px;
+    top: 458px;
+    left: 100px;
+    border: 2px solid #0052D4;
+    padding: 20px 5px;
+    background: white;
+    position: absolute;
+    border-radius: 25px;
+}
+
+.ctn-starperfil, .ctn-barperfil{
+    width: 48%;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.ctn-starperfil h2{
+    font-size: 45px;
+    font-weight: 300;
+    text-align: center;
+}
+
+.stars{
+    padding-bottom: 10px;
+    font-size: 14px;
+    text-align: center;
+}
+
+#star1, #star2, #star3, #star4{
+    color: #fff600;
+}
+
+#star5{
+    color: #e5e5e5;
+}
+
+.ctn-starperfil p{
+    font-size: 14px;
+    text-align: center;
+}
+
+.ctn-starperfil p span{
+    font-weight: bolder;
+}
+
+.ctn-barperfil p, .ctn-barperfil .bar{
+    display: inline-block;
+    margin-left: 5px;
+}
+
+.ctn-barperfil p{
+    font-size: 14px;
+}
+
+.bar{
+    width: 75px;
+    height: 10px;
+    background: #e5e5e5;
+}
+
+#bar5, #bar4, #bar3, #bar2, #bar1{
+    height: 10px;
+    position: absolute;
+    left: 139px;
+}
+
+#bar5{
+    width: 45px;
+    background: #0052D4;
+    top: 25px;
+}
+
+#bar4{
+    width: 9px;
+    background: #0052D4;
+    top: 44px;
+}
+
+#bar3{
+    width: 6px;
+    background: #0052D4;
+    top: 63px;
+}
+
+#bar2{
+    width: 6px;
+    background: #0052D4;
+    top: 82px;
+}
+
+#bar1{
+    width: 9px;
+    background: #0052D4;
+    top: 101px;
+}
+
+#hrvc{
+    margin: 0px 10px 10px 10px;
+}
+
+.ctn-pubperfil{
+    display: block;
+    align-items: center;
+    width: 875px;
+    top: 458px;
+    left: 390px;
+    border: 2px solid #0052D4;
+    padding: 20px;
+    background: white;
+    position: absolute;
+    border-radius: 25px;
+}
+
+.ctn-pubperfil .ctn-editarip{
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 10px;
+}
+
+.ctn-pubperfil .ctn-editarip h2{
+    padding: 7px 0px;
+}
+
+.ctn-pubperfil #bbfiled1{
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    font-size: 14px;
+    background: white;
+    border: 2px solid white;
+    transition: all 200ms;
+    font-weight: 600;
+    cursor: pointer;
+    color: #0052D4;
+    outline: none;
+    width: 17.3%;
+}
+
+.ctn-pubperfil #bbfiled1:hover{
+    background: #fff;
+    border: 2px solid #0052D4;
+}
+
+.ctn-pubperfil #hrpub{
+    margin-bottom: 10px;
+}
+
+.box-footer{
+    padding: 0px 0px 30px 0px;
+}
+
+#añadir, #comprobar{
+    margin-bottom: 10px;
+    font-size: 14px;
+    font-weight: bolder;
+}
+
+#publicacion{
+    resize: none;
+}
+
+.form-control{
+    width: 400px;
+    margin-bottom: 10px;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #e5e5e5;
+    background: #F2F2F2;
+    outline: none;
+}
+
+.form-control:focus{
+    border: 1px solid #0052D4;
+}
+
+.ctn-imagend{
+    position: absolute;
+    top: 83px;
+    left: 450px;
+}
+
+#previewimage{
+    position: absolute;
+    top: 27px;
+    width: 400px;
+    height: 182px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#labelimage{
+    border: 1px solid #e5e5e5;
+    border-radius: 25px;
+    background: #F2F2F2;
+    padding: 65px 174px;
+    font-size: 50px;
+    outline: none;
+    position: absolute;
+    top: 27px;
+    cursor: pointer;
+    transition: 200ms;
+}
+
+#labelimage i{
+    color: #777777;
+}
+
+#labelimage:hover{
+    border: 1px solid #0052D4;
+}
+
+
+#file-1, #publicar{
+    display: none;
+}
+
+#guardar{
+    padding: 10px 20px;
+    font-size: 14px;
+    background: #00d418;
+    border: 2px solid #00d418;
+    transition: all 200ms;
+    font-weight: 600;
+    cursor: pointer;
+    color: white;
+    outline: none;
+    width: 18%;
+    margin-left: 115px;
+}
+
+#guardar:hover{
+    border: 2px solid #00ee1b;
+    background: #00ee1b;
+}
+
+.box-body p{
+    font-size: 14px;
+    width: 405px;
+    margin: 17px 25px 17px 0px;
+    padding: 0px 10px;
+    display: inline-block;
+}
+
+.ctn-imagepub{
+    margin: 17px 0px;
+    width: 400px;
+    height: 182px;
+    justify-content: center;
+    align-items: center;
+    display: inline-block;
+}
+
+.box-body img{
+    width: 400px;
+    height: 182px;
+    object-fit: contain;
+}

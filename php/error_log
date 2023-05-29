@@ -1,0 +1,1549 @@
+[22-Sep-2022 22:20:08 America/Boise] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home2/themedun/public_html/php/conexion_paciente.php on line 3
+[22-Sep-2022 22:20:11 America/Boise] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home2/themedun/public_html/php/conexion_paciente.php on line 3
+[22-Sep-2022 22:20:14 America/Boise] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home2/themedun/public_html/php/conexion_paciente.php on line 3
+[22-Sep-2022 22:20:17 America/Boise] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home2/themedun/public_html/php/conexion_paciente.php on line 3
+[22-Sep-2022 22:20:20 America/Boise] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home2/themedun/public_html/php/conexion_paciente.php on line 3
+[22-Sep-2022 22:20:23 America/Boise] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home2/themedun/public_html/php/conexion_paciente.php on line 3
+[22-Sep-2022 22:20:27 America/Boise] PHP Warning:  include(conexion_paciente.php): failed to open stream: No such file or directory in /home2/themedun/public_html/php/classNotificaciones.php on line 3
+[22-Sep-2022 22:20:27 America/Boise] PHP Warning:  include(): Failed opening 'conexion_paciente.php' for inclusion (include_path='.:/opt/cpanel/ea-php74/root/usr/share/pear') in /home2/themedun/public_html/php/classNotificaciones.php on line 3
+[22-Sep-2022 22:20:27 America/Boise] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, null given in /home2/themedun/public_html/php/classNotificaciones.php on line 459
+[22-Sep-2022 22:20:27 America/Boise] PHP Warning:  mysqli_error() expects parameter 1 to be mysqli, null given in /home2/themedun/public_html/php/classNotificaciones.php on line 459
+[22-Sep-2022 22:20:29 America/Boise] PHP Warning:  include(conexion_paciente.php): failed to open stream: No such file or directory in /home2/themedun/public_html/php/classNotificaciones.php on line 3
+[22-Sep-2022 22:20:29 America/Boise] PHP Warning:  include(): Failed opening 'conexion_paciente.php' for inclusion (include_path='.:/opt/cpanel/ea-php74/root/usr/share/pear') in /home2/themedun/public_html/php/classNotificaciones.php on line 3
+[22-Sep-2022 22:20:29 America/Boise] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, null given in /home2/themedun/public_html/php/classNotificaciones.php on line 459
+[22-Sep-2022 22:20:29 America/Boise] PHP Warning:  mysqli_error() expects parameter 1 to be mysqli, null given in /home2/themedun/public_html/php/classNotificaciones.php on line 459
+[22-Sep-2022 22:20:32 America/Boise] PHP Warning:  include(conexion_paciente.php): failed to open stream: No such file or directory in /home2/themedun/public_html/php/classNotificaciones.php on line 3
+[22-Sep-2022 22:20:32 America/Boise] PHP Warning:  include(): Failed opening 'conexion_paciente.php' for inclusion (include_path='.:/opt/cpanel/ea-php74/root/usr/share/pear') in /home2/themedun/public_html/php/classNotificaciones.php on line 3
+[22-Sep-2022 22:20:32 America/Boise] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, null given in /home2/themedun/public_html/php/classNotificaciones.php on line 459
+[22-Sep-2022 22:20:32 America/Boise] PHP Warning:  mysqli_error() expects parameter 1 to be mysqli, null given in /home2/themedun/public_html/php/classNotificaciones.php on line 459
+[22-Sep-2022 22:20:36 America/Boise] PHP Warning:  include(conexion_paciente.php): failed to open stream: No such file or directory in /home2/themedun/public_html/php/classNotificaciones.php on line 3
+[22-Sep-2022 22:20:36 America/Boise] PHP Warning:  include(): Failed opening 'conexion_paciente.php' for inclusion (include_path='.:/opt/cpanel/ea-php74/root/usr/share/pear') in /home2/themedun/public_html/php/classNotificaciones.php on line 3
+[22-Sep-2022 22:20:36 America/Boise] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, null given in /home2/themedun/public_html/php/classNotificaciones.php on line 459
+[22-Sep-2022 22:20:36 America/Boise] PHP Warning:  mysqli_error() expects parameter 1 to be mysqli, null given in /home2/themedun/public_html/php/classNotificaciones.php on line 459
+[22-Sep-2022 22:20:38 America/Boise] PHP Warning:  include(conexion_paciente.php): failed to open stream: No such file or directory in /home2/themedun/public_html/php/classNotificaciones.php on line 3
+[22-Sep-2022 22:20:38 America/Boise] PHP Warning:  include(): Failed opening 'conexion_paciente.php' for inclusion (include_path='.:/opt/cpanel/ea-php74/root/usr/share/pear') in /home2/themedun/public_html/php/classNotificaciones.php on line 3
+[22-Sep-2022 22:20:38 America/Boise] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, null given in /home2/themedun/public_html/php/classNotificaciones.php on line 459
+[22-Sep-2022 22:20:38 America/Boise] PHP Warning:  mysqli_error() expects parameter 1 to be mysqli, null given in /home2/themedun/public_html/php/classNotificaciones.php on line 459
+[22-Sep-2022 22:20:41 America/Boise] PHP Warning:  include(conexion_paciente.php): failed to open stream: No such file or directory in /home2/themedun/public_html/php/classNotificaciones.php on line 3
+[22-Sep-2022 22:20:41 America/Boise] PHP Warning:  include(): Failed opening 'conexion_paciente.php' for inclusion (include_path='.:/opt/cpanel/ea-php74/root/usr/share/pear') in /home2/themedun/public_html/php/classNotificaciones.php on line 3
+[22-Sep-2022 22:20:41 America/Boise] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, null given in /home2/themedun/public_html/php/classNotificaciones.php on line 459
+[22-Sep-2022 22:20:41 America/Boise] PHP Warning:  mysqli_error() expects parameter 1 to be mysqli, null given in /home2/themedun/public_html/php/classNotificaciones.php on line 459
+[22-Sep-2022 22:20:44 America/Boise] PHP Warning:  include(conexion_paciente.php): failed to open stream: No such file or directory in /home2/themedun/public_html/php/classNotificaciones.php on line 3
+[22-Sep-2022 22:20:44 America/Boise] PHP Warning:  include(): Failed opening 'conexion_paciente.php' for inclusion (include_path='.:/opt/cpanel/ea-php74/root/usr/share/pear') in /home2/themedun/public_html/php/classNotificaciones.php on line 3
+[22-Sep-2022 22:20:44 America/Boise] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, null given in /home2/themedun/public_html/php/classNotificaciones.php on line 459
+[22-Sep-2022 22:20:44 America/Boise] PHP Warning:  mysqli_error() expects parameter 1 to be mysqli, null given in /home2/themedun/public_html/php/classNotificaciones.php on line 459
+[22-Sep-2022 22:20:47 America/Boise] PHP Warning:  include(conexion_paciente.php): failed to open stream: No such file or directory in /home2/themedun/public_html/php/classNotificaciones.php on line 3
+[22-Sep-2022 22:20:47 America/Boise] PHP Warning:  include(): Failed opening 'conexion_paciente.php' for inclusion (include_path='.:/opt/cpanel/ea-php74/root/usr/share/pear') in /home2/themedun/public_html/php/classNotificaciones.php on line 3
+[22-Sep-2022 22:20:47 America/Boise] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, null given in /home2/themedun/public_html/php/classNotificaciones.php on line 459
+[22-Sep-2022 22:20:47 America/Boise] PHP Warning:  mysqli_error() expects parameter 1 to be mysqli, null given in /home2/themedun/public_html/php/classNotificaciones.php on line 459
+[22-Sep-2022 22:20:50 America/Boise] PHP Warning:  include(conexion_paciente.php): failed to open stream: No such file or directory in /home2/themedun/public_html/php/classNotificaciones.php on line 3
+[22-Sep-2022 22:20:50 America/Boise] PHP Warning:  include(): Failed opening 'conexion_paciente.php' for inclusion (include_path='.:/opt/cpanel/ea-php74/root/usr/share/pear') in /home2/themedun/public_html/php/classNotificaciones.php on line 3
+[22-Sep-2022 22:20:50 America/Boise] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, null given in /home2/themedun/public_html/php/classNotificaciones.php on line 459
+[22-Sep-2022 22:20:50 America/Boise] PHP Warning:  mysqli_error() expects parameter 1 to be mysqli, null given in /home2/themedun/public_html/php/classNotificaciones.php on line 459
+[22-Sep-2022 22:20:53 America/Boise] PHP Warning:  include(conexion_paciente.php): failed to open stream: No such file or directory in /home2/themedun/public_html/php/classNotificaciones.php on line 3
+[22-Sep-2022 22:20:53 America/Boise] PHP Warning:  include(): Failed opening 'conexion_paciente.php' for inclusion (include_path='.:/opt/cpanel/ea-php74/root/usr/share/pear') in /home2/themedun/public_html/php/classNotificaciones.php on line 3
+[22-Sep-2022 22:20:53 America/Boise] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, null given in /home2/themedun/public_html/php/classNotificaciones.php on line 459
+[22-Sep-2022 22:20:53 America/Boise] PHP Warning:  mysqli_error() expects parameter 1 to be mysqli, null given in /home2/themedun/public_html/php/classNotificaciones.php on line 459
+[22-Sep-2022 22:24:00 America/Boise] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO) in /home2/themedun/public_html/php/eventos.php:3
+Stack trace:
+#0 /home2/themedun/public_html/php/eventos.php(3): PDO->__construct('mysql:dbname=th...', 'root', '')
+#1 {main}
+  thrown in /home2/themedun/public_html/php/eventos.php on line 3
+[22-Sep-2022 22:24:05 America/Boise] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO) in /home2/themedun/public_html/php/eventos.php:3
+Stack trace:
+#0 /home2/themedun/public_html/php/eventos.php(3): PDO->__construct('mysql:dbname=th...', 'root', '')
+#1 {main}
+  thrown in /home2/themedun/public_html/php/eventos.php on line 3
+[26-Sep-2022 22:35:17 America/Boise] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO) in /home2/themedun/public_html/php/eventos.php:3
+Stack trace:
+#0 /home2/themedun/public_html/php/eventos.php(3): PDO->__construct('mysql:dbname=th...', 'root', '')
+#1 {main}
+  thrown in /home2/themedun/public_html/php/eventos.php on line 3
+[26-Sep-2022 22:35:22 America/Boise] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO) in /home2/themedun/public_html/php/eventos.php:3
+Stack trace:
+#0 /home2/themedun/public_html/php/eventos.php(3): PDO->__construct('mysql:dbname=th...', 'root', '')
+#1 {main}
+  thrown in /home2/themedun/public_html/php/eventos.php on line 3
+[26-Sep-2022 22:35:25 America/Boise] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO) in /home2/themedun/public_html/php/eventos.php:3
+Stack trace:
+#0 /home2/themedun/public_html/php/eventos.php(3): PDO->__construct('mysql:dbname=th...', 'root', '')
+#1 {main}
+  thrown in /home2/themedun/public_html/php/eventos.php on line 3
+[26-Sep-2022 22:35:30 America/Boise] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO) in /home2/themedun/public_html/php/eventos.php:3
+Stack trace:
+#0 /home2/themedun/public_html/php/eventos.php(3): PDO->__construct('mysql:dbname=th...', 'root', '')
+#1 {main}
+  thrown in /home2/themedun/public_html/php/eventos.php on line 3
+[26-Sep-2022 22:35:32 America/Boise] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO) in /home2/themedun/public_html/php/eventos.php:3
+Stack trace:
+#0 /home2/themedun/public_html/php/eventos.php(3): PDO->__construct('mysql:dbname=th...', 'root', '')
+#1 {main}
+  thrown in /home2/themedun/public_html/php/eventos.php on line 3
+[26-Sep-2022 22:35:34 America/Boise] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO) in /home2/themedun/public_html/php/eventos.php:3
+Stack trace:
+#0 /home2/themedun/public_html/php/eventos.php(3): PDO->__construct('mysql:dbname=th...', 'root', '')
+#1 {main}
+  thrown in /home2/themedun/public_html/php/eventos.php on line 3
+[26-Sep-2022 22:36:21 America/Boise] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO) in /home2/themedun/public_html/php/eventos.php:3
+Stack trace:
+#0 /home2/themedun/public_html/php/eventos.php(3): PDO->__construct('mysql:dbname=th...', 'root', '')
+#1 {main}
+  thrown in /home2/themedun/public_html/php/eventos.php on line 3
+[26-Sep-2022 22:37:04 America/Boise] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO) in /home2/themedun/public_html/php/eventoss.php:3
+Stack trace:
+#0 /home2/themedun/public_html/php/eventoss.php(3): PDO->__construct('mysql:dbname=th...', 'root', '')
+#1 {main}
+  thrown in /home2/themedun/public_html/php/eventoss.php on line 3
+[26-Sep-2022 22:37:08 America/Boise] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO) in /home2/themedun/public_html/php/eventoss.php:3
+Stack trace:
+#0 /home2/themedun/public_html/php/eventoss.php(3): PDO->__construct('mysql:dbname=th...', 'root', '')
+#1 {main}
+  thrown in /home2/themedun/public_html/php/eventoss.php on line 3
+[26-Sep-2022 22:37:10 America/Boise] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO) in /home2/themedun/public_html/php/eventoss.php:3
+Stack trace:
+#0 /home2/themedun/public_html/php/eventoss.php(3): PDO->__construct('mysql:dbname=th...', 'root', '')
+#1 {main}
+  thrown in /home2/themedun/public_html/php/eventoss.php on line 3
+[26-Sep-2022 22:37:11 America/Boise] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO) in /home2/themedun/public_html/php/eventoss.php:3
+Stack trace:
+#0 /home2/themedun/public_html/php/eventoss.php(3): PDO->__construct('mysql:dbname=th...', 'root', '')
+#1 {main}
+  thrown in /home2/themedun/public_html/php/eventoss.php on line 3
+[26-Sep-2022 22:37:11 America/Boise] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO) in /home2/themedun/public_html/php/eventoss.php:3
+Stack trace:
+#0 /home2/themedun/public_html/php/eventoss.php(3): PDO->__construct('mysql:dbname=th...', 'root', '')
+#1 {main}
+  thrown in /home2/themedun/public_html/php/eventoss.php on line 3
+[26-Sep-2022 22:37:12 America/Boise] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO) in /home2/themedun/public_html/php/eventoss.php:3
+Stack trace:
+#0 /home2/themedun/public_html/php/eventoss.php(3): PDO->__construct('mysql:dbname=th...', 'root', '')
+#1 {main}
+  thrown in /home2/themedun/public_html/php/eventoss.php on line 3
+[26-Sep-2022 22:37:17 America/Boise] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO) in /home2/themedun/public_html/php/eventos.php:3
+Stack trace:
+#0 /home2/themedun/public_html/php/eventos.php(3): PDO->__construct('mysql:dbname=th...', 'root', '')
+#1 {main}
+  thrown in /home2/themedun/public_html/php/eventos.php on line 3
+[26-Sep-2022 22:37:18 America/Boise] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO) in /home2/themedun/public_html/php/eventos.php:3
+Stack trace:
+#0 /home2/themedun/public_html/php/eventos.php(3): PDO->__construct('mysql:dbname=th...', 'root', '')
+#1 {main}
+  thrown in /home2/themedun/public_html/php/eventos.php on line 3
+[26-Sep-2022 22:37:19 America/Boise] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO) in /home2/themedun/public_html/php/eventos.php:3
+Stack trace:
+#0 /home2/themedun/public_html/php/eventos.php(3): PDO->__construct('mysql:dbname=th...', 'root', '')
+#1 {main}
+  thrown in /home2/themedun/public_html/php/eventos.php on line 3
+[26-Sep-2022 22:37:20 America/Boise] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO) in /home2/themedun/public_html/php/eventos.php:3
+Stack trace:
+#0 /home2/themedun/public_html/php/eventos.php(3): PDO->__construct('mysql:dbname=th...', 'root', '')
+#1 {main}
+  thrown in /home2/themedun/public_html/php/eventos.php on line 3
+[26-Sep-2022 22:37:20 America/Boise] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO) in /home2/themedun/public_html/php/eventos.php:3
+Stack trace:
+#0 /home2/themedun/public_html/php/eventos.php(3): PDO->__construct('mysql:dbname=th...', 'root', '')
+#1 {main}
+  thrown in /home2/themedun/public_html/php/eventos.php on line 3
+[26-Sep-2022 22:37:21 America/Boise] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO) in /home2/themedun/public_html/php/eventos.php:3
+Stack trace:
+#0 /home2/themedun/public_html/php/eventos.php(3): PDO->__construct('mysql:dbname=th...', 'root', '')
+#1 {main}
+  thrown in /home2/themedun/public_html/php/eventos.php on line 3
+[26-Sep-2022 22:37:28 America/Boise] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO) in /home2/themedun/public_html/php/eventos.php:3
+Stack trace:
+#0 /home2/themedun/public_html/php/eventos.php(3): PDO->__construct('mysql:dbname=th...', 'root', '')
+#1 {main}
+  thrown in /home2/themedun/public_html/php/eventos.php on line 3
+[26-Sep-2022 22:38:34 America/Boise] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO) in /home2/themedun/public_html/php/eventos.php:3
+Stack trace:
+#0 /home2/themedun/public_html/php/eventos.php(3): PDO->__construct('mysql:dbname=th...', 'root', '')
+#1 {main}
+  thrown in /home2/themedun/public_html/php/eventos.php on line 3
+[26-Sep-2022 22:39:46 America/Boise] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO) in /home2/themedun/public_html/php/eventos.php:3
+Stack trace:
+#0 /home2/themedun/public_html/php/eventos.php(3): PDO->__construct('mysql:dbname=th...', 'root', '')
+#1 {main}
+  thrown in /home2/themedun/public_html/php/eventos.php on line 3
+[26-Sep-2022 22:39:48 America/Boise] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO) in /home2/themedun/public_html/php/eventos.php:3
+Stack trace:
+#0 /home2/themedun/public_html/php/eventos.php(3): PDO->__construct('mysql:dbname=th...', 'root', '')
+#1 {main}
+  thrown in /home2/themedun/public_html/php/eventos.php on line 3
+[26-Sep-2022 22:40:34 America/Boise] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO) in /home2/themedun/public_html/php/eventos.php:3
+Stack trace:
+#0 /home2/themedun/public_html/php/eventos.php(3): PDO->__construct('mysql:dbname=th...', 'root', '')
+#1 {main}
+  thrown in /home2/themedun/public_html/php/eventos.php on line 3
+[26-Sep-2022 22:40:37 America/Boise] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO) in /home2/themedun/public_html/php/eventos.php:3
+Stack trace:
+#0 /home2/themedun/public_html/php/eventos.php(3): PDO->__construct('mysql:dbname=th...', 'root', '')
+#1 {main}
+  thrown in /home2/themedun/public_html/php/eventos.php on line 3
+[26-Sep-2022 22:40:48 America/Boise] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO) in /home2/themedun/public_html/php/eventos.php:3
+Stack trace:
+#0 /home2/themedun/public_html/php/eventos.php(3): PDO->__construct('mysql:dbname=th...', 'root', '')
+#1 {main}
+  thrown in /home2/themedun/public_html/php/eventos.php on line 3
+[26-Sep-2022 22:41:48 America/Boise] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO) in /home2/themedun/public_html/php/eventos.php:3
+Stack trace:
+#0 /home2/themedun/public_html/php/eventos.php(3): PDO->__construct('mysql:dbname=th...', 'root', '')
+#1 {main}
+  thrown in /home2/themedun/public_html/php/eventos.php on line 3
+[26-Sep-2022 22:43:39 America/Boise] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO) in /home2/themedun/public_html/php/eventos.php:3
+Stack trace:
+#0 /home2/themedun/public_html/php/eventos.php(3): PDO->__construct('mysql:dbname=th...', 'root', '')
+#1 {main}
+  thrown in /home2/themedun/public_html/php/eventos.php on line 3
+[26-Sep-2022 22:44:48 America/Boise] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO) in /home2/themedun/public_html/php/eventos.php:3
+Stack trace:
+#0 /home2/themedun/public_html/php/eventos.php(3): PDO->__construct('mysql:dbname=th...', 'root', '')
+#1 {main}
+  thrown in /home2/themedun/public_html/php/eventos.php on line 3
+[26-Sep-2022 22:45:34 America/Boise] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO) in /home2/themedun/public_html/php/eventos.php:3
+Stack trace:
+#0 /home2/themedun/public_html/php/eventos.php(3): PDO->__construct('mysql:dbname=th...', 'root', '')
+#1 {main}
+  thrown in /home2/themedun/public_html/php/eventos.php on line 3
+[26-Sep-2022 22:45:39 America/Boise] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO) in /home2/themedun/public_html/php/eventos.php:3
+Stack trace:
+#0 /home2/themedun/public_html/php/eventos.php(3): PDO->__construct('mysql:dbname=th...', 'root', '')
+#1 {main}
+  thrown in /home2/themedun/public_html/php/eventos.php on line 3
+[26-Sep-2022 22:45:48 America/Boise] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO) in /home2/themedun/public_html/php/eventos.php:3
+Stack trace:
+#0 /home2/themedun/public_html/php/eventos.php(3): PDO->__construct('mysql:dbname=th...', 'root', '')
+#1 {main}
+  thrown in /home2/themedun/public_html/php/eventos.php on line 3
+[26-Sep-2022 22:46:24 America/Boise] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO) in /home2/themedun/public_html/php/eventos.php:3
+Stack trace:
+#0 /home2/themedun/public_html/php/eventos.php(3): PDO->__construct('mysql:dbname=th...', 'root', '')
+#1 {main}
+  thrown in /home2/themedun/public_html/php/eventos.php on line 3
+[26-Sep-2022 22:47:04 America/Boise] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO) in /home2/themedun/public_html/php/eventos.php:3
+Stack trace:
+#0 /home2/themedun/public_html/php/eventos.php(3): PDO->__construct('mysql:dbname=th...', 'root', '')
+#1 {main}
+  thrown in /home2/themedun/public_html/php/eventos.php on line 3
+[26-Sep-2022 22:47:31 America/Boise] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO) in /home2/themedun/public_html/php/eventos.php:3
+Stack trace:
+#0 /home2/themedun/public_html/php/eventos.php(3): PDO->__construct('mysql:dbname=th...', 'root', '')
+#1 {main}
+  thrown in /home2/themedun/public_html/php/eventos.php on line 3
+[26-Sep-2022 22:47:37 America/Boise] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO) in /home2/themedun/public_html/php/eventos.php:3
+Stack trace:
+#0 /home2/themedun/public_html/php/eventos.php(3): PDO->__construct('mysql:dbname=th...', 'root', '')
+#1 {main}
+  thrown in /home2/themedun/public_html/php/eventos.php on line 3
+[27-Sep-2022 14:29:28 America/Boise] PHP Fatal error:  Composer detected issues in your platform: Your Composer dependencies require a PHP version ">= 8.0.0". You are running 7.4.30. in /home2/themedun/public_html/vendor/composer/platform_check.php on line 24
+[27-Sep-2022 14:29:37 America/Boise] PHP Fatal error:  Composer detected issues in your platform: Your Composer dependencies require a PHP version ">= 8.0.0". You are running 7.4.30. in /home2/themedun/public_html/vendor/composer/platform_check.php on line 24
+[27-Sep-2022 14:37:33 America/Boise] PHP Fatal error:  Composer detected issues in your platform: Your Composer dependencies require a PHP version ">= 8.0.0". You are running 7.4.30. in /home2/themedun/public_html/vendor/composer/platform_check.php on line 24
+[27-Sep-2022 14:48:04 America/Boise] PHP Fatal error:  Composer detected issues in your platform: Your Composer dependencies require a PHP version ">= 8.0.0". You are running 7.4.30. in /home2/themedun/public_html/vendor/composer/platform_check.php on line 24
+[27-Sep-2022 15:13:44 America/Boise] PHP Fatal error:  Composer detected issues in your platform: Your Composer dependencies require a PHP version ">= 8.0.0". You are running 7.4.30. in /home2/themedun/public_html/vendor/composer/platform_check.php on line 24
+[27-Sep-2022 15:14:51 America/Boise] PHP Fatal error:  Composer detected issues in your platform: Your Composer dependencies require a PHP version ">= 8.0.0". You are running 7.4.30. in /home2/themedun/public_html/vendor/composer/platform_check.php on line 24
+[27-Sep-2022 15:23:37 America/Boise] PHP Fatal error:  Composer detected issues in your platform: Your Composer dependencies require a PHP version ">= 8.0.0". You are running 7.4.30. in /home2/themedun/public_html/vendor/composer/platform_check.php on line 24
+[27-Sep-2022 16:28:35 America/Boise] PHP Fatal error:  Composer detected issues in your platform: Your Composer dependencies require a PHP version ">= 8.0.0". You are running 7.4.30. in /home2/themedun/public_html/vendor/composer/platform_check.php on line 24
+[27-Sep-2022 16:31:28 America/Boise] PHP Fatal error:  Composer detected issues in your platform: Your Composer dependencies require a PHP version ">= 8.0.0". You are running 7.4.30. in /home2/themedun/public_html/vendor/composer/platform_check.php on line 24
+[27-Sep-2022 16:31:33 America/Boise] PHP Fatal error:  Composer detected issues in your platform: Your Composer dependencies require a PHP version ">= 8.0.0". You are running 7.4.30. in /home2/themedun/public_html/vendor/composer/platform_check.php on line 24
+[27-Sep-2022 16:32:04 America/Boise] PHP Fatal error:  Composer detected issues in your platform: Your Composer dependencies require a PHP version ">= 8.0.0". You are running 7.4.30. in /home2/themedun/public_html/vendor/composer/platform_check.php on line 24
+[27-Sep-2022 16:32:43 America/Boise] PHP Fatal error:  Composer detected issues in your platform: Your Composer dependencies require a PHP version ">= 8.0.0". You are running 7.4.30. in /home2/themedun/public_html/vendor/composer/platform_check.php on line 24
+[27-Sep-2022 16:32:53 America/Boise] PHP Fatal error:  Composer detected issues in your platform: Your Composer dependencies require a PHP version ">= 8.0.0". You are running 7.4.30. in /home2/themedun/public_html/vendor/composer/platform_check.php on line 24
+[27-Sep-2022 16:33:33 America/Boise] PHP Fatal error:  Composer detected issues in your platform: Your Composer dependencies require a PHP version ">= 8.0.0". You are running 7.4.30. in /home2/themedun/public_html/vendor/composer/platform_check.php on line 24
+[27-Sep-2022 16:35:53 America/Boise] PHP Fatal error:  require_once(): Failed opening required '/home2/themedun/public_html/vendor/composer/autoload_real.php' (include_path='.:/opt/cpanel/ea-php74/root/usr/share/pear') in /home2/themedun/public_html/vendor/autoload.php on line 10
+[27-Sep-2022 16:36:00 America/Boise] PHP Fatal error:  require_once(): Failed opening required '/home2/themedun/public_html/vendor/composer/autoload_real.php' (include_path='.:/opt/cpanel/ea-php74/root/usr/share/pear') in /home2/themedun/public_html/vendor/autoload.php on line 10
+[27-Sep-2022 16:36:16 America/Boise] PHP Fatal error:  require_once(): Failed opening required '/home2/themedun/public_html/vendor/composer/autoload_real.php' (include_path='.:/opt/cpanel/ea-php74/root/usr/share/pear') in /home2/themedun/public_html/vendor/autoload.php on line 10
+[27-Sep-2022 16:36:21 America/Boise] PHP Fatal error:  require_once(): Failed opening required '/home2/themedun/public_html/vendor/composer/autoload_real.php' (include_path='.:/opt/cpanel/ea-php74/root/usr/share/pear') in /home2/themedun/public_html/vendor/autoload.php on line 10
+[27-Sep-2022 16:36:31 America/Boise] PHP Fatal error:  require_once(): Failed opening required '/home2/themedun/public_html/vendor/composer/autoload_real.php' (include_path='.:/opt/cpanel/ea-php74/root/usr/share/pear') in /home2/themedun/public_html/vendor/autoload.php on line 10
+[27-Sep-2022 16:41:50 America/Boise] PHP Fatal error:  Uncaught Exception: Wrong type NULL. It should be float for property unit_price in /home2/themedun/public_html/vendor/mercadopago/dx-php/src/MercadoPago/Entity.php:455
+Stack trace:
+#0 /home2/themedun/public_html/vendor/mercadopago/dx-php/src/MercadoPago/Entity.php(364): MercadoPago\Entity->tryFormat(NULL, 'float', 'unit_price')
+#1 /home2/themedun/public_html/vendor/mercadopago/dx-php/src/MercadoPago/Entity.php(308): MercadoPago\Entity->_setValue('unit_price', NULL)
+#2 /home2/themedun/public_html/php/test.php(47): MercadoPago\Entity->__set('unit_price', NULL)
+#3 {main}
+  thrown in /home2/themedun/public_html/vendor/mercadopago/dx-php/src/MercadoPago/Entity.php on line 455
+[04-Oct-2022 17:03:02 America/Lima] PHP Warning:  Undefined variable $correo in /home2/themedun/public_html/php/crearCuentaPro.php on line 90
+[05-Oct-2022 15:50:55 America/Boise] PHP Warning:  Undefined variable $start in /home2/themedun/public_html/php/aceptarSolicitudCita.php on line 59
+[12-Oct-2022 22:23:08 America/Boise] PHP Warning:  Undefined array key "texto" in /home2/themedun/public_html/php/pruebas.php on line 6
+[12-Oct-2022 22:24:25 America/Boise] PHP Warning:  Undefined array key "texto" in /home2/themedun/public_html/php/pruebas.php on line 6
+[12-Oct-2022 22:31:19 America/Boise] PHP Warning:  Undefined array key "texto" in /home2/themedun/public_html/php/pruebas.php on line 7
+[12-Oct-2022 22:35:26 America/Boise] PHP Warning:  session_destroy(): Trying to destroy uninitialized session in /home2/themedun/public_html/php/pruebas.php on line 2
+[12-Oct-2022 22:35:32 America/Boise] PHP Warning:  session_destroy(): Trying to destroy uninitialized session in /home2/themedun/public_html/php/pruebas.php on line 2
+[12-Oct-2022 22:35:41 America/Boise] PHP Warning:  session_destroy(): Trying to destroy uninitialized session in /home2/themedun/public_html/php/pruebas.php on line 2
+[12-Oct-2022 22:36:06 America/Boise] PHP Warning:  Undefined array key "texto" in /home2/themedun/public_html/php/pruebas.php on line 5
+[12-Oct-2022 22:37:26 America/Boise] PHP Warning:  Undefined array key "texto" in /home2/themedun/public_html/php/pruebas.php on line 5
+[12-Oct-2022 22:45:32 America/Boise] PHP Warning:  session_start(): open(//sess_05cfaab992112087afcc1504cff15186, O_RDWR) failed: Permission denied (13) in /home2/themedun/public_html/php/pruebas.php on line 8
+[12-Oct-2022 22:45:32 America/Boise] PHP Warning:  session_start(): Failed to read session data: files (path: /) in /home2/themedun/public_html/php/pruebas.php on line 8
+[12-Oct-2022 22:45:32 America/Boise] PHP Warning:  Undefined array key "test" in /home2/themedun/public_html/php/pruebas.php on line 9
+[12-Oct-2022 22:45:37 America/Boise] PHP Warning:  session_start(): open(//sess_05cfaab992112087afcc1504cff15186, O_RDWR) failed: Permission denied (13) in /home2/themedun/public_html/php/pruebas2.php on line 9
+[12-Oct-2022 22:45:37 America/Boise] PHP Warning:  session_start(): Failed to read session data: files (path: /) in /home2/themedun/public_html/php/pruebas2.php on line 9
+[12-Oct-2022 22:45:41 America/Boise] PHP Warning:  session_start(): open(//sess_05cfaab992112087afcc1504cff15186, O_RDWR) failed: Permission denied (13) in /home2/themedun/public_html/php/pruebas.php on line 8
+[12-Oct-2022 22:45:41 America/Boise] PHP Warning:  session_start(): Failed to read session data: files (path: /) in /home2/themedun/public_html/php/pruebas.php on line 8
+[12-Oct-2022 22:45:41 America/Boise] PHP Warning:  Undefined array key "test" in /home2/themedun/public_html/php/pruebas.php on line 9
+[12-Oct-2022 22:46:00 America/Boise] PHP Warning:  session_start(): open(//sess_05cfaab992112087afcc1504cff15186, O_RDWR) failed: Permission denied (13) in /home2/themedun/public_html/php/pruebas.php on line 8
+[12-Oct-2022 22:46:00 America/Boise] PHP Warning:  session_start(): Failed to read session data: files (path: /) in /home2/themedun/public_html/php/pruebas.php on line 8
+[12-Oct-2022 22:46:00 America/Boise] PHP Warning:  Undefined array key "test" in /home2/themedun/public_html/php/pruebas.php on line 9
+[12-Oct-2022 22:48:00 America/Boise] PHP Warning:  session_start(): open(//sess_05cfaab992112087afcc1504cff15186, O_RDWR) failed: Permission denied (13) in /home2/themedun/public_html/php/pruebas2.php on line 9
+[12-Oct-2022 22:48:00 America/Boise] PHP Warning:  session_start(): Failed to read session data: files (path: /) in /home2/themedun/public_html/php/pruebas2.php on line 9
+[12-Oct-2022 22:48:01 America/Boise] PHP Warning:  session_start(): open(//sess_05cfaab992112087afcc1504cff15186, O_RDWR) failed: Permission denied (13) in /home2/themedun/public_html/php/pruebas.php on line 8
+[12-Oct-2022 22:48:01 America/Boise] PHP Warning:  session_start(): Failed to read session data: files (path: /) in /home2/themedun/public_html/php/pruebas.php on line 8
+[12-Oct-2022 22:48:01 America/Boise] PHP Warning:  Undefined array key "test" in /home2/themedun/public_html/php/pruebas.php on line 9
+[12-Oct-2022 22:48:09 America/Boise] PHP Warning:  session_start(): open(//sess_05cfaab992112087afcc1504cff15186, O_RDWR) failed: Permission denied (13) in /home2/themedun/public_html/php/pruebas.php on line 8
+[12-Oct-2022 22:48:09 America/Boise] PHP Warning:  session_start(): Failed to read session data: files (path: /) in /home2/themedun/public_html/php/pruebas.php on line 8
+[12-Oct-2022 22:48:09 America/Boise] PHP Warning:  Undefined array key "test" in /home2/themedun/public_html/php/pruebas.php on line 9
+[12-Oct-2022 22:48:13 America/Boise] PHP Warning:  session_start(): open(//sess_05cfaab992112087afcc1504cff15186, O_RDWR) failed: Permission denied (13) in /home2/themedun/public_html/php/pruebas2.php on line 9
+[12-Oct-2022 22:48:13 America/Boise] PHP Warning:  session_start(): Failed to read session data: files (path: /) in /home2/themedun/public_html/php/pruebas2.php on line 9
+[12-Oct-2022 22:48:15 America/Boise] PHP Warning:  session_start(): open(//sess_05cfaab992112087afcc1504cff15186, O_RDWR) failed: Permission denied (13) in /home2/themedun/public_html/php/pruebas.php on line 8
+[12-Oct-2022 22:48:15 America/Boise] PHP Warning:  session_start(): Failed to read session data: files (path: /) in /home2/themedun/public_html/php/pruebas.php on line 8
+[12-Oct-2022 22:48:15 America/Boise] PHP Warning:  Undefined array key "test" in /home2/themedun/public_html/php/pruebas.php on line 9
+[12-Oct-2022 22:50:14 America/Boise] PHP Warning:  session_start(): open(//sess_05cfaab992112087afcc1504cff15186, O_RDWR) failed: Permission denied (13) in /home2/themedun/public_html/php/pruebas2.php on line 9
+[12-Oct-2022 22:50:14 America/Boise] PHP Warning:  session_start(): Failed to read session data: files (path: /) in /home2/themedun/public_html/php/pruebas2.php on line 9
+[12-Oct-2022 22:50:30 America/Boise] PHP Warning:  session_start(): open(//sess_7a97dbcee976e815191d3f89d79282b0, O_RDWR) failed: Permission denied (13) in /home2/themedun/public_html/php/pruebas.php on line 8
+[12-Oct-2022 22:50:30 America/Boise] PHP Warning:  session_start(): Failed to read session data: files (path: /) in /home2/themedun/public_html/php/pruebas.php on line 8
+[12-Oct-2022 22:50:30 America/Boise] PHP Warning:  Undefined array key "test" in /home2/themedun/public_html/php/pruebas.php on line 9
+[12-Oct-2022 22:50:36 America/Boise] PHP Warning:  session_start(): open(//sess_7a97dbcee976e815191d3f89d79282b0, O_RDWR) failed: Permission denied (13) in /home2/themedun/public_html/php/pruebas2.php on line 9
+[12-Oct-2022 22:50:36 America/Boise] PHP Warning:  session_start(): Failed to read session data: files (path: /) in /home2/themedun/public_html/php/pruebas2.php on line 9
+[12-Oct-2022 22:51:00 America/Boise] PHP Warning:  session_start(): open(//sess_05cfaab992112087afcc1504cff15186, O_RDWR) failed: Permission denied (13) in /home2/themedun/public_html/php/pruebas2.php on line 9
+[12-Oct-2022 22:51:00 America/Boise] PHP Warning:  session_start(): Failed to read session data: files (path: /) in /home2/themedun/public_html/php/pruebas2.php on line 9
+[12-Oct-2022 22:51:18 America/Boise] PHP Warning:  session_start(): open(//sess_7a97dbcee976e815191d3f89d79282b0, O_RDWR) failed: Permission denied (13) in /home2/themedun/public_html/php/pruebas2.php on line 9
+[12-Oct-2022 22:51:18 America/Boise] PHP Warning:  session_start(): Failed to read session data: files (path: /) in /home2/themedun/public_html/php/pruebas2.php on line 9
+[12-Oct-2022 22:51:33 America/Boise] PHP Warning:  session_start(): open(//sess_7a97dbcee976e815191d3f89d79282b0, O_RDWR) failed: Permission denied (13) in /home2/themedun/public_html/php/pruebas2.php on line 9
+[12-Oct-2022 22:51:33 America/Boise] PHP Warning:  session_start(): Failed to read session data: files (path: /) in /home2/themedun/public_html/php/pruebas2.php on line 9
+[12-Oct-2022 22:57:41 America/Boise] PHP Warning:  Undefined array key "test" in /home2/themedun/public_html/php/pruebas.php on line 5
+[12-Oct-2022 22:57:50 America/Boise] PHP Warning:  Undefined array key "test" in /home2/themedun/public_html/php/pruebas.php on line 5
+[12-Oct-2022 22:57:51 America/Boise] PHP Warning:  Undefined array key "test" in /home2/themedun/public_html/php/pruebas.php on line 5
+[12-Oct-2022 22:58:36 America/Boise] PHP Warning:  Undefined array key "test" in /home2/themedun/public_html/php/pruebas.php on line 5
+[12-Oct-2022 22:59:43 America/Boise] PHP Warning:  Undefined array key "test" in /home2/themedun/public_html/php/pruebas.php on line 5
+[12-Oct-2022 22:59:54 America/Boise] PHP Warning:  Undefined array key "test" in /home2/themedun/public_html/php/pruebas.php on line 5
+[12-Oct-2022 22:59:55 America/Boise] PHP Warning:  Undefined array key "test" in /home2/themedun/public_html/php/pruebas.php on line 5
+[12-Oct-2022 23:00:01 America/Boise] PHP Warning:  Undefined array key "test" in /home2/themedun/public_html/php/pruebas.php on line 5
+[12-Oct-2022 23:00:48 America/Boise] PHP Warning:  Undefined array key "test" in /home2/themedun/public_html/php/pruebas.php on line 5
+[12-Oct-2022 23:00:49 America/Boise] PHP Warning:  Undefined array key "test" in /home2/themedun/public_html/php/pruebas.php on line 5
+[12-Oct-2022 23:01:46 America/Boise] PHP Warning:  Undefined array key "test" in /home2/themedun/public_html/php/pruebas.php on line 5
+[12-Oct-2022 23:01:56 America/Boise] PHP Warning:  Undefined array key "test" in /home2/themedun/public_html/php/pruebas.php on line 5
+[12-Oct-2022 23:01:57 America/Boise] PHP Warning:  Undefined array key "test" in /home2/themedun/public_html/php/pruebas.php on line 5
+[12-Oct-2022 23:02:13 America/Boise] PHP Warning:  Undefined array key "test" in /home2/themedun/public_html/php/pruebas.php on line 5
+[12-Oct-2022 23:02:14 America/Boise] PHP Warning:  Undefined array key "test" in /home2/themedun/public_html/php/pruebas.php on line 5
+[12-Oct-2022 23:02:25 America/Boise] PHP Warning:  Undefined array key "test" in /home2/themedun/public_html/php/pruebas.php on line 5
+[12-Oct-2022 23:02:36 America/Boise] PHP Warning:  Undefined array key "test" in /home2/themedun/public_html/php/pruebas.php on line 5
+[12-Oct-2022 23:02:37 America/Boise] PHP Warning:  Undefined array key "test" in /home2/themedun/public_html/php/pruebas.php on line 5
+[12-Oct-2022 23:02:51 America/Boise] PHP Warning:  Undefined array key "test" in /home2/themedun/public_html/php/pruebas.php on line 5
+[12-Oct-2022 23:03:13 America/Boise] PHP Warning:  Undefined array key "test" in /home2/themedun/public_html/php/pruebas.php on line 5
+[12-Oct-2022 23:03:16 America/Boise] PHP Parse error:  syntax error, unexpected token ";", expecting ")" in /home2/themedun/public_html/php/pruebas2.php on line 3
+[12-Oct-2022 23:03:22 America/Boise] PHP Parse error:  syntax error, unexpected token ";", expecting ")" in /home2/themedun/public_html/php/pruebas2.php on line 3
+[12-Oct-2022 23:04:16 America/Boise] PHP Parse error:  syntax error, unexpected token ";", expecting ")" in /home2/themedun/public_html/php/pruebas2.php on line 3
+[12-Oct-2022 23:04:17 America/Boise] PHP Parse error:  syntax error, unexpected token ";", expecting ")" in /home2/themedun/public_html/php/pruebas2.php on line 3
+[12-Oct-2022 23:04:43 America/Boise] PHP Parse error:  syntax error, unexpected token ";", expecting ")" in /home2/themedun/public_html/php/pruebas2.php on line 3
+[12-Oct-2022 23:05:06 America/Boise] PHP Parse error:  syntax error, unexpected token ";", expecting ")" in /home2/themedun/public_html/php/pruebas2.php on line 3
+[12-Oct-2022 23:05:13 America/Boise] PHP Warning:  Undefined array key "test" in /home2/themedun/public_html/php/pruebas.php on line 5
+[12-Oct-2022 23:05:17 America/Boise] PHP Parse error:  syntax error, unexpected token ";", expecting ")" in /home2/themedun/public_html/php/pruebas2.php on line 3
+[12-Oct-2022 23:05:33 America/Boise] PHP Parse error:  syntax error, unexpected token ";", expecting ")" in /home2/themedun/public_html/php/pruebas2.php on line 3
+[12-Oct-2022 23:05:34 America/Boise] PHP Warning:  Undefined array key "test" in /home2/themedun/public_html/php/pruebas.php on line 5
+[12-Oct-2022 23:07:26 America/Boise] PHP Warning:  Undefined array key "test" in /home2/themedun/public_html/php/pruebas.php on line 5
+[12-Oct-2022 23:07:59 America/Boise] PHP Warning:  Undefined array key "test" in /home2/themedun/public_html/php/pruebas.php on line 5
+[12-Oct-2022 23:08:02 America/Boise] PHP Parse error:  syntax error, unexpected token ";", expecting ")" in /home2/themedun/public_html/php/pruebas2.php on line 3
+[12-Oct-2022 23:08:06 America/Boise] PHP Parse error:  syntax error, unexpected token ";", expecting ")" in /home2/themedun/public_html/php/pruebas2.php on line 3
+[12-Oct-2022 23:08:57 America/Boise] PHP Warning:  Undefined array key "test" in /home2/themedun/public_html/php/pruebas.php on line 5
+[12-Oct-2022 23:08:59 America/Boise] PHP Warning:  Undefined array key "test" in /home2/themedun/public_html/php/pruebas.php on line 5
+[12-Oct-2022 23:09:00 America/Boise] PHP Warning:  Undefined array key "test" in /home2/themedun/public_html/php/pruebas.php on line 5
+[12-Oct-2022 23:09:01 America/Boise] PHP Warning:  Undefined array key "test" in /home2/themedun/public_html/php/pruebas.php on line 5
+[12-Oct-2022 23:09:01 America/Boise] PHP Warning:  Undefined array key "test" in /home2/themedun/public_html/php/pruebas.php on line 5
+[12-Oct-2022 23:09:23 America/Boise] PHP Warning:  Undefined array key "test" in /home2/themedun/public_html/php/pruebas.php on line 5
+[12-Oct-2022 23:09:43 America/Boise] PHP Warning:  Undefined array key "test" in /home2/themedun/public_html/php/pruebas.php on line 5
+[12-Oct-2022 23:09:58 America/Boise] PHP Warning:  Undefined array key "test" in /home2/themedun/public_html/php/pruebas.php on line 5
+[12-Oct-2022 23:10:22 America/Boise] PHP Warning:  Undefined array key "test" in /home2/themedun/public_html/php/pruebas.php on line 5
+[12-Oct-2022 23:10:23 America/Boise] PHP Warning:  Undefined array key "test" in /home2/themedun/public_html/php/pruebas.php on line 5
+[12-Oct-2022 23:10:56 America/Boise] PHP Warning:  Undefined array key "test" in /home2/themedun/public_html/php/pruebas.php on line 5
+[12-Oct-2022 23:10:57 America/Boise] PHP Warning:  Undefined array key "test" in /home2/themedun/public_html/php/pruebas.php on line 5
+[12-Oct-2022 23:10:58 America/Boise] PHP Warning:  Undefined array key "test" in /home2/themedun/public_html/php/pruebas.php on line 5
+[12-Oct-2022 23:12:09 America/Boise] PHP Warning:  Undefined array key "test" in /home2/themedun/public_html/php/pruebas.php on line 5
+[12-Oct-2022 23:12:40 America/Boise] PHP Warning:  Undefined array key "test" in /home2/themedun/public_html/php/pruebas.php on line 5
+[12-Oct-2022 23:13:13 America/Boise] PHP Warning:  Undefined array key "test" in /home2/themedun/public_html/php/pruebas.php on line 5
+[12-Oct-2022 23:14:18 America/Boise] PHP Warning:  Undefined array key "test" in /home2/themedun/public_html/php/pruebas.php on line 5
+[12-Oct-2022 23:14:46 America/Boise] PHP Warning:  Undefined array key "test" in /home2/themedun/public_html/php/pruebas.php on line 5
+[12-Oct-2022 23:14:59 America/Boise] PHP Warning:  Undefined array key "test" in /home2/themedun/public_html/php/pruebas.php on line 5
+[12-Oct-2022 23:46:49 America/Boise] PHP Warning:  Undefined array key "test" in /home2/themedun/public_html/php/pruebas.php on line 5
+[13-Oct-2022 10:44:15 America/Boise] PHP Warning:  Undefined array key "test" in /home2/themedun/public_html/php/pruebas.php on line 5
+[18-Oct-2022 07:58:39 America/Boise] PHP Warning:  Undefined array key "correo" in /home2/themedun/public_html/php/validarLogin.php on line 4
+[18-Oct-2022 11:08:06 America/Boise] PHP Warning:  Undefined array key "test" in /home2/themedun/public_html/php/pruebas.php on line 5
+[22-Oct-2022 07:41:23 America/Boise] PHP Warning:  Undefined array key "correo" in /home2/themedun/public_html/php/validarLogin.php on line 4
+[22-Oct-2022 22:04:04 America/Boise] PHP Warning:  Undefined array key "nombres" in /home2/themedun/public_html/php/guardarReclamo.php on line 5
+[22-Oct-2022 22:04:04 America/Boise] PHP Warning:  Undefined array key "apellidos" in /home2/themedun/public_html/php/guardarReclamo.php on line 6
+[22-Oct-2022 22:04:04 America/Boise] PHP Warning:  Undefined array key "documento" in /home2/themedun/public_html/php/guardarReclamo.php on line 7
+[22-Oct-2022 22:04:04 America/Boise] PHP Warning:  Undefined array key "numdoc" in /home2/themedun/public_html/php/guardarReclamo.php on line 8
+[22-Oct-2022 22:04:04 America/Boise] PHP Warning:  Undefined array key "domicilio" in /home2/themedun/public_html/php/guardarReclamo.php on line 9
+[22-Oct-2022 22:04:04 America/Boise] PHP Warning:  Undefined array key "telefono" in /home2/themedun/public_html/php/guardarReclamo.php on line 10
+[22-Oct-2022 22:04:04 America/Boise] PHP Warning:  Undefined array key "correo" in /home2/themedun/public_html/php/guardarReclamo.php on line 11
+[22-Oct-2022 22:04:04 America/Boise] PHP Warning:  Undefined array key "nombrestut" in /home2/themedun/public_html/php/guardarReclamo.php on line 12
+[22-Oct-2022 22:04:04 America/Boise] PHP Warning:  Undefined array key "apellidostut" in /home2/themedun/public_html/php/guardarReclamo.php on line 13
+[22-Oct-2022 22:04:04 America/Boise] PHP Warning:  Undefined array key "documentotut" in /home2/themedun/public_html/php/guardarReclamo.php on line 14
+[22-Oct-2022 22:04:04 America/Boise] PHP Warning:  Undefined array key "numdoctut" in /home2/themedun/public_html/php/guardarReclamo.php on line 15
+[22-Oct-2022 22:04:04 America/Boise] PHP Warning:  Undefined array key "domiciliotut" in /home2/themedun/public_html/php/guardarReclamo.php on line 16
+[22-Oct-2022 22:04:04 America/Boise] PHP Warning:  Undefined array key "telefonotut" in /home2/themedun/public_html/php/guardarReclamo.php on line 17
+[22-Oct-2022 22:04:04 America/Boise] PHP Warning:  Undefined array key "correotut" in /home2/themedun/public_html/php/guardarReclamo.php on line 18
+[22-Oct-2022 22:04:04 America/Boise] PHP Warning:  Undefined array key "tipobien" in /home2/themedun/public_html/php/guardarReclamo.php on line 19
+[22-Oct-2022 22:04:04 America/Boise] PHP Warning:  Undefined array key "monto" in /home2/themedun/public_html/php/guardarReclamo.php on line 20
+[22-Oct-2022 22:04:04 America/Boise] PHP Warning:  Undefined array key "numcita" in /home2/themedun/public_html/php/guardarReclamo.php on line 21
+[22-Oct-2022 22:04:04 America/Boise] PHP Warning:  Undefined array key "descripcion" in /home2/themedun/public_html/php/guardarReclamo.php on line 22
+[22-Oct-2022 22:04:04 America/Boise] PHP Warning:  Undefined array key "reclamo" in /home2/themedun/public_html/php/guardarReclamo.php on line 23
+[22-Oct-2022 22:04:04 America/Boise] PHP Warning:  Undefined array key "detalle" in /home2/themedun/public_html/php/guardarReclamo.php on line 24
+[22-Oct-2022 22:04:04 America/Boise] PHP Warning:  Undefined array key "pedido" in /home2/themedun/public_html/php/guardarReclamo.php on line 25
+[22-Oct-2022 23:04:04 America/Lima] PHP Warning:  Undefined array key "evidencia" in /home2/themedun/public_html/php/guardarReclamo.php on line 31
+[22-Oct-2022 23:04:04 America/Lima] PHP Warning:  Trying to access array offset on value of type null in /home2/themedun/public_html/php/guardarReclamo.php on line 31
+[22-Oct-2022 23:04:04 America/Lima] PHP Warning:  Undefined array key "evidencia" in /home2/themedun/public_html/php/guardarReclamo.php on line 32
+[22-Oct-2022 23:04:04 America/Lima] PHP Warning:  Trying to access array offset on value of type null in /home2/themedun/public_html/php/guardarReclamo.php on line 32
+[25-Oct-2022 10:57:49 America/Boise] PHP Warning:  Undefined array key "codigo" in /home2/themedun/public_html/php/codigoReclamacion.php on line 5
+[25-Oct-2022 12:21:17 America/Boise] PHP Warning:  Undefined array key "correo" in /home2/themedun/public_html/php/validarLogin.php on line 4
+[26-Oct-2022 18:56:36 America/Boise] PHP Warning:  Undefined array key "contraseè´–a" in /home2/themedun/public_html/php/cambiarContrasena.php on line 10
+[26-Oct-2022 18:58:40 America/Boise] PHP Warning:  Undefined array key "contraseè´–a" in /home2/themedun/public_html/php/cambiarContrasena.php on line 10
+[26-Oct-2022 19:06:41 America/Boise] PHP Warning:  Undefined array key "contraseè´–a" in /home2/themedun/public_html/php/cambiarContrasena.php on line 10
+[26-Oct-2022 19:20:05 America/Boise] PHP Warning:  Undefined array key "contraseè´–a" in /home2/themedun/public_html/php/cambiarContrase√±a.php on line 10
+[26-Oct-2022 19:23:57 America/Boise] PHP Warning:  Undefined array key "contraseÂçòa" in /home2/themedun/public_html/php/cambiarContrase√±a.php on line 10
+[26-Oct-2022 19:54:39 America/Boise] PHP Warning:  Undefined array key "contraseÂçòa" in /home2/themedun/public_html/php/cambiarContrase√±a.php on line 10
+[26-Oct-2022 19:57:38 America/Boise] PHP Warning:  Undefined array key "contraseÂçòa" in /home2/themedun/public_html/php/cambiarContrase√±a.php on line 10
+[03-Nov-2022 18:59:32 America/Boise] PHP Warning:  Undefined array key "correo" in /home2/themedun/public_html/php/validarLogin.php on line 4
+[03-Nov-2022 20:33:51 America/Boise] PHP Warning:  Undefined array key "correo" in /home2/themedun/public_html/php/validarLogin.php on line 4
+[05-Nov-2022 12:29:42 America/Boise] PHP Warning:  Undefined array key "correo" in /home2/themedun/public_html/php/validarLogin.php on line 4
+[18-Nov-2022 23:48:53 America/Boise] PHP Warning:  Undefined array key "imc" in /home2/themedun/public_html/php/guardarHistoria.php on line 21
+[19-Nov-2022 00:18:10 America/Boise] PHP Warning:  Undefined array key "imc" in /home2/themedun/public_html/php/guardarHistoria.php on line 21
+[19-Nov-2022 00:22:51 America/Boise] PHP Warning:  Undefined array key "imc" in /home2/themedun/public_html/php/guardarHistoria.php on line 21
+[20-Nov-2022 19:24:44 America/Boise] PHP Warning:  Undefined array key "tiempoenf" in /home2/themedun/public_html/php/guardarHistoria.php on line 5
+[20-Nov-2022 19:24:44 America/Boise] PHP Warning:  Undefined array key "inicio" in /home2/themedun/public_html/php/guardarHistoria.php on line 6
+[20-Nov-2022 19:24:44 America/Boise] PHP Warning:  Undefined array key "curso" in /home2/themedun/public_html/php/guardarHistoria.php on line 7
+[20-Nov-2022 19:24:44 America/Boise] PHP Warning:  Undefined array key "sintomas" in /home2/themedun/public_html/php/guardarHistoria.php on line 8
+[20-Nov-2022 19:24:44 America/Boise] PHP Warning:  Undefined array key "relato" in /home2/themedun/public_html/php/guardarHistoria.php on line 9
+[20-Nov-2022 19:24:44 America/Boise] PHP Warning:  Undefined array key "anthf" in /home2/themedun/public_html/php/guardarHistoria.php on line 10
+[20-Nov-2022 19:24:44 America/Boise] PHP Warning:  Undefined array key "antpp" in /home2/themedun/public_html/php/guardarHistoria.php on line 11
+[20-Nov-2022 19:24:44 America/Boise] PHP Warning:  Undefined array key "medicamentos" in /home2/themedun/public_html/php/guardarHistoria.php on line 12
+[20-Nov-2022 19:24:44 America/Boise] PHP Warning:  Undefined array key "alergias" in /home2/themedun/public_html/php/guardarHistoria.php on line 13
+[20-Nov-2022 19:24:44 America/Boise] PHP Warning:  Undefined array key "freccar" in /home2/themedun/public_html/php/guardarHistoria.php on line 14
+[20-Nov-2022 19:24:44 America/Boise] PHP Warning:  Undefined array key "frecres" in /home2/themedun/public_html/php/guardarHistoria.php on line 15
+[20-Nov-2022 19:24:44 America/Boise] PHP Warning:  Undefined array key "sato" in /home2/themedun/public_html/php/guardarHistoria.php on line 16
+[20-Nov-2022 19:24:44 America/Boise] PHP Warning:  Undefined array key "presion" in /home2/themedun/public_html/php/guardarHistoria.php on line 17
+[20-Nov-2022 19:24:44 America/Boise] PHP Warning:  Undefined array key "temperatura" in /home2/themedun/public_html/php/guardarHistoria.php on line 18
+[20-Nov-2022 19:24:44 America/Boise] PHP Warning:  Undefined array key "peso" in /home2/themedun/public_html/php/guardarHistoria.php on line 19
+[20-Nov-2022 19:24:44 America/Boise] PHP Warning:  Undefined array key "talla" in /home2/themedun/public_html/php/guardarHistoria.php on line 20
+[20-Nov-2022 19:24:44 America/Boise] PHP Warning:  Undefined array key "imc" in /home2/themedun/public_html/php/guardarHistoria.php on line 21
+[20-Nov-2022 19:24:44 America/Boise] PHP Warning:  Undefined array key "evalfisica" in /home2/themedun/public_html/php/guardarHistoria.php on line 22
+[20-Nov-2022 19:24:44 America/Boise] PHP Warning:  Undefined array key "prures" in /home2/themedun/public_html/php/guardarHistoria.php on line 23
+[20-Nov-2022 19:24:44 America/Boise] PHP Warning:  Undefined array key "diagpre" in /home2/themedun/public_html/php/guardarHistoria.php on line 24
+[20-Nov-2022 19:24:44 America/Boise] PHP Warning:  Undefined array key "diagdef" in /home2/themedun/public_html/php/guardarHistoria.php on line 25
+[20-Nov-2022 19:24:44 America/Boise] PHP Warning:  Undefined array key "tratfarm" in /home2/themedun/public_html/php/guardarHistoria.php on line 26
+[20-Nov-2022 19:24:44 America/Boise] PHP Warning:  Undefined array key "indicec" in /home2/themedun/public_html/php/guardarHistoria.php on line 27
+[20-Nov-2022 19:24:44 America/Boise] PHP Warning:  Undefined array key "indicesp" in /home2/themedun/public_html/php/guardarHistoria.php on line 28
+[20-Nov-2022 19:24:44 America/Boise] PHP Warning:  Undefined array key "txtarc" in /home2/themedun/public_html/php/guardarHistoria.php on line 29
+[20-Nov-2022 19:24:44 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home2/themedun/public_html/php/guardarHistoria.php on line 29
+[20-Nov-2022 19:24:44 America/Boise] PHP Warning:  Undefined array key "txtarc" in /home2/themedun/public_html/php/guardarHistoria.php on line 30
+[20-Nov-2022 19:24:44 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home2/themedun/public_html/php/guardarHistoria.php on line 30
+[20-Nov-2022 19:24:44 America/Boise] PHP Warning:  Undefined array key "txtgrabacion" in /home2/themedun/public_html/php/guardarHistoria.php on line 35
+[20-Nov-2022 19:24:44 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home2/themedun/public_html/php/guardarHistoria.php on line 35
+[20-Nov-2022 19:24:44 America/Boise] PHP Warning:  Undefined array key "txtgrabacion" in /home2/themedun/public_html/php/guardarHistoria.php on line 36
+[20-Nov-2022 19:24:44 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home2/themedun/public_html/php/guardarHistoria.php on line 36
+[21-Nov-2022 12:51:56 America/Boise] PHP Warning:  Undefined array key "anexouno" in /home2/themedun/public_html/php/editarAnexos.php on line 4
+[21-Nov-2022 12:51:56 America/Boise] PHP Warning:  Undefined array key "anexodos" in /home2/themedun/public_html/php/editarAnexos.php on line 5
+[21-Nov-2022 12:51:56 America/Boise] PHP Warning:  Undefined array key "anexotres" in /home2/themedun/public_html/php/editarAnexos.php on line 6
+[21-Nov-2022 12:51:56 America/Boise] PHP Warning:  Undefined array key "anexocuatro" in /home2/themedun/public_html/php/editarAnexos.php on line 7
+[21-Nov-2022 14:37:43 America/Boise] PHP Warning:  unlink(anexos/1310448550A1DNI 2.jpg): No such file or directory in /home2/themedun/public_html/php/editarAnexos.php on line 22
+[21-Nov-2022 14:45:11 America/Boise] PHP Warning:  unlink(../anexos/): Is a directory in /home2/themedun/public_html/php/editarAnexos.php on line 46
+[21-Nov-2022 15:08:15 America/Boise] PHP Warning:  Undefined array key "imc" in /home2/themedun/public_html/php/guardarHistoria.php on line 21
+[25-Nov-2022 20:38:19 America/Boise] PHP Warning:  Attempt to read property "num_rows" on bool in /home2/themedun/public_html/php/pruebas2.php on line 71
+[26-Nov-2022 09:52:41 America/Boise] PHP Warning:  Undefined array key "correo" in /home2/themedun/public_html/php/validarLogin.php on line 4
+[07-Dec-2022 02:14:18 America/Boise] PHP Warning:  Undefined array key "correo" in /home2/themedun/public_html/php/validarLogin.php on line 4
+[07-Dec-2022 23:11:34 America/Boise] PHP Warning:  Undefined array key "nombres" in /home2/themedun/public_html/php/guardarReclamo.php on line 5
+[07-Dec-2022 23:11:34 America/Boise] PHP Warning:  Undefined array key "apellidos" in /home2/themedun/public_html/php/guardarReclamo.php on line 6
+[07-Dec-2022 23:11:34 America/Boise] PHP Warning:  Undefined array key "documento" in /home2/themedun/public_html/php/guardarReclamo.php on line 7
+[07-Dec-2022 23:11:34 America/Boise] PHP Warning:  Undefined array key "numdoc" in /home2/themedun/public_html/php/guardarReclamo.php on line 8
+[07-Dec-2022 23:11:34 America/Boise] PHP Warning:  Undefined array key "domicilio" in /home2/themedun/public_html/php/guardarReclamo.php on line 9
+[07-Dec-2022 23:11:34 America/Boise] PHP Warning:  Undefined array key "telefono" in /home2/themedun/public_html/php/guardarReclamo.php on line 10
+[07-Dec-2022 23:11:34 America/Boise] PHP Warning:  Undefined array key "correo" in /home2/themedun/public_html/php/guardarReclamo.php on line 11
+[07-Dec-2022 23:11:34 America/Boise] PHP Warning:  Undefined array key "nombrestut" in /home2/themedun/public_html/php/guardarReclamo.php on line 12
+[07-Dec-2022 23:11:34 America/Boise] PHP Warning:  Undefined array key "apellidostut" in /home2/themedun/public_html/php/guardarReclamo.php on line 13
+[07-Dec-2022 23:11:34 America/Boise] PHP Warning:  Undefined array key "documentotut" in /home2/themedun/public_html/php/guardarReclamo.php on line 14
+[07-Dec-2022 23:11:34 America/Boise] PHP Warning:  Undefined array key "numdoctut" in /home2/themedun/public_html/php/guardarReclamo.php on line 15
+[07-Dec-2022 23:11:34 America/Boise] PHP Warning:  Undefined array key "domiciliotut" in /home2/themedun/public_html/php/guardarReclamo.php on line 16
+[07-Dec-2022 23:11:34 America/Boise] PHP Warning:  Undefined array key "telefonotut" in /home2/themedun/public_html/php/guardarReclamo.php on line 17
+[07-Dec-2022 23:11:34 America/Boise] PHP Warning:  Undefined array key "correotut" in /home2/themedun/public_html/php/guardarReclamo.php on line 18
+[07-Dec-2022 23:11:34 America/Boise] PHP Warning:  Undefined array key "tipobien" in /home2/themedun/public_html/php/guardarReclamo.php on line 19
+[07-Dec-2022 23:11:34 America/Boise] PHP Warning:  Undefined array key "monto" in /home2/themedun/public_html/php/guardarReclamo.php on line 20
+[07-Dec-2022 23:11:34 America/Boise] PHP Warning:  Undefined array key "numcita" in /home2/themedun/public_html/php/guardarReclamo.php on line 21
+[07-Dec-2022 23:11:34 America/Boise] PHP Warning:  Undefined array key "descripcion" in /home2/themedun/public_html/php/guardarReclamo.php on line 22
+[07-Dec-2022 23:11:34 America/Boise] PHP Warning:  Undefined array key "reclamo" in /home2/themedun/public_html/php/guardarReclamo.php on line 23
+[07-Dec-2022 23:11:34 America/Boise] PHP Warning:  Undefined array key "detalle" in /home2/themedun/public_html/php/guardarReclamo.php on line 24
+[07-Dec-2022 23:11:34 America/Boise] PHP Warning:  Undefined array key "pedido" in /home2/themedun/public_html/php/guardarReclamo.php on line 25
+[08-Dec-2022 01:11:34 America/Lima] PHP Warning:  Undefined array key "evidencia" in /home2/themedun/public_html/php/guardarReclamo.php on line 31
+[08-Dec-2022 01:11:34 America/Lima] PHP Warning:  Trying to access array offset on value of type null in /home2/themedun/public_html/php/guardarReclamo.php on line 31
+[08-Dec-2022 01:11:34 America/Lima] PHP Warning:  Undefined array key "evidencia" in /home2/themedun/public_html/php/guardarReclamo.php on line 32
+[08-Dec-2022 01:11:34 America/Lima] PHP Warning:  Trying to access array offset on value of type null in /home2/themedun/public_html/php/guardarReclamo.php on line 32
+[08-Dec-2022 10:13:44 America/Boise] PHP Warning:  Undefined array key "correo" in /home2/themedun/public_html/php/validarLogin.php on line 4
+[09-Dec-2022 00:28:08 America/Boise] PHP Warning:  Undefined array key "nombres" in /home2/themedun/public_html/php/guardarReclamo.php on line 5
+[09-Dec-2022 00:28:08 America/Boise] PHP Warning:  Undefined array key "apellidos" in /home2/themedun/public_html/php/guardarReclamo.php on line 6
+[09-Dec-2022 00:28:08 America/Boise] PHP Warning:  Undefined array key "documento" in /home2/themedun/public_html/php/guardarReclamo.php on line 7
+[09-Dec-2022 00:28:08 America/Boise] PHP Warning:  Undefined array key "numdoc" in /home2/themedun/public_html/php/guardarReclamo.php on line 8
+[09-Dec-2022 00:28:08 America/Boise] PHP Warning:  Undefined array key "domicilio" in /home2/themedun/public_html/php/guardarReclamo.php on line 9
+[09-Dec-2022 00:28:08 America/Boise] PHP Warning:  Undefined array key "telefono" in /home2/themedun/public_html/php/guardarReclamo.php on line 10
+[09-Dec-2022 00:28:08 America/Boise] PHP Warning:  Undefined array key "correo" in /home2/themedun/public_html/php/guardarReclamo.php on line 11
+[09-Dec-2022 00:28:08 America/Boise] PHP Warning:  Undefined array key "nombrestut" in /home2/themedun/public_html/php/guardarReclamo.php on line 12
+[09-Dec-2022 00:28:08 America/Boise] PHP Warning:  Undefined array key "apellidostut" in /home2/themedun/public_html/php/guardarReclamo.php on line 13
+[09-Dec-2022 00:28:08 America/Boise] PHP Warning:  Undefined array key "documentotut" in /home2/themedun/public_html/php/guardarReclamo.php on line 14
+[09-Dec-2022 00:28:08 America/Boise] PHP Warning:  Undefined array key "numdoctut" in /home2/themedun/public_html/php/guardarReclamo.php on line 15
+[09-Dec-2022 00:28:08 America/Boise] PHP Warning:  Undefined array key "domiciliotut" in /home2/themedun/public_html/php/guardarReclamo.php on line 16
+[09-Dec-2022 00:28:08 America/Boise] PHP Warning:  Undefined array key "telefonotut" in /home2/themedun/public_html/php/guardarReclamo.php on line 17
+[09-Dec-2022 00:28:08 America/Boise] PHP Warning:  Undefined array key "correotut" in /home2/themedun/public_html/php/guardarReclamo.php on line 18
+[09-Dec-2022 00:28:08 America/Boise] PHP Warning:  Undefined array key "tipobien" in /home2/themedun/public_html/php/guardarReclamo.php on line 19
+[09-Dec-2022 00:28:08 America/Boise] PHP Warning:  Undefined array key "monto" in /home2/themedun/public_html/php/guardarReclamo.php on line 20
+[09-Dec-2022 00:28:08 America/Boise] PHP Warning:  Undefined array key "numcita" in /home2/themedun/public_html/php/guardarReclamo.php on line 21
+[09-Dec-2022 00:28:08 America/Boise] PHP Warning:  Undefined array key "descripcion" in /home2/themedun/public_html/php/guardarReclamo.php on line 22
+[09-Dec-2022 00:28:08 America/Boise] PHP Warning:  Undefined array key "reclamo" in /home2/themedun/public_html/php/guardarReclamo.php on line 23
+[09-Dec-2022 00:28:08 America/Boise] PHP Warning:  Undefined array key "detalle" in /home2/themedun/public_html/php/guardarReclamo.php on line 24
+[09-Dec-2022 00:28:08 America/Boise] PHP Warning:  Undefined array key "pedido" in /home2/themedun/public_html/php/guardarReclamo.php on line 25
+[09-Dec-2022 02:28:08 America/Lima] PHP Warning:  Undefined array key "evidencia" in /home2/themedun/public_html/php/guardarReclamo.php on line 31
+[09-Dec-2022 02:28:08 America/Lima] PHP Warning:  Trying to access array offset on value of type null in /home2/themedun/public_html/php/guardarReclamo.php on line 31
+[09-Dec-2022 02:28:08 America/Lima] PHP Warning:  Undefined array key "evidencia" in /home2/themedun/public_html/php/guardarReclamo.php on line 32
+[09-Dec-2022 02:28:08 America/Lima] PHP Warning:  Trying to access array offset on value of type null in /home2/themedun/public_html/php/guardarReclamo.php on line 32
+[11-Dec-2022 09:31:13 America/Boise] PHP Warning:  Undefined array key "correo" in /home2/themedun/public_html/php/validarLogin.php on line 4
+[12-Dec-2022 15:32:42 America/Boise] PHP Fatal error:  Uncaught TypeError: Notificaciones::tiempoTranscurrido(): Return value must be of type string, none returned in /home2/themedun/public_html/php/classNotificaciones.php:45
+Stack trace:
+#0 /home2/themedun/public_html/php/classNotificaciones.php(123): Notificaciones->tiempoTranscurrido('2022-11-18 16:4...')
+#1 /home2/themedun/public_html/php/classNotificaciones.php(521): Notificaciones->listarNotificacionesPaciente()
+#2 {main}
+  thrown in /home2/themedun/public_html/php/classNotificaciones.php on line 45
+[12-Dec-2022 15:32:42 America/Boise] PHP Fatal error:  Uncaught TypeError: Notificaciones::tiempoTranscurrido(): Return value must be of type string, none returned in /home2/themedun/public_html/php/classNotificaciones.php:45
+Stack trace:
+#0 /home2/themedun/public_html/php/classNotificaciones.php(123): Notificaciones->tiempoTranscurrido('2022-11-18 16:4...')
+#1 /home2/themedun/public_html/php/classNotificaciones.php(521): Notificaciones->listarNotificacionesPaciente()
+#2 {main}
+  thrown in /home2/themedun/public_html/php/classNotificaciones.php on line 45
+[12-Dec-2022 15:32:43 America/Boise] PHP Fatal error:  Uncaught TypeError: Notificaciones::tiempoTranscurrido(): Return value must be of type string, none returned in /home2/themedun/public_html/php/classNotificaciones.php:45
+Stack trace:
+#0 /home2/themedun/public_html/php/classNotificaciones.php(123): Notificaciones->tiempoTranscurrido('2022-11-18 16:4...')
+#1 /home2/themedun/public_html/php/classNotificaciones.php(521): Notificaciones->listarNotificacionesPaciente()
+#2 {main}
+  thrown in /home2/themedun/public_html/php/classNotificaciones.php on line 45
+[12-Dec-2022 15:32:43 America/Boise] PHP Fatal error:  Uncaught TypeError: Notificaciones::tiempoTranscurrido(): Return value must be of type string, none returned in /home2/themedun/public_html/php/classNotificaciones.php:45
+Stack trace:
+#0 /home2/themedun/public_html/php/classNotificaciones.php(123): Notificaciones->tiempoTranscurrido('2022-11-18 16:4...')
+#1 /home2/themedun/public_html/php/classNotificaciones.php(521): Notificaciones->listarNotificacionesPaciente()
+#2 {main}
+  thrown in /home2/themedun/public_html/php/classNotificaciones.php on line 45
+[13-Dec-2022 02:32:39 America/Boise] PHP Warning:  Undefined array key "correo" in /home2/themedun/public_html/php/validarLogin.php on line 4
+[14-Dec-2022 18:11:21 America/Boise] PHP Warning:  Undefined array key "nombres" in /home2/themedun/public_html/php/guardarReclamo.php on line 5
+[14-Dec-2022 18:11:21 America/Boise] PHP Warning:  Undefined array key "apellidos" in /home2/themedun/public_html/php/guardarReclamo.php on line 6
+[14-Dec-2022 18:11:21 America/Boise] PHP Warning:  Undefined array key "documento" in /home2/themedun/public_html/php/guardarReclamo.php on line 7
+[14-Dec-2022 18:11:21 America/Boise] PHP Warning:  Undefined array key "numdoc" in /home2/themedun/public_html/php/guardarReclamo.php on line 8
+[14-Dec-2022 18:11:21 America/Boise] PHP Warning:  Undefined array key "domicilio" in /home2/themedun/public_html/php/guardarReclamo.php on line 9
+[14-Dec-2022 18:11:21 America/Boise] PHP Warning:  Undefined array key "telefono" in /home2/themedun/public_html/php/guardarReclamo.php on line 10
+[14-Dec-2022 18:11:21 America/Boise] PHP Warning:  Undefined array key "correo" in /home2/themedun/public_html/php/guardarReclamo.php on line 11
+[14-Dec-2022 18:11:21 America/Boise] PHP Warning:  Undefined array key "nombrestut" in /home2/themedun/public_html/php/guardarReclamo.php on line 12
+[14-Dec-2022 18:11:21 America/Boise] PHP Warning:  Undefined array key "apellidostut" in /home2/themedun/public_html/php/guardarReclamo.php on line 13
+[14-Dec-2022 18:11:21 America/Boise] PHP Warning:  Undefined array key "documentotut" in /home2/themedun/public_html/php/guardarReclamo.php on line 14
+[14-Dec-2022 18:11:21 America/Boise] PHP Warning:  Undefined array key "numdoctut" in /home2/themedun/public_html/php/guardarReclamo.php on line 15
+[14-Dec-2022 18:11:21 America/Boise] PHP Warning:  Undefined array key "domiciliotut" in /home2/themedun/public_html/php/guardarReclamo.php on line 16
+[14-Dec-2022 18:11:21 America/Boise] PHP Warning:  Undefined array key "telefonotut" in /home2/themedun/public_html/php/guardarReclamo.php on line 17
+[14-Dec-2022 18:11:21 America/Boise] PHP Warning:  Undefined array key "correotut" in /home2/themedun/public_html/php/guardarReclamo.php on line 18
+[14-Dec-2022 18:11:21 America/Boise] PHP Warning:  Undefined array key "tipobien" in /home2/themedun/public_html/php/guardarReclamo.php on line 19
+[14-Dec-2022 18:11:21 America/Boise] PHP Warning:  Undefined array key "monto" in /home2/themedun/public_html/php/guardarReclamo.php on line 20
+[14-Dec-2022 18:11:21 America/Boise] PHP Warning:  Undefined array key "numcita" in /home2/themedun/public_html/php/guardarReclamo.php on line 21
+[14-Dec-2022 18:11:21 America/Boise] PHP Warning:  Undefined array key "descripcion" in /home2/themedun/public_html/php/guardarReclamo.php on line 22
+[14-Dec-2022 18:11:21 America/Boise] PHP Warning:  Undefined array key "reclamo" in /home2/themedun/public_html/php/guardarReclamo.php on line 23
+[14-Dec-2022 18:11:21 America/Boise] PHP Warning:  Undefined array key "detalle" in /home2/themedun/public_html/php/guardarReclamo.php on line 24
+[14-Dec-2022 18:11:21 America/Boise] PHP Warning:  Undefined array key "pedido" in /home2/themedun/public_html/php/guardarReclamo.php on line 25
+[14-Dec-2022 20:11:21 America/Lima] PHP Warning:  Undefined array key "evidencia" in /home2/themedun/public_html/php/guardarReclamo.php on line 31
+[14-Dec-2022 20:11:21 America/Lima] PHP Warning:  Trying to access array offset on value of type null in /home2/themedun/public_html/php/guardarReclamo.php on line 31
+[14-Dec-2022 20:11:21 America/Lima] PHP Warning:  Undefined array key "evidencia" in /home2/themedun/public_html/php/guardarReclamo.php on line 32
+[14-Dec-2022 20:11:21 America/Lima] PHP Warning:  Trying to access array offset on value of type null in /home2/themedun/public_html/php/guardarReclamo.php on line 32
+[16-Dec-2022 16:51:51 America/Boise] PHP Warning:  Undefined array key "codigo" in /home2/themedun/public_html/php/codigoReclamacion.php on line 5
+[17-Dec-2022 19:26:47 America/Boise] PHP Warning:  require_once(php-jwt-master/src/BeforeValidException.php): Failed to open stream: No such file or directory in /home2/themedun/public_html/php/Zoom_Api.php on line 3
+[17-Dec-2022 19:26:47 America/Boise] PHP Fatal error:  Uncaught Error: Failed opening required 'php-jwt-master/src/BeforeValidException.php' (include_path='.:/opt/cpanel/ea-php80/root/usr/share/pear') in /home2/themedun/public_html/php/Zoom_Api.php:3
+Stack trace:
+#0 /home2/themedun/public_html/php/programarCita.php(16): include_once()
+#1 {main}
+  thrown in /home2/themedun/public_html/php/Zoom_Api.php on line 3
+[17-Dec-2022 19:38:26 America/Boise] PHP Warning:  require_once(php-jwt-master/src/BeforeValidException.php): Failed to open stream: No such file or directory in /home2/themedun/public_html/php/Zoom_Api.php on line 3
+[17-Dec-2022 19:38:26 America/Boise] PHP Fatal error:  Uncaught Error: Failed opening required 'php-jwt-master/src/BeforeValidException.php' (include_path='.:/opt/cpanel/ea-php80/root/usr/share/pear') in /home2/themedun/public_html/php/Zoom_Api.php:3
+Stack trace:
+#0 /home2/themedun/public_html/php/programarCita.php(16): include_once()
+#1 {main}
+  thrown in /home2/themedun/public_html/php/Zoom_Api.php on line 3
+[17-Dec-2022 19:44:39 America/Boise] PHP Warning:  require_once(php-jwt-master/src/BeforeValidException.php): Failed to open stream: No such file or directory in /home2/themedun/public_html/php/Zoom_Api.php on line 3
+[17-Dec-2022 19:44:39 America/Boise] PHP Fatal error:  Uncaught Error: Failed opening required 'php-jwt-master/src/BeforeValidException.php' (include_path='.:/opt/cpanel/ea-php80/root/usr/share/pear') in /home2/themedun/public_html/php/Zoom_Api.php:3
+Stack trace:
+#0 /home2/themedun/public_html/php/programarCita.php(16): include_once()
+#1 {main}
+  thrown in /home2/themedun/public_html/php/Zoom_Api.php on line 3
+[17-Dec-2022 19:46:28 America/Boise] PHP Warning:  require_once(php-jwt-master/src/BeforeValidException.php): Failed to open stream: No such file or directory in /home2/themedun/public_html/php/Zoom_Api.php on line 3
+[17-Dec-2022 19:46:28 America/Boise] PHP Fatal error:  Uncaught Error: Failed opening required 'php-jwt-master/src/BeforeValidException.php' (include_path='.:/opt/cpanel/ea-php80/root/usr/share/pear') in /home2/themedun/public_html/php/Zoom_Api.php:3
+Stack trace:
+#0 /home2/themedun/public_html/php/programarCita.php(16): include_once()
+#1 {main}
+  thrown in /home2/themedun/public_html/php/Zoom_Api.php on line 3
+[17-Dec-2022 19:49:05 America/Boise] PHP Warning:  require_once(php-jwt-master/src/BeforeValidException.php): Failed to open stream: No such file or directory in /home2/themedun/public_html/php/Zoom_Api.php on line 3
+[17-Dec-2022 19:49:05 America/Boise] PHP Fatal error:  Uncaught Error: Failed opening required 'php-jwt-master/src/BeforeValidException.php' (include_path='.:/opt/cpanel/ea-php80/root/usr/share/pear') in /home2/themedun/public_html/php/Zoom_Api.php:3
+Stack trace:
+#0 /home2/themedun/public_html/php/programarCita.php(17): include_once()
+#1 {main}
+  thrown in /home2/themedun/public_html/php/Zoom_Api.php on line 3
+[17-Dec-2022 19:55:37 America/Boise] PHP Warning:  require_once(php-jwt-master/src/BeforeValidException.php): Failed to open stream: No such file or directory in /home2/themedun/public_html/php/Zoom_Api.php on line 3
+[17-Dec-2022 19:55:37 America/Boise] PHP Fatal error:  Uncaught Error: Failed opening required 'php-jwt-master/src/BeforeValidException.php' (include_path='.:/opt/cpanel/ea-php80/root/usr/share/pear') in /home2/themedun/public_html/php/Zoom_Api.php:3
+Stack trace:
+#0 /home2/themedun/public_html/php/programarCita.php(17): include_once()
+#1 {main}
+  thrown in /home2/themedun/public_html/php/Zoom_Api.php on line 3
+[17-Dec-2022 19:58:48 America/Boise] PHP Warning:  require_once(php-jwt-master/src/BeforeValidException.php): Failed to open stream: No such file or directory in /home2/themedun/public_html/php/Zoom_Api.php on line 3
+[17-Dec-2022 19:58:48 America/Boise] PHP Fatal error:  Uncaught Error: Failed opening required 'php-jwt-master/src/BeforeValidException.php' (include_path='.:/opt/cpanel/ea-php80/root/usr/share/pear') in /home2/themedun/public_html/php/Zoom_Api.php:3
+Stack trace:
+#0 /home2/themedun/public_html/php/programarCita.php(17): include_once()
+#1 {main}
+  thrown in /home2/themedun/public_html/php/Zoom_Api.php on line 3
+[17-Dec-2022 21:16:27 America/Boise] PHP Warning:  require_once(php-jwt-master/src/BeforeValidException.php): Failed to open stream: No such file or directory in /home2/themedun/public_html/php/Zoom_Api.php on line 3
+[17-Dec-2022 21:16:27 America/Boise] PHP Fatal error:  Uncaught Error: Failed opening required 'php-jwt-master/src/BeforeValidException.php' (include_path='.:/opt/cpanel/ea-php80/root/usr/share/pear') in /home2/themedun/public_html/php/Zoom_Api.php:3
+Stack trace:
+#0 /home2/themedun/public_html/php/programarCita.php(17): include_once()
+#1 {main}
+  thrown in /home2/themedun/public_html/php/Zoom_Api.php on line 3
+[17-Dec-2022 21:19:04 America/Boise] PHP Warning:  require_once(php-jwt-master/src/BeforeValidException.php): Failed to open stream: No such file or directory in /home2/themedun/public_html/php/Zoom_Api.php on line 3
+[17-Dec-2022 21:19:04 America/Boise] PHP Fatal error:  Uncaught Error: Failed opening required 'php-jwt-master/src/BeforeValidException.php' (include_path='.:/opt/cpanel/ea-php80/root/usr/share/pear') in /home2/themedun/public_html/php/Zoom_Api.php:3
+Stack trace:
+#0 /home2/themedun/public_html/php/programarCita.php(17): include_once()
+#1 {main}
+  thrown in /home2/themedun/public_html/php/Zoom_Api.php on line 3
+[17-Dec-2022 21:21:36 America/Boise] PHP Warning:  require_once(php-jwt-master/src/BeforeValidException.php): Failed to open stream: No such file or directory in /home2/themedun/public_html/php/Zoom_Api.php on line 3
+[17-Dec-2022 21:21:36 America/Boise] PHP Fatal error:  Uncaught Error: Failed opening required 'php-jwt-master/src/BeforeValidException.php' (include_path='.:/opt/cpanel/ea-php80/root/usr/share/pear') in /home2/themedun/public_html/php/Zoom_Api.php:3
+Stack trace:
+#0 /home2/themedun/public_html/php/programarCita.php(17): include_once()
+#1 {main}
+  thrown in /home2/themedun/public_html/php/Zoom_Api.php on line 3
+[17-Dec-2022 21:25:19 America/Boise] PHP Warning:  require_once(php-jwt-master/src/BeforeValidException.php): Failed to open stream: No such file or directory in /home2/themedun/public_html/php/Zoom_Api.php on line 3
+[17-Dec-2022 21:25:19 America/Boise] PHP Fatal error:  Uncaught Error: Failed opening required 'php-jwt-master/src/BeforeValidException.php' (include_path='.:/opt/cpanel/ea-php80/root/usr/share/pear') in /home2/themedun/public_html/php/Zoom_Api.php:3
+Stack trace:
+#0 /home2/themedun/public_html/php/programarCita.php(17): include_once()
+#1 {main}
+  thrown in /home2/themedun/public_html/php/Zoom_Api.php on line 3
+[17-Dec-2022 21:26:01 America/Boise] PHP Warning:  require_once(php-jwt-master/src/BeforeValidException.php): Failed to open stream: No such file or directory in /home2/themedun/public_html/php/Zoom_Api.php on line 3
+[17-Dec-2022 21:26:01 America/Boise] PHP Fatal error:  Uncaught Error: Failed opening required 'php-jwt-master/src/BeforeValidException.php' (include_path='.:/opt/cpanel/ea-php80/root/usr/share/pear') in /home2/themedun/public_html/php/Zoom_Api.php:3
+Stack trace:
+#0 /home2/themedun/public_html/php/programarCita.php(17): include_once()
+#1 {main}
+  thrown in /home2/themedun/public_html/php/Zoom_Api.php on line 3
+[17-Dec-2022 21:27:25 America/Boise] PHP Warning:  require_once(php-jwt-master/src/BeforeValidException.php): Failed to open stream: No such file or directory in /home2/themedun/public_html/php/Zoom_Api.php on line 3
+[17-Dec-2022 21:27:25 America/Boise] PHP Fatal error:  Uncaught Error: Failed opening required 'php-jwt-master/src/BeforeValidException.php' (include_path='.:/opt/cpanel/ea-php80/root/usr/share/pear') in /home2/themedun/public_html/php/Zoom_Api.php:3
+Stack trace:
+#0 /home2/themedun/public_html/php/programarCita.php(17): include_once()
+#1 {main}
+  thrown in /home2/themedun/public_html/php/Zoom_Api.php on line 3
+[17-Dec-2022 21:29:04 America/Boise] PHP Warning:  require_once(php-jwt-master/src/BeforeValidException.php): Failed to open stream: No such file or directory in /home2/themedun/public_html/php/Zoom_Api.php on line 3
+[17-Dec-2022 21:29:04 America/Boise] PHP Fatal error:  Uncaught Error: Failed opening required 'php-jwt-master/src/BeforeValidException.php' (include_path='.:/opt/cpanel/ea-php80/root/usr/share/pear') in /home2/themedun/public_html/php/Zoom_Api.php:3
+Stack trace:
+#0 /home2/themedun/public_html/php/programarCita.php(17): include_once()
+#1 {main}
+  thrown in /home2/themedun/public_html/php/Zoom_Api.php on line 3
+[17-Dec-2022 21:30:03 America/Boise] PHP Warning:  Undefined array key "idPay" in /home2/themedun/public_html/php/programarCita.php on line 9
+[17-Dec-2022 21:30:03 America/Boise] PHP Warning:  require_once(php-jwt-master/src/BeforeValidException.php): Failed to open stream: No such file or directory in /home2/themedun/public_html/php/Zoom_Api.php on line 3
+[17-Dec-2022 21:30:03 America/Boise] PHP Fatal error:  Uncaught Error: Failed opening required 'php-jwt-master/src/BeforeValidException.php' (include_path='.:/opt/cpanel/ea-php80/root/usr/share/pear') in /home2/themedun/public_html/php/Zoom_Api.php:3
+Stack trace:
+#0 /home2/themedun/public_html/php/programarCita.php(17): include_once()
+#1 {main}
+  thrown in /home2/themedun/public_html/php/Zoom_Api.php on line 3
+[17-Dec-2022 21:31:10 America/Boise] PHP Warning:  Undefined array key "idPagot" in /home2/themedun/public_html/php/programarCita.php on line 8
+[17-Dec-2022 21:31:10 America/Boise] PHP Warning:  Undefined array key "idPay" in /home2/themedun/public_html/php/programarCita.php on line 9
+[17-Dec-2022 21:31:10 America/Boise] PHP Warning:  require_once(php-jwt-master/src/BeforeValidException.php): Failed to open stream: No such file or directory in /home2/themedun/public_html/php/Zoom_Api.php on line 3
+[17-Dec-2022 21:31:10 America/Boise] PHP Fatal error:  Uncaught Error: Failed opening required 'php-jwt-master/src/BeforeValidException.php' (include_path='.:/opt/cpanel/ea-php80/root/usr/share/pear') in /home2/themedun/public_html/php/Zoom_Api.php:3
+Stack trace:
+#0 /home2/themedun/public_html/php/programarCita.php(17): include_once()
+#1 {main}
+  thrown in /home2/themedun/public_html/php/Zoom_Api.php on line 3
+[17-Dec-2022 21:31:26 America/Boise] PHP Warning:  Undefined array key "idPagot" in /home2/themedun/public_html/php/programarCita.php on line 8
+[17-Dec-2022 21:31:26 America/Boise] PHP Warning:  Undefined array key "idPay" in /home2/themedun/public_html/php/programarCita.php on line 9
+[17-Dec-2022 21:31:26 America/Boise] PHP Warning:  require_once(php-jwt-master/src/BeforeValidException.php): Failed to open stream: No such file or directory in /home2/themedun/public_html/php/Zoom_Api.php on line 3
+[17-Dec-2022 21:31:26 America/Boise] PHP Fatal error:  Uncaught Error: Failed opening required 'php-jwt-master/src/BeforeValidException.php' (include_path='.:/opt/cpanel/ea-php80/root/usr/share/pear') in /home2/themedun/public_html/php/Zoom_Api.php:3
+Stack trace:
+#0 /home2/themedun/public_html/php/programarCita.php(17): include_once()
+#1 {main}
+  thrown in /home2/themedun/public_html/php/Zoom_Api.php on line 3
+[17-Dec-2022 21:33:36 America/Boise] PHP Warning:  Undefined array key "idPagot" in /home2/themedun/public_html/php/programarCita.php on line 8
+[17-Dec-2022 21:33:36 America/Boise] PHP Warning:  Undefined array key "idPay" in /home2/themedun/public_html/php/programarCita.php on line 9
+[17-Dec-2022 21:33:36 America/Boise] PHP Warning:  require_once(php-jwt-master/src/BeforeValidException.php): Failed to open stream: No such file or directory in /home2/themedun/public_html/php/Zoom_Api.php on line 3
+[17-Dec-2022 21:33:36 America/Boise] PHP Fatal error:  Uncaught Error: Failed opening required 'php-jwt-master/src/BeforeValidException.php' (include_path='.:/opt/cpanel/ea-php80/root/usr/share/pear') in /home2/themedun/public_html/php/Zoom_Api.php:3
+Stack trace:
+#0 /home2/themedun/public_html/php/programarCita.php(17): include_once()
+#1 {main}
+  thrown in /home2/themedun/public_html/php/Zoom_Api.php on line 3
+[17-Dec-2022 21:34:10 America/Boise] PHP Warning:  Undefined array key "idPagot" in /home2/themedun/public_html/php/programarCita.php on line 8
+[17-Dec-2022 21:34:10 America/Boise] PHP Warning:  Undefined array key "idPay" in /home2/themedun/public_html/php/programarCita.php on line 9
+[17-Dec-2022 21:34:10 America/Boise] PHP Warning:  require_once(php-jwt-master/src/BeforeValidException.php): Failed to open stream: No such file or directory in /home2/themedun/public_html/php/Zoom_Api.php on line 3
+[17-Dec-2022 21:34:10 America/Boise] PHP Fatal error:  Uncaught Error: Failed opening required 'php-jwt-master/src/BeforeValidException.php' (include_path='.:/opt/cpanel/ea-php80/root/usr/share/pear') in /home2/themedun/public_html/php/Zoom_Api.php:3
+Stack trace:
+#0 /home2/themedun/public_html/php/programarCita.php(17): include_once()
+#1 {main}
+  thrown in /home2/themedun/public_html/php/Zoom_Api.php on line 3
+[17-Dec-2022 21:34:42 America/Boise] PHP Warning:  require_once(php-jwt-master/src/BeforeValidException.php): Failed to open stream: No such file or directory in /home2/themedun/public_html/php/Zoom_Api.php on line 3
+[17-Dec-2022 21:34:42 America/Boise] PHP Fatal error:  Uncaught Error: Failed opening required 'php-jwt-master/src/BeforeValidException.php' (include_path='.:/opt/cpanel/ea-php80/root/usr/share/pear') in /home2/themedun/public_html/php/Zoom_Api.php:3
+Stack trace:
+#0 /home2/themedun/public_html/php/programarCita.php(17): include_once()
+#1 {main}
+  thrown in /home2/themedun/public_html/php/Zoom_Api.php on line 3
+[17-Dec-2022 21:35:41 America/Boise] PHP Warning:  require_once(php-jwt-master/src/BeforeValidException.php): Failed to open stream: No such file or directory in /home2/themedun/public_html/php/Zoom_Api.php on line 3
+[17-Dec-2022 21:35:41 America/Boise] PHP Fatal error:  Uncaught Error: Failed opening required 'php-jwt-master/src/BeforeValidException.php' (include_path='.:/opt/cpanel/ea-php80/root/usr/share/pear') in /home2/themedun/public_html/php/Zoom_Api.php:3
+Stack trace:
+#0 /home2/themedun/public_html/php/programarCita.php(17): include_once()
+#1 {main}
+  thrown in /home2/themedun/public_html/php/Zoom_Api.php on line 3
+[17-Dec-2022 21:36:53 America/Boise] PHP Warning:  require_once(php-jwt-master/src/BeforeValidException.php): Failed to open stream: No such file or directory in /home2/themedun/public_html/php/Zoom_Api.php on line 3
+[17-Dec-2022 21:36:54 America/Boise] PHP Fatal error:  Uncaught Error: Failed opening required 'php-jwt-master/src/BeforeValidException.php' (include_path='.:/opt/cpanel/ea-php80/root/usr/share/pear') in /home2/themedun/public_html/php/Zoom_Api.php:3
+Stack trace:
+#0 /home2/themedun/public_html/php/programarCita.php(17): include_once()
+#1 {main}
+  thrown in /home2/themedun/public_html/php/Zoom_Api.php on line 3
+[17-Dec-2022 21:41:27 America/Boise] PHP Warning:  require_once(php-jwt-master/src/BeforeValidException.php): Failed to open stream: No such file or directory in /home2/themedun/public_html/php/Zoom_Api.php on line 3
+[17-Dec-2022 21:41:27 America/Boise] PHP Fatal error:  Uncaught Error: Failed opening required 'php-jwt-master/src/BeforeValidException.php' (include_path='.:/opt/cpanel/ea-php80/root/usr/share/pear') in /home2/themedun/public_html/php/Zoom_Api.php:3
+Stack trace:
+#0 /home2/themedun/public_html/php/programarCita.php(17): include_once()
+#1 {main}
+  thrown in /home2/themedun/public_html/php/Zoom_Api.php on line 3
+[17-Dec-2022 21:42:14 America/Boise] PHP Warning:  require_once(php-jwt-master/src/BeforeValidException.php): Failed to open stream: No such file or directory in /home2/themedun/public_html/php/Zoom_Api.php on line 3
+[17-Dec-2022 21:42:14 America/Boise] PHP Fatal error:  Uncaught Error: Failed opening required 'php-jwt-master/src/BeforeValidException.php' (include_path='.:/opt/cpanel/ea-php80/root/usr/share/pear') in /home2/themedun/public_html/php/Zoom_Api.php:3
+Stack trace:
+#0 /home2/themedun/public_html/php/programarCita.php(17): include_once()
+#1 {main}
+  thrown in /home2/themedun/public_html/php/Zoom_Api.php on line 3
+[17-Dec-2022 21:43:17 America/Boise] PHP Warning:  require_once(php-jwt-master/src/BeforeValidException.php): Failed to open stream: No such file or directory in /home2/themedun/public_html/php/Zoom_Api.php on line 3
+[17-Dec-2022 21:43:17 America/Boise] PHP Fatal error:  Uncaught Error: Failed opening required 'php-jwt-master/src/BeforeValidException.php' (include_path='.:/opt/cpanel/ea-php80/root/usr/share/pear') in /home2/themedun/public_html/php/Zoom_Api.php:3
+Stack trace:
+#0 /home2/themedun/public_html/php/programarCita.php(17): include_once()
+#1 {main}
+  thrown in /home2/themedun/public_html/php/Zoom_Api.php on line 3
+[17-Dec-2022 21:45:30 America/Boise] PHP Warning:  require_once(php-jwt-master/src/BeforeValidException.php): Failed to open stream: No such file or directory in /home2/themedun/public_html/php/Zoom_Api.php on line 3
+[17-Dec-2022 21:45:30 America/Boise] PHP Fatal error:  Uncaught Error: Failed opening required 'php-jwt-master/src/BeforeValidException.php' (include_path='.:/opt/cpanel/ea-php80/root/usr/share/pear') in /home2/themedun/public_html/php/Zoom_Api.php:3
+Stack trace:
+#0 /home2/themedun/public_html/php/programarCita.php(17): include_once()
+#1 {main}
+  thrown in /home2/themedun/public_html/php/Zoom_Api.php on line 3
+[17-Dec-2022 21:47:22 America/Boise] PHP Warning:  require_once(php-jwt-master/src/BeforeValidException.php): Failed to open stream: No such file or directory in /home2/themedun/public_html/php/Zoom_Api.php on line 3
+[17-Dec-2022 21:47:22 America/Boise] PHP Fatal error:  Uncaught Error: Failed opening required 'php-jwt-master/src/BeforeValidException.php' (include_path='.:/opt/cpanel/ea-php80/root/usr/share/pear') in /home2/themedun/public_html/php/Zoom_Api.php:3
+Stack trace:
+#0 /home2/themedun/public_html/php/programarCita.php(17): include_once()
+#1 {main}
+  thrown in /home2/themedun/public_html/php/Zoom_Api.php on line 3
+[17-Dec-2022 21:50:29 America/Boise] PHP Warning:  require_once(php-jwt-master/src/BeforeValidException.php): Failed to open stream: No such file or directory in /home2/themedun/public_html/php/Zoom_Api.php on line 3
+[17-Dec-2022 21:50:29 America/Boise] PHP Fatal error:  Uncaught Error: Failed opening required 'php-jwt-master/src/BeforeValidException.php' (include_path='.:/opt/cpanel/ea-php80/root/usr/share/pear') in /home2/themedun/public_html/php/Zoom_Api.php:3
+Stack trace:
+#0 /home2/themedun/public_html/php/programarCita.php(17): include_once()
+#1 {main}
+  thrown in /home2/themedun/public_html/php/Zoom_Api.php on line 3
+[17-Dec-2022 21:52:52 America/Boise] PHP Warning:  require_once(php-jwt-master/src/BeforeValidException.php): Failed to open stream: No such file or directory in /home2/themedun/public_html/php/Zoom_Api.php on line 3
+[17-Dec-2022 21:52:52 America/Boise] PHP Fatal error:  Uncaught Error: Failed opening required 'php-jwt-master/src/BeforeValidException.php' (include_path='.:/opt/cpanel/ea-php80/root/usr/share/pear') in /home2/themedun/public_html/php/Zoom_Api.php:3
+Stack trace:
+#0 /home2/themedun/public_html/php/programarCita.php(17): include_once()
+#1 {main}
+  thrown in /home2/themedun/public_html/php/Zoom_Api.php on line 3
+[17-Dec-2022 21:53:31 America/Boise] PHP Warning:  require_once(php-jwt-master/src/BeforeValidException.php): Failed to open stream: No such file or directory in /home2/themedun/public_html/php/Zoom_Api.php on line 3
+[17-Dec-2022 21:53:31 America/Boise] PHP Fatal error:  Uncaught Error: Failed opening required 'php-jwt-master/src/BeforeValidException.php' (include_path='.:/opt/cpanel/ea-php80/root/usr/share/pear') in /home2/themedun/public_html/php/Zoom_Api.php:3
+Stack trace:
+#0 /home2/themedun/public_html/php/programarCita.php(17): include_once()
+#1 {main}
+  thrown in /home2/themedun/public_html/php/Zoom_Api.php on line 3
+[17-Dec-2022 21:54:42 America/Boise] PHP Warning:  require_once(php-jwt-master/src/BeforeValidException.php): Failed to open stream: No such file or directory in /home2/themedun/public_html/php/Zoom_Api.php on line 3
+[17-Dec-2022 21:54:42 America/Boise] PHP Fatal error:  Uncaught Error: Failed opening required 'php-jwt-master/src/BeforeValidException.php' (include_path='.:/opt/cpanel/ea-php80/root/usr/share/pear') in /home2/themedun/public_html/php/Zoom_Api.php:3
+Stack trace:
+#0 /home2/themedun/public_html/php/programarCita.php(17): include_once()
+#1 {main}
+  thrown in /home2/themedun/public_html/php/Zoom_Api.php on line 3
+[17-Dec-2022 21:55:03 America/Boise] PHP Warning:  require_once(php-jwt-master/src/BeforeValidException.php): Failed to open stream: No such file or directory in /home2/themedun/public_html/php/Zoom_Api.php on line 3
+[17-Dec-2022 21:55:03 America/Boise] PHP Fatal error:  Uncaught Error: Failed opening required 'php-jwt-master/src/BeforeValidException.php' (include_path='.:/opt/cpanel/ea-php80/root/usr/share/pear') in /home2/themedun/public_html/php/Zoom_Api.php:3
+Stack trace:
+#0 /home2/themedun/public_html/php/programarCita.php(17): include_once()
+#1 {main}
+  thrown in /home2/themedun/public_html/php/Zoom_Api.php on line 3
+[17-Dec-2022 21:57:13 America/Boise] PHP Warning:  require_once(php-jwt-master/src/BeforeValidException.php): Failed to open stream: No such file or directory in /home2/themedun/public_html/php/Zoom_Api.php on line 3
+[17-Dec-2022 21:57:13 America/Boise] PHP Fatal error:  Uncaught Error: Failed opening required 'php-jwt-master/src/BeforeValidException.php' (include_path='.:/opt/cpanel/ea-php80/root/usr/share/pear') in /home2/themedun/public_html/php/Zoom_Api.php:3
+Stack trace:
+#0 /home2/themedun/public_html/php/programarCita.php(17): include_once()
+#1 {main}
+  thrown in /home2/themedun/public_html/php/Zoom_Api.php on line 3
+[17-Dec-2022 22:00:10 America/Boise] PHP Warning:  require_once(php-jwt-master/src/BeforeValidException.php): Failed to open stream: No such file or directory in /home2/themedun/public_html/php/Zoom_Api.php on line 3
+[17-Dec-2022 22:00:10 America/Boise] PHP Fatal error:  Uncaught Error: Failed opening required 'php-jwt-master/src/BeforeValidException.php' (include_path='.:/opt/cpanel/ea-php80/root/usr/share/pear') in /home2/themedun/public_html/php/Zoom_Api.php:3
+Stack trace:
+#0 /home2/themedun/public_html/php/programarCita.php(17): include_once()
+#1 {main}
+  thrown in /home2/themedun/public_html/php/Zoom_Api.php on line 3
+[17-Dec-2022 22:08:29 America/Boise] PHP Warning:  require_once(php-jwt-master/src/BeforeValidException.php): Failed to open stream: No such file or directory in /home2/themedun/public_html/php/Zoom_Api.php on line 3
+[17-Dec-2022 22:08:29 America/Boise] PHP Fatal error:  Uncaught Error: Failed opening required 'php-jwt-master/src/BeforeValidException.php' (include_path='.:/opt/cpanel/ea-php80/root/usr/share/pear') in /home2/themedun/public_html/php/Zoom_Api.php:3
+Stack trace:
+#0 /home2/themedun/public_html/php/programarCita.php(17): include_once()
+#1 {main}
+  thrown in /home2/themedun/public_html/php/Zoom_Api.php on line 3
+[17-Dec-2022 22:15:11 America/Boise] PHP Warning:  require_once(php-jwt-master/src/BeforeValidException.php): Failed to open stream: No such file or directory in /home2/themedun/public_html/php/Zoom_Api.php on line 3
+[17-Dec-2022 22:15:11 America/Boise] PHP Fatal error:  Uncaught Error: Failed opening required 'php-jwt-master/src/BeforeValidException.php' (include_path='.:/opt/cpanel/ea-php80/root/usr/share/pear') in /home2/themedun/public_html/php/Zoom_Api.php:3
+Stack trace:
+#0 /home2/themedun/public_html/php/programarCita.php(17): include_once()
+#1 {main}
+  thrown in /home2/themedun/public_html/php/Zoom_Api.php on line 3
+[17-Dec-2022 22:26:16 America/Boise] PHP Warning:  require_once(php-jwt-master/src/BeforeValidException.php): Failed to open stream: No such file or directory in /home2/themedun/public_html/php/Zoom_Api.php on line 3
+[17-Dec-2022 22:26:16 America/Boise] PHP Fatal error:  Uncaught Error: Failed opening required 'php-jwt-master/src/BeforeValidException.php' (include_path='.:/opt/cpanel/ea-php80/root/usr/share/pear') in /home2/themedun/public_html/php/Zoom_Api.php:3
+Stack trace:
+#0 /home2/themedun/public_html/php/programarCita.php(17): include_once()
+#1 {main}
+  thrown in /home2/themedun/public_html/php/Zoom_Api.php on line 3
+[17-Dec-2022 22:29:33 America/Boise] PHP Warning:  Undefined array key "idcita" in /home2/themedun/public_html/php/programarCita.php on line 4
+[17-Dec-2022 22:29:33 America/Boise] PHP Warning:  Undefined array key "idadmin" in /home2/themedun/public_html/php/programarCita.php on line 5
+[17-Dec-2022 22:29:33 America/Boise] PHP Warning:  Undefined array key "idPro" in /home2/themedun/public_html/php/programarCita.php on line 7
+[17-Dec-2022 22:29:33 America/Boise] PHP Warning:  Undefined array key "idPac" in /home2/themedun/public_html/php/programarCita.php on line 8
+[17-Dec-2022 22:29:33 America/Boise] PHP Warning:  Undefined array key "tipoPay" in /home2/themedun/public_html/php/programarCita.php on line 10
+[17-Dec-2022 22:29:33 America/Boise] PHP Warning:  require_once(php-jwt-master/src/BeforeValidException.php): Failed to open stream: No such file or directory in /home2/themedun/public_html/php/Zoom_Api.php on line 3
+[17-Dec-2022 22:29:33 America/Boise] PHP Fatal error:  Uncaught Error: Failed opening required 'php-jwt-master/src/BeforeValidException.php' (include_path='.:/opt/cpanel/ea-php80/root/usr/share/pear') in /home2/themedun/public_html/php/Zoom_Api.php:3
+Stack trace:
+#0 /home2/themedun/public_html/php/programarCita.php(17): include_once()
+#1 {main}
+  thrown in /home2/themedun/public_html/php/Zoom_Api.php on line 3
+[17-Dec-2022 22:45:56 America/Boise] PHP Warning:  include(./php/Zoom_Api.php): Failed to open stream: No such file or directory in /home2/themedun/public_html/php/programarCita.php on line 17
+[17-Dec-2022 22:45:56 America/Boise] PHP Warning:  include(): Failed opening './php/Zoom_Api.php' for inclusion (include_path='.:/opt/cpanel/ea-php80/root/usr/share/pear') in /home2/themedun/public_html/php/programarCita.php on line 17
+[17-Dec-2022 22:45:56 America/Boise] PHP Fatal error:  Uncaught Error: Class "Zoom_Api" not found in /home2/themedun/public_html/php/programarCita.php:37
+Stack trace:
+#0 {main}
+  thrown in /home2/themedun/public_html/php/programarCita.php on line 37
+[17-Dec-2022 22:46:37 America/Boise] PHP Warning:  include(./php/Zoom_Api.php): Failed to open stream: No such file or directory in /home2/themedun/public_html/php/programarCita.php on line 17
+[17-Dec-2022 22:46:37 America/Boise] PHP Warning:  include(): Failed opening './php/Zoom_Api.php' for inclusion (include_path='.:/opt/cpanel/ea-php80/root/usr/share/pear') in /home2/themedun/public_html/php/programarCita.php on line 17
+[17-Dec-2022 22:46:37 America/Boise] PHP Fatal error:  Uncaught Error: Class "Zoom_Api" not found in /home2/themedun/public_html/php/programarCita.php:37
+Stack trace:
+#0 {main}
+  thrown in /home2/themedun/public_html/php/programarCita.php on line 37
+[19-Dec-2022 06:03:07 America/Boise] PHP Warning:  Undefined array key "nombres" in /home2/themedun/public_html/php/guardarReclamo.php on line 5
+[19-Dec-2022 06:03:07 America/Boise] PHP Warning:  Undefined array key "apellidos" in /home2/themedun/public_html/php/guardarReclamo.php on line 6
+[19-Dec-2022 06:03:07 America/Boise] PHP Warning:  Undefined array key "documento" in /home2/themedun/public_html/php/guardarReclamo.php on line 7
+[19-Dec-2022 06:03:07 America/Boise] PHP Warning:  Undefined array key "numdoc" in /home2/themedun/public_html/php/guardarReclamo.php on line 8
+[19-Dec-2022 06:03:07 America/Boise] PHP Warning:  Undefined array key "domicilio" in /home2/themedun/public_html/php/guardarReclamo.php on line 9
+[19-Dec-2022 06:03:07 America/Boise] PHP Warning:  Undefined array key "telefono" in /home2/themedun/public_html/php/guardarReclamo.php on line 10
+[19-Dec-2022 06:03:07 America/Boise] PHP Warning:  Undefined array key "correo" in /home2/themedun/public_html/php/guardarReclamo.php on line 11
+[19-Dec-2022 06:03:07 America/Boise] PHP Warning:  Undefined array key "nombrestut" in /home2/themedun/public_html/php/guardarReclamo.php on line 12
+[19-Dec-2022 06:03:07 America/Boise] PHP Warning:  Undefined array key "apellidostut" in /home2/themedun/public_html/php/guardarReclamo.php on line 13
+[19-Dec-2022 06:03:07 America/Boise] PHP Warning:  Undefined array key "documentotut" in /home2/themedun/public_html/php/guardarReclamo.php on line 14
+[19-Dec-2022 06:03:07 America/Boise] PHP Warning:  Undefined array key "numdoctut" in /home2/themedun/public_html/php/guardarReclamo.php on line 15
+[19-Dec-2022 06:03:07 America/Boise] PHP Warning:  Undefined array key "domiciliotut" in /home2/themedun/public_html/php/guardarReclamo.php on line 16
+[19-Dec-2022 06:03:07 America/Boise] PHP Warning:  Undefined array key "telefonotut" in /home2/themedun/public_html/php/guardarReclamo.php on line 17
+[19-Dec-2022 06:03:07 America/Boise] PHP Warning:  Undefined array key "correotut" in /home2/themedun/public_html/php/guardarReclamo.php on line 18
+[19-Dec-2022 06:03:07 America/Boise] PHP Warning:  Undefined array key "tipobien" in /home2/themedun/public_html/php/guardarReclamo.php on line 19
+[19-Dec-2022 06:03:07 America/Boise] PHP Warning:  Undefined array key "monto" in /home2/themedun/public_html/php/guardarReclamo.php on line 20
+[19-Dec-2022 06:03:07 America/Boise] PHP Warning:  Undefined array key "numcita" in /home2/themedun/public_html/php/guardarReclamo.php on line 21
+[19-Dec-2022 06:03:07 America/Boise] PHP Warning:  Undefined array key "descripcion" in /home2/themedun/public_html/php/guardarReclamo.php on line 22
+[19-Dec-2022 06:03:07 America/Boise] PHP Warning:  Undefined array key "reclamo" in /home2/themedun/public_html/php/guardarReclamo.php on line 23
+[19-Dec-2022 06:03:07 America/Boise] PHP Warning:  Undefined array key "detalle" in /home2/themedun/public_html/php/guardarReclamo.php on line 24
+[19-Dec-2022 06:03:07 America/Boise] PHP Warning:  Undefined array key "pedido" in /home2/themedun/public_html/php/guardarReclamo.php on line 25
+[19-Dec-2022 08:03:07 America/Lima] PHP Warning:  Undefined array key "evidencia" in /home2/themedun/public_html/php/guardarReclamo.php on line 31
+[19-Dec-2022 08:03:07 America/Lima] PHP Warning:  Trying to access array offset on value of type null in /home2/themedun/public_html/php/guardarReclamo.php on line 31
+[19-Dec-2022 08:03:07 America/Lima] PHP Warning:  Undefined array key "evidencia" in /home2/themedun/public_html/php/guardarReclamo.php on line 32
+[19-Dec-2022 08:03:07 America/Lima] PHP Warning:  Trying to access array offset on value of type null in /home2/themedun/public_html/php/guardarReclamo.php on line 32
+[22-Dec-2022 04:20:06 America/Boise] PHP Warning:  Undefined array key "nombres" in /home2/themedun/public_html/php/guardarReclamo.php on line 5
+[22-Dec-2022 04:20:06 America/Boise] PHP Warning:  Undefined array key "apellidos" in /home2/themedun/public_html/php/guardarReclamo.php on line 6
+[22-Dec-2022 04:20:06 America/Boise] PHP Warning:  Undefined array key "documento" in /home2/themedun/public_html/php/guardarReclamo.php on line 7
+[22-Dec-2022 04:20:06 America/Boise] PHP Warning:  Undefined array key "numdoc" in /home2/themedun/public_html/php/guardarReclamo.php on line 8
+[22-Dec-2022 04:20:06 America/Boise] PHP Warning:  Undefined array key "domicilio" in /home2/themedun/public_html/php/guardarReclamo.php on line 9
+[22-Dec-2022 04:20:06 America/Boise] PHP Warning:  Undefined array key "telefono" in /home2/themedun/public_html/php/guardarReclamo.php on line 10
+[22-Dec-2022 04:20:06 America/Boise] PHP Warning:  Undefined array key "correo" in /home2/themedun/public_html/php/guardarReclamo.php on line 11
+[22-Dec-2022 04:20:06 America/Boise] PHP Warning:  Undefined array key "nombrestut" in /home2/themedun/public_html/php/guardarReclamo.php on line 12
+[22-Dec-2022 04:20:06 America/Boise] PHP Warning:  Undefined array key "apellidostut" in /home2/themedun/public_html/php/guardarReclamo.php on line 13
+[22-Dec-2022 04:20:06 America/Boise] PHP Warning:  Undefined array key "documentotut" in /home2/themedun/public_html/php/guardarReclamo.php on line 14
+[22-Dec-2022 04:20:06 America/Boise] PHP Warning:  Undefined array key "numdoctut" in /home2/themedun/public_html/php/guardarReclamo.php on line 15
+[22-Dec-2022 04:20:06 America/Boise] PHP Warning:  Undefined array key "domiciliotut" in /home2/themedun/public_html/php/guardarReclamo.php on line 16
+[22-Dec-2022 04:20:06 America/Boise] PHP Warning:  Undefined array key "telefonotut" in /home2/themedun/public_html/php/guardarReclamo.php on line 17
+[22-Dec-2022 04:20:06 America/Boise] PHP Warning:  Undefined array key "correotut" in /home2/themedun/public_html/php/guardarReclamo.php on line 18
+[22-Dec-2022 04:20:06 America/Boise] PHP Warning:  Undefined array key "tipobien" in /home2/themedun/public_html/php/guardarReclamo.php on line 19
+[22-Dec-2022 04:20:06 America/Boise] PHP Warning:  Undefined array key "monto" in /home2/themedun/public_html/php/guardarReclamo.php on line 20
+[22-Dec-2022 04:20:06 America/Boise] PHP Warning:  Undefined array key "numcita" in /home2/themedun/public_html/php/guardarReclamo.php on line 21
+[22-Dec-2022 04:20:06 America/Boise] PHP Warning:  Undefined array key "descripcion" in /home2/themedun/public_html/php/guardarReclamo.php on line 22
+[22-Dec-2022 04:20:06 America/Boise] PHP Warning:  Undefined array key "reclamo" in /home2/themedun/public_html/php/guardarReclamo.php on line 23
+[22-Dec-2022 04:20:06 America/Boise] PHP Warning:  Undefined array key "detalle" in /home2/themedun/public_html/php/guardarReclamo.php on line 24
+[22-Dec-2022 04:20:06 America/Boise] PHP Warning:  Undefined array key "pedido" in /home2/themedun/public_html/php/guardarReclamo.php on line 25
+[22-Dec-2022 06:20:06 America/Lima] PHP Warning:  Undefined array key "evidencia" in /home2/themedun/public_html/php/guardarReclamo.php on line 31
+[22-Dec-2022 06:20:06 America/Lima] PHP Warning:  Trying to access array offset on value of type null in /home2/themedun/public_html/php/guardarReclamo.php on line 31
+[22-Dec-2022 06:20:06 America/Lima] PHP Warning:  Undefined array key "evidencia" in /home2/themedun/public_html/php/guardarReclamo.php on line 32
+[22-Dec-2022 06:20:06 America/Lima] PHP Warning:  Trying to access array offset on value of type null in /home2/themedun/public_html/php/guardarReclamo.php on line 32
+[26-Dec-2022 08:45:49 America/Boise] PHP Warning:  Undefined array key "correo" in /home2/themedun/public_html/php/validarLogin.php on line 4
+[26-Dec-2022 12:21:55 America/Boise] PHP Warning:  Undefined array key "nombres" in /home2/themedun/public_html/php/guardarReclamo.php on line 5
+[26-Dec-2022 12:21:55 America/Boise] PHP Warning:  Undefined array key "apellidos" in /home2/themedun/public_html/php/guardarReclamo.php on line 6
+[26-Dec-2022 12:21:55 America/Boise] PHP Warning:  Undefined array key "documento" in /home2/themedun/public_html/php/guardarReclamo.php on line 7
+[26-Dec-2022 12:21:55 America/Boise] PHP Warning:  Undefined array key "numdoc" in /home2/themedun/public_html/php/guardarReclamo.php on line 8
+[26-Dec-2022 12:21:55 America/Boise] PHP Warning:  Undefined array key "domicilio" in /home2/themedun/public_html/php/guardarReclamo.php on line 9
+[26-Dec-2022 12:21:55 America/Boise] PHP Warning:  Undefined array key "telefono" in /home2/themedun/public_html/php/guardarReclamo.php on line 10
+[26-Dec-2022 12:21:55 America/Boise] PHP Warning:  Undefined array key "correo" in /home2/themedun/public_html/php/guardarReclamo.php on line 11
+[26-Dec-2022 12:21:55 America/Boise] PHP Warning:  Undefined array key "nombrestut" in /home2/themedun/public_html/php/guardarReclamo.php on line 12
+[26-Dec-2022 12:21:55 America/Boise] PHP Warning:  Undefined array key "apellidostut" in /home2/themedun/public_html/php/guardarReclamo.php on line 13
+[26-Dec-2022 12:21:55 America/Boise] PHP Warning:  Undefined array key "documentotut" in /home2/themedun/public_html/php/guardarReclamo.php on line 14
+[26-Dec-2022 12:21:55 America/Boise] PHP Warning:  Undefined array key "numdoctut" in /home2/themedun/public_html/php/guardarReclamo.php on line 15
+[26-Dec-2022 12:21:55 America/Boise] PHP Warning:  Undefined array key "domiciliotut" in /home2/themedun/public_html/php/guardarReclamo.php on line 16
+[26-Dec-2022 12:21:55 America/Boise] PHP Warning:  Undefined array key "telefonotut" in /home2/themedun/public_html/php/guardarReclamo.php on line 17
+[26-Dec-2022 12:21:55 America/Boise] PHP Warning:  Undefined array key "correotut" in /home2/themedun/public_html/php/guardarReclamo.php on line 18
+[26-Dec-2022 12:21:55 America/Boise] PHP Warning:  Undefined array key "tipobien" in /home2/themedun/public_html/php/guardarReclamo.php on line 19
+[26-Dec-2022 12:21:55 America/Boise] PHP Warning:  Undefined array key "monto" in /home2/themedun/public_html/php/guardarReclamo.php on line 20
+[26-Dec-2022 12:21:55 America/Boise] PHP Warning:  Undefined array key "numcita" in /home2/themedun/public_html/php/guardarReclamo.php on line 21
+[26-Dec-2022 12:21:55 America/Boise] PHP Warning:  Undefined array key "descripcion" in /home2/themedun/public_html/php/guardarReclamo.php on line 22
+[26-Dec-2022 12:21:55 America/Boise] PHP Warning:  Undefined array key "reclamo" in /home2/themedun/public_html/php/guardarReclamo.php on line 23
+[26-Dec-2022 12:21:55 America/Boise] PHP Warning:  Undefined array key "detalle" in /home2/themedun/public_html/php/guardarReclamo.php on line 24
+[26-Dec-2022 12:21:55 America/Boise] PHP Warning:  Undefined array key "pedido" in /home2/themedun/public_html/php/guardarReclamo.php on line 25
+[26-Dec-2022 14:21:55 America/Lima] PHP Warning:  Undefined array key "evidencia" in /home2/themedun/public_html/php/guardarReclamo.php on line 31
+[26-Dec-2022 14:21:55 America/Lima] PHP Warning:  Trying to access array offset on value of type null in /home2/themedun/public_html/php/guardarReclamo.php on line 31
+[26-Dec-2022 14:21:55 America/Lima] PHP Warning:  Undefined array key "evidencia" in /home2/themedun/public_html/php/guardarReclamo.php on line 32
+[26-Dec-2022 14:21:55 America/Lima] PHP Warning:  Trying to access array offset on value of type null in /home2/themedun/public_html/php/guardarReclamo.php on line 32
+[28-Dec-2022 22:38:15 America/Boise] PHP Warning:  Undefined array key "nombres" in /home2/themedun/public_html/php/guardarReclamo.php on line 5
+[28-Dec-2022 22:38:15 America/Boise] PHP Warning:  Undefined array key "apellidos" in /home2/themedun/public_html/php/guardarReclamo.php on line 6
+[28-Dec-2022 22:38:15 America/Boise] PHP Warning:  Undefined array key "documento" in /home2/themedun/public_html/php/guardarReclamo.php on line 7
+[28-Dec-2022 22:38:15 America/Boise] PHP Warning:  Undefined array key "numdoc" in /home2/themedun/public_html/php/guardarReclamo.php on line 8
+[28-Dec-2022 22:38:15 America/Boise] PHP Warning:  Undefined array key "domicilio" in /home2/themedun/public_html/php/guardarReclamo.php on line 9
+[28-Dec-2022 22:38:15 America/Boise] PHP Warning:  Undefined array key "telefono" in /home2/themedun/public_html/php/guardarReclamo.php on line 10
+[28-Dec-2022 22:38:15 America/Boise] PHP Warning:  Undefined array key "correo" in /home2/themedun/public_html/php/guardarReclamo.php on line 11
+[28-Dec-2022 22:38:15 America/Boise] PHP Warning:  Undefined array key "nombrestut" in /home2/themedun/public_html/php/guardarReclamo.php on line 12
+[28-Dec-2022 22:38:15 America/Boise] PHP Warning:  Undefined array key "apellidostut" in /home2/themedun/public_html/php/guardarReclamo.php on line 13
+[28-Dec-2022 22:38:15 America/Boise] PHP Warning:  Undefined array key "documentotut" in /home2/themedun/public_html/php/guardarReclamo.php on line 14
+[28-Dec-2022 22:38:15 America/Boise] PHP Warning:  Undefined array key "numdoctut" in /home2/themedun/public_html/php/guardarReclamo.php on line 15
+[28-Dec-2022 22:38:15 America/Boise] PHP Warning:  Undefined array key "domiciliotut" in /home2/themedun/public_html/php/guardarReclamo.php on line 16
+[28-Dec-2022 22:38:15 America/Boise] PHP Warning:  Undefined array key "telefonotut" in /home2/themedun/public_html/php/guardarReclamo.php on line 17
+[28-Dec-2022 22:38:15 America/Boise] PHP Warning:  Undefined array key "correotut" in /home2/themedun/public_html/php/guardarReclamo.php on line 18
+[28-Dec-2022 22:38:15 America/Boise] PHP Warning:  Undefined array key "tipobien" in /home2/themedun/public_html/php/guardarReclamo.php on line 19
+[28-Dec-2022 22:38:15 America/Boise] PHP Warning:  Undefined array key "monto" in /home2/themedun/public_html/php/guardarReclamo.php on line 20
+[28-Dec-2022 22:38:15 America/Boise] PHP Warning:  Undefined array key "numcita" in /home2/themedun/public_html/php/guardarReclamo.php on line 21
+[28-Dec-2022 22:38:15 America/Boise] PHP Warning:  Undefined array key "descripcion" in /home2/themedun/public_html/php/guardarReclamo.php on line 22
+[28-Dec-2022 22:38:15 America/Boise] PHP Warning:  Undefined array key "reclamo" in /home2/themedun/public_html/php/guardarReclamo.php on line 23
+[28-Dec-2022 22:38:15 America/Boise] PHP Warning:  Undefined array key "detalle" in /home2/themedun/public_html/php/guardarReclamo.php on line 24
+[28-Dec-2022 22:38:15 America/Boise] PHP Warning:  Undefined array key "pedido" in /home2/themedun/public_html/php/guardarReclamo.php on line 25
+[29-Dec-2022 00:38:15 America/Lima] PHP Warning:  Undefined array key "evidencia" in /home2/themedun/public_html/php/guardarReclamo.php on line 31
+[29-Dec-2022 00:38:15 America/Lima] PHP Warning:  Trying to access array offset on value of type null in /home2/themedun/public_html/php/guardarReclamo.php on line 31
+[29-Dec-2022 00:38:15 America/Lima] PHP Warning:  Undefined array key "evidencia" in /home2/themedun/public_html/php/guardarReclamo.php on line 32
+[29-Dec-2022 00:38:15 America/Lima] PHP Warning:  Trying to access array offset on value of type null in /home2/themedun/public_html/php/guardarReclamo.php on line 32
+[15-Jan-2023 15:00:02 America/Boise] PHP Warning:  Undefined array key "correo" in /home2/themedun/public_html/php/validarLogin.php on line 4
+[19-Jan-2023 19:52:22 America/Boise] PHP Warning:  Undefined array key "idPro" in /home2/themedun/public_html/php/administrarCita.php on line 6
+[19-Jan-2023 19:52:22 America/Boise] PHP Warning:  Undefined array key "idPac" in /home2/themedun/public_html/php/administrarCita.php on line 7
+[20-Jan-2023 19:59:39 America/Boise] PHP Warning:  Undefined array key "imc" in /home2/themedun/public_html/php/guardarHistoria.php on line 21
+[20-Jan-2023 20:03:31 America/Boise] PHP Warning:  Undefined array key "imc" in /home2/themedun/public_html/php/guardarHistoria.php on line 21
+[22-Jan-2023 15:05:23 America/Boise] PHP Warning:  Undefined array key "correo" in /home2/themedun/public_html/php/validarLogin.php on line 4
+[23-Jan-2023 15:14:20 America/Boise] PHP Warning:  Undefined array key "nombres" in /home2/themedun/public_html/php/enviarAyuda.php on line 2
+[23-Jan-2023 15:14:20 America/Boise] PHP Warning:  Undefined array key "apellidos" in /home2/themedun/public_html/php/enviarAyuda.php on line 3
+[23-Jan-2023 15:14:20 America/Boise] PHP Warning:  Undefined array key "correo" in /home2/themedun/public_html/php/enviarAyuda.php on line 4
+[23-Jan-2023 15:14:20 America/Boise] PHP Warning:  Undefined array key "telefono" in /home2/themedun/public_html/php/enviarAyuda.php on line 5
+[23-Jan-2023 15:14:20 America/Boise] PHP Warning:  Undefined array key "pais" in /home2/themedun/public_html/php/enviarAyuda.php on line 6
+[23-Jan-2023 15:14:20 America/Boise] PHP Warning:  Undefined array key "ciudad" in /home2/themedun/public_html/php/enviarAyuda.php on line 7
+[23-Jan-2023 15:14:20 America/Boise] PHP Warning:  Undefined array key "cuenta" in /home2/themedun/public_html/php/enviarAyuda.php on line 8
+[25-Jan-2023 23:45:50 America/Boise] PHP Warning:  Undefined array key "codigo" in /home2/themedun/public_html/php/codigoReclamacion.php on line 5
+[28-Jan-2023 15:29:40 America/Boise] PHP Warning:  Undefined array key "correo" in /home2/themedun/public_html/php/validarLogin.php on line 4
+[04-Feb-2023 08:37:04 America/Boise] PHP Warning:  Undefined array key "correo" in /home2/themedun/public_html/php/validarLogin.php on line 4
+[21-Feb-2023 21:41:01 America/Boise] PHP Warning:  Undefined array key "imc" in /home2/themedun/public_html/php/guardarHistoria.php on line 21
+[24-Feb-2023 22:39:17 America/Boise] PHP Warning:  Undefined property: stdClass::$cantidad in /home2/themedun/public_html/php/classNotificaciones.php on line 45
+[24-Feb-2023 22:39:17 America/Boise] PHP Warning:  Undefined property: stdClass::$cantidad in /home2/themedun/public_html/php/classNotificaciones.php on line 47
+[24-Feb-2023 22:39:17 America/Boise] PHP Warning:  Undefined property: stdClass::$cantidad in /home2/themedun/public_html/php/classNotificaciones.php on line 49
+[24-Feb-2023 22:39:17 America/Boise] PHP Warning:  Undefined property: stdClass::$cantidad in /home2/themedun/public_html/php/classNotificaciones.php on line 51
+[02-Mar-2023 15:17:18 America/Boise] PHP Warning:  Undefined property: stdClass::$cantidad in /home2/themedun/public_html/php/classNotificaciones.php on line 45
+[02-Mar-2023 15:17:18 America/Boise] PHP Warning:  Undefined property: stdClass::$cantidad in /home2/themedun/public_html/php/classNotificaciones.php on line 47
+[02-Mar-2023 15:17:18 America/Boise] PHP Warning:  Undefined property: stdClass::$cantidad in /home2/themedun/public_html/php/classNotificaciones.php on line 49
+[02-Mar-2023 15:17:18 America/Boise] PHP Warning:  Undefined property: stdClass::$cantidad in /home2/themedun/public_html/php/classNotificaciones.php on line 51
+[02-Mar-2023 15:22:13 America/Boise] PHP Warning:  Undefined property: stdClass::$cantidad in /home2/themedun/public_html/php/classNotificaciones.php on line 45
+[02-Mar-2023 15:22:13 America/Boise] PHP Warning:  Undefined property: stdClass::$cantidad in /home2/themedun/public_html/php/classNotificaciones.php on line 47
+[02-Mar-2023 15:22:13 America/Boise] PHP Warning:  Undefined property: stdClass::$cantidad in /home2/themedun/public_html/php/classNotificaciones.php on line 49
+[02-Mar-2023 15:22:13 America/Boise] PHP Warning:  Undefined property: stdClass::$cantidad in /home2/themedun/public_html/php/classNotificaciones.php on line 51
+[02-Mar-2023 15:23:17 America/Boise] PHP Warning:  Undefined property: stdClass::$cantidad in /home2/themedun/public_html/php/classNotificaciones.php on line 45
+[02-Mar-2023 15:23:17 America/Boise] PHP Warning:  Undefined property: stdClass::$cantidad in /home2/themedun/public_html/php/classNotificaciones.php on line 47
+[02-Mar-2023 15:23:17 America/Boise] PHP Warning:  Undefined property: stdClass::$cantidad in /home2/themedun/public_html/php/classNotificaciones.php on line 49
+[02-Mar-2023 15:23:17 America/Boise] PHP Warning:  Undefined property: stdClass::$cantidad in /home2/themedun/public_html/php/classNotificaciones.php on line 51
+[02-Mar-2023 15:26:56 America/Boise] PHP Warning:  Undefined property: stdClass::$cantidad in /home2/themedun/public_html/php/classNotificaciones.php on line 45
+[02-Mar-2023 15:26:56 America/Boise] PHP Warning:  Undefined property: stdClass::$cantidad in /home2/themedun/public_html/php/classNotificaciones.php on line 47
+[02-Mar-2023 15:26:56 America/Boise] PHP Warning:  Undefined property: stdClass::$cantidad in /home2/themedun/public_html/php/classNotificaciones.php on line 49
+[02-Mar-2023 15:26:56 America/Boise] PHP Warning:  Undefined property: stdClass::$cantidad in /home2/themedun/public_html/php/classNotificaciones.php on line 51
+[03-Mar-2023 04:19:41 America/Boise] PHP Warning:  Undefined property: stdClass::$cantidad in /home2/themedun/public_html/php/classNotificaciones.php on line 45
+[03-Mar-2023 04:19:41 America/Boise] PHP Warning:  Undefined property: stdClass::$cantidad in /home2/themedun/public_html/php/classNotificaciones.php on line 47
+[03-Mar-2023 04:19:41 America/Boise] PHP Warning:  Undefined property: stdClass::$cantidad in /home2/themedun/public_html/php/classNotificaciones.php on line 49
+[03-Mar-2023 04:19:41 America/Boise] PHP Warning:  Undefined property: stdClass::$cantidad in /home2/themedun/public_html/php/classNotificaciones.php on line 51
+[03-Mar-2023 04:19:41 America/Boise] PHP Warning:  Undefined property: stdClass::$cantidad in /home2/themedun/public_html/php/classNotificaciones.php on line 45
+[03-Mar-2023 04:19:41 America/Boise] PHP Warning:  Undefined property: stdClass::$cantidad in /home2/themedun/public_html/php/classNotificaciones.php on line 47
+[03-Mar-2023 04:19:41 America/Boise] PHP Warning:  Undefined property: stdClass::$cantidad in /home2/themedun/public_html/php/classNotificaciones.php on line 49
+[03-Mar-2023 04:19:41 America/Boise] PHP Warning:  Undefined property: stdClass::$cantidad in /home2/themedun/public_html/php/classNotificaciones.php on line 51
+[04-Mar-2023 09:10:13 America/Boise] PHP Warning:  Undefined property: stdClass::$cantidad in /home2/themedun/public_html/php/classNotificaciones.php on line 45
+[04-Mar-2023 09:10:13 America/Boise] PHP Warning:  Undefined property: stdClass::$cantidad in /home2/themedun/public_html/php/classNotificaciones.php on line 47
+[04-Mar-2023 09:10:13 America/Boise] PHP Warning:  Undefined property: stdClass::$cantidad in /home2/themedun/public_html/php/classNotificaciones.php on line 49
+[04-Mar-2023 09:10:13 America/Boise] PHP Warning:  Undefined property: stdClass::$cantidad in /home2/themedun/public_html/php/classNotificaciones.php on line 51
+[04-Mar-2023 09:10:21 America/Boise] PHP Warning:  Undefined property: stdClass::$cantidad in /home2/themedun/public_html/php/classNotificaciones.php on line 45
+[04-Mar-2023 09:10:21 America/Boise] PHP Warning:  Undefined property: stdClass::$cantidad in /home2/themedun/public_html/php/classNotificaciones.php on line 47
+[04-Mar-2023 09:10:21 America/Boise] PHP Warning:  Undefined property: stdClass::$cantidad in /home2/themedun/public_html/php/classNotificaciones.php on line 49
+[04-Mar-2023 09:10:21 America/Boise] PHP Warning:  Undefined property: stdClass::$cantidad in /home2/themedun/public_html/php/classNotificaciones.php on line 51
+[07-Mar-2023 05:25:36 America/Boise] PHP Warning:  mysqli_connect(): (08004/1040): Too many connections in /home2/themedun/public_html/php/conexion_paciente.php on line 3
+[07-Mar-2023 05:25:36 America/Boise] PHP Fatal error:  Uncaught TypeError: mysqli_query(): Argument #1 ($mysql) must be of type mysqli, bool given in /home2/themedun/public_html/php/conexion_paciente.php:5
+Stack trace:
+#0 /home2/themedun/public_html/php/conexion_paciente.php(5): mysqli_query(false, 'SET time_zone =...')
+#1 /home2/themedun/public_html/php/classNotificaciones.php(3): include('/home2/themedun...')
+#2 {main}
+  thrown in /home2/themedun/public_html/php/conexion_paciente.php on line 5
+[07-Mar-2023 05:37:42 America/Boise] PHP Warning:  mysqli_connect(): (HY000/1040): Too many connections in /home2/themedun/public_html/php/conexion_paciente.php on line 3
+[07-Mar-2023 05:37:43 America/Boise] PHP Fatal error:  Uncaught TypeError: mysqli_query(): Argument #1 ($mysql) must be of type mysqli, bool given in /home2/themedun/public_html/php/conexion_paciente.php:5
+Stack trace:
+#0 /home2/themedun/public_html/php/conexion_paciente.php(5): mysqli_query(false, 'SET time_zone =...')
+#1 /home2/themedun/public_html/php/classNotificaciones.php(3): include('/home2/themedun...')
+#2 {main}
+  thrown in /home2/themedun/public_html/php/conexion_paciente.php on line 5
+[07-Mar-2023 05:44:06 America/Boise] PHP Warning:  mysqli_connect(): (08004/1040): Too many connections in /home2/themedun/public_html/php/conexion_paciente.php on line 3
+[07-Mar-2023 05:44:09 America/Boise] PHP Fatal error:  Uncaught TypeError: mysqli_query(): Argument #1 ($mysql) must be of type mysqli, bool given in /home2/themedun/public_html/php/conexion_paciente.php:5
+Stack trace:
+#0 /home2/themedun/public_html/php/conexion_paciente.php(5): mysqli_query(false, 'SET time_zone =...')
+#1 /home2/themedun/public_html/php/classNotificaciones.php(3): include('/home2/themedun...')
+#2 {main}
+  thrown in /home2/themedun/public_html/php/conexion_paciente.php on line 5
+[08-Mar-2023 20:10:52 America/Boise] PHP Warning:  Undefined array key "correo" in /home2/themedun/public_html/php/validarLogin.php on line 4
+[13-Mar-2023 01:30:33 America/Boise] PHP Warning:  Undefined array key "correo" in /home2/themedun/public_html/php/validarLogin.php on line 4
+[14-Mar-2023 21:13:00 America/Boise] PHP Warning:  Undefined property: stdClass::$cantidad in /home2/themedun/public_html/php/classNotificaciones.php on line 45
+[14-Mar-2023 21:13:00 America/Boise] PHP Warning:  Undefined property: stdClass::$cantidad in /home2/themedun/public_html/php/classNotificaciones.php on line 47
+[14-Mar-2023 21:13:00 America/Boise] PHP Warning:  Undefined property: stdClass::$cantidad in /home2/themedun/public_html/php/classNotificaciones.php on line 49
+[14-Mar-2023 21:13:00 America/Boise] PHP Warning:  Undefined property: stdClass::$cantidad in /home2/themedun/public_html/php/classNotificaciones.php on line 51
+[15-Mar-2023 11:21:12 America/Boise] PHP Warning:  Undefined property: stdClass::$cantidad in /home2/themedun/public_html/php/classNotificaciones.php on line 45
+[15-Mar-2023 11:21:12 America/Boise] PHP Warning:  Undefined property: stdClass::$cantidad in /home2/themedun/public_html/php/classNotificaciones.php on line 47
+[15-Mar-2023 11:21:12 America/Boise] PHP Warning:  Undefined property: stdClass::$cantidad in /home2/themedun/public_html/php/classNotificaciones.php on line 49
+[15-Mar-2023 11:21:12 America/Boise] PHP Warning:  Undefined property: stdClass::$cantidad in /home2/themedun/public_html/php/classNotificaciones.php on line 51
+[16-Mar-2023 18:51:54 America/Boise] PHP Warning:  unlink(../anexos/): Is a directory in /home2/themedun/public_html/php/editarAnexos.php on line 22
+[16-Mar-2023 18:58:34 America/Boise] PHP Warning:  unlink(../anexos/): Is a directory in /home2/themedun/public_html/php/editarAnexos.php on line 38
+[17-Mar-2023 17:55:46 America/Boise] PHP Warning:  Undefined array key "correo" in /home2/themedun/public_html/php/validarLogin.php on line 4
+[18-Mar-2023 13:40:34 America/Boise] PHP Warning:  Undefined array key "correo" in /home2/themedun/public_html/php/validarLogin.php on line 4
+[19-Mar-2023 13:00:17 America/Boise] PHP Warning:  Undefined array key "correo" in /home2/themedun/public_html/php/validarLogin.php on line 4
+[20-Mar-2023 22:52:11 America/Boise] PHP Warning:  Undefined array key "imc" in /home2/themedun/public_html/php/guardarHistoria.php on line 21
+[20-Mar-2023 23:20:02 America/Boise] PHP Warning:  Undefined array key "imc" in /home2/themedun/public_html/php/guardarHistoria.php on line 21
+[23-Mar-2023 11:55:39 America/Boise] PHP Warning:  Undefined array key "idPro" in /home2/themedun/public_html/php/administrarCita.php on line 6
+[23-Mar-2023 11:55:39 America/Boise] PHP Warning:  Undefined array key "idPac" in /home2/themedun/public_html/php/administrarCita.php on line 7
+[23-Mar-2023 12:19:07 America/Boise] PHP Warning:  Undefined property: stdClass::$cantidad in /home2/themedun/public_html/php/classNotificaciones.php on line 45
+[23-Mar-2023 12:19:07 America/Boise] PHP Warning:  Undefined property: stdClass::$cantidad in /home2/themedun/public_html/php/classNotificaciones.php on line 47
+[23-Mar-2023 12:19:07 America/Boise] PHP Warning:  Undefined property: stdClass::$cantidad in /home2/themedun/public_html/php/classNotificaciones.php on line 49
+[23-Mar-2023 12:19:07 America/Boise] PHP Warning:  Undefined property: stdClass::$cantidad in /home2/themedun/public_html/php/classNotificaciones.php on line 51
+[28-Mar-2023 05:25:37 America/Boise] PHP Warning:  mysqli_connect(): (08004/1040): Too many connections in /home2/themedun/public_html/php/conexion_paciente.php on line 3
+[28-Mar-2023 05:25:37 America/Boise] PHP Fatal error:  Uncaught TypeError: mysqli_query(): Argument #1 ($mysql) must be of type mysqli, bool given in /home2/themedun/public_html/php/conexion_paciente.php:5
+Stack trace:
+#0 /home2/themedun/public_html/php/conexion_paciente.php(5): mysqli_query(false, 'SET time_zone =...')
+#1 /home2/themedun/public_html/php/classNotificaciones.php(3): include('/home2/themedun...')
+#2 {main}
+  thrown in /home2/themedun/public_html/php/conexion_paciente.php on line 5
+[28-Mar-2023 05:25:37 America/Boise] PHP Warning:  mysqli_connect(): (08004/1040): Too many connections in /home2/themedun/public_html/php/conexion_paciente.php on line 3
+[28-Mar-2023 05:25:37 America/Boise] PHP Fatal error:  Uncaught TypeError: mysqli_query(): Argument #1 ($mysql) must be of type mysqli, bool given in /home2/themedun/public_html/php/conexion_paciente.php:5
+Stack trace:
+#0 /home2/themedun/public_html/php/conexion_paciente.php(5): mysqli_query(false, 'SET time_zone =...')
+#1 /home2/themedun/public_html/php/classNotificaciones.php(3): include('/home2/themedun...')
+#2 {main}
+  thrown in /home2/themedun/public_html/php/conexion_paciente.php on line 5
+[28-Mar-2023 05:25:39 America/Boise] PHP Warning:  mysqli_connect(): (08004/1040): Too many connections in /home2/themedun/public_html/php/conexion_paciente.php on line 3
+[28-Mar-2023 05:26:45 America/Boise] PHP Fatal error:  Uncaught TypeError: mysqli_query(): Argument #1 ($mysql) must be of type mysqli, bool given in /home2/themedun/public_html/php/conexion_paciente.php:5
+Stack trace:
+#0 /home2/themedun/public_html/php/conexion_paciente.php(5): mysqli_query(false, 'SET time_zone =...')
+#1 /home2/themedun/public_html/php/classNotificaciones.php(3): include('/home2/themedun...')
+#2 {main}
+  thrown in /home2/themedun/public_html/php/conexion_paciente.php on line 5
+[28-Mar-2023 05:26:49 America/Boise] PHP Warning:  mysqli_connect(): (HY000/1040): Too many connections in /home2/themedun/public_html/php/conexion_paciente.php on line 3
+[28-Mar-2023 05:27:22 America/Boise] PHP Fatal error:  Uncaught TypeError: mysqli_query(): Argument #1 ($mysql) must be of type mysqli, bool given in /home2/themedun/public_html/php/conexion_paciente.php:5
+Stack trace:
+#0 /home2/themedun/public_html/php/conexion_paciente.php(5): mysqli_query(false, 'SET time_zone =...')
+#1 /home2/themedun/public_html/php/classNotificaciones.php(3): include('/home2/themedun...')
+#2 {main}
+  thrown in /home2/themedun/public_html/php/conexion_paciente.php on line 5
+[28-Mar-2023 05:27:22 America/Boise] PHP Warning:  mysqli_connect(): (08004/1040): Too many connections in /home2/themedun/public_html/php/conexion_paciente.php on line 3
+[28-Mar-2023 05:27:22 America/Boise] PHP Fatal error:  Uncaught TypeError: mysqli_query(): Argument #1 ($mysql) must be of type mysqli, bool given in /home2/themedun/public_html/php/conexion_paciente.php:5
+Stack trace:
+#0 /home2/themedun/public_html/php/conexion_paciente.php(5): mysqli_query(false, 'SET time_zone =...')
+#1 /home2/themedun/public_html/php/classNotificaciones.php(3): include('/home2/themedun...')
+#2 {main}
+  thrown in /home2/themedun/public_html/php/conexion_paciente.php on line 5
+[28-Mar-2023 05:42:25 America/Boise] PHP Warning:  mysqli_connect(): (08004/1040): Too many connections in /home2/themedun/public_html/php/conexion_paciente.php on line 3
+[28-Mar-2023 05:42:27 America/Boise] PHP Fatal error:  Uncaught TypeError: mysqli_query(): Argument #1 ($mysql) must be of type mysqli, bool given in /home2/themedun/public_html/php/conexion_paciente.php:5
+Stack trace:
+#0 /home2/themedun/public_html/php/conexion_paciente.php(5): mysqli_query(false, 'SET time_zone =...')
+#1 /home2/themedun/public_html/php/classNotificaciones.php(3): include('/home2/themedun...')
+#2 {main}
+  thrown in /home2/themedun/public_html/php/conexion_paciente.php on line 5
+[28-Mar-2023 05:42:29 America/Boise] PHP Warning:  mysqli_connect(): (HY000/1040): Too many connections in /home2/themedun/public_html/php/conexion_paciente.php on line 3
+[28-Mar-2023 05:42:31 America/Boise] PHP Fatal error:  Uncaught TypeError: mysqli_query(): Argument #1 ($mysql) must be of type mysqli, bool given in /home2/themedun/public_html/php/conexion_paciente.php:5
+Stack trace:
+#0 /home2/themedun/public_html/php/conexion_paciente.php(5): mysqli_query(false, 'SET time_zone =...')
+#1 /home2/themedun/public_html/php/classNotificaciones.php(3): include('/home2/themedun...')
+#2 {main}
+  thrown in /home2/themedun/public_html/php/conexion_paciente.php on line 5
+[28-Mar-2023 05:42:49 America/Boise] PHP Warning:  mysqli_connect(): (08004/1040): Too many connections in /home2/themedun/public_html/php/conexion_paciente.php on line 3
+[28-Mar-2023 05:42:49 America/Boise] PHP Warning:  mysqli_connect(): (08004/1040): Too many connections in /home2/themedun/public_html/php/conexion_paciente.php on line 3
+[28-Mar-2023 05:42:49 America/Boise] PHP Warning:  mysqli_connect(): (08004/1040): Too many connections in /home2/themedun/public_html/php/conexion_paciente.php on line 3
+[28-Mar-2023 05:42:49 America/Boise] PHP Warning:  mysqli_connect(): (HY000/1040): Too many connections in /home2/themedun/public_html/php/conexion_paciente.php on line 3
+[28-Mar-2023 05:42:49 America/Boise] PHP Warning:  mysqli_connect(): (HY000/1040): Too many connections in /home2/themedun/public_html/php/conexion_paciente.php on line 3
+[28-Mar-2023 05:42:49 America/Boise] PHP Warning:  mysqli_connect(): (08004/1040): Too many connections in /home2/themedun/public_html/php/conexion_paciente.php on line 3
+[28-Mar-2023 05:42:49 America/Boise] PHP Fatal error:  Uncaught TypeError: mysqli_query(): Argument #1 ($mysql) must be of type mysqli, bool given in /home2/themedun/public_html/php/conexion_paciente.php:5
+Stack trace:
+#0 /home2/themedun/public_html/php/conexion_paciente.php(5): mysqli_query(false, 'SET time_zone =...')
+#1 /home2/themedun/public_html/php/classNotificaciones.php(3): include('/home2/themedun...')
+#2 {main}
+  thrown in /home2/themedun/public_html/php/conexion_paciente.php on line 5
+[28-Mar-2023 05:42:49 America/Boise] PHP Fatal error:  Uncaught TypeError: mysqli_query(): Argument #1 ($mysql) must be of type mysqli, bool given in /home2/themedun/public_html/php/conexion_paciente.php:5
+Stack trace:
+#0 /home2/themedun/public_html/php/conexion_paciente.php(5): mysqli_query(false, 'SET time_zone =...')
+#1 /home2/themedun/public_html/php/classNotificaciones.php(3): include('/home2/themedun...')
+#2 {main}
+  thrown in /home2/themedun/public_html/php/conexion_paciente.php on line 5
+[28-Mar-2023 05:42:49 America/Boise] PHP Fatal error:  Uncaught TypeError: mysqli_query(): Argument #1 ($mysql) must be of type mysqli, bool given in /home2/themedun/public_html/php/conexion_paciente.php:5
+Stack trace:
+#0 /home2/themedun/public_html/php/conexion_paciente.php(5): mysqli_query(false, 'SET time_zone =...')
+#1 /home2/themedun/public_html/php/classNotificaciones.php(3): include('/home2/themedun...')
+#2 {main}
+  thrown in /home2/themedun/public_html/php/conexion_paciente.php on line 5
+[28-Mar-2023 05:42:49 America/Boise] PHP Warning:  mysqli_connect(): (08004/1040): Too many connections in /home2/themedun/public_html/php/conexion_paciente.php on line 3
+[28-Mar-2023 05:42:49 America/Boise] PHP Fatal error:  Uncaught TypeError: mysqli_query(): Argument #1 ($mysql) must be of type mysqli, bool given in /home2/themedun/public_html/php/conexion_paciente.php:5
+Stack trace:
+#0 /home2/themedun/public_html/php/conexion_paciente.php(5): mysqli_query(false, 'SET time_zone =...')
+#1 /home2/themedun/public_html/php/classNotificaciones.php(3): include('/home2/themedun...')
+#2 {main}
+  thrown in /home2/themedun/public_html/php/conexion_paciente.php on line 5
+[28-Mar-2023 05:42:49 America/Boise] PHP Fatal error:  Uncaught TypeError: mysqli_query(): Argument #1 ($mysql) must be of type mysqli, bool given in /home2/themedun/public_html/php/conexion_paciente.php:5
+Stack trace:
+#0 /home2/themedun/public_html/php/conexion_paciente.php(5): mysqli_query(false, 'SET time_zone =...')
+#1 /home2/themedun/public_html/php/classNotificaciones.php(3): include('/home2/themedun...')
+#2 {main}
+  thrown in /home2/themedun/public_html/php/conexion_paciente.php on line 5
+[28-Mar-2023 05:42:49 America/Boise] PHP Fatal error:  Uncaught TypeError: mysqli_query(): Argument #1 ($mysql) must be of type mysqli, bool given in /home2/themedun/public_html/php/conexion_paciente.php:5
+Stack trace:
+#0 /home2/themedun/public_html/php/conexion_paciente.php(5): mysqli_query(false, 'SET time_zone =...')
+#1 /home2/themedun/public_html/php/classNotificaciones.php(3): include('/home2/themedun...')
+#2 {main}
+  thrown in /home2/themedun/public_html/php/conexion_paciente.php on line 5
+[28-Mar-2023 05:42:49 America/Boise] PHP Fatal error:  Uncaught TypeError: mysqli_query(): Argument #1 ($mysql) must be of type mysqli, bool given in /home2/themedun/public_html/php/conexion_paciente.php:5
+Stack trace:
+#0 /home2/themedun/public_html/php/conexion_paciente.php(5): mysqli_query(false, 'SET time_zone =...')
+#1 /home2/themedun/public_html/php/classNotificaciones.php(3): include('/home2/themedun...')
+#2 {main}
+  thrown in /home2/themedun/public_html/php/conexion_paciente.php on line 5
+[28-Mar-2023 05:42:49 America/Boise] PHP Warning:  mysqli_connect(): (08004/1040): Too many connections in /home2/themedun/public_html/php/conexion_paciente.php on line 3
+[28-Mar-2023 05:42:49 America/Boise] PHP Warning:  mysqli_connect(): (08004/1040): Too many connections in /home2/themedun/public_html/php/conexion_paciente.php on line 3
+[28-Mar-2023 05:42:49 America/Boise] PHP Warning:  mysqli_connect(): (08004/1040): Too many connections in /home2/themedun/public_html/php/conexion_paciente.php on line 3
+[28-Mar-2023 05:42:49 America/Boise] PHP Warning:  mysqli_connect(): (08004/1040): Too many connections in /home2/themedun/public_html/php/conexion_paciente.php on line 3
+[28-Mar-2023 05:42:49 America/Boise] PHP Fatal error:  Uncaught TypeError: mysqli_query(): Argument #1 ($mysql) must be of type mysqli, bool given in /home2/themedun/public_html/php/conexion_paciente.php:5
+Stack trace:
+#0 /home2/themedun/public_html/php/conexion_paciente.php(5): mysqli_query(false, 'SET time_zone =...')
+#1 /home2/themedun/public_html/php/classNotificaciones.php(3): include('/home2/themedun...')
+#2 {main}
+  thrown in /home2/themedun/public_html/php/conexion_paciente.php on line 5
+[28-Mar-2023 05:42:49 America/Boise] PHP Fatal error:  Uncaught TypeError: mysqli_query(): Argument #1 ($mysql) must be of type mysqli, bool given in /home2/themedun/public_html/php/conexion_paciente.php:5
+Stack trace:
+#0 /home2/themedun/public_html/php/conexion_paciente.php(5): mysqli_query(false, 'SET time_zone =...')
+#1 /home2/themedun/public_html/php/classNotificaciones.php(3): include('/home2/themedun...')
+#2 {main}
+  thrown in /home2/themedun/public_html/php/conexion_paciente.php on line 5
+[28-Mar-2023 05:42:49 America/Boise] PHP Warning:  mysqli_connect(): (08004/1040): Too many connections in /home2/themedun/public_html/php/conexion_paciente.php on line 3
+[28-Mar-2023 05:42:49 America/Boise] PHP Fatal error:  Uncaught TypeError: mysqli_query(): Argument #1 ($mysql) must be of type mysqli, bool given in /home2/themedun/public_html/php/conexion_paciente.php:5
+Stack trace:
+#0 /home2/themedun/public_html/php/conexion_paciente.php(5): mysqli_query(false, 'SET time_zone =...')
+#1 /home2/themedun/public_html/php/classNotificaciones.php(3): include('/home2/themedun...')
+#2 {main}
+  thrown in /home2/themedun/public_html/php/conexion_paciente.php on line 5
+[28-Mar-2023 05:42:49 America/Boise] PHP Warning:  mysqli_connect(): (08004/1040): Too many connections in /home2/themedun/public_html/php/conexion_paciente.php on line 3
+[28-Mar-2023 05:42:49 America/Boise] PHP Fatal error:  Uncaught TypeError: mysqli_query(): Argument #1 ($mysql) must be of type mysqli, bool given in /home2/themedun/public_html/php/conexion_paciente.php:5
+Stack trace:
+#0 /home2/themedun/public_html/php/conexion_paciente.php(5): mysqli_query(false, 'SET time_zone =...')
+#1 /home2/themedun/public_html/php/classNotificaciones.php(3): include('/home2/themedun...')
+#2 {main}
+  thrown in /home2/themedun/public_html/php/conexion_paciente.php on line 5
+[28-Mar-2023 05:42:49 America/Boise] PHP Fatal error:  Uncaught TypeError: mysqli_query(): Argument #1 ($mysql) must be of type mysqli, bool given in /home2/themedun/public_html/php/conexion_paciente.php:5
+Stack trace:
+#0 /home2/themedun/public_html/php/conexion_paciente.php(5): mysqli_query(false, 'SET time_zone =...')
+#1 /home2/themedun/public_html/php/classNotificaciones.php(3): include('/home2/themedun...')
+#2 {main}
+  thrown in /home2/themedun/public_html/php/conexion_paciente.php on line 5
+[28-Mar-2023 05:42:49 America/Boise] PHP Warning:  mysqli_connect(): (08004/1040): Too many connections in /home2/themedun/public_html/php/conexion_paciente.php on line 3
+[28-Mar-2023 05:42:49 America/Boise] PHP Warning:  mysqli_connect(): (HY000/1040): Too many connections in /home2/themedun/public_html/php/conexion_paciente.php on line 3
+[28-Mar-2023 05:42:49 America/Boise] PHP Fatal error:  Uncaught TypeError: mysqli_query(): Argument #1 ($mysql) must be of type mysqli, bool given in /home2/themedun/public_html/php/conexion_paciente.php:5
+Stack trace:
+#0 /home2/themedun/public_html/php/conexion_paciente.php(5): mysqli_query(false, 'SET time_zone =...')
+#1 /home2/themedun/public_html/php/classNotificaciones.php(3): include('/home2/themedun...')
+#2 {main}
+  thrown in /home2/themedun/public_html/php/conexion_paciente.php on line 5
+[28-Mar-2023 05:42:49 America/Boise] PHP Fatal error:  Uncaught TypeError: mysqli_query(): Argument #1 ($mysql) must be of type mysqli, bool given in /home2/themedun/public_html/php/conexion_paciente.php:5
+Stack trace:
+#0 /home2/themedun/public_html/php/conexion_paciente.php(5): mysqli_query(false, 'SET time_zone =...')
+#1 /home2/themedun/public_html/php/classNotificaciones.php(3): include('/home2/themedun...')
+#2 {main}
+  thrown in /home2/themedun/public_html/php/conexion_paciente.php on line 5
+[28-Mar-2023 05:42:49 America/Boise] PHP Fatal error:  Uncaught TypeError: mysqli_query(): Argument #1 ($mysql) must be of type mysqli, bool given in /home2/themedun/public_html/php/conexion_paciente.php:5
+Stack trace:
+#0 /home2/themedun/public_html/php/conexion_paciente.php(5): mysqli_query(false, 'SET time_zone =...')
+#1 /home2/themedun/public_html/php/classNotificaciones.php(3): include('/home2/themedun...')
+#2 {main}
+  thrown in /home2/themedun/public_html/php/conexion_paciente.php on line 5
+[28-Mar-2023 05:42:51 America/Boise] PHP Warning:  mysqli_connect(): (HY000/1040): Too many connections in /home2/themedun/public_html/php/conexion_paciente.php on line 3
+[28-Mar-2023 05:42:51 America/Boise] PHP Fatal error:  Uncaught TypeError: mysqli_query(): Argument #1 ($mysql) must be of type mysqli, bool given in /home2/themedun/public_html/php/conexion_paciente.php:5
+Stack trace:
+#0 /home2/themedun/public_html/php/conexion_paciente.php(5): mysqli_query(false, 'SET time_zone =...')
+#1 /home2/themedun/public_html/php/classNotificaciones.php(3): include('/home2/themedun...')
+#2 {main}
+  thrown in /home2/themedun/public_html/php/conexion_paciente.php on line 5
+[28-Mar-2023 05:42:53 America/Boise] PHP Warning:  mysqli_connect(): (HY000/1040): Too many connections in /home2/themedun/public_html/php/conexion_paciente.php on line 3
+[28-Mar-2023 05:42:53 America/Boise] PHP Fatal error:  Uncaught TypeError: mysqli_query(): Argument #1 ($mysql) must be of type mysqli, bool given in /home2/themedun/public_html/php/conexion_paciente.php:5
+Stack trace:
+#0 /home2/themedun/public_html/php/conexion_paciente.php(5): mysqli_query(false, 'SET time_zone =...')
+#1 /home2/themedun/public_html/php/classNotificaciones.php(3): include('/home2/themedun...')
+#2 {main}
+  thrown in /home2/themedun/public_html/php/conexion_paciente.php on line 5
+[28-Mar-2023 05:42:57 America/Boise] PHP Warning:  mysqli_connect(): (HY000/1040): Too many connections in /home2/themedun/public_html/php/conexion_paciente.php on line 3
+[28-Mar-2023 05:42:57 America/Boise] PHP Fatal error:  Uncaught TypeError: mysqli_query(): Argument #1 ($mysql) must be of type mysqli, bool given in /home2/themedun/public_html/php/conexion_paciente.php:5
+Stack trace:
+#0 /home2/themedun/public_html/php/conexion_paciente.php(5): mysqli_query(false, 'SET time_zone =...')
+#1 /home2/themedun/public_html/php/classNotificaciones.php(3): include('/home2/themedun...')
+#2 {main}
+  thrown in /home2/themedun/public_html/php/conexion_paciente.php on line 5
+[28-Mar-2023 05:43:19 America/Boise] PHP Warning:  mysqli_connect(): (HY000/1040): Too many connections in /home2/themedun/public_html/php/conexion_paciente.php on line 3
+[28-Mar-2023 05:43:19 America/Boise] PHP Fatal error:  Uncaught TypeError: mysqli_query(): Argument #1 ($mysql) must be of type mysqli, bool given in /home2/themedun/public_html/php/conexion_paciente.php:5
+Stack trace:
+#0 /home2/themedun/public_html/php/conexion_paciente.php(5): mysqli_query(false, 'SET time_zone =...')
+#1 /home2/themedun/public_html/php/classNotificaciones.php(3): include('/home2/themedun...')
+#2 {main}
+  thrown in /home2/themedun/public_html/php/conexion_paciente.php on line 5
+[28-Mar-2023 05:44:50 America/Boise] PHP Warning:  mysqli_connect(): (HY000/1040): Too many connections in /home2/themedun/public_html/php/conexion_paciente.php on line 3
+[28-Mar-2023 05:44:50 America/Boise] PHP Warning:  mysqli_connect(): (08004/1040): Too many connections in /home2/themedun/public_html/php/conexion_paciente.php on line 3
+[28-Mar-2023 05:44:50 America/Boise] PHP Warning:  mysqli_connect(): (HY000/1040): Too many connections in /home2/themedun/public_html/php/conexion_paciente.php on line 3
+[28-Mar-2023 05:44:50 America/Boise] PHP Warning:  mysqli_connect(): (HY000/1040): Too many connections in /home2/themedun/public_html/php/conexion_paciente.php on line 3
+[28-Mar-2023 05:44:50 America/Boise] PHP Warning:  mysqli_connect(): (08004/1040): Too many connections in /home2/themedun/public_html/php/conexion_paciente.php on line 3
+[28-Mar-2023 05:44:50 America/Boise] PHP Warning:  mysqli_connect(): (HY000/1040): Too many connections in /home2/themedun/public_html/php/conexion_paciente.php on line 3
+[28-Mar-2023 05:44:52 America/Boise] PHP Fatal error:  Uncaught TypeError: mysqli_query(): Argument #1 ($mysql) must be of type mysqli, bool given in /home2/themedun/public_html/php/conexion_paciente.php:5
+Stack trace:
+#0 /home2/themedun/public_html/php/conexion_paciente.php(5): mysqli_query(false, 'SET time_zone =...')
+#1 /home2/themedun/public_html/php/classNotificaciones.php(3): include('/home2/themedun...')
+#2 {main}
+  thrown in /home2/themedun/public_html/php/conexion_paciente.php on line 5
+[28-Mar-2023 05:44:52 America/Boise] PHP Fatal error:  Uncaught TypeError: mysqli_query(): Argument #1 ($mysql) must be of type mysqli, bool given in /home2/themedun/public_html/php/conexion_paciente.php:5
+Stack trace:
+#0 /home2/themedun/public_html/php/conexion_paciente.php(5): mysqli_query(false, 'SET time_zone =...')
+#1 /home2/themedun/public_html/php/classNotificaciones.php(3): include('/home2/themedun...')
+#2 {main}
+  thrown in /home2/themedun/public_html/php/conexion_paciente.php on line 5
+[28-Mar-2023 05:44:52 America/Boise] PHP Fatal error:  Uncaught TypeError: mysqli_query(): Argument #1 ($mysql) must be of type mysqli, bool given in /home2/themedun/public_html/php/conexion_paciente.php:5
+Stack trace:
+#0 /home2/themedun/public_html/php/conexion_paciente.php(5): mysqli_query(false, 'SET time_zone =...')
+#1 /home2/themedun/public_html/php/classNotificaciones.php(3): include('/home2/themedun...')
+#2 {main}
+  thrown in /home2/themedun/public_html/php/conexion_paciente.php on line 5
+[28-Mar-2023 05:44:52 America/Boise] PHP Fatal error:  Uncaught TypeError: mysqli_query(): Argument #1 ($mysql) must be of type mysqli, bool given in /home2/themedun/public_html/php/conexion_paciente.php:5
+Stack trace:
+#0 /home2/themedun/public_html/php/conexion_paciente.php(5): mysqli_query(false, 'SET time_zone =...')
+#1 /home2/themedun/public_html/php/classNotificaciones.php(3): include('/home2/themedun...')
+#2 {main}
+  thrown in /home2/themedun/public_html/php/conexion_paciente.php on line 5
+[28-Mar-2023 05:44:52 America/Boise] PHP Fatal error:  Uncaught TypeError: mysqli_query(): Argument #1 ($mysql) must be of type mysqli, bool given in /home2/themedun/public_html/php/conexion_paciente.php:5
+Stack trace:
+#0 /home2/themedun/public_html/php/conexion_paciente.php(5): mysqli_query(false, 'SET time_zone =...')
+#1 /home2/themedun/public_html/php/classNotificaciones.php(3): include('/home2/themedun...')
+#2 {main}
+  thrown in /home2/themedun/public_html/php/conexion_paciente.php on line 5
+[28-Mar-2023 05:44:52 America/Boise] PHP Fatal error:  Uncaught TypeError: mysqli_query(): Argument #1 ($mysql) must be of type mysqli, bool given in /home2/themedun/public_html/php/conexion_paciente.php:5
+Stack trace:
+#0 /home2/themedun/public_html/php/conexion_paciente.php(5): mysqli_query(false, 'SET time_zone =...')
+#1 /home2/themedun/public_html/php/classNotificaciones.php(3): include('/home2/themedun...')
+#2 {main}
+  thrown in /home2/themedun/public_html/php/conexion_paciente.php on line 5
+[28-Mar-2023 05:44:53 America/Boise] PHP Warning:  mysqli_connect(): (08004/1040): Too many connections in /home2/themedun/public_html/php/conexion_paciente.php on line 3
+[28-Mar-2023 05:44:52 America/Boise] PHP Warning:  mysqli_connect(): (HY000/1040): Too many connections in /home2/themedun/public_html/php/conexion_paciente.php on line 3
+[28-Mar-2023 05:44:55 America/Boise] PHP Warning:  mysqli_connect(): (HY000/1040): Too many connections in /home2/themedun/public_html/php/conexion_paciente.php on line 3
+[28-Mar-2023 05:44:55 America/Boise] PHP Warning:  mysqli_connect(): (HY000/1040): Too many connections in /home2/themedun/public_html/php/conexion_paciente.php on line 3
+[28-Mar-2023 05:44:55 America/Boise] PHP Fatal error:  Uncaught TypeError: mysqli_query(): Argument #1 ($mysql) must be of type mysqli, bool given in /home2/themedun/public_html/php/conexion_paciente.php:5
+Stack trace:
+#0 /home2/themedun/public_html/php/conexion_paciente.php(5): mysqli_query(false, 'SET time_zone =...')
+#1 /home2/themedun/public_html/php/classNotificaciones.php(3): include('/home2/themedun...')
+#2 {main}
+  thrown in /home2/themedun/public_html/php/conexion_paciente.php on line 5
+[28-Mar-2023 05:44:55 America/Boise] PHP Warning:  mysqli_connect(): (HY000/1040): Too many connections in /home2/themedun/public_html/php/conexion_paciente.php on line 3
+[28-Mar-2023 05:44:54 America/Boise] PHP Warning:  mysqli_connect(): (HY000/1040): Too many connections in /home2/themedun/public_html/php/conexion_paciente.php on line 3
+[28-Mar-2023 05:44:55 America/Boise] PHP Fatal error:  Uncaught TypeError: mysqli_query(): Argument #1 ($mysql) must be of type mysqli, bool given in /home2/themedun/public_html/php/conexion_paciente.php:5
+Stack trace:
+#0 /home2/themedun/public_html/php/conexion_paciente.php(5): mysqli_query(false, 'SET time_zone =...')
+#1 /home2/themedun/public_html/php/classNotificaciones.php(3): include('/home2/themedun...')
+#2 {main}
+  thrown in /home2/themedun/public_html/php/conexion_paciente.php on line 5
+[28-Mar-2023 05:44:55 America/Boise] PHP Fatal error:  Uncaught TypeError: mysqli_query(): Argument #1 ($mysql) must be of type mysqli, bool given in /home2/themedun/public_html/php/conexion_paciente.php:5
+Stack trace:
+#0 /home2/themedun/public_html/php/conexion_paciente.php(5): mysqli_query(false, 'SET time_zone =...')
+#1 /home2/themedun/public_html/php/classNotificaciones.php(3): include('/home2/themedun...')
+#2 {main}
+  thrown in /home2/themedun/public_html/php/conexion_paciente.php on line 5
+[28-Mar-2023 05:44:55 America/Boise] PHP Fatal error:  Uncaught TypeError: mysqli_query(): Argument #1 ($mysql) must be of type mysqli, bool given in /home2/themedun/public_html/php/conexion_paciente.php:5
+Stack trace:
+#0 /home2/themedun/public_html/php/conexion_paciente.php(5): mysqli_query(false, 'SET time_zone =...')
+#1 /home2/themedun/public_html/php/classNotificaciones.php(3): include('/home2/themedun...')
+#2 {main}
+  thrown in /home2/themedun/public_html/php/conexion_paciente.php on line 5
+[28-Mar-2023 05:44:55 America/Boise] PHP Fatal error:  Uncaught TypeError: mysqli_query(): Argument #1 ($mysql) must be of type mysqli, bool given in /home2/themedun/public_html/php/conexion_paciente.php:5
+Stack trace:
+#0 /home2/themedun/public_html/php/conexion_paciente.php(5): mysqli_query(false, 'SET time_zone =...')
+#1 /home2/themedun/public_html/php/classNotificaciones.php(3): include('/home2/themedun...')
+#2 {main}
+  thrown in /home2/themedun/public_html/php/conexion_paciente.php on line 5
+[28-Mar-2023 05:44:55 America/Boise] PHP Fatal error:  Uncaught TypeError: mysqli_query(): Argument #1 ($mysql) must be of type mysqli, bool given in /home2/themedun/public_html/php/conexion_paciente.php:5
+Stack trace:
+#0 /home2/themedun/public_html/php/conexion_paciente.php(5): mysqli_query(false, 'SET time_zone =...')
+#1 /home2/themedun/public_html/php/classNotificaciones.php(3): include('/home2/themedun...')
+#2 {main}
+  thrown in /home2/themedun/public_html/php/conexion_paciente.php on line 5
+[28-Mar-2023 05:44:58 America/Boise] PHP Warning:  mysqli_connect(): (HY000/1040): Too many connections in /home2/themedun/public_html/php/conexion_paciente.php on line 3
+[28-Mar-2023 05:44:58 America/Boise] PHP Warning:  mysqli_connect(): (HY000/1040): Too many connections in /home2/themedun/public_html/php/conexion_paciente.php on line 3
+[28-Mar-2023 05:44:58 America/Boise] PHP Warning:  mysqli_connect(): (08004/1040): Too many connections in /home2/themedun/public_html/php/conexion_paciente.php on line 3
+[28-Mar-2023 05:44:58 America/Boise] PHP Fatal error:  Uncaught TypeError: mysqli_query(): Argument #1 ($mysql) must be of type mysqli, bool given in /home2/themedun/public_html/php/conexion_paciente.php:5
+Stack trace:
+#0 /home2/themedun/public_html/php/conexion_paciente.php(5): mysqli_query(false, 'SET time_zone =...')
+#1 /home2/themedun/public_html/php/classNotificaciones.php(3): include('/home2/themedun...')
+#2 {main}
+  thrown in /home2/themedun/public_html/php/conexion_paciente.php on line 5
+[28-Mar-2023 05:44:58 America/Boise] PHP Fatal error:  Uncaught TypeError: mysqli_query(): Argument #1 ($mysql) must be of type mysqli, bool given in /home2/themedun/public_html/php/conexion_paciente.php:5
+Stack trace:
+#0 /home2/themedun/public_html/php/conexion_paciente.php(5): mysqli_query(false, 'SET time_zone =...')
+#1 /home2/themedun/public_html/php/classNotificaciones.php(3): include('/home2/themedun...')
+#2 {main}
+  thrown in /home2/themedun/public_html/php/conexion_paciente.php on line 5
+[28-Mar-2023 05:44:58 America/Boise] PHP Fatal error:  Uncaught TypeError: mysqli_query(): Argument #1 ($mysql) must be of type mysqli, bool given in /home2/themedun/public_html/php/conexion_paciente.php:5
+Stack trace:
+#0 /home2/themedun/public_html/php/conexion_paciente.php(5): mysqli_query(false, 'SET time_zone =...')
+#1 /home2/themedun/public_html/php/classNotificaciones.php(3): include('/home2/themedun...')
+#2 {main}
+  thrown in /home2/themedun/public_html/php/conexion_paciente.php on line 5
+[28-Mar-2023 05:44:58 America/Boise] PHP Warning:  mysqli_connect(): (HY000/1040): Too many connections in /home2/themedun/public_html/php/conexion_paciente.php on line 3
+[28-Mar-2023 05:44:58 America/Boise] PHP Warning:  mysqli_connect(): (08004/1040): Too many connections in /home2/themedun/public_html/php/conexion_paciente.php on line 3
+[28-Mar-2023 05:44:58 America/Boise] PHP Fatal error:  Uncaught TypeError: mysqli_query(): Argument #1 ($mysql) must be of type mysqli, bool given in /home2/themedun/public_html/php/conexion_paciente.php:5
+Stack trace:
+#0 /home2/themedun/public_html/php/conexion_paciente.php(5): mysqli_query(false, 'SET time_zone =...')
+#1 /home2/themedun/public_html/php/classNotificaciones.php(3): include('/home2/themedun...')
+#2 {main}
+  thrown in /home2/themedun/public_html/php/conexion_paciente.php on line 5
+[28-Mar-2023 05:44:58 America/Boise] PHP Fatal error:  Uncaught TypeError: mysqli_query(): Argument #1 ($mysql) must be of type mysqli, bool given in /home2/themedun/public_html/php/conexion_paciente.php:5
+Stack trace:
+#0 /home2/themedun/public_html/php/conexion_paciente.php(5): mysqli_query(false, 'SET time_zone =...')
+#1 /home2/themedun/public_html/php/classNotificaciones.php(3): include('/home2/themedun...')
+#2 {main}
+  thrown in /home2/themedun/public_html/php/conexion_paciente.php on line 5
+[28-Mar-2023 05:44:58 America/Boise] PHP Warning:  mysqli_connect(): (HY000/1040): Too many connections in /home2/themedun/public_html/php/conexion_paciente.php on line 3
+[28-Mar-2023 05:44:58 America/Boise] PHP Fatal error:  Uncaught TypeError: mysqli_query(): Argument #1 ($mysql) must be of type mysqli, bool given in /home2/themedun/public_html/php/conexion_paciente.php:5
+Stack trace:
+#0 /home2/themedun/public_html/php/conexion_paciente.php(5): mysqli_query(false, 'SET time_zone =...')
+#1 /home2/themedun/public_html/php/classNotificaciones.php(3): include('/home2/themedun...')
+#2 {main}
+  thrown in /home2/themedun/public_html/php/conexion_paciente.php on line 5
+[28-Mar-2023 05:44:58 America/Boise] PHP Warning:  mysqli_connect(): (HY000/1040): Too many connections in /home2/themedun/public_html/php/conexion_paciente.php on line 3
+[28-Mar-2023 05:44:58 America/Boise] PHP Fatal error:  Uncaught TypeError: mysqli_query(): Argument #1 ($mysql) must be of type mysqli, bool given in /home2/themedun/public_html/php/conexion_paciente.php:5
+Stack trace:
+#0 /home2/themedun/public_html/php/conexion_paciente.php(5): mysqli_query(false, 'SET time_zone =...')
+#1 /home2/themedun/public_html/php/classNotificaciones.php(3): include('/home2/themedun...')
+#2 {main}
+  thrown in /home2/themedun/public_html/php/conexion_paciente.php on line 5
+[28-Mar-2023 05:44:58 America/Boise] PHP Warning:  mysqli_connect(): (08004/1040): Too many connections in /home2/themedun/public_html/php/conexion_paciente.php on line 3
+[28-Mar-2023 05:44:58 America/Boise] PHP Fatal error:  Uncaught TypeError: mysqli_query(): Argument #1 ($mysql) must be of type mysqli, bool given in /home2/themedun/public_html/php/conexion_paciente.php:5
+Stack trace:
+#0 /home2/themedun/public_html/php/conexion_paciente.php(5): mysqli_query(false, 'SET time_zone =...')
+#1 /home2/themedun/public_html/php/classNotificaciones.php(3): include('/home2/themedun...')
+#2 {main}
+  thrown in /home2/themedun/public_html/php/conexion_paciente.php on line 5
+[28-Mar-2023 05:44:58 America/Boise] PHP Warning:  mysqli_connect(): (HY000/1040): Too many connections in /home2/themedun/public_html/php/conexion_paciente.php on line 3
+[28-Mar-2023 05:44:58 America/Boise] PHP Fatal error:  Uncaught TypeError: mysqli_query(): Argument #1 ($mysql) must be of type mysqli, bool given in /home2/themedun/public_html/php/conexion_paciente.php:5
+Stack trace:
+#0 /home2/themedun/public_html/php/conexion_paciente.php(5): mysqli_query(false, 'SET time_zone =...')
+#1 /home2/themedun/public_html/php/classNotificaciones.php(3): include('/home2/themedun...')
+#2 {main}
+  thrown in /home2/themedun/public_html/php/conexion_paciente.php on line 5
+[28-Mar-2023 05:44:58 America/Boise] PHP Warning:  mysqli_connect(): (HY000/1040): Too many connections in /home2/themedun/public_html/php/conexion_paciente.php on line 3
+[28-Mar-2023 05:44:58 America/Boise] PHP Fatal error:  Uncaught TypeError: mysqli_query(): Argument #1 ($mysql) must be of type mysqli, bool given in /home2/themedun/public_html/php/conexion_paciente.php:5
+Stack trace:
+#0 /home2/themedun/public_html/php/conexion_paciente.php(5): mysqli_query(false, 'SET time_zone =...')
+#1 /home2/themedun/public_html/php/classNotificaciones.php(3): include('/home2/themedun...')
+#2 {main}
+  thrown in /home2/themedun/public_html/php/conexion_paciente.php on line 5
+[28-Mar-2023 05:44:58 America/Boise] PHP Warning:  mysqli_connect(): (HY000/1040): Too many connections in /home2/themedun/public_html/php/conexion_paciente.php on line 3
+[28-Mar-2023 05:44:58 America/Boise] PHP Fatal error:  Uncaught TypeError: mysqli_query(): Argument #1 ($mysql) must be of type mysqli, bool given in /home2/themedun/public_html/php/conexion_paciente.php:5
+Stack trace:
+#0 /home2/themedun/public_html/php/conexion_paciente.php(5): mysqli_query(false, 'SET time_zone =...')
+#1 /home2/themedun/public_html/php/classNotificaciones.php(3): include('/home2/themedun...')
+#2 {main}
+  thrown in /home2/themedun/public_html/php/conexion_paciente.php on line 5
+[28-Mar-2023 05:45:30 America/Boise] PHP Warning:  mysqli_connect(): (HY000/1040): Too many connections in /home2/themedun/public_html/php/conexion_paciente.php on line 3
+[28-Mar-2023 05:45:31 America/Boise] PHP Fatal error:  Uncaught TypeError: mysqli_query(): Argument #1 ($mysql) must be of type mysqli, bool given in /home2/themedun/public_html/php/conexion_paciente.php:5
+Stack trace:
+#0 /home2/themedun/public_html/php/conexion_paciente.php(5): mysqli_query(false, 'SET time_zone =...')
+#1 /home2/themedun/public_html/php/classNotificaciones.php(3): include('/home2/themedun...')
+#2 {main}
+  thrown in /home2/themedun/public_html/php/conexion_paciente.php on line 5
+[28-Mar-2023 05:45:31 America/Boise] PHP Warning:  mysqli_connect(): (08004/1040): Too many connections in /home2/themedun/public_html/php/conexion_paciente.php on line 3
+[28-Mar-2023 05:45:32 America/Boise] PHP Fatal error:  Uncaught TypeError: mysqli_query(): Argument #1 ($mysql) must be of type mysqli, bool given in /home2/themedun/public_html/php/conexion_paciente.php:5
+Stack trace:
+#0 /home2/themedun/public_html/php/conexion_paciente.php(5): mysqli_query(false, 'SET time_zone =...')
+#1 /home2/themedun/public_html/php/classNotificaciones.php(3): include('/home2/themedun...')
+#2 {main}
+  thrown in /home2/themedun/public_html/php/conexion_paciente.php on line 5
+[30-Mar-2023 21:00:02 America/Boise] PHP Warning:  Undefined property: stdClass::$cantidad in /home2/themedun/public_html/php/classNotificaciones.php on line 45
+[30-Mar-2023 21:00:02 America/Boise] PHP Warning:  Undefined property: stdClass::$cantidad in /home2/themedun/public_html/php/classNotificaciones.php on line 47
+[30-Mar-2023 21:00:02 America/Boise] PHP Warning:  Undefined property: stdClass::$cantidad in /home2/themedun/public_html/php/classNotificaciones.php on line 49
+[30-Mar-2023 21:00:02 America/Boise] PHP Warning:  Undefined property: stdClass::$cantidad in /home2/themedun/public_html/php/classNotificaciones.php on line 51
+[30-Mar-2023 21:00:02 America/Boise] PHP Warning:  Undefined property: stdClass::$cantidad in /home2/themedun/public_html/php/classNotificaciones.php on line 45
+[30-Mar-2023 21:00:02 America/Boise] PHP Warning:  Undefined property: stdClass::$cantidad in /home2/themedun/public_html/php/classNotificaciones.php on line 47
+[30-Mar-2023 21:00:02 America/Boise] PHP Warning:  Undefined property: stdClass::$cantidad in /home2/themedun/public_html/php/classNotificaciones.php on line 49
+[30-Mar-2023 21:00:02 America/Boise] PHP Warning:  Undefined property: stdClass::$cantidad in /home2/themedun/public_html/php/classNotificaciones.php on line 51
+[31-Mar-2023 05:53:34 America/Boise] PHP Warning:  Undefined property: stdClass::$cantidad in /home2/themedun/public_html/php/classNotificaciones.php on line 45
+[31-Mar-2023 05:53:34 America/Boise] PHP Warning:  Undefined property: stdClass::$cantidad in /home2/themedun/public_html/php/classNotificaciones.php on line 45
+[31-Mar-2023 05:53:34 America/Boise] PHP Warning:  Undefined property: stdClass::$cantidad in /home2/themedun/public_html/php/classNotificaciones.php on line 47
+[31-Mar-2023 05:53:34 America/Boise] PHP Warning:  Undefined property: stdClass::$cantidad in /home2/themedun/public_html/php/classNotificaciones.php on line 49
+[31-Mar-2023 05:53:34 America/Boise] PHP Warning:  Undefined property: stdClass::$cantidad in /home2/themedun/public_html/php/classNotificaciones.php on line 47
+[31-Mar-2023 05:53:34 America/Boise] PHP Warning:  Undefined property: stdClass::$cantidad in /home2/themedun/public_html/php/classNotificaciones.php on line 51
+[31-Mar-2023 05:53:34 America/Boise] PHP Warning:  Undefined property: stdClass::$cantidad in /home2/themedun/public_html/php/classNotificaciones.php on line 49
+[31-Mar-2023 05:53:34 America/Boise] PHP Warning:  Undefined property: stdClass::$cantidad in /home2/themedun/public_html/php/classNotificaciones.php on line 51
+[31-Mar-2023 19:58:58 America/Boise] PHP Warning:  Undefined property: stdClass::$cantidad in /home2/themedun/public_html/php/classNotificaciones.php on line 45
+[31-Mar-2023 19:58:58 America/Boise] PHP Warning:  Undefined property: stdClass::$cantidad in /home2/themedun/public_html/php/classNotificaciones.php on line 47
+[31-Mar-2023 19:58:58 America/Boise] PHP Warning:  Undefined property: stdClass::$cantidad in /home2/themedun/public_html/php/classNotificaciones.php on line 49
+[31-Mar-2023 19:58:58 America/Boise] PHP Warning:  Undefined property: stdClass::$cantidad in /home2/themedun/public_html/php/classNotificaciones.php on line 51
+[31-Mar-2023 20:00:50 America/Boise] PHP Warning:  Undefined property: stdClass::$cantidad in /home2/themedun/public_html/php/classNotificaciones.php on line 45
+[31-Mar-2023 20:00:50 America/Boise] PHP Warning:  Undefined property: stdClass::$cantidad in /home2/themedun/public_html/php/classNotificaciones.php on line 47
+[31-Mar-2023 20:00:50 America/Boise] PHP Warning:  Undefined property: stdClass::$cantidad in /home2/themedun/public_html/php/classNotificaciones.php on line 49
+[31-Mar-2023 20:00:50 America/Boise] PHP Warning:  Undefined property: stdClass::$cantidad in /home2/themedun/public_html/php/classNotificaciones.php on line 51
+[31-Mar-2023 20:04:01 America/Boise] PHP Warning:  Undefined property: stdClass::$cantidad in /home2/themedun/public_html/php/classNotificaciones.php on line 45
+[31-Mar-2023 20:04:01 America/Boise] PHP Warning:  Undefined property: stdClass::$cantidad in /home2/themedun/public_html/php/classNotificaciones.php on line 47
+[31-Mar-2023 20:04:01 America/Boise] PHP Warning:  Undefined property: stdClass::$cantidad in /home2/themedun/public_html/php/classNotificaciones.php on line 49
+[31-Mar-2023 20:04:01 America/Boise] PHP Warning:  Undefined property: stdClass::$cantidad in /home2/themedun/public_html/php/classNotificaciones.php on line 51
+[03-Apr-2023 08:00:02 America/Boise] PHP Warning:  Undefined property: stdClass::$cantidad in /home2/themedun/public_html/php/classNotificaciones.php on line 45
+[03-Apr-2023 08:00:02 America/Boise] PHP Warning:  Undefined property: stdClass::$cantidad in /home2/themedun/public_html/php/classNotificaciones.php on line 47
+[03-Apr-2023 08:00:02 America/Boise] PHP Warning:  Undefined property: stdClass::$cantidad in /home2/themedun/public_html/php/classNotificaciones.php on line 49
+[03-Apr-2023 08:00:02 America/Boise] PHP Warning:  Undefined property: stdClass::$cantidad in /home2/themedun/public_html/php/classNotificaciones.php on line 51
+[04-Apr-2023 05:22:18 America/Boise] PHP Warning:  mysqli_connect(): (08004/1040): Too many connections in /home2/themedun/public_html/php/conexion_paciente.php on line 3
+[04-Apr-2023 05:22:18 America/Boise] PHP Fatal error:  Uncaught TypeError: mysqli_query(): Argument #1 ($mysql) must be of type mysqli, bool given in /home2/themedun/public_html/php/conexion_paciente.php:5
+Stack trace:
+#0 /home2/themedun/public_html/php/conexion_paciente.php(5): mysqli_query(false, 'SET time_zone =...')
+#1 /home2/themedun/public_html/php/classNotificaciones.php(3): include('/home2/themedun...')
+#2 {main}
+  thrown in /home2/themedun/public_html/php/conexion_paciente.php on line 5
+[04-Apr-2023 09:05:25 America/Boise] PHP Warning:  Undefined array key "imc" in /home2/themedun/public_html/php/guardarHistoria.php on line 21
+[10-Apr-2023 00:33:39 America/Boise] PHP Warning:  Undefined array key "correo" in /home2/themedun/public_html/php/validarCorreoPro.php on line 4
+[10-Apr-2023 00:33:39 America/Boise] PHP Warning:  Undefined array key "correo" in /home2/themedun/public_html/php/validarCorreoPro.php on line 11
+[10-Apr-2023 04:07:21 America/Boise] PHP Warning:  Undefined array key "correo" in /home2/themedun/public_html/php/validarLoginPro.php on line 4
+[10-Apr-2023 05:34:40 America/Boise] PHP Warning:  Undefined property: stdClass::$cantidad in /home2/themedun/public_html/php/classNotificaciones.php on line 45
+[10-Apr-2023 05:34:40 America/Boise] PHP Warning:  Undefined property: stdClass::$cantidad in /home2/themedun/public_html/php/classNotificaciones.php on line 47
+[10-Apr-2023 05:34:40 America/Boise] PHP Warning:  Undefined property: stdClass::$cantidad in /home2/themedun/public_html/php/classNotificaciones.php on line 49
+[10-Apr-2023 05:34:40 America/Boise] PHP Warning:  Undefined property: stdClass::$cantidad in /home2/themedun/public_html/php/classNotificaciones.php on line 51
+[10-Apr-2023 05:40:59 America/Boise] PHP Warning:  Undefined property: stdClass::$cantidad in /home2/themedun/public_html/php/classNotificaciones.php on line 45
+[10-Apr-2023 05:40:59 America/Boise] PHP Warning:  Undefined property: stdClass::$cantidad in /home2/themedun/public_html/php/classNotificaciones.php on line 47
+[10-Apr-2023 05:40:59 America/Boise] PHP Warning:  Undefined property: stdClass::$cantidad in /home2/themedun/public_html/php/classNotificaciones.php on line 49
+[10-Apr-2023 05:40:59 America/Boise] PHP Warning:  Undefined property: stdClass::$cantidad in /home2/themedun/public_html/php/classNotificaciones.php on line 51
+[10-Apr-2023 05:40:59 America/Boise] PHP Warning:  Undefined property: stdClass::$cantidad in /home2/themedun/public_html/php/classNotificaciones.php on line 45
+[10-Apr-2023 05:40:59 America/Boise] PHP Warning:  Undefined property: stdClass::$cantidad in /home2/themedun/public_html/php/classNotificaciones.php on line 47
+[10-Apr-2023 05:40:59 America/Boise] PHP Warning:  Undefined property: stdClass::$cantidad in /home2/themedun/public_html/php/classNotificaciones.php on line 49
+[10-Apr-2023 05:40:59 America/Boise] PHP Warning:  Undefined property: stdClass::$cantidad in /home2/themedun/public_html/php/classNotificaciones.php on line 51
+[12-Apr-2023 05:27:52 America/Boise] PHP Warning:  mysqli_connect(): (08004/1040): Too many connections in /home2/themedun/public_html/php/conexion_paciente.php on line 3
+[12-Apr-2023 05:27:52 America/Boise] PHP Fatal error:  Uncaught TypeError: mysqli_query(): Argument #1 ($mysql) must be of type mysqli, bool given in /home2/themedun/public_html/php/conexion_paciente.php:5
+Stack trace:
+#0 /home2/themedun/public_html/php/conexion_paciente.php(5): mysqli_query(false, 'SET time_zone =...')
+#1 /home2/themedun/public_html/php/classNotificaciones.php(3): include('/home2/themedun...')
+#2 {main}
+  thrown in /home2/themedun/public_html/php/conexion_paciente.php on line 5
+[12-Apr-2023 05:27:52 America/Boise] PHP Warning:  mysqli_connect(): (08004/1040): Too many connections in /home2/themedun/public_html/php/conexion_paciente.php on line 3
+[12-Apr-2023 05:27:53 America/Boise] PHP Fatal error:  Uncaught TypeError: mysqli_query(): Argument #1 ($mysql) must be of type mysqli, bool given in /home2/themedun/public_html/php/conexion_paciente.php:5
+Stack trace:
+#0 /home2/themedun/public_html/php/conexion_paciente.php(5): mysqli_query(false, 'SET time_zone =...')
+#1 /home2/themedun/public_html/php/classNotificaciones.php(3): include('/home2/themedun...')
+#2 {main}
+  thrown in /home2/themedun/public_html/php/conexion_paciente.php on line 5
+[12-Apr-2023 05:28:19 America/Boise] PHP Warning:  mysqli_connect(): (HY000/1040): Too many connections in /home2/themedun/public_html/php/conexion_paciente.php on line 3
+[12-Apr-2023 05:28:21 America/Boise] PHP Fatal error:  Uncaught TypeError: mysqli_query(): Argument #1 ($mysql) must be of type mysqli, bool given in /home2/themedun/public_html/php/conexion_paciente.php:5
+Stack trace:
+#0 /home2/themedun/public_html/php/conexion_paciente.php(5): mysqli_query(false, 'SET time_zone =...')
+#1 /home2/themedun/public_html/php/classNotificaciones.php(3): include('/home2/themedun...')
+#2 {main}
+  thrown in /home2/themedun/public_html/php/conexion_paciente.php on line 5
+[13-Apr-2023 21:28:35 America/Boise] PHP Warning:  Undefined array key "nombres" in /home2/themedun/public_html/php/enviarAyuda.php on line 2
+[13-Apr-2023 21:28:35 America/Boise] PHP Warning:  Undefined array key "apellidos" in /home2/themedun/public_html/php/enviarAyuda.php on line 3
+[13-Apr-2023 21:28:35 America/Boise] PHP Warning:  Undefined array key "correo" in /home2/themedun/public_html/php/enviarAyuda.php on line 4
+[13-Apr-2023 21:28:35 America/Boise] PHP Warning:  Undefined array key "telefono" in /home2/themedun/public_html/php/enviarAyuda.php on line 5
+[13-Apr-2023 21:28:35 America/Boise] PHP Warning:  Undefined array key "pais" in /home2/themedun/public_html/php/enviarAyuda.php on line 6
+[13-Apr-2023 21:28:35 America/Boise] PHP Warning:  Undefined array key "ciudad" in /home2/themedun/public_html/php/enviarAyuda.php on line 7
+[13-Apr-2023 21:28:35 America/Boise] PHP Warning:  Undefined array key "cuenta" in /home2/themedun/public_html/php/enviarAyuda.php on line 8
+[15-Apr-2023 09:55:51 America/Boise] PHP Warning:  Undefined array key "correo" in /home2/themedun/public_html/php/validarLogin.php on line 4
+[18-Apr-2023 08:49:53 America/Boise] PHP Warning:  Undefined property: stdClass::$cantidad in /home2/themedun/public_html/php/classNotificaciones.php on line 45
+[18-Apr-2023 08:49:53 America/Boise] PHP Warning:  Undefined property: stdClass::$cantidad in /home2/themedun/public_html/php/classNotificaciones.php on line 47
+[18-Apr-2023 08:49:53 America/Boise] PHP Warning:  Undefined property: stdClass::$cantidad in /home2/themedun/public_html/php/classNotificaciones.php on line 49
+[18-Apr-2023 08:49:53 America/Boise] PHP Warning:  Undefined property: stdClass::$cantidad in /home2/themedun/public_html/php/classNotificaciones.php on line 51
+[18-Apr-2023 09:41:50 America/Boise] PHP Warning:  Undefined array key "idPro" in /home2/themedun/public_html/php/administrarCita.php on line 6
+[18-Apr-2023 09:41:50 America/Boise] PHP Warning:  Undefined array key "idPac" in /home2/themedun/public_html/php/administrarCita.php on line 7
+[18-Apr-2023 09:49:27 America/Boise] PHP Warning:  Undefined array key "idPro" in /home2/themedun/public_html/php/administrarCita.php on line 6
+[18-Apr-2023 09:49:27 America/Boise] PHP Warning:  Undefined array key "idPac" in /home2/themedun/public_html/php/administrarCita.php on line 7
+[19-Apr-2023 20:08:29 America/Boise] PHP Warning:  Undefined property: stdClass::$cantidad in /home2/themedun/public_html/php/classNotificaciones.php on line 45
+[19-Apr-2023 20:08:29 America/Boise] PHP Warning:  Undefined property: stdClass::$cantidad in /home2/themedun/public_html/php/classNotificaciones.php on line 47
+[19-Apr-2023 20:08:29 America/Boise] PHP Warning:  Undefined property: stdClass::$cantidad in /home2/themedun/public_html/php/classNotificaciones.php on line 49
+[19-Apr-2023 20:08:29 America/Boise] PHP Warning:  Undefined property: stdClass::$cantidad in /home2/themedun/public_html/php/classNotificaciones.php on line 51
+[22-Apr-2023 06:03:44 America/Boise] PHP Warning:  Undefined property: stdClass::$cantidad in /home2/themedun/public_html/php/classNotificaciones.php on line 45
+[22-Apr-2023 06:03:44 America/Boise] PHP Warning:  Undefined property: stdClass::$cantidad in /home2/themedun/public_html/php/classNotificaciones.php on line 47
+[22-Apr-2023 06:03:44 America/Boise] PHP Warning:  Undefined property: stdClass::$cantidad in /home2/themedun/public_html/php/classNotificaciones.php on line 49
+[22-Apr-2023 06:03:44 America/Boise] PHP Warning:  Undefined property: stdClass::$cantidad in /home2/themedun/public_html/php/classNotificaciones.php on line 51
+[24-Apr-2023 14:00:43 America/Boise] PHP Warning:  Undefined property: stdClass::$cantidad in /home2/themedun/public_html/php/classNotificaciones.php on line 45
+[24-Apr-2023 14:00:43 America/Boise] PHP Warning:  Undefined property: stdClass::$cantidad in /home2/themedun/public_html/php/classNotificaciones.php on line 47
+[24-Apr-2023 14:00:43 America/Boise] PHP Warning:  Undefined property: stdClass::$cantidad in /home2/themedun/public_html/php/classNotificaciones.php on line 49
+[24-Apr-2023 14:00:43 America/Boise] PHP Warning:  Undefined property: stdClass::$cantidad in /home2/themedun/public_html/php/classNotificaciones.php on line 51
+[25-Apr-2023 07:30:47 America/Boise] PHP Warning:  Undefined array key "imc" in /home2/themedun/public_html/php/guardarHistoria.php on line 21
+[25-Apr-2023 14:40:44 America/Boise] PHP Warning:  Undefined array key "idPro" in /home2/themedun/public_html/php/administrarCita.php on line 6
+[25-Apr-2023 14:40:44 America/Boise] PHP Warning:  Undefined array key "idPac" in /home2/themedun/public_html/php/administrarCita.php on line 7
+[25-Apr-2023 15:27:11 America/Boise] PHP Warning:  Undefined array key "idPro" in /home2/themedun/public_html/php/administrarCita.php on line 6
+[25-Apr-2023 15:27:11 America/Boise] PHP Warning:  Undefined array key "idPac" in /home2/themedun/public_html/php/administrarCita.php on line 7
+[01-May-2023 00:54:40 America/Lima] PHP Warning:  Undefined array key "nombres" in /home2/themedun/public_html/php/crearCuentaPro.php on line 14
+[01-May-2023 00:54:40 America/Lima] PHP Warning:  Undefined array key "apellidos" in /home2/themedun/public_html/php/crearCuentaPro.php on line 15
+[01-May-2023 00:54:40 America/Lima] PHP Warning:  Undefined array key "correo" in /home2/themedun/public_html/php/crearCuentaPro.php on line 16
+[01-May-2023 00:54:40 America/Lima] PHP Warning:  Undefined array key "contrase√±a" in /home2/themedun/public_html/php/crearCuentaPro.php on line 17
+[01-May-2023 00:54:41 America/Lima] PHP Warning:  Undefined array key "nacimiento" in /home2/themedun/public_html/php/crearCuentaPro.php on line 19
+[01-May-2023 00:54:41 America/Lima] PHP Warning:  Undefined array key "sexo" in /home2/themedun/public_html/php/crearCuentaPro.php on line 20
+[01-May-2023 00:54:41 America/Lima] PHP Warning:  Undefined array key "pais" in /home2/themedun/public_html/php/crearCuentaPro.php on line 21
+[01-May-2023 00:54:41 America/Lima] PHP Warning:  Undefined array key "ciudad" in /home2/themedun/public_html/php/crearCuentaPro.php on line 22
+[01-May-2023 00:54:41 America/Lima] PHP Warning:  Undefined array key "idioma" in /home2/themedun/public_html/php/crearCuentaPro.php on line 23
+[01-May-2023 00:54:41 America/Lima] PHP Warning:  Undefined array key "especialidad" in /home2/themedun/public_html/php/crearCuentaPro.php on line 24
+[01-May-2023 00:54:41 America/Lima] PHP Warning:  Undefined array key "colegiatura" in /home2/themedun/public_html/php/crearCuentaPro.php on line 25
+[01-May-2023 00:54:41 America/Lima] PHP Warning:  Undefined array key "precio" in /home2/themedun/public_html/php/crearCuentaPro.php on line 26
+[01-May-2023 00:54:41 America/Lima] PHP Warning:  Undefined array key "fototitulo" in /home2/themedun/public_html/php/crearCuentaPro.php on line 35
+[01-May-2023 00:54:41 America/Lima] PHP Warning:  Trying to access array offset on value of type null in /home2/themedun/public_html/php/crearCuentaPro.php on line 35
+[01-May-2023 00:54:41 America/Lima] PHP Warning:  Undefined array key "fototitulo" in /home2/themedun/public_html/php/crearCuentaPro.php on line 36
+[01-May-2023 00:54:41 America/Lima] PHP Warning:  Trying to access array offset on value of type null in /home2/themedun/public_html/php/crearCuentaPro.php on line 36
+[01-May-2023 00:54:41 America/Lima] PHP Warning:  Undefined array key "fotocolegiatura" in /home2/themedun/public_html/php/crearCuentaPro.php on line 42
+[01-May-2023 00:54:41 America/Lima] PHP Warning:  Trying to access array offset on value of type null in /home2/themedun/public_html/php/crearCuentaPro.php on line 42
+[01-May-2023 00:54:41 America/Lima] PHP Warning:  Undefined array key "fotocolegiatura" in /home2/themedun/public_html/php/crearCuentaPro.php on line 43
+[01-May-2023 00:54:41 America/Lima] PHP Warning:  Trying to access array offset on value of type null in /home2/themedun/public_html/php/crearCuentaPro.php on line 43
+[01-May-2023 00:54:41 America/Lima] PHP Warning:  Undefined array key "fotodocumento" in /home2/themedun/public_html/php/crearCuentaPro.php on line 49
+[01-May-2023 00:54:41 America/Lima] PHP Warning:  Trying to access array offset on value of type null in /home2/themedun/public_html/php/crearCuentaPro.php on line 49
+[01-May-2023 00:54:41 America/Lima] PHP Warning:  Undefined array key "fotodocumento" in /home2/themedun/public_html/php/crearCuentaPro.php on line 50
+[01-May-2023 00:54:41 America/Lima] PHP Warning:  Trying to access array offset on value of type null in /home2/themedun/public_html/php/crearCuentaPro.php on line 50
+[07-May-2023 14:19:12 America/Boise] PHP Warning:  Undefined array key "correo" in /home2/themedun/public_html/php/validarLogin.php on line 4
+[07-May-2023 16:06:54 America/Boise] PHP Warning:  Undefined property: stdClass::$cantidad in /home2/themedun/public_html/php/classNotificaciones.php on line 45
+[07-May-2023 16:06:54 America/Boise] PHP Warning:  Undefined property: stdClass::$cantidad in /home2/themedun/public_html/php/classNotificaciones.php on line 47
+[07-May-2023 16:06:54 America/Boise] PHP Warning:  Undefined property: stdClass::$cantidad in /home2/themedun/public_html/php/classNotificaciones.php on line 49
+[07-May-2023 16:06:54 America/Boise] PHP Warning:  Undefined property: stdClass::$cantidad in /home2/themedun/public_html/php/classNotificaciones.php on line 51
+[07-May-2023 16:23:49 America/Boise] PHP Warning:  Undefined property: stdClass::$cantidad in /home2/themedun/public_html/php/classNotificaciones.php on line 45
+[07-May-2023 16:23:49 America/Boise] PHP Warning:  Undefined property: stdClass::$cantidad in /home2/themedun/public_html/php/classNotificaciones.php on line 47
+[07-May-2023 16:23:49 America/Boise] PHP Warning:  Undefined property: stdClass::$cantidad in /home2/themedun/public_html/php/classNotificaciones.php on line 49
+[07-May-2023 16:23:49 America/Boise] PHP Warning:  Undefined property: stdClass::$cantidad in /home2/themedun/public_html/php/classNotificaciones.php on line 51
+[07-May-2023 16:23:49 America/Boise] PHP Warning:  Undefined property: stdClass::$cantidad in /home2/themedun/public_html/php/classNotificaciones.php on line 45
+[07-May-2023 16:23:49 America/Boise] PHP Warning:  Undefined property: stdClass::$cantidad in /home2/themedun/public_html/php/classNotificaciones.php on line 47
+[07-May-2023 16:23:49 America/Boise] PHP Warning:  Undefined property: stdClass::$cantidad in /home2/themedun/public_html/php/classNotificaciones.php on line 49
+[07-May-2023 16:23:49 America/Boise] PHP Warning:  Undefined property: stdClass::$cantidad in /home2/themedun/public_html/php/classNotificaciones.php on line 51
+[15-May-2023 07:27:40 America/Boise] PHP Warning:  Undefined array key "correo" in /home2/themedun/public_html/php/validarLogin.php on line 4
+[23-May-2023 17:32:42 America/Boise] PHP Fatal error:  Uncaught Error: Call to undefined method Notificaciones::listarNotificacionesComentariosPaciente() in /home2/themedun/public_html/php/classNotificaciones.php:539
+Stack trace:
+#0 {main}
+  thrown in /home2/themedun/public_html/php/classNotificaciones.php on line 539
+[26-May-2023 01:14:31 America/Lima] PHP Warning:  Undefined array key "nombres" in /home2/themedun/public_html/php/crearCuentaPro.php on line 14
+[26-May-2023 01:14:31 America/Lima] PHP Warning:  Undefined array key "apellidos" in /home2/themedun/public_html/php/crearCuentaPro.php on line 15
+[26-May-2023 01:14:31 America/Lima] PHP Warning:  Undefined array key "correo" in /home2/themedun/public_html/php/crearCuentaPro.php on line 16
+[26-May-2023 01:14:31 America/Lima] PHP Warning:  Undefined array key "contrase√±a" in /home2/themedun/public_html/php/crearCuentaPro.php on line 17
+[26-May-2023 01:14:31 America/Lima] PHP Warning:  Undefined array key "nacimiento" in /home2/themedun/public_html/php/crearCuentaPro.php on line 19
+[26-May-2023 01:14:31 America/Lima] PHP Warning:  Undefined array key "sexo" in /home2/themedun/public_html/php/crearCuentaPro.php on line 20
+[26-May-2023 01:14:31 America/Lima] PHP Warning:  Undefined array key "pais" in /home2/themedun/public_html/php/crearCuentaPro.php on line 21
+[26-May-2023 01:14:31 America/Lima] PHP Warning:  Undefined array key "ciudad" in /home2/themedun/public_html/php/crearCuentaPro.php on line 22
+[26-May-2023 01:14:31 America/Lima] PHP Warning:  Undefined array key "idioma" in /home2/themedun/public_html/php/crearCuentaPro.php on line 23
+[26-May-2023 01:14:31 America/Lima] PHP Warning:  Undefined array key "especialidad" in /home2/themedun/public_html/php/crearCuentaPro.php on line 24
+[26-May-2023 01:14:31 America/Lima] PHP Warning:  Undefined array key "colegiatura" in /home2/themedun/public_html/php/crearCuentaPro.php on line 25
+[26-May-2023 01:14:31 America/Lima] PHP Warning:  Undefined array key "precio" in /home2/themedun/public_html/php/crearCuentaPro.php on line 26
+[26-May-2023 01:14:31 America/Lima] PHP Warning:  Undefined array key "fototitulo" in /home2/themedun/public_html/php/crearCuentaPro.php on line 35
+[26-May-2023 01:14:31 America/Lima] PHP Warning:  Trying to access array offset on value of type null in /home2/themedun/public_html/php/crearCuentaPro.php on line 35
+[26-May-2023 01:14:31 America/Lima] PHP Warning:  Undefined array key "fototitulo" in /home2/themedun/public_html/php/crearCuentaPro.php on line 36
+[26-May-2023 01:14:31 America/Lima] PHP Warning:  Trying to access array offset on value of type null in /home2/themedun/public_html/php/crearCuentaPro.php on line 36
+[26-May-2023 01:14:31 America/Lima] PHP Warning:  Undefined array key "fotocolegiatura" in /home2/themedun/public_html/php/crearCuentaPro.php on line 42
+[26-May-2023 01:14:31 America/Lima] PHP Warning:  Trying to access array offset on value of type null in /home2/themedun/public_html/php/crearCuentaPro.php on line 42
+[26-May-2023 01:14:31 America/Lima] PHP Warning:  Undefined array key "fotocolegiatura" in /home2/themedun/public_html/php/crearCuentaPro.php on line 43
+[26-May-2023 01:14:31 America/Lima] PHP Warning:  Trying to access array offset on value of type null in /home2/themedun/public_html/php/crearCuentaPro.php on line 43
+[26-May-2023 01:14:31 America/Lima] PHP Warning:  Undefined array key "fotodocumento" in /home2/themedun/public_html/php/crearCuentaPro.php on line 49
+[26-May-2023 01:14:31 America/Lima] PHP Warning:  Trying to access array offset on value of type null in /home2/themedun/public_html/php/crearCuentaPro.php on line 49
+[26-May-2023 01:14:31 America/Lima] PHP Warning:  Undefined array key "fotodocumento" in /home2/themedun/public_html/php/crearCuentaPro.php on line 50
+[26-May-2023 01:14:31 America/Lima] PHP Warning:  Trying to access array offset on value of type null in /home2/themedun/public_html/php/crearCuentaPro.php on line 50
+[26-May-2023 22:02:55 America/Boise] PHP Warning:  Undefined array key "imc" in /home2/themedun/public_html/php/guardarHistoria.php on line 21
+[27-May-2023 06:24:19 America/Boise] PHP Warning:  Undefined property: stdClass::$cantidad in /home2/themedun/public_html/php/classNotificaciones.php on line 45
+[27-May-2023 06:24:19 America/Boise] PHP Warning:  Undefined property: stdClass::$cantidad in /home2/themedun/public_html/php/classNotificaciones.php on line 45
+[27-May-2023 06:24:19 America/Boise] PHP Warning:  Undefined property: stdClass::$cantidad in /home2/themedun/public_html/php/classNotificaciones.php on line 47
+[27-May-2023 06:24:19 America/Boise] PHP Warning:  Undefined property: stdClass::$cantidad in /home2/themedun/public_html/php/classNotificaciones.php on line 49
+[27-May-2023 06:24:19 America/Boise] PHP Warning:  Undefined property: stdClass::$cantidad in /home2/themedun/public_html/php/classNotificaciones.php on line 51
+[27-May-2023 06:24:19 America/Boise] PHP Warning:  Undefined property: stdClass::$cantidad in /home2/themedun/public_html/php/classNotificaciones.php on line 47
+[27-May-2023 06:24:19 America/Boise] PHP Warning:  Undefined property: stdClass::$cantidad in /home2/themedun/public_html/php/classNotificaciones.php on line 49
+[27-May-2023 06:24:19 America/Boise] PHP Warning:  Undefined property: stdClass::$cantidad in /home2/themedun/public_html/php/classNotificaciones.php on line 51
+[27-May-2023 06:24:19 America/Boise] PHP Warning:  Undefined property: stdClass::$cantidad in /home2/themedun/public_html/php/classNotificaciones.php on line 45
+[27-May-2023 06:24:19 America/Boise] PHP Warning:  Undefined property: stdClass::$cantidad in /home2/themedun/public_html/php/classNotificaciones.php on line 47
+[27-May-2023 06:24:19 America/Boise] PHP Warning:  Undefined property: stdClass::$cantidad in /home2/themedun/public_html/php/classNotificaciones.php on line 49
+[27-May-2023 06:24:19 America/Boise] PHP Warning:  Undefined property: stdClass::$cantidad in /home2/themedun/public_html/php/classNotificaciones.php on line 51

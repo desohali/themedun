@@ -1,0 +1,37 @@
+.form-contra #guardaraccion{
+    margin:-5px 0px 0px 0px;
+}
+@media screen and (max-width: 415px){
+    .boxhistorial,.ctn-contra2{
+        padding-top:178px;
+    }
+    .titulolr{
+        font-size: 110%;
+        margin: 0px;
+        margin-top: 10px;
+    }
+    .ctn-hpacientes .ctn-editarpc h2{
+        font-size: 90%;
+    }
+    #p2pais, #p2ciudad{
+        display: grid;
+    }
+    .ctn-contra .form-contra{
+        margin: 0px;
+        width: 100%;
+    }
+    .divinper{
+        display: block;
+    }
+    #fecharec3{
+        top: 238px;
+        left: 72%;
+        font-size: 70%;
+        width: auto;
+    }
+    .form-contra #guardaraccion{
+        padding: 5px 10px;
+        margin:-10px auto 10px auto;
+        font-size: 80%;
+    }
+}

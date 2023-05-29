@@ -1,0 +1,199 @@
+h1{
+    margin-bottom:0px !important;
+}
+
+.ctn-horario, .ctn-agenda{
+    max-width:none !important;
+    display: block;
+    align-items: center;
+    width: 100%;
+    border: none;
+    padding: 20px;
+    padding-top:10px;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0px 0px 3px 1px #0052d4;
+}
+
+.ctn-horario{
+    margin-bottom: 25px;
+}
+
+.ctn-agenda{
+    padding: 10px 20px 25px 20px;
+}
+
+#hrdis{
+    background-color: #d5d5d5; margin: 0px;
+}
+
+#tablaPrueba tr{
+    font-weight: 500;
+    height: 25px;
+}
+
+.si, .no{
+    font-weight: normal;
+}
+
+#labelminus i, #labelmas i{
+    cursor: pointer;
+}
+
+.ctn-horario .ctn-editarh, .ctn-agenda .ctn-editarag{
+    display: flex;
+    justify-content: space-between;
+    padding: 7px 10px 0px 10px;
+    font-size: 14px;
+    font-weight:800;
+}
+
+.ctn-horario .ctn-editarh h2, .ctn-agenda .ctn-editarag h2{
+    padding: 0px 10px;
+    margin: 0px;
+}
+
+.ctn-horario table,.ctn-horario td,.ctn-horario th{
+    border: 1px solid #d5d5d5;
+    border-collapse: separate;
+    padding: 0px;
+    font-size: 14px;
+    text-align: center;
+}
+
+.ctn-horario table tr:first-child td:first-child { 
+    border-top-left-radius: 15px; 
+}
+.ctn-horario table tr:first-child td:last-child { 
+    border-top-right-radius: 15px; 
+}
+.ctn-horario table tr:last-child td:first-child { 
+    border-bottom-left-radius: 15px; 
+}
+.ctn-horario table tr:last-child td:last-child { 
+    border-bottom-right-radius: 15px; 
+}
+
+.ctn-horario td{
+    width: 125px;
+}
+
+.ctn-no, .ctn-si{
+    width:100%;
+}
+
+.ctn-horario .ctn-no:hover,.ctn-horario .ctn-si:hover{
+    background:#F2F2F2;
+}
+
+.ctn-horario table{
+    margin: 15px auto 0px auto;
+    border: none;
+}
+
+.mas, .minus, #coordenada, #dsemana, #ocultfeho{
+    display: none;
+}
+
+#labelmas, #labelminus{
+    font-size: 20px;
+}
+
+#labelmas{
+    color: #00d418;
+    margin: 0px;
+}
+
+#labelmas:hover, .si{
+    color: #00ee1b;
+}
+
+#labelminus{
+    color: #ff0000;
+    margin: 0px 0px 0px 20px;
+}
+
+#labelminus:hover, .no{
+    color: #e10800;
+}
+
+.no{
+    color: #ff0000;
+}
+
+.si, .no{
+    margin: 0px;
+}
+
+.ctn-agenda{
+    top: 772px;
+}
+
+#aceptarcita{
+    position: absolute;
+    top: 45px;
+    left: 400px;
+    background: #00d418;
+    border: 2px solid #00d418;
+}
+
+#aceptarcita:hover{
+    border: 2px solid #00ee1b;
+    background: #00ee1b;
+}
+
+#aceptarcita:focus{
+    box-shadow: none;
+}
+
+.ctn-editarpc li{
+    font-size:14px;
+}
+
+#informes{
+    justify-content:space-between;
+}
+
+#bcfiled2{
+    padding: 10px 20px;
+    font-size: 14px;
+    background: #0052d4;
+    border: none;
+    transition: all 200ms;
+    font-weight: 500;
+    cursor: pointer;
+    color: white;
+    outline: none;
+    border-radius: 5px;
+    box-shadow: 0px 0px 3px 1px white;
+}
+
+#bcfiled2:hover{
+    background: white;
+    color: #0052d4;
+    border: none;
+    text-decoration:none;
+    box-shadow: 0px 0px 3px 1px #0052d4;
+}
+
+@media screen and (max-width: 415px){
+    .ctn-horario, .ctn-agenda{
+        padding: 10px;
+        padding-bottom:15px;
+    }
+    .ctn-horario #tablaPrueba{
+        overflow-x: scroll;
+    }
+    .ctn-horario table, .ctn-horario td, .ctn-horario th{
+        font-size: 12px;
+    }
+    .ctn-horario td{
+        min-width: 110px;
+    }
+    .ctn-editarpc li{
+        font-size:12px;
+    }
+    #ulhabilitar{
+        display:none;
+    }
+}

@@ -1,0 +1,402 @@
+main{
+    display:flex;
+    padding: 3% 7.5%;
+    justify-content: space-between;
+}
+
+.msg-error{
+    margin-left: 21.3%;
+}
+
+.ctn-contra2{
+    padding: 25px 7.5%;
+    padding-top:87px;
+}
+
+.ctn-contra .form-contra{
+    position: static;
+    height: auto;
+    padding: 20px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.ctn-contra2 .form-contra{
+    position: static;
+    margin: 0px;
+    width: 100%;
+    height: auto;
+    padding: 2%;
+}
+
+.form-contra input[type="text"], .form-contra input[type="email"], .form-contra textarea{
+    padding-right: 10px;
+}
+
+.ctn-contra #formli{
+    width:100%;
+}
+
+#formli h2{
+    font-size:24px;
+}
+
+#formli input[type="text"]{
+    margin: 8px auto;
+}
+
+.ctn-contra #formReclamaciones{
+    width:100%;
+}
+
+#ctn-dos{
+    width: 75.6%;
+}
+
+#ctn-li{
+    display: block;
+    align-items: center;
+    width: 21%;
+    height: auto;
+    max-height: 545px;
+}
+
+.form-contra #codigot{
+}
+
+.form-contra #caenviar{
+    margin: 15px 0px 3px 28%;
+}
+
+#tithoja{
+    margin-bottom: 20px;
+}
+
+#fecharec, #fecharec2, #fecharec3{
+    font-weight: bolder;
+    color: black;
+    position: absolute;
+    top: 70px;
+    left: 84%;
+    width: 90px;
+}
+
+#fecharec3{
+    top: 156px;
+    left: 78%;
+}
+
+.boxhc span{
+    font-weight: bolder;
+}
+
+.boxhc{
+    margin: 10px;
+    font-size: 14px;
+}
+
+.divhisto{
+    display: flex;
+}
+
+.boxhc .divhisto p, .boxhc .divhisto label{
+    margin-top: 20px;
+}
+
+#empre2 p{
+    width: 50%;
+    text-align: center;
+}
+
+#idcon p{
+    width: 25%;
+    text-align: center;
+    margin-right: 3%;
+}
+
+#idcon2 p, #idbien p, .idbienclass p{
+    width: 33.3%;
+    text-align: center;
+    margin-right: 3%;
+}
+
+#iddetalle p{
+    width: 50%;
+    text-align: center;
+    margin-right: 3%;
+}
+
+#idbien2 p{
+    width: 100%;
+    text-align: center;
+}
+
+#idcon .ultimo, #idcon2 .ultimo, #idbien .ultimo, .idbienclass .ultimo, #iddetalle .ultimo{
+    margin-right: 0px;
+}
+
+#direcor{
+    text-align: center;
+    margin-top: 20px;
+}
+
+.ctn-contra .form-contra .boxhc h2{
+    margin: 0px;
+    font-size: 150%;
+    color: black;
+    text-align: left;
+}
+
+.ctn-contra .form-contra select{
+    padding: 9px 10px;
+    color: #777777;
+}
+
+.ctn-contra .form-contra a{
+    color: #0052d4;
+}
+
+.ctn-contra .form-contra a:hover{
+    text-decoration: underline;
+}
+
+.hrlr{
+    margin: 20px 0px 15px 0px;
+}
+
+#evidencia{
+    display: none;
+}
+
+#labelevi{
+    width: 100%;
+    padding: 10px;
+    color: #777777;
+    cursor: pointer;
+}
+
+#ultimop{
+    margin-top: 5px;
+    font-size:11px;
+}
+
+#recenviar{
+    margin: 10px 0px 0px 46%;
+}
+
+.form-contra input[type="email"], .form-contra input[type="number"], .form-contra input[type="text"], .form-contra select, .form-contra textarea, .form-contra label{
+    margin: 0px auto;
+}
+
+#formli input[type="text"]{
+    padding-right: 40px;
+}
+
+.divinper{
+    display: flex;
+    justify-content: space-between;
+}
+
+#bbfiled1{
+    display: block;
+    padding: 10px 20px;
+    font-size: 14px;
+    background: white;
+    border: 2px solid white;
+    transition: all 200ms;
+    font-weight: 600;
+    cursor: pointer;
+    color: #0052D4;
+    outline: none;
+    margin: -10px 0px 0px 0px;
+    text-align:center;
+    border-radius: 0.25rem;
+    width: auto;
+}
+
+#bbfiled1:hover{
+    background: #fff;
+    border: 2px solid #0052D4;
+}
+
+.sobrehisto{
+    display: flex;
+    align-items: flex-start;
+}
+
+.sobrehisto .divhisto, .sobrehisto #idcon p, .sobrehisto #idcon2 p{
+    width: 100%;
+}
+.sobrehisto #idbien2{
+    width: 33.3%;
+}
+.sobrehisto #idbien{
+    justify-content: space-between;
+    width: 66.6%;
+    padding-left:7.5%;
+    padding-right:6.5%;
+}
+.sobrehisto .idbienclass{
+    width: 70%;
+    padding:0%;
+    padding-left:1%;
+}
+
+.idbienclass p{
+    width: 49%;
+    margin-right:2%;
+}
+
+#labelevi:hover{
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+@media screen and (max-width: 415px){
+    main{
+        display:block;
+        padding:0px;
+    }
+    .ctn-contra .form-contra{
+        padding: 2%;
+        padding-bottom: 4%;
+        width: 90%;
+        margin: 5%;
+    }
+    .ctn-contra #formli{
+        height: auto;
+        padding: 2% 4%;
+    }
+    #formli input[type="text"]{
+        margin: 8px auto;
+        padding-right: 35px;
+    }
+    .form-contra #codigot{
+        width: 100%;
+        margin-left: 0%;
+        font-size: 80%;
+        padding-right: 35px;
+    }
+    .form-contra #caenviar{
+        font-size: 14px;
+        padding: 10px 20px;
+        width:100px;
+        margin: 10px 0px 10px 33%;
+    }
+    .msg-error{
+        margin-left: 0%;
+    }
+    .ctn-contra .form-contra h2{
+        margin: 10px;
+    }
+    #tithoja{
+        margin: 10px 10px 15px 10px;
+    }
+    #fecharec, #fecharec2{
+        top: 205px;
+        left: 75%;
+        width: 62px;
+        font-size: 70%;
+    }
+    #fecharec2{
+        top: 205px;
+    }
+    .ctn-contra .form-contra .boxhc h2{
+        margin: 0px;
+        font-size: 115%;
+    }
+    .boxhc{
+        margin: 0px 10px;
+    }
+    .hrlr{
+        margin: 10px 0px 5px 0px;
+    }
+    .boxhc .divhisto p, .boxhc .divhisto label{
+        margin-top: 10px;
+    }
+    .ctn-contra .form-contra select{
+        padding: 9px 10px;
+        font-size: 90%;
+    }
+    .form-contra input[type="text"], .form-contra input[type="email"], .form-contra textarea, .form-contra input[type="number"]{
+        font-size: 90%;
+    }
+    #empre2 p{
+        width: 50%;
+    }
+    #direcor{
+        margin-top: 10px;
+    }
+    #idcon p, #idbien p, .idbienclass p, #iddetalle p{
+        width: 48%;
+    }
+    .idbienclass p{
+        width: 48.5%;
+    }
+    #idcon #pape, #idcon #pnumdoc, #idbien #pnumcita, .idbienclass #pnumcita, #idcon #pape2, #idcon #pnumdoc2{
+        position: absolute;
+        margin-top: -33px;
+        margin-left: 158px;
+        width: 40%;
+    }
+    #idcon #pnumdoc{
+        margin-top: -50px;
+    }
+    #idbien #pnumcita, .idbienclass #pnumcita, #idcon #pape2{
+        margin-top: -16px;
+    }
+    #iddetalle #pevidencia{
+        width: 100%;
+    }
+    #idbien2 #pdet{
+        margin-top: 10px;
+    }
+    #idbien2 #pped{
+        margin-top: 5px;
+    }
+    #idcon2 p{
+        width: 100%;
+    }
+    #iddetalle #preclamo{
+        margin-bottom: 20px;
+    }
+    #labelevi{
+        padding-right: 12%;
+        font-size: 90%;
+    }
+    #ultimop{
+        margin-top: 5px;
+        font-size: 75%;
+    }
+    #recenviar{
+        margin: 10px 0px 10px 33.8%;
+        font-size: 14px;
+        padding: 10px 20px;
+        width:100px;
+    }
+    .sobrehisto{
+        display: block;
+    }
+    .sobrehisto #idbien2{
+        width: 48.5%;
+    }
+    .sobrehisto #idbien, .sobrehisto .idbienclass{
+        justify-content: center;
+        width: 100%;
+        padding: 0px;
+    }
+    #idcon .espacio, #idcon2 .espacio, #idbien .espacio, .idbienclass .espacio, #iddetalle .espacio{
+        margin-right: 0px;
+    }
+    .sobrehisto .idbienclass{
+        justify-content: space-between;
+        padding-left:0%;
+    }
+    #ctn-dos, #ctn-li{
+        width:auto;
+    }
+    .ctn-contra #formReclamaciones,.ctn-contra #formli{
+        width:90%;
+    }
+    #formli h2{
+        font-size:120%;
+    }
+}

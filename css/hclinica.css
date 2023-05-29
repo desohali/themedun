@@ -1,0 +1,12 @@
+.boxclini{
+    padding: 0px 7.5%;
+    padding-top:87px;
+    min-height: 575px;
+}
+
+@media screen and (max-width: 415px){
+    .boxclini{
+        padding: 0px;
+        padding-top:168px;
+    }
+}

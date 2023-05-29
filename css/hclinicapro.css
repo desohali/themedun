@@ -1,0 +1,379 @@
+.boxclini{
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 7.5%;
+    padding-top:87px;
+    min-height: 625px;
+}
+
+select{
+    cursor: pointer;
+    color: #777777;
+}
+
+#boxclini2{
+    padding-top:0px;
+}
+
+#licodigo{
+    margin-left:15px;
+    margin-top:10px;
+}
+
+#codigocie{
+    color:#0052D4;
+}
+
+#codigocie:hover{
+    text-decoration:underline;
+}
+
+.ctn-sideperfil{
+    display: block;
+    align-items: center;
+    width: 21%;
+    height: auto;
+    max-height: 545px;
+    border: 0px;
+    padding: 20px;
+    padding-right:0px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.ctn-fotoperfil{
+    width: 100%;
+    height: 200px;
+}
+
+#fppro{
+    width:200px;
+    height: 200px;
+    border: 1px solid #e4e6eb;
+    border-radius:10px;
+}
+
+.ctn-fotoperfil{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right:20px;
+}
+
+.listarecord{
+    font-size: 14px;
+    border-top: 1px solid gray;
+}
+
+.listarecord li{
+    border-bottom: 1px solid gray;
+    padding: 5px 0px;
+}
+
+.listarecord li a{
+    color: black;
+}
+
+.spanlista:hover{
+    text-decoration:underline;
+}
+
+.ctn-record{
+    overflow-y:scroll;
+    height: 255px;
+}
+
+#boxclini2, #formHistoria{
+    width: 75.6%;
+}
+
+.ctn-hclinica{
+    display: block;
+    align-items: center;
+    width: 75.6%;
+    border: 0px;
+    padding: 20px;
+    background: white;
+    border-radius: 15px;
+    margin-bottom: 25px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+#boxclini2 .ctn-hclinica, #formHistoria .ctn-hclinica{
+    width: 100%;
+}
+
+.ctn-editarpc{
+    padding: 5px 10px;
+    text-align: center;
+}
+
+.ctn-editarpc h2{
+    color: #0052D4;
+    font-size: 30px;
+}
+
+.ctn-titrecord{
+    padding: 15px 0px;
+    text-align: center;
+    padding-right:20px;
+}
+
+.ctn-titrecord h2{
+    color: #0052D4;
+    font-size: 14px;
+}
+
+.box-body span{
+    font-weight: 500;
+}
+
+.boxhc{
+    margin: 10px;
+    font-size: 14px;
+}
+
+.divhisto{
+    display: flex;
+}
+
+.boxhc p{
+    margin-top: 10px;
+}
+
+#introcita p, #anamnesis p, #antecedentes p, #antecedentes2 p, #diagnostico p, #tratamiento p, #medtratante p, #anexos p{
+    width: 50%;
+    text-align: center;
+}
+
+#exafisico p, #exafisico2 p{
+    width: 25%;
+    text-align: center;
+}
+
+#filiacion1, #filiacion2, #fisi10, #fisi11, #fisi20, #fisi21{
+    width:50%;
+}
+
+#filiacion1 p, #filiacion2 p, #fisi10 p, #fisi11 p, #fisi20 p, #fisi21 p{
+    width:50%;
+    text-align: center;
+}
+
+#filnombre, #filrelato, #filef, #filpru, #filtrata{
+    text-align: center;
+}
+
+#filiacion1 p, #filiacion2p{
+    width:50%;
+    text-align: center;
+}
+.box-body h2{
+    font-size: 19px;
+}
+
+.boxhc #pacredito{
+    width:100%;
+    font-size:11px;
+    text-align:center;
+}
+
+#guardarhc, #guardarap{
+    width:100px;
+    padding: 10px 20px;
+    font-size: 14px;
+    background: #00d418;
+    border: 1px solid #00d418;
+    transition: all 200ms;
+    font-weight: 500;
+    cursor: pointer;
+    color: white;
+    outline: none;
+    margin: 10px 0px 5px 43.8%;
+    border-radius: 5px;
+}
+
+.ctn-editarp label{
+    display: block;
+    padding: 10px 20px;
+    font-size: 14px;
+    background: white;
+    border: 1px solid #0052d4;
+    transition: all 200ms;
+    font-weight: 600;
+    cursor: pointer;
+    color: #0052D4;
+    outline: none;
+    text-align:center;
+    border-radius: 5px;
+}
+
+#guardarap, .ctn-editarp label{
+    margin: -8px 10px 0px 0px;
+}
+
+.ctn-editarp label:hover{
+    background: #0052d4;
+    color:#fff;
+}
+
+.ctn-editarp, .divinper{
+    display: flex;
+    justify-content: space-between;
+}
+
+#guardarhc:hover, #guardarap:hover{
+    background: #00ee1b;
+    border: 1px solid #00ee1b;
+}
+
+.box2{
+    display: none;
+}
+
+.txthc{
+    padding: 10px 7px;
+    margin-top: 10px;
+    width: 90%;
+    resize: vertical;
+    border: 1px solid #e4e6eb;
+    background: #F0F2F5;
+    outline: none;
+    font-size:14px;
+    transition: all 200ms;
+    border-radius:5px;
+}
+
+.txthc:focus{
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+#nodatos{
+    margin-top: 10px;
+    color: #FFC107;
+    text-align: center;
+    font-weight:500;
+}
+
+.evidencia, .evidencia2, .auno, .ados, .atres, .acuatro{
+    display: none;
+}
+
+#labelevi, #labelevi2, #labelauno, #labelados, #labelatres, #labelacuatro{
+    padding: 10px;
+    color: #777777;
+    cursor: pointer;
+    border: 1px solid #e4e6eb;
+    background: #F0F2F5;
+    outline: none;
+    width:90%;
+    margin:20px 2.3% 0px 2.3%;
+    transition: all 200ms;
+    border-radius:5px;
+    max-width: 45%;
+}
+
+#labelevi:hover, #labelevi2:hover, #labelauno:hover, #labelados:hover, #labelatres:hover, #labelacuatro:hover{
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    
+}
+
+#anexos p a:hover{
+    text-decoration:underline;
+}
+
+@media screen and (max-width: 415px){
+    .boxclini{
+        display:block;
+        padding: 0px;
+        padding-top:122px;
+    }
+    .ctn-sideperfil{
+        width: 90%;
+        padding: 20px;
+        margin-left: 5%;
+        margin-bottom:25px;
+        max-height:395px;
+    }
+    .ctn-fotoperfil, .ctn-titrecord{
+        padding-right:0px;
+    }
+    .ctn-titrecord h2,.ctn-editarpc h2,.box-body h2{
+        font-size:16px;
+    }
+    .listarecord{
+        font-size:12px;
+    }
+    .ctn-record{
+        height:105px;
+    }
+    #boxclini2{
+        padding-top:0px;
+    }
+    .ctn-hclinica{
+        width: 90%;
+        padding: 5px 10px 10px 10px;
+        margin-left:5%;
+        margin-bottom: 25px;
+    }
+    .ctn-editarpc{
+        display: block;
+        padding: 7px 10px;
+    }
+    .boxhc{
+        margin: 10px 5px;
+        font-size: 12px;
+    }
+    #filiacion, #anamnesis, #antecedentes, #antecedentes2, #exafisico, #exafisico2, #diagnostico, #tratamiento, #anexos, #medtratante{
+        display: block;
+    }
+    .boxhc p{
+        margin-top: 5px;
+    }
+    .boxhc p textarea{
+        width:100%;
+        font-size:12px;
+    }
+    .boxhc p input[type="text"], .boxhc p input[type="number"]{
+        width:96.5%;
+        padding: 12px 5px;
+        font-size:12px;
+    }
+    #filiacion1, #filiacion2, #exafisico, #fisi10, #fisi11, #fisi20, #fisi21, #idinicio, #idcurso, #anamnesis p, #antecedentes p, #antecedentes2 p, #fisi10 p, #fisi11 p, #fisi20 p, #fisi21 p, #diagnostico p, #tratamiento p, #anexos p, #medtratante p{
+        width: 100%;
+        font-size:12px;
+    }
+    #fisi10 .fisizq, #fisi11 .fisizq, #fisi20 .fisizq, #fisi21 .fisizq{
+        text-align: left;
+        justify-content: left;
+    }
+    #fisi10 .fisder, #fisi11 .fisder, #fisi20 .fisder, #fisi21 .fisder{
+        text-align: right;
+        justify-content: right;
+    }
+    #guardarhc{
+        padding: 7px 10px;
+        font-size: 12px;
+        width:24%;
+        margin: 5px 38% 10px 38%;
+    }
+    #labelevi, #labelevi2, #labelauno, #labelados, #labelatres, #labelacuatro{
+        display:block;
+        width:100%;
+        margin:15px 0px 0px 0px;
+    }
+    .ctn-editarp{
+        display: block;
+    }
+    #guardarap, .ctn-editarp label{
+        margin: 0px;
+        margin-top: 5px;
+        padding: 7px 10px;
+        font-size: 12px;
+        width:75px;
+    }
+    #boxclini2, #formHistoria{
+        width:90%;
+    }
+}

@@ -1,0 +1,76 @@
+.ctn-error{
+    display: flex;
+    align-items: center;
+}
+.globoerror{
+    margin: auto;
+}
+#img-cayuda{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}
+.boxerror{
+    margin: auto;
+    width: 450px;
+    padding: 30px 20px;
+    background: white;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0px 0px 3px 1px #0052D4;
+}
+.boxerror h1{
+    font-size: 30px;
+    margin-bottom: 20px;
+    color: #0052D4;
+}
+#img-cayuda img{
+    width: 73.5%;
+    margin: 40px 0px;
+}
+#avolver{
+    width:130px;
+    padding: 10px 20px;
+    font-size: 14px;
+    background: #0052D4;
+    transition: all 200ms;
+    font-weight: 500;
+    cursor: pointer;
+    color: white;
+    outline: none;
+    text-align:center;
+    border-radius: 5px;
+    margin: 25px 170px 0px 170px;
+    display: block;
+}
+#avolver:hover{
+    background: #fff;
+    color: #0052D4;
+    box-shadow: 0px 0px 3px 1px #0052D4;
+}
+@media screen and (max-width: 415px){
+    #img-cayuda{
+        display: none;
+    }
+    .globoerror{
+        margin:20% 0px;
+    }
+    .boxerror{
+        margin: 5%;
+        width: 90%;
+        padding: 30px 20px;
+    }
+    .boxerror h1{
+        font-size: 20px;
+        margin-bottom:10px;
+    }
+    .boxerror p{
+        font-size: 12px;
+    }
+    #avolver{
+        font-size: 12px;
+        margin: 25px 38% 0px 38%;
+        width:24%;
+        padding:7px 10px;
+    }
+}

@@ -1,0 +1,408 @@
+select, input[type="date"]{
+    cursor: pointer;
+    color: #777777;
+}
+
+#mainadmin .contenedor__todo{   
+    width: 600px;
+    position: relative;
+    margin-top: -110px;
+    margin-bottom: 36px;
+    left: 215px;
+}
+
+#mainadmin #ctn_login_admin{
+    left: 600px;
+}
+
+#mainadmin .caja__trasera{
+    box-sizing: border-box;
+    width: 260px;
+    height: 300px;
+    padding: 55px 25px;
+    display: block;
+    justify-content: center;
+    text-align: center;
+    background: #0052D4;
+    color: white;
+    margin:101px 0px 90px 0px;
+}
+
+/*Formularios*/
+#mainadmin .med-logos{
+    display: flex;
+}
+
+#mainadmin .med-login{
+    width: 25%;
+    margin: 5% 12.5%;
+}
+
+#mainadmin .contenedor__login-register{
+    display: flex;
+    align-items: center;
+    width: 350px;
+    position: relative;
+    top: -240px;
+    left: 260px;
+}
+
+#mainadmin .contenedor__login-register .formulario__register{
+    width: 400px;
+    height: AUTO;
+    padding: 30px 20px;
+    background: white;
+    position: absolute;
+    border-radius: 20px;
+}
+
+#mainadmin .contenedor__login-register .formulario__register h2{
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #0052D4;
+}
+
+#mainadmin .msg-error, .msg-error-contraseña{
+    font-size: 12px;
+    color: #ff0800;
+    position: absolute;
+    top: 120px;
+}
+
+#mainadmin .msg-error-contraseña{
+    top: 175px;
+}
+
+#mainadmin #hr-login{
+    margin-top: 20px;
+}
+
+#mainadmin #icon-eye-login{
+    top: 145px;
+    right: 25px;
+    position: absolute;
+    cursor: pointer;
+}
+
+#mainadmin input[type="password"]{
+    width: 100%;
+    padding: 10px;
+    margin: 8px auto;
+    border: 1px solid #e5e5e5;
+    background: #F2F2F2;
+    font-size: 14px;
+    outline: none;
+}
+
+#mainadmin input[type="password"]{
+    padding-right: 40px;
+}
+
+#mainadmin input[type="password"]:focus{
+    border: 1px solid #0052D4;
+}
+
+#mainadmin .contenedor__login-register .formulario__register{
+    padding: 20px 8px 20px 10px;
+}
+
+#mainadmin .msg-error-contraseña, #mainadmin .msg-error, #mainadmin .msg-error-fototitulo, #mainadmin .msg-error-fotofirma, #mainadmin .msg-error-fotohuella{
+    font-size: 12px;
+    color: #ff0800;
+    display: inline-block;
+}
+
+#mainadmin .msg-error-fototitulo, #mainadmin .msg-error-fotofirma, #mainadmin .msg-error-fotohuella{
+    position: absolute;
+}
+
+#mainadmin .msg-error, #mainadmin .msg-error-contraseña{
+    position: absolute;
+    top: 165px;
+    margin-left: 1.5%;
+}
+
+#mainadmin .msg-error-contraseña{
+    top: 220px;
+}
+
+#mainadmin .contenedor__login-register .formulario__register h2{
+    margin-bottom: 7px;
+}
+
+#mainadmin .contenedor__login-register form #remodal{
+    margin-bottom: 0px;
+}
+
+#mainadmin #hr-register{
+    margin-bottom: 10px;
+}
+
+#mainadmin .icon-eye{
+    position: absolute;
+    cursor: pointer;
+    top: 228px;
+}
+
+#mainadmin .eye1{
+    right: 215px;
+}
+
+#mainadmin .eye2{
+    right: 22px;
+}
+
+#mainadmin .formulario__register p{
+    text-align: center;
+    font-size: 11px;
+}
+
+#mainadmin .formulario__register a{
+    font-size: 11px;
+    color: #0052D4;
+}
+
+#mainadmin .formulario__register a:hover{
+    text-decoration: underline;
+}
+
+#mainadmin .filaregister{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#mainadmin #terminosp{
+    margin-bottom: 23px;
+}
+
+#mainadmin #nombres, #mainadmin #sexo, #mainadmin #pais, #mainadmin #apellidos, #mainadmin #ciudad, #mainadmin .formulario__register input[type="date"]{
+    width: 47%;
+    padding: 9px 10px;
+    border: 1px solid #e5e5e5;
+    background: #F2F2F2;
+    font-size: 14px;
+    outline: none;
+    margin: 8px auto;
+    border-radius:5px;
+}
+
+#mainadmin #pais{
+    padding: 8px 10px;
+}
+
+#mainadmin .formulario__register input[type="text"]{
+    padding: 10px;
+}
+
+#mainadmin #nombres:focus, #mainadmin #apellidos:focus, #mainadmin #sexo:focus, #mainadmin .formulario__register input[type="password"]:focus, 
+#mainadmin .formulario__register input[type="email"]:focus, #mainadmin .formulario__register input[type="date"]:focus, 
+#mainadmin #pais:focus, #mainadmin #ciudad:focus, #mainadmin .formulario__register input[type="text"]:focus, #mainadmin #contrasenar:focus, #mainadmin #contrasenarcon:focus{
+    border: 1px solid #F2F2F2;
+    box-shadow: 0px 0px 3px 1px #0052d4;
+}
+
+#mainadmin .formulario__register input[type="email"], #mainadmin .formulario__register input[type="password"], #mainadmin #contrasenar, #mainadmin #contrasenarcon{
+    width: 97%;
+    margin: 8px auto;
+    padding: 10px;
+    border: 1px solid #e5e5e5;
+    background: #F2F2F2;
+    font-size: 14px;
+    outline: none;
+    border-radius:5px;
+}
+
+#mainadmin #contrasenar, #mainadmin #contrasenarcon{
+    width: 47%;
+}
+
+#mainadmin .formulario__register input[type="password"], #mainadmin #contrasenar, #mainadmin #contrasenarcon{
+    padding-right: 35px;
+}
+
+#mainadmin .formulario__register input[type="submit"]{
+    width: 110px;
+    padding: 10px 20px;
+    border: none;
+    font-size: 14px;
+    background: #00d418;
+    transition: all 200ms;
+    font-weight: 600;
+    cursor: pointer;
+    color: white;
+    outline: none;
+    margin-top: 15px;
+    margin-left: 135px;
+    border-radius: 0.25rem;
+}
+
+#mainadmin #bregist{
+    margin-top: 10px;
+    margin-left: 0px;
+    position: absolute;
+    left: 394px;
+}
+
+#mainadmin #padjunto{
+    text-align:center;
+    font-size: 11px;
+    margin-top: 10px;
+    margin-left: 0px;
+}
+
+#mainadmin #hradju{
+    margin-top: 5px;
+}
+
+#mainadmin .formulario__register input[type="submit"]:hover{
+    background: #00ee1b;
+}
+
+#mainadmin .lbl-modal{
+	padding: 10px 20px;
+    margin-left: 100px;
+    border: none;
+    font-size: 14px;
+    background: #00d418;
+    transition: all 200ms;
+    font-weight: 600;
+    cursor: pointer;
+    color: white;
+    outline: none;
+    border-radius: 0.25rem;
+}
+
+#mainadmin .lbl-modal:hover{
+    background: #00ee1b;
+}
+
+#mainadmin .formulario__register .comprobar{
+    margin-bottom: 10px;
+    font-size: 14px;
+    font-weight: bolder;
+    text-align: left;
+    margin-left: 0px;
+}
+
+@media screen and (max-width: 415px){
+    #mainadmin .contenedor__todo{   
+        width: 100%;
+        height: 600px;
+        position: relative;
+        margin-top: 415px;
+        margin-bottom: -525px;
+        left: 0px;
+    }
+    #mainadmin .caja__trasera{
+        width: 75%;
+        height: 30%;
+        padding: 25px 45px;
+        position: relative;
+        left: 12%;
+    }
+    #mainadmin .contenedor__login-register{
+        width: 90%;
+        height: 63%;
+        position: relative;
+        top: -105%;
+        left: 5%;
+    }
+    #mainadmin .contenedor__login-register .formulario__register{
+        width: 100%;
+        height: auto;
+        padding: 20px 10px;
+        position: absolute;
+    }
+    #mainadmin .contenedor__login-register .formulario__register h2{
+        font-size: 120%;
+    }
+    #mainadmin .msg-error, #mainadmin .msg-error-contraseña{
+        font-size: 80%;
+    }
+    #mainadmin #hr-login{
+        margin-top: 15px;
+    }
+    #mainadmin #icon-eye-login{
+        top: 127px;
+        right: 20px;
+    }
+    #mainadmin input[type="password"]{
+        width: 100%;
+        padding: 10px 30px 10px 10px;
+        font-size: 80%;
+    }
+    #mainadmin .contenedor__login-register .formulario__register{
+        padding: 20px 10px;
+    }
+    #mainadmin .msg-error-contraseña, #mainadmin .msg-error-sexo, #mainadmin .msg-error, #mainadmin .msg-error-apellidos, #mainadmin .msg-error-idioma, #mainadmin .msg-error-nacimiento, #mainadmin .msg-error-colegiatura, #mainadmin .msg-error-fototitulo, #mainadmin .msg-error-fotofirma, #mainadmin .msg-error-fotohuella{
+        font-size: 80%;
+    }
+    #mainadmin .msg-error-apellidos, #mainadmin .msg-error-nacimiento, #mainadmin .msg-error-idioma, #mainadmin .msg-error-colegiatura{
+        left: 146px;
+    }
+    #mainadmin #hr-register{
+        margin-bottom: 10px;
+    }
+    #mainadmin .icon-eye{
+        top: 40%;
+    }
+    #mainadmin .eye1{
+        right: 55%;
+    }
+    #mainadmin .eye2{
+        right: 8%;
+    }
+    #mainadmin .formulario__register p{
+        font-size: 80%;
+        font-size: 65%;
+    }
+    #mainadmin .formulario__register a{
+        font-size: 100%;
+    }
+    #mainadmin #terminosp{
+        margin-bottom: 10px;
+    }
+    #mainadmin #label-masculino, #mainadmin #label-femenino, #mainadmin #label-otro, #mainadmin #label-psicologo, #mainadmin #label-nutricionista, #mainadmin #label-medico{
+        padding: 10px 3px;
+        font-size: 80%;
+    }
+    #mainadmin #masculino, #mainadmin #femenino, #mainadmin #otro, #mainadmin #medico, #mainadmin #psicologo, #mainadmin #nutricionista{
+        margin-right: 5px;
+    }
+    #mainadmin #nombres , #mainadmin #pais, #mainadmin #apellidos, #mainadmin #ciudad, #mainadmin .formulario__register input[type="date"]{
+        padding: 10px;
+        font-size: 80%;
+    }
+    #mainadmin .formulario__register input[type="email"], #mainadmin .formulario__register input[type="password"], #mainadmin #contrasenar{
+        font-size: 80%;
+    }
+    #mainadmin .formulario__register input[type="submit"]{
+        width: 35%;
+        padding: 8px 15px;
+        font-size: 80%;
+        margin-top: 15px;
+        margin-left: 32.5%;
+    }
+    #mainadmin #bregist{
+        left: 33%;
+    }
+    #mainadmin .lbl-modal{
+	    padding: 8px 15px;
+	    width: 30%;
+        margin: 0px 32% 0px 32%;
+        font-size: 80%;
+    }
+    #mainadmin .contenedor__login-register form #remodal{
+        margin-bottom: 0px;
+        font-size: 100%;
+    }
+    #mainadmin #hradju{
+        margin-top: -90px;
+    }
+    #mainadmin #padjunto{
+        margin-top: 15px;
+        margin-bottom: 5px;
+    }
+}

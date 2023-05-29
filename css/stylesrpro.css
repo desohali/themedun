@@ -1,0 +1,385 @@
+.contenedor__login-register .formulario__register{
+    padding: 20px 8px 20px 10px;
+    overflow-y: scroll;
+}
+
+#btnregistro{
+    background:#00d418;
+    border:1px solid #00d418;
+    font-size:14px;
+    font-weight:500;
+    padding:10px 20px;
+    transition: all 200ms;
+    outline:none !important;
+    outline-width: 0 !important;
+    box-shadow: none !important;
+    -moz-box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    margin-left:32%;
+    line-height: normal;
+}
+
+#btnregistro:hover{
+    background:#00ee1b;
+    border:1px solid #00ee1b;
+}
+
+.msg-error-contraseña, .msg-error, .msg-error-fototitulo, .msg-error-fotofirma, .msg-error-fotohuella{
+    font-size: 12px;
+    color: #ff0800;
+    display: inline-block;
+}
+
+.msg-error-fototitulo, .msg-error-fotofirma, .msg-error-fotohuella{
+    position: absolute;
+}
+
+.msg-error, .msg-error-contraseña{
+    position: absolute;
+    top: 165px;
+    margin-left: 1.5%;
+}
+
+.msg-error-contraseña{
+    top: 220px;
+}
+
+.contenedor__login-register .formulario__register h2{
+    margin-bottom: 7px;
+}
+
+.contenedor__login-register form #remodal{
+    margin-bottom: 0px;
+}
+
+#hr-register{
+    margin-bottom: 10px;
+}
+
+.icon-eye{
+    position: absolute;
+    cursor: pointer;
+    top: 190px;
+}
+
+.eye1{
+    right: 178px;
+}
+
+.eye2{
+    right: 22px;
+}
+
+.formulario__register p{
+    text-align: center;
+    font-size: 11px;
+}
+
+.formulario__register a{
+    font-size: 11px;
+    color: #0052D4;
+}
+
+.formulario__register a:hover{
+    text-decoration: underline;
+}
+
+.filaregister{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#terminosp{
+    margin-bottom: 23px;
+}
+
+#nombres,#nombresyape,#apellidosyape,#yape, #sexo, #doctitular, #inputIdpro, #inputIdpro2, #numdoctitular, #domiciliotitular, #nombrebanco, #tipocuenta, #codigocuenta, #especialidad, #pais, #precio, #apellidos, #ciudad, #idioma, .formulario__register input[type="date"], #colegiatura, #nacimiento{
+    width: 47%;
+    padding: 9px 10px;
+    border: 1px solid #e4e6eb;
+    background: #F0F2F5;
+    font-size: 14px;
+    outline: none;
+    margin: 8px auto;
+    border-radius:5px;
+}
+
+#pais{
+    padding: 8px 10px;
+}
+
+.formulario__register input[type="text"], #precio, #colegiatura{
+    padding: 10px;
+}
+
+#nombres:focus,#nombresyape:focus,#apellidosyape:focus,#yape:focus, #doctitular:focus, #numdoctitular:focus, #domiciliotitular:focus, #nombrebanco:focus, #tipocuenta:focus, #codigocuenta:focus, #apellidos:focus, #sexo:focus, #especialidad:focus,.formulario__register input[type="password"]:focus, 
+.formulario__register input[type="email"]:focus, .formulario__register input[type="date"]:focus, 
+#pais:focus, #idioma:focus, #ciudad:focus, #colegiatura:focus, #especialidad:focus, #precio:focus, .formulario__register input[type="text"]:focus, #contrasenar:focus, #contrasenarcon:focus, #nacimiento:focus{
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.formulario__register input[type="email"], .formulario__register input[type="password"], #contrasenar, #contrasenarcon{
+    width: 97%;
+    margin: 8px auto;
+    padding: 10px;
+    border: 1px solid #e4e6eb;
+    background: #F0F2F5;
+    font-size: 14px;
+    outline: none;
+    border-radius:5px;
+}
+
+#contrasenar, #contrasenarcon{
+    width: 47%;
+}
+
+.formulario__register input[type="password"], #contrasenar, #contrasenarcon{
+    padding-right: 35px;
+}
+
+.formulario__register input[type="submit"]{
+    width: 110px;
+    padding: 10px 20px;
+    border: 1px solid #00d418;
+    font-size: 14px;
+    background: #00d418;
+    transition: all 200ms;
+    font-weight: 500;
+    cursor: pointer;
+    color: white;
+    outline: none;
+    margin-top: 15px;
+    margin-left: 102px;
+    border-radius: 5px;
+}
+
+#bregist{
+    margin-top: 10px;
+    margin-left: 43.5%;
+}
+
+#padjunto{
+    text-align:center;
+    font-size: 11px;
+    margin-top: 10px;
+    margin-left: 0px;
+}
+
+#hradju{
+    margin-top: 5px;
+}
+
+.formulario__register input[type="submit"]:hover{
+    border: 1px solid #00ee1b;
+    background: #00ee1b;
+}
+
+.contenido{
+	width: 100%;
+	padding: 10px; 
+	padding-top: 0px; 
+	display: flex;
+}
+.contenido h3{
+	margin-bottom: 10px;
+}
+.contenido p{
+	margin-bottom: 7px;
+}
+
+.formulario__register .comprobar{
+    margin-bottom: 10px;
+    font-size: 14px;
+    font-weight: 500;
+    text-align: left;
+    margin-left: 0px;
+}
+
+.ctn-previeimage{
+    width: 267px;
+    height: 215px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 25px;
+}
+
+#previewimage3{
+    margin-right: 0px;
+}
+
+.labelimage{
+    border: 1px solid #e4e6eb;
+    border-radius: 15px;
+    background: #F0F2F5;
+    padding: 76px 107.5px;
+    position: absolute;
+    top: 44px;
+    font-size: 50px;
+    outline: none;
+    cursor: pointer;
+    transition: all 200ms;
+}
+
+.labelimage i{
+    color: gray;
+}
+
+.labelimage:hover{
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+
+#fototitulo, #fotofirma, #fotohuella{
+    display: none;
+}
+
+.modsegundo{
+    max-width:905px;
+}
+
+#subirTitle{
+    width:100%;
+    text-align:center;
+    color: #0052d4;
+    font-size:22px;
+    font-weight:500;
+}
+
+@media screen and (max-width: 415px){
+    .contenedor__login-register .formulario__register{
+        padding: 20px 10px;
+    }
+    .msg-error-contraseña, .msg-error-sexo, .msg-error, .msg-error-apellidos, .msg-error-idioma, .msg-error-nacimiento, .msg-error-colegiatura, .msg-error-fototitulo, .msg-error-fotofirma, .msg-error-fotohuella{
+        font-size: 80%;
+    }
+    .msg-error-apellidos, .msg-error-nacimiento, .msg-error-idioma, .msg-error-colegiatura{
+        left: 146px;
+    }
+    #hr-register{
+        margin-bottom: 10px;
+    }
+    .icon-eye{
+        top: 52%;
+    }
+    .eye1{
+        right: 55%;
+    }
+    .eye2{
+        right: 8%;
+    }
+    .formulario__register p{
+        font-size: 80%;
+        font-size: 65%;
+    }
+    .formulario__register a{
+        font-size: 100%;
+    }
+    #terminosp{
+        margin-bottom: 10px;
+    }
+    #label-masculino, #label-femenino, #label-otro, #label-psicologo, #label-nutricionista, #label-medico{
+        padding: 10px 3px;
+        font-size: 12px;
+    }
+    #masculino, #femenino, #otro, #medico, #psicologo, #nutricionista{
+        margin-right: 5px;
+    }
+    #nombres , #pais, #precio, #apellidos, #idioma, #ciudad, .formulario__register input[type="date"], #colegiatura, #nacimiento{
+        padding: 10px;
+        font-size: 12px;
+    }
+    .formulario__register input[type="email"], .formulario__register input[type="password"], #contrasenar, #contrasenarcon, #sexo, #especialidad{
+        font-size: 12px;
+    }
+    .formulario__register input[type="submit"]{
+        width: 36%;
+        padding: 7px 10px;
+        font-size: 12px;
+        margin: 15px 32% 0px 32%;
+    }
+    #btnregistro{
+        width:36%;
+        font-size:12px;
+        padding:7px 10px;
+        margin-left:32%;
+    }
+    #bregist{
+        margin-left: 32%;
+    }
+    .contenedor,.contenedor2,.contenedor3{
+	    width: 90%;
+	    height: 95%;
+    }
+    .contenedor #xmodal i,.contenedor2 #xmodal2 i,.contenedor3 #xmodal3 i{
+	    font-size: 130%;
+    }
+    .contenido{
+	    display: block;
+	    height: 97%;
+	    padding:0px 10px;
+    }
+    .lbl-modal,.lbl-modal2,.lbl-modal3{
+	    padding: 8px 15px;
+	    width: 30%;
+        margin: 0px 32% 0px 32%;
+        font-size: 80%;
+    }
+    .contenedor__login-register form #remodal{
+        margin-bottom: 0px;
+        font-size: 100%;
+    }
+    .ctn-imagend{
+        height: 28.5%;
+    }
+    .ctn-previeimage{
+        text-align: center;
+        align-items:center;
+        max-width: 89%;
+        max-height: 130px;
+        margin: 0px auto;
+        box-sizing: border-box;
+        margin-bottom:15px;
+    }
+    #previewimage3{
+        margin: 0px 5%;
+    }
+    .labelimage{
+        top:35px;
+        padding: 10.8% 31%;
+        margin: 0px 4%;
+        width: 76.8%;
+        height: 21.8%;
+        font-size: 300%;
+    }
+    #labelimage2{
+        top: 33.3%;
+    }
+    #labelimage3{
+        top: 60.5%;
+    }
+    #padjunto{
+        margin-top: 10px;
+        margin-bottom: 5px;
+    }
+    #subirTitle{
+        font-size:20px;
+    }
+    .formulario__register .comprobar{
+        font-size:12px;
+        margin-bottom:5px;
+    }
+    #mtercero .modal-header{
+         padding:8px;
+    }
+    #hradju{
+        margin:10px 0px 0px 0px;
+    }
+}
+
+
+
+
+
+

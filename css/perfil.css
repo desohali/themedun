@@ -1,0 +1,12 @@
+.ctn-herramientasperfil{
+    margin-bottom:126px;
+}
+
+@media screen and (max-width: 415px){
+    .filauno{
+        padding-top:168px;
+    }
+    .ctn-herramientasperfil{
+        margin-bottom:25px;
+    }
+}

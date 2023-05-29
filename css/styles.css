@@ -1,0 +1,428 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+}
+
+hr{
+    color:#e4e6eb;
+}
+
+#hr-register{
+    margin-top:0;
+}
+
+h1, h2, p, a, pre, body{
+    font-family: 'Roboto', sans-serif !important;
+    line-height: normal !important;
+}
+
+p, h2, h1, ul{
+    margin-bottom:0;
+}
+
+h2{
+    font-weight:bold;
+    font-size:1.5em;
+}
+
+a:hover{
+    text-decoration:none;
+}
+
+pre{
+    margin-bottom:0px !important;
+    overflow: visible;
+}
+
+body{
+    background: #f0f2f5;
+}
+
+select, input[type="date"]{
+    cursor: pointer;
+    color: #777777;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.titulo__frase{
+    width: 600px;
+    transform: translate(10%, 56.5%);
+}
+
+.titulo__frase h1{
+    font-size: 45px;
+    display: inline-block;
+}  
+
+.titulo__frase #mu, #fraselogin{
+    color: #0052D4;
+    font-weight: bold;
+} 
+
+#fraselogin{
+    font-size:1.2rem;
+    text-align:center;
+} 
+
+.comillas{
+    color:#ff0000;
+    font-weight:normal;
+}
+
+.titulo__frase #px{
+    color: #ff0000;
+    font-weight: 350;
+} 
+
+.titulo__frase p{
+    font-size: 30px;
+    margin-bottom: 75px;
+}
+
+.titulo__frase a{
+    padding: 10px 20px;
+    border: 1px solid #0052d4;
+    font-size: 14px;
+    background: #0052D4;
+    font-weight: 500;
+    cursor: pointer;
+    color: white;
+    outline: none;
+    transition: all 200ms;
+    margin-left: 172px;
+    border-radius: 5px;
+}
+
+.titulo__frase a:hover{
+    background: #fff;
+    color: #0052D4;
+}
+
+#fraseadmin{
+    width:700px;
+}
+
+.contenedor__todo{   
+    width: 600px;
+    position: relative;
+    margin-top: -230px;
+    margin-bottom: 40px;
+    left: 700px;
+}
+
+#ctn_login_admin{
+    left: 600px;
+}
+
+.caja__trasera{
+    box-sizing: border-box;
+    width: 260px;
+    height: 300px;
+    padding: 55px 25px;
+    display: block;
+    justify-content: center;
+    text-align: center;
+    background: #0052D4;
+    color: white;
+    margin:101px 0px 90px 0px;
+    border-start-start-radius:15px;
+    border-end-start-radius:15px;
+}
+
+.caja__trasera h3{
+    font-weight: 400;
+    font-size: 26px;
+}
+
+.caja__trasera p{
+    margin-top: 30px;
+}
+
+.caja__trasera button{
+    margin-top: 30px;
+    padding: 10px 20px;
+    border: 1px solid white;
+    font-size: 14px;
+    background: transparent;
+    font-weight: 500;
+    cursor: pointer;
+    color: white;
+    outline: none;
+    transition: all 200ms;
+    border-radius: 5px;
+}
+
+.caja__trasera button:hover{
+    background: #fff;
+    color: #0052D4;
+}
+
+/*Formularios*/
+.med-logos{
+    display: flex;
+    justify-content:center;
+    margin-top:15px;
+    padding:10px;
+    border-radius:10px;
+    border:1px solid #ff0000;
+}
+
+.med-logos.recuperar,.med-logos.reclamos{
+    margin-top:20px;
+}
+
+.med-logos:hover{
+    background: #f0f2f5;
+}
+
+.med-login{
+    width: 25%;
+    margin: 1% 12.5%;
+}
+
+.contenedor__login-register{
+    display: flex;
+    align-items: center;
+    width: 350px;
+    position: relative;
+    top: -240px;
+    left: 260px;
+}
+
+#contenedoradmin{
+    left:270px;
+}
+
+.contenedor__login-register .formulario__register, .contenedor__login-register .formulario__login, .ctn-contra .form-contra{
+    width: 350px;
+    height: 385px;
+    padding: 30px 20px;
+    background: white;
+    position: absolute;
+    border-radius: 15px;
+    border: none;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.contenedor__login-register .formulario__login{
+    padding: 23px 15px;
+}
+
+.contenedor__login-register .formulario__register h2, .contenedor__login-register .formulario__login h2, .ctn-contra .form-contra h2{
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #0052D4;
+}
+
+.contenedor__login-register .formulario__login h2{
+    margin-bottom: 12px;
+}
+
+.msg-error, .msg-error-contraseña{
+    font-size: 12px;
+    color: #ff0800;
+    position: absolute;
+    top: 120px;
+}
+
+.msg-error-contraseña{
+    top: 175px;
+}
+
+.formulario__login a{
+    display:block;
+    width:auto;
+    font-size: 14px;
+    text-align: center;
+    margin-bottom: 10px;
+    color: #0052D4;
+}
+
+.formulario__login a:hover{
+    text-decoration: underline;
+}
+
+#hr-login{
+    margin-top: 20px;
+}
+
+#icon-eye-login{
+    top: 145px;
+    right: 27px;
+    position: absolute;
+    cursor: pointer;
+}
+
+#icon-eye-reclamos{
+    top: 150px;
+    left: 21.5%;
+    position: absolute;
+    cursor: pointer;
+}
+
+.formulario__login input[type="email"], input[type="password"], .form-contra input[type="text"], .formulario__login input[type="text"], .form-contra input[type="email"], .form-contra input[type="number"], .form-contra input[type="text"], .form-contra select, .form-contra textarea, .form-contra label{
+    width: 100%;
+    padding: 10px;
+    margin: 8px auto;
+    border: 1px solid #e4e6eb;
+    background: #F0F2F5;
+    font-size: 14px;
+    outline: none;
+    border-radius:5px;
+}
+
+input[type="password"], .formulario__login input[type="text"], .form-contra input[type="text"]{
+    padding-right: 40px;
+}
+
+.formulario__login input[type="text"]:focus, .formulario__login input[type="email"]:focus, input[type="password"]:focus, .form-contra input[type="email"]:focus, .form-contra input[type="number"]:focus, .form-contra input[type="text"]:focus, .form-contra select:focus, .form-contra textarea:focus{
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.formulario__login input[type="submit"], .form-contra input[type="submit"]{
+    padding: 10px 20px;
+    margin: 10px 0px 20px 92px;
+    font-size: 14px;
+    border:1px solid #00d418;
+    background: #00d418;
+    transition: all 200ms;
+    font-weight: 500;
+    cursor: pointer;
+    color: white;
+    outline: none;
+    border-radius: 5px;
+}
+
+.formulario__login input[type="submit"]{
+    margin: 30px 0px 20px 98px;
+}
+
+.formulario__login input[type="submit"]:hover, .form-contra input[type="submit"]:hover{
+    background: #00ee1b;
+    border:1px solid #00ee1b;
+}
+
+
+
+@media screen and (max-width: 415px){
+    .titulo__frase{
+        width: 90%;
+        position: relative;
+        margin-top: -10%;
+        left: -4%;
+        text-align: center;
+    }
+    .titulo__frase h1{
+        font-size: 24px;
+    } 
+    .titulo__frase p{
+        font-size: 12px;
+        margin-bottom: 20px;
+    }
+    .titulo__frase a{
+        padding: 7px 10px;
+        font-size: 14px;
+        margin-left:0%;
+    }
+    .contenedor__todo{   
+        width: 90%;
+        height: 600px;
+        position: relative;
+        margin-top: 410px;
+        margin-bottom: -395px;
+        left: 5%;
+    }
+    #ctn_login_admin{
+        left: 5%;
+        margin-bottom: -575px;
+    }
+    .caja__trasera{
+        width: 75%;
+        height: 30%;
+        padding: 25px 30px;
+        position: relative;
+        left: 12%;
+        border-start-start-radius:0px;
+        border-end-start-radius:15px;
+        border-end-end-radius:15px;
+    }
+    .caja_rgs{
+        padding: 25px 45px;
+    }
+    .caja__trasera h3, .contenedor__login-register .formulario__register h2, .contenedor__login-register .formulario__login h2, .ctn-contra .form-contra h2{
+        font-size: 20px;
+    }
+    .caja__trasera p{
+        margin-top: 20px;
+        font-size: 12px;
+    }
+    .caja__trasera button{
+        margin-top: 20px;
+        padding: 7px 10px;
+        font-size: 12px;
+    }
+    .contenedor__login-register{
+        width: 90%;
+        height: 55%;
+        position: relative;
+        top: -100%;
+        left: 5%;
+    }
+    .contenedor__login-register .formulario__register, .contenedor__login-register .formulario__login{
+        width: 100%;
+        height: 100%;
+        padding: 20px 10px;
+        position: absolute;
+    }
+    .msg-error, .msg-error-contraseña, .formulario__login a{
+        font-size: 12px;
+    }
+    #hr-login{
+        margin-top: 15px;
+    }
+    #icon-eye-login{
+        top: 131px;
+        right: 20px;
+    }
+    #icon-eye-reclamos{
+        top: 79px;
+        left: 83%;
+    }
+    .formulario__login input[type="email"], input[type="password"], .form-contra input[type="text"], .formulario__login input[type="text"], .form-contra input[type="email"], .form-contra input[type="number"], .form-contra input[type="text"]{
+        width: 100%;
+        padding: 10px 30px 10px 10px;
+        font-size: 12px;
+        margin:10px auto;
+    }
+    .formulario__login input[type="submit"]{
+        padding: 7px 10px;
+        width: 40%;
+        margin: 10px 30% 20px 30%;
+        font-size: 12px;
+    }
+    #contenedoradmin{
+        left:5%;
+    }
+    #fraseadmin{
+        width:90%;
+        left:-7%;
+    }
+    .med-login{
+        margin:7% 12.5%;
+    }
+}
+
+
+
+
+
+
+
+

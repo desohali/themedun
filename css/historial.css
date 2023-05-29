@@ -1,0 +1,985 @@
+h1{
+    margin-bottom:0px;
+}
+
+.contenedor__login-register .formulario__register{
+    padding: 20px 8px 20px 10px;
+    overflow-y: scroll;
+}
+
+.contenedor__login-register .formulario__register h2{
+    margin-bottom: 7px;
+}
+
+.contenedor__login-register form #remodal{
+    margin-bottom: 0px;
+}
+
+.formulario__register p{
+    text-align: center;
+    font-size: 11px;
+}
+
+.formulario__register a{
+    font-size: 11px;
+    color: #0052D4;
+}
+
+.formulario__register a:hover{
+    text-decoration: underline;
+}
+
+.filaregister{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#terminosp{
+    margin-bottom: 23px;
+}
+
+#nombres,#nombresyape,#apellidosyape,#yape, #sexo, #doctitular, #inputIdpro, #inputIdpro2, #inputIdadmin2, #numdoctitular, #domiciliotitular, #nombrebanco, #tipocuenta, #codigocuenta, #especialidad, #pais, #precio, #apellidos, #ciudad, #idioma, .formulario__register input[type="date"], #colegiatura{
+    width: 47%;
+    padding: 9px 10px;
+    border: 1px solid #e5e5e5;
+    background: #F2F2F2;
+    font-size: 14px;
+    outline: none;
+    margin: 8px auto;
+    border-radius:5px;
+    box-shadow: 0px 0px 3px 1px white;
+}
+
+#pais{
+    padding: 8px 10px;
+}
+
+.formulario__register input[type="text"], #precio, #colegiatura{
+    padding: 10px;
+}
+
+#nombres:focus,#nombresyape:focus,#apellidosyape:focus,#yape:focus, #doctitular:focus, #numdoctitular:focus, #domiciliotitular:focus, #nombrebanco:focus, #tipocuenta:focus, #codigocuenta:focus, #apellidos:focus, #sexo:focus, #especialidad:focus,.formulario__register input[type="password"]:focus, 
+.formulario__register input[type="email"]:focus, .formulario__register input[type="date"]:focus, 
+#pais:focus, #idioma:focus, #ciudad:focus, #colegiatura:focus, #especialidad:focus, #precio:focus, .formulario__register input[type="text"]:focus, #contrasenar:focus, #contrasenarcon:focus{
+    border: 1px solid #F2F2F2;
+    box-shadow: 0px 0px 3px 1px #0052d4;
+}
+
+.formulario__register input[type="email"], .formulario__register input[type="password"], #contrasenar, #contrasenarcon{
+    width: 97%;
+    margin: 8px auto;
+    padding: 10px;
+    border: 1px solid #e5e5e5;
+    background: #F2F2F2;
+    font-size: 14px;
+    outline: none;
+}
+
+#contrasenar, #contrasenarcon{
+    width: 47%;
+}
+
+.formulario__register input[type="password"], #contrasenar, #contrasenarcon{
+    padding-right: 35px;
+}
+
+#box_filter select{
+    margin:0px;
+}
+
+.formulario__register input[type="submit"]{
+    width: 110px;
+    padding: 10px 20px;
+    border: none;
+    font-size: 14px;
+    background: #00d418;
+    transition: all 200ms;
+    font-weight: 500;
+    cursor: pointer;
+    color: white;
+    outline: none;
+    margin-top: 15px;
+    margin-left: 102px;
+    border-radius: 5px;
+}
+
+#bregist{
+    margin-top: 10px;
+    margin-left: 0px;
+    position: absolute;
+    left: 394px;
+}
+
+#padjunto{
+    text-align:center;
+    font-size: 11px;
+    margin-top: 10px;
+    margin-left: 0px;
+}
+
+#hradju{
+    margin-top: 5px;
+}
+
+.formulario__register input[type="submit"]:hover{
+    background: #00ee1b;
+}
+
+.contenido{
+	width: 100%;
+	padding: 10px; 
+	display: flex;
+}
+.contenido h3{
+	margin-bottom: 10px;
+}
+.contenido p{
+	margin-bottom: 7px;
+}
+
+.formulario__register .comprobar{
+    margin-bottom: 10px;
+    font-size: 14px;
+    font-weight: bolder;
+    text-align: left;
+    margin-left: 0px;
+}
+
+.ctn-previeimage{
+    width: 267px;
+    height: 215px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 25px;
+}
+
+#previewimage3{
+    margin-right: 0px;
+}
+
+.labelimage{
+    border: 1px solid #e5e5e5;
+    border-radius: 25px;
+    background: #F2F2F2;
+    padding: 76px 107.5px;
+    position: absolute;
+    top: 89px;
+    font-size: 50px;
+    outline: none;
+    cursor: pointer;
+    transition: 200ms;
+}
+
+.labelimage i{
+    color: #777777;
+}
+
+.labelimage:hover{
+    border: 1px solid #0052D4;
+}
+
+
+#fototitulo, #fotofirma, #fotohuella{
+    display: none;
+}
+
+@media screen and (max-width: 415px){
+    .contenedor__login-register .formulario__register{
+        padding: 20px 10px;
+    }
+    .msg-error-contrase単a, .msg-error-sexo, .msg-error, .msg-error-apellidos, .msg-error-idioma, .msg-error-nacimiento, .msg-error-colegiatura, .msg-error-fototitulo, .msg-error-fotofirma, .msg-error-fotohuella{
+        font-size: 12px;
+    }
+    .msg-error-apellidos, .msg-error-nacimiento, .msg-error-idioma, .msg-error-colegiatura{
+        left: 146px;
+    }
+    #hr-register{
+        margin-bottom: 10px;
+    }
+    .icon-eye{
+        top: 51.5%;
+    }
+    .eye1{
+        right: 55%;
+    }
+    .eye2{
+        right: 8%;
+    }
+    .formulario__register p{
+        font-size: 65%;
+    }
+    .formulario__register a{
+        font-size: 100%;
+    }
+    #terminosp{
+        margin-bottom: 10px;
+    }
+    #label-masculino, #label-femenino, #label-otro, #label-psicologo, #label-nutricionista, #label-medico{
+        padding: 10px 3px;
+        font-size: 12px;
+    }
+    #masculino, #femenino, #otro, #medico, #psicologo, #nutricionista{
+        margin-right: 5px;
+    }
+    #nombres , #pais, #precio, #apellidos, #idioma, #ciudad, .formulario__register input[type="date"], #colegiatura{
+        padding: 10px;
+        font-size: 12px;
+    }
+    .formulario__register input[type="email"], .formulario__register input[type="password"], #contrasenar{
+        font-size: 12px;
+    }
+    .formulario__register input[type="submit"]{
+        width: 35%;
+        padding: 8px 15px;
+        font-size: 12px;
+        margin: 15px 32% 0px 32%;
+    }
+    #bregist{
+        left: 33%;
+    }
+    .contenedor,.contenedor2,.contenedor3{
+	    width: 90%;
+	    height: 95%;
+    }
+    .contenedor #xmodal i,.contenedor2 #xmodal2 i,.contenedor3 #xmodal3 i{
+	    font-size: 130%;
+    }
+    .contenido{
+	    display: block;
+	    height: 97%;
+    }
+    .lbl-modal,.lbl-modal2,.lbl-modal3{
+	    padding: 8px 15px;
+	    width: 30%;
+        margin: 0px 32% 0px 32%;
+        font-size: 12px;
+    }
+    .contenedor__login-register form #remodal{
+        margin-bottom: 0px;
+        font-size: 100%;
+    }
+    .ctn-imagend{
+        height: 28.5%;
+    }
+    .ctn-previeimage{
+        text-align: center;
+        align-items:center;
+        max-width: 89%;
+        max-height: 81%;
+        margin: 0px auto;
+        margin-top: -4px;
+        box-sizing: border-box;
+    }
+    #previewimage3{
+        margin: 0px 4%;
+        margin-top: -5px;
+    }
+    .labelimage{
+        padding: 14% 30%;
+        margin: 0px 4%;
+        width: 75%;
+        height: 21%;
+        font-size: 300%;
+    }
+    #labelimage1{
+        top: 9.6%;
+    }
+    #labelimage2{
+        top: 35%;
+    }
+    #labelimage3{
+        top: 60.5%;
+    }
+    #hradju{
+        margin-top: -90px;
+    }
+    #padjunto{
+        margin-top: 15px;
+        margin-bottom: 5px;
+    }
+}
+
+#pagarTitle{
+    font-size: 22px;
+    font-weight: 500;
+    text-align: center;
+    color: #0052D4;
+    width:100%;
+}
+
+.columnastmu{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.columnasuno{
+    width:52%;
+}
+
+.columnasdos{
+    width:48%;
+}
+
+.filaregister ul{
+    margin-bottom:0px;
+}
+
+.historia4 p{
+    width:100%;
+    font-size:14px;
+}
+
+.historia4 .columnasuno p{
+    text-align:center;
+}
+
+.historia4 li{
+    font-size:14px;
+    list-style:none;
+}
+
+.columnasimg{
+    display:flex;
+    align-items:center;
+    justify-content: flex-end;
+}
+
+.columnasdos img{
+    width:94%;
+}
+
+.columnasdos #awsp,.columnasdos #acorreo{
+    font-size:14px;
+    padding-left:6%;
+    color:#0052d4;
+}
+
+.formulario__register p{
+    text-align:center;
+}
+
+#hr-register{
+    margin-top:10px;
+    margin-bottom:10px;
+}
+
+.infodoble{
+    width:100%;
+    justify-content:space-between;
+}
+
+#bcfiled2{
+    width:auto;
+    padding: 10px 20px;
+    font-size: 14px;
+    background: #0052d4;
+    border: 2px solid #0052d4;
+    transition: all 200ms;
+    font-weight: 500;
+    cursor: pointer;
+    color: white;
+    outline: none;
+    border-radius: 5px;
+}
+
+#bcfiled2:hover{
+    background: white;
+    color: #0052d4;
+    border: 2px solid #0052D4;
+    text-decoration:none;
+}
+
+.moddeuda{
+    top:-28px;
+    padding-left:0px !important;
+    padding-right:0px !important;
+}
+
+.historia4 .moddeuda{
+    overflow-y:hidden;
+}
+
+.divfoot .hfoot{
+    font-size: 24px;
+    font-weight:bolder;
+}
+
+.divfoot .divicons a:hover{
+    text-decoration:none;
+}
+
+@media screen and (max-width: 415px){
+    .ctn-fullc{
+        padding: 0px;
+        padding-top:179px;
+        width: 90%;
+        height: auto;
+        margin-left: 5%;
+        margin-bottom: 25px;
+    }
+    .ctn-fullc .container{
+        padding: 5px 10px 15px 10px;
+    }
+    .selhora #tituloEvento, .confirmarcita #tituloEvento{
+        font-size:110%;
+    }
+    .fc-left h2{
+        font-size:120%;
+        margin-top: 3px;
+    }
+    .fc-right{
+        font-size: 12px;
+    }
+    .selhora #descripcionEvento table, .selhora #descripcionEvento td, .selhora #descripcionEvento th{
+        font-size: 90%;
+    }
+    #tablaPrueba2 tr{
+        height: 20px;
+    }
+    #edit-pc, .fc-toolbar.fc-header-toolbar{
+        margin-bottom: 0.75rem;
+    }
+    .selhora hr, .confirmarcita hr{
+        margin-top: 0.5rem;
+        margin-bottom: 0.75rem;
+    }
+    .col-7{
+        min-width:100%;
+    }
+    .fc-day-grid-container{
+        height: auto !important;
+
+    }
+    .modal-body2{
+        display: block;
+    }
+    .selhora, #ModalEventos .confirmarcita{
+        width: 100%;
+    }
+    #ModalEventos .confirmarcita{
+        border: none;
+        margin-top: 15px;
+        margin-left: 0px;
+        padding-left: 0px;
+    }
+    .confirmarcita .close{
+        position: absolute;
+        top: 1%;
+        right: 4%;
+    }
+    .modal-selcon .modal-footer{
+        padding: 0px;
+        padding-top: 1rem;
+    }
+    #formInforme input[type="text"]{
+        width: 95%;
+    }
+    .formulario__register h2{
+        font-size: 120%;
+        margin-bottom: 20px;
+    }
+    .contenedorfc,.contenedorcita{
+        width: 90%;
+        height: auto;
+    }
+    .contenedorfc{
+        width: 100%;
+    }
+    .columnastmu{
+        display: block;
+    }
+    .columnasuno, .columnasdos{
+        width:100%;
+    }
+    .columnasdos{
+        display:none;
+    }
+}
+
+.boxhistorial{
+    padding: 25px 7.5%;
+    padding-top:87px;
+}
+
+.ctn-historial, .ctn-hpacientes{
+    display: block;
+    align-items: center;
+    width: 100%;
+    min-height: 513px;
+    border: none;
+    padding: 10px 20px;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.ctn-historial{
+    min-height: 463px;
+}
+
+#histopro{
+    min-height: 270px;
+}
+
+#histoadmin{
+    min-height: 297px;
+}
+
+#histopac{
+    min-height: 462px;
+}
+
+.ctn-editarpc{
+    display: flex;
+    justify-content: space-between;
+    padding: 7px 10px;
+}
+
+#editarpc2{
+    padding-bottom:0px;
+}
+
+.ctn-editarpc p{
+    width:49%;
+    font-size:19px;
+}
+
+.box-body, .boxhisto1, .boxhisto2{
+    display: flex;
+    justify-content: space-between;
+}
+
+.boxhisto1, .boxhisto2{
+    width:50%;
+}
+
+.historia1,.historia2,.historia3,.historia4{
+    width: 50%;
+}
+
+#historia4{
+    width:auto;
+    margin-right:2.7%;
+}
+
+.boxhistorial span{
+    font-weight: 500;
+}
+
+.box-body p{
+    margin: 10px;
+    font-size: 14px;
+}
+
+.lbl-modal, .lbl-modal2, .lbl-modal3{
+	display: block;
+    width: 55%;
+    padding: 10px 20px;
+    font-size: 14px;
+    background: white;
+    border: 2px solid white;
+    transition: all 200ms;
+    font-weight: 500;
+    cursor: pointer;
+    color: #0052D4;
+    outline: none;
+    margin-left: 62px;
+    text-align:center;
+    border-radius: 5px;
+}
+
+.lbl-modal2{
+    width:100%;
+    margin-left: 0px;
+    color: #ff0000;
+}
+
+.lbl-modal:hover, .lbl-modal2:hover, .lbl-modal3:hover{
+    background: #fff;
+    border: 2px solid #0052D4;
+}
+
+.lbl-modal2:hover{
+    border: 2px solid #ff0000;
+}
+
+.contenedor,.contenedor2,.contenedor3{
+    width: 800px;
+	height: 465px;
+}
+
+.contenedor2{
+    width: 600px;
+	height: 440px;
+}
+
+.contenedor3{
+    width: 450px;
+	height: 300px;
+}
+
+#ctn-pro{
+    height: auto;
+}
+
+.box-body .pdatos{
+    text-align: left;
+    margin: 0px;
+    margin-left: 1.5%;
+}
+
+#btn-modal:checked ~ .modal .contenedor, #btn-modal2:checked ~ .modal2 .contenedor2, #btn-modal3:checked ~ .modal3 .contenedor3{
+	transform: translateY(6.5%);
+}
+
+.contenedor__login-register .formulario__register{
+    padding: 0px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.formulario__register h2{
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #0052D4;
+}
+
+#editarpc h2, #editarpc2 h2{
+    font-size: 24px;
+    font-weight:bolder;
+}
+
+.ctn-infpagos hr{
+    margin: 0px;
+}
+
+#hr-register{
+    margin: 10px 0px;
+}
+
+#btndeuda, #btncuenta, #btnyape{
+    background:white;
+    border:none;
+    font-size:14px;
+    font-weight:500;
+    padding:10px 20px;
+    transition: all 200ms;
+    line-height:normal !important;
+    outline:none !important;
+    outline-width: 0 !important;
+    box-shadow: none !important;
+    -moz-box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow:0px 0px 3px 1px #0052d4 !important;
+    border-radius:5px !important;
+}
+
+#btndeuda{
+    color:white;
+    margin-top:-5px;
+    box-shadow:0px 0px 3px 1px white !important;
+    background:#00d418;
+}
+
+#btndeuda:hover{
+    background:#00ee1b;
+    color:white;
+}
+
+#btncuenta:hover, #btnyape:hover{
+    box-shadow:0px 0px 3px 1px white !important;
+    background:#0052d4;
+    color:white;
+}
+
+#btncuenta, #btnyape{
+    color:#0052d4;
+}
+
+#hbuttons{
+    padding-left:19%;
+}
+
+#hbuttons #btncuenta, #hbuttons #btnyape{
+    margin-top: 10px;
+    width:145px;
+}
+
+#hbuttons #btnyape{
+    margin-bottom: 0px;
+}
+
+.formulario__register .pguardar{
+    text-align: center;
+    font-size: 11px;
+    margin-left:0px;
+}
+
+.formulario__register input[type="submit"]{
+    margin-top: 5px;
+    margin-left: 38.5%;
+}
+
+.formulario__register #submitYape{
+    margin-left: 35%;
+}
+
+#bodyCuentaEditar, #bodyYapeEditar{
+    display: none;
+}
+
+#formCuenta2 .filaregister,#formYape2 #filaEditar{
+    justify-content: flex-start;
+}
+
+.pcentral{
+    width: 100%;
+}
+
+.pmedio{
+    width: 50%;
+}
+
+.filaregister label{
+    display: block;
+    padding: 10px 20px;
+    font-size: 14px;
+    background: white;
+    transition: all 200ms;
+    border:none;
+    font-weight: 500;
+    cursor: pointer;
+    color: #0052D4;
+    outline: none;
+    text-align:center;
+    border-radius: 5px;
+    box-shadow: 0px 0px 3px 1px #0052d4;
+    margin:10px;
+    margin-left:3px;
+}
+
+.filaregister label:hover{
+    background: #0052d4;
+    color:white;
+    box-shadow: 0px 0px 3px 1px white;
+}
+
+#labelEditar{
+    margin-top: 15px;
+}
+
+#labelEditarYape{
+    margin-top:24px;
+    margin-bottom: 15px;
+}
+
+#labelequal i, #labelmas i, #labelminus i{
+    cursor: pointer;
+}
+#labelmas, #labelequal, #labelminus{
+    font-size: 20px;
+}
+
+#labelmas{
+    color: #00d418;
+    margin: 0px;
+}
+
+#labelmas:hover, .si{
+    color: #00ee1b;
+}
+
+#labelequal{
+    color: #FFC107;
+    margin: 0px;
+}
+
+#labelequal:hover, .no{
+    color: #ffcd38;
+}
+
+#labelminus{
+    color: #e50000;
+    margin: 0px;
+}
+
+#labelminus:hover, .no{
+    color: #ff0800;
+}
+
+.box-body .ppago{
+    margin-top: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.box-body .pprepago{
+    margin-bottom: 0px;
+}
+
+.columnastmu{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.columnasuno, .columnasdos{
+    width:50%;
+}
+
+.ctn-editarpc #historia4 p{
+    width:100%;
+    font-size:14px;
+}
+
+.ctn-editarpc #historia4 li{
+    font-size:14px;
+}
+
+.columnasdos{
+    justify-content:center;
+}
+
+.formulario__register #awsp,.formulario__register #acorreo{
+    font-size:14px;
+}
+
+.modyape .modsegundo{
+    width:30%;
+}
+
+@media screen and (max-width: 415px){
+    .boxhistorial{
+        padding: 25px 0px;
+        padding-top:122px;
+    }
+    .boxhistorial #histospan{
+        margin-right: 45px;
+    }
+    .ctn-historial, .ctn-hpacientes{
+        width:90%;
+        margin-left:5%;
+        padding: 5px 10px;
+    }
+    .ctn-editarpc{
+        display: block;
+        padding: 7px 10px;
+    }
+    .ctn-historial #editarpc{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .ctn-editarpc p{
+        width:100%;
+        font-size:12px;
+    }
+    .ctn-editarpc h2{
+        font-size:16px;
+    }
+    #editarpc h2, #editarpc2 h2{
+        font-size:16px;
+        font-weight:500;
+    }
+    .box-body{
+        display:block;
+    }
+    .boxhisto1, .boxhisto2{
+        display:block;
+        width:100%;
+    }
+    .historia1, .historia2, .historia3, .historia4{
+        display:flex;
+        width:100%;
+    }
+    .box-body p{
+        font-size: 12px;
+        margin:9.2px 5px;
+        width:50%;
+    }
+    .box-body #formYape2  p{
+        margin:4.8px 5px;
+    }
+    .box-body .historia3 p{
+        width:100%;
+    }
+    #hbuttons{
+        justify-content:space-between;
+        padding-left:0%;
+        padding: 5px 10px 15px 10px;
+    }
+    #hbuttons #btncuenta, #hbuttons #btnyape{
+        padding:7px 10px;
+        font-size:12px;
+        width:130px;
+    }
+    #btndeuda{
+        padding:7px 10px;
+        font-size:12px;
+    }
+    .lbl-modal,.lbl-modal2,.lbl-modal3{
+        width: 80%;
+        margin-left: 10%;
+        padding: 5px 10px;
+        font-size: 12px;
+    }
+    .lbl-modal2{
+        width: 100%;
+        margin-left: 0%;
+        margin-top:-2px;
+    }
+    .lbl-modal3{
+        margin-top:10px;
+    }
+    .formulario__register h2{
+        font-size: 120%;
+        margin-bottom: 20px;
+    }
+    #formCuenta2 .filaregister{
+        align-items: flex-start;
+    }
+    .contenedor,.contenedor2,.contenedor3{
+        width: 90%;
+        height: auto;
+    }
+    .formulario__register input[type="submit"]{
+        width: 24%;
+        padding: 7px 10px;
+        margin:5px 38%;
+    }
+    .filaregister label{
+        padding: 7px 10px;
+        font-size: 12px;
+        width:24%;
+    }
+    #btn-modal:checked ~ .modal .contenedor,#btn-modal2:checked ~ .modal2 .contenedor2,#btn-modal3:checked ~ .modal3 .contenedor3{
+        transform: translateY(12.5%);
+    }
+    .columnastmu{
+        display: block;
+    }
+    .columnasuno, .columnasdos{
+        width:100%;
+    }
+    .ctn-editarpc #historia4 p, .ctn-editarpc #historia4 li,#nombres,#nombresyape,#apellidosyape,#yape, #sexo, #doctitular, #inputIdpro, #inputIdpro2, #numdoctitular, #domiciliotitular, #nombrebanco, #tipocuenta, #codigocuenta, #especialidad, #pais, #precio, #apellidos, #ciudad, #idioma, .formulario__register input[type="date"], #colegiatura{
+        font-size:12px;
+        margin:5px auto;
+    }
+    .columnasdos{
+        display:none;
+    }
+    #pagarTitle{
+        font-size: 16px;
+    }
+    .box-body .pcentral,.box-body .pguardar{
+        width:100%;
+    }
+    .modyape .modsegundo{
+        width:auto;
+    }
+}

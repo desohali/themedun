@@ -1,0 +1,312 @@
+.fraseinic{
+    width: 100%;
+    background: #0052D4;
+    text-align: center;
+    align-items: center;
+    padding: 20px
+}
+
+.fraseinic h2{
+    font-size: 50px;
+    color: white;
+}
+
+.card-deck{
+    margin:60px;
+}
+
+.card-title{
+    font-size:13px;
+    margin-bottom:0px;
+}
+
+.card{
+    border-radius:15px;
+    border:1px solid #0052d4;
+}
+
+iframe{
+    height:200px;
+    border-top-left-radius:15px;
+    border-top-right-radius:15px;
+}
+
+.divdatos{
+    padding-bottom: 25px;
+    margin: 60px;
+    background: white;
+    border-radius: 20px;
+}
+
+#divque{
+    border: 1px solid #0052d4;
+}
+
+#divpor{
+    border: 1px solid #ff0000;
+}
+
+#divpara{
+    border: 1px solid #00d418;
+}
+
+.divdatos h2{
+    text-align: center;
+    font-size: 35px;
+}
+
+.saludtit{
+    margin-top: 25px;
+    color: #0052D4;
+}
+
+.porquetmu, .paraquetmu, .queestmu{
+    padding: 5px;
+    background: #ff0000;
+    color: white;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.paraquetmu{
+    background: #00ee1b;
+}
+
+.queestmu{
+    background: #0052d4;
+}
+
+.divdatos ul li, .datosmisvis{
+    width: 80%;
+    margin: 25px 75px;
+    font-size: 20px;
+}
+
+.divdatos ul li{
+    color:#0052d4;
+}
+
+.divdatos ul li p{
+    color:black;
+}
+
+.divdatos .datosmisvis ul li{
+    width: 100%;
+    margin: 25px 0px;
+}
+
+.misyvis{
+    margin: 0px 10px 15px 0px;
+    color: #0052d4;
+}
+
+.datosmisvis p{
+    text-align: center;
+}
+
+.datosclave{
+    display: flex;
+    align-items:center;
+}
+
+.datosclave img{
+    width: 22%;
+    height: 22%;
+    margin-right:50px;
+}
+
+#vervision{
+    margin-top: 30px;
+}
+
+#datosclavedos{
+    margin-top: 15px;
+}
+
+#datosquees{
+    width:auto;
+    margin-bottom:0px;
+}
+
+.funciones{
+    width:auto;
+    margin:25px 0px;
+    padding-right:25px;
+}
+
+.beneficios{
+    width:auto;
+    margin:25px 0px;
+    padding-left:25px;
+}
+
+.dosparrafos{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.unparrafo{
+    display:flex;
+    margin:25px;
+    justify-content:center;
+}
+
+.dosparrafos p, .unparrafo p{
+    width: 46%;
+    border-radius:10px;
+    padding:5px 8px;
+    border: 1px solid #0052d4;
+    display:flex;
+    align-items:center;
+    height:78px;
+}
+
+.dosparrafos p:hover, .unparrafo p:hover{
+    background: #F0F2F5;
+}
+
+.unparrafo p{
+    border: 1px solid #ff0000;
+}
+
+#automedica{
+    padding:5px 20px;
+}
+
+#parrafomedio{
+    width:50%;
+}
+
+#espaciodatos{
+    margin-top:15px;
+}
+
+#spanmedio{
+    color:#ff0000;
+}
+
+@media screen and (max-width: 415px){
+    .fraseinic{
+        width: 100%;
+        padding: 25px 10px;
+    }
+    .fraseinic h2{
+        font-size: 28px;
+    }
+    .secundi{
+        position:relative;
+        z-index:9;
+    }
+    .divdatos{
+        padding-bottom: 10px;
+        margin: 6.5%;
+    }
+    .divdatos h2{
+        font-size: 20px;
+    }
+    .saludtit{
+        margin-top: 10px;
+    }
+    .divdatos ul li, .datosmisvis{
+        width: 88%;
+        margin: 10px 20px;
+        font-size: 12px;
+    }
+    .datosclave{
+        display: block;
+    }
+    .dosparrafos p, .unparrafo p{
+        display:flex;
+        height:55px;
+        align-items:center;
+        font-size:12px;
+    }
+    .misyvis{
+        margin: 0px;
+    }
+    #vervision{
+        margin-top: 10px;
+    }
+    .divdatos .misyvis{
+        font-size:20px;
+    }
+    .datosclave img{
+        margin-right:0px;
+        margin-left: 25%;
+        margin-bottom: 2.5%;
+        width: 50%;
+    }
+    .funciones, .beneficios{
+        width:100%;
+        margin:10px 0%;
+        padding:0px;
+    }
+    .funciones h2, .beneficios h2{
+        margin-bottom:10px;
+        font-size:185%;
+    }
+    .beneficios h2{
+        margin-top:20px;
+    }
+    .unparrafo{
+        margin:15px;
+    }
+    #automedica{
+        padding:5px;
+    }
+    .card-deck{
+        margin:6.5%;
+        margin-bottom:0px;
+    }
+    .card-title{
+        font-size:12px;
+    }
+    iframe{
+        height:160px;
+    }
+    .card-deck .card{
+        margin-bottom:25px;
+    }
+    #ultimacard{
+        margin-bottom:0px;
+    }
+}
+
+@media screen and (min-width: 416px) and (max-width: 850px){
+    .fraseinic{
+        width: 100%;
+        padding: 25px 10px;
+    }
+    .fraseinic h2{
+        font-size: 400%;
+    }
+    .divdatos{
+        padding-bottom: 10px;
+        margin: 6.5%;
+    }
+    .divdatos h2{
+        font-size: 280%;
+    }
+    .saludtit{
+        margin-top: 10px;
+    }
+    .divdatos ul li, .datosmisvis{
+        width: 80%;
+        margin: 10px 10%;
+        font-size: 180%;
+    }
+    .datosclave{
+        display: block;
+    }
+    .misyvis{
+        margin: 0px;
+    }
+    #vervision{
+        margin-top: 10px;
+    }
+    .datosclave img{
+        margin-left: 25%;
+        width: 50%;
+    }
+}

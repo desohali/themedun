@@ -1,0 +1,93 @@
+.footmed{
+    width: 100%;
+    background: #0052D4;
+    padding: 50px;
+    display: flex;
+    color: white;
+}
+
+.divfoot{
+    width:24%;
+}
+
+.divuni a, .divicons a{
+    color: white;
+    font-size: 120%;
+    transition: all 200ms;
+}
+
+.divuni a:hover, .divicons a:hover{
+    font-weight: bolder;
+    text-decoration:none;
+}
+
+#divflogo{
+    width:25%;
+}
+
+#divnos{
+    width:27%;
+}
+
+.hfoot{
+    margin-bottom: 25px;
+}
+
+.flogo img{
+    width: 18%;
+    position: absolute;
+    margin-top: -1.5%;
+    margin-left: 0.5%;
+}
+
+.copyr{
+    width: 100%;
+    background: black;
+    text-align: center;
+    color: white;
+    padding: 10px 0px;
+    font-size:15px;
+}
+
+#saludfoot{
+    width: 13%;
+    margin-left: 5px;
+}
+
+.divuni a{
+    text-decoration: none;
+}
+
+@media screen and (max-width: 415px){
+    .footmed{
+        padding: 25px;
+        display: block;
+    }
+    .divfoot{
+        width:100%;
+        margin-top: 25px;
+    }
+    .divuni a, .divicons a{
+        font-size: 100%;
+    }
+    #divflogo{
+        width:100%;
+        margin-top: 0px;
+    }
+    #divnos{
+        width:100%;
+    }
+    .hfoot{
+        font-size: 120%;
+        margin-bottom: 15px;
+    }
+    .flogo img{
+        position: static;
+        width: 50%;
+        margin: 0px 25%;
+    }
+    .copyr{
+        font-size: 100%;
+        padding: 10px 5%;
+    }
+}

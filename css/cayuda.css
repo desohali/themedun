@@ -1,0 +1,106 @@
+.ctn-contra .form-contra{
+    width: 500px;
+    height: auto;
+    position: static;
+    margin: 3% 5% 3% 55%;
+}
+
+.form-contra input[type="text"], .form-contra input[type="email"], .form-contra select{
+    width: 48%;
+    padding: 10px;
+}
+
+.form-contra select{
+    padding: 9px 10px;
+    color: #777777;
+}
+
+#nombres, #correo, #pais{
+    margin-right: 5px;
+}
+
+.form-contra input[type="submit"]{
+    margin: 5px 0px 0px 41%;
+}
+
+#hr-login{
+    margin: 20px 0px;
+}
+
+#img-cayuda{
+    width: 40.5%;
+    position: absolute;
+    left: 6.8%;
+}
+
+#img-cayuda img{
+    width: 95%;
+}
+
+.form-contra a{
+    color: #0052d4;
+    font-size: 15px;
+}
+
+.form-contra a:hover{
+    text-decoration: underline;
+}
+
+#error-apellido{
+    margin-left: 21.9%;
+}
+
+#error-telefono{
+    margin-left: 26.8%;
+}
+
+#error-ciudad{
+    margin-left: 25.1%;
+}
+
+.ctn-contra .form-contra h2{
+    margin-bottom:0px;
+}
+
+.ctn-contra .form-contra{
+    padding:20px;
+}
+
+#enlacemail{
+    display:block;
+    margin-top:20px;
+}
+
+@media screen and (max-width: 415px){
+    .ctn-contra .form-contra{
+        width: 90%;
+        height: 490px;
+        margin: 5%;
+    }
+    .form-contra select{
+        padding: 8px 10px;
+    }
+    #nombres, #correo, #pais{
+        margin-right: 2.5%;
+    }
+    .form-contra input[type="submit"]{
+        margin: 5px 0px 0px 33%;
+        padding: 10px 20px;
+        width:100px;
+    }
+    .form-contra a{
+        font-size: 14px;
+    }
+    #img-cayuda{
+        display: none;
+    }
+    #error-apellido{
+        margin-left: 11%;
+    }
+    #error-telefono{
+        margin-left: 17.5%;
+    }
+    #error-ciudad{
+        margin-left: 15.4%;
+    }
+}

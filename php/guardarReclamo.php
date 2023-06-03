@@ -24,15 +24,15 @@ $reclamo = trim($_POST["reclamo"]);
 $detalle = nl2br(ucfirst(trim($_POST["detalle"])));
 $pedido = nl2br(ucfirst(trim($_POST["pedido"])));
 $acciones = "Aún no hay observaciones ni acciones.";
-$codigonew = rand(100000,999999);
-$codigofin = $codigonew.''.$numdoc;
+$codigonew = rand(100000, 999999);
+$codigofin = $codigonew . '' . $numdoc;
 date_default_timezone_set("America/Lima");
 $fecha = date('d/m/Y');
 $nombrefoto1 = $_FILES['evidencia']['name'];
 $ruta1 = $_FILES['evidencia']['tmp_name'];
-if($nombrefoto1!='' && $ruta1!=''){
-    $evidencia=$codigofin.$nombrefoto1;
-    $destino1 = "../evidencias/".$evidencia;
+if ($nombrefoto1 != '' && $ruta1 != '') {
+    $evidencia = $codigofin . $nombrefoto1;
+    $destino1 = "../evidencias/" . $evidencia;
 }
 
 $titulo = "CONSTANCIA DE RECLAMACIÓN";
@@ -43,7 +43,7 @@ $mensaje = "
 </head>
 <body>
     <h1 style='color:#0052d4; text-align:center'>The Med Universe</h1>
-    <p>Estimado(a), ".$nombres." ".$apellidos.":<br><br>Hemos registrado su hoja de reclamación en nuestro Libro de Reclamaciones - The Med Universe. Para revisar el estado de su reclamación, ingrese el siguiente código: ".$codigofin."<br><br>The Med Universe dará respuesta a la reclamación en un plazo no mayor a quince (15) días hábiles.</p>
+    <p>Estimado(a), " . $nombres . " " . $apellidos . ":<br><br>Hemos registrado su hoja de reclamación en nuestro Libro de Reclamaciones - The Med Universe. Para revisar el estado de su reclamación, ingrese el siguiente código: " . $codigofin . "<br><br>The Med Universe dará respuesta a la reclamación en un plazo no mayor a quince (15) días hábiles.</p>
 </body>
 </html>
 ";
@@ -54,11 +54,14 @@ $cabeceras .= 'Content-type: text/html; charset=UTF-8' . "\r\n";
 
 // Cabeceras adicionales
 $cabeceras .= 'From: reclamos@themeduniverse.com' . "\r\n";
-if(mail($correo, $titulo, $mensaje, $cabeceras)){
+/* if(mail($correo, $titulo, $mensaje, $cabeceras)){
     $sql = "INSERT INTO lreclamos (codigo, nombres, apellidos, documento, numdoc, domicilio, telefono, correo, nombrestut, apellidostut, documentotut, numdoctut, domiciliotut, telefonotut, correotut, tipobien, monto, numcita, descripcion, reclamo, evidencia, detalle, pedido, fecha, acciones) VALUES ('$codigofin', '$nombres', '$apellidos', '$documento', '$numdoc', '$domicilio', '$telefono', '$correo', '$nombrestut', '$apellidostut', '$documentotut', '$numdoctut', '$domiciliotut', '$telefonotut', '$correotut', '$tipobien', '$monto', '$numcita', '$descripcion', '$reclamo', '$evidencia', '$detalle', '$pedido', '$fecha', '$acciones')";
     if(is_uploaded_file($ruta1)){
         copy($ruta1, $destino1);
     }
     $stmt = mysqli_query($conexion, $sql);
-}
-?> 
+} */
+
+echo json_encode(array(
+    array('correo' => $correo, 'titulo' => $titulo,  'mensaje' => $mensaje, 'cabeceras' => $cabeceras)
+));

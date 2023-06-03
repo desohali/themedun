@@ -115,8 +115,13 @@ if (isset($_GET['id']) && @$_GET['id'] == @$_SESSION['id']){
                 <?php
                 $fecha = time() - strtotime($nacimiento);
                 $edad = floor($fecha / 31556926);
+                if($edad=='1'){
+                    $año="año";
+                }else{
+                    $año="años";
+                }
                 ?>
-                <p id="nacimientoperfil"><span>Fecha de nacimiento<span class="spanedad"> (Edad)</span>:</span> <?php echo $newDateNac?><span class="spanedad" id="idedad"> (<?php echo $edad?> años)</span></p>
+                <p id="nacimientoperfil"><span>Fecha de nacimiento<span class="spanedad"> (Edad)</span>:</span> <?php echo $newDateNac?><span class="spanedad" id="idedad"> (<?php echo $edad." ".$año?>)</span></p>
                 <p id="edadperfil"><span>Edad:</span> <?php echo $edad?> años</p>
                 <p id="sexoperfil"><span>Género:</span> <?php echo $sexo?></p><br>
                 <p id="paisperfil"><span>País:</span> <?php echo $pais?></p>

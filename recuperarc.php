@@ -7,9 +7,9 @@ include './seguridad.php';
 $seguridad = new Seguridad($conexion, "");
 $seguridad->verificarSiYaEstoyLogeado();
 
-$urlactual='https://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
+$urlactual = 'https://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
 
-if ($urlactual=='https://themeduniverse.com/recuperarc') {
+if ($urlactual == 'https://themeduniverse.com/recuperarc') {
     echo "<script>window.location.href='" . $_ENV['APP_URL'] . "recuperarc'</script>";
 }
 
@@ -49,7 +49,7 @@ if ($urlactual=='https://themeduniverse.com/recuperarc') {
                     }
                     fetch("<?php echo $_ENV['APP_URL']; ?>php/enviarCodigo.php", peticion)
                         .then(respuesta => respuesta.json())
-                        .then(respuesta => {
+                        .then(async (respuesta) => {
                             if (respuesta["correo"] == "Este correo no existe") {
                                 Swal.fire({
                                     title: 'Correo incorrecto',
@@ -59,16 +59,32 @@ if ($urlactual=='https://themeduniverse.com/recuperarc') {
                                     confirmButtonText: 'Ok',
                                 });
                             } else {
-                                Swal.fire({
-                                    title: 'Código enviado',
-                                    text: 'Ingresa el código que hemos enviado a tu correo.',
-                                    icon: 'success',
-                                    confirmButtonColor: '#0052d4',
-                                    confirmButtonText: 'Ok',
-                                }).then(() => {
-                                    // cambiar la url a donde quieres redigirig
-                                    window.location.replace("<?php echo $_ENV['APP_URL']; ?>restablecerc/" + respuesta["id"] + "/" + respuesta["token"]);
-                                });
+
+                                await enviarCorreo(respuesta["correo"]);
+
+                                const formData2 = new FormData();
+                                formData2.append("token", respuesta["token"]);
+                                formData2.append("correo1", formData.get("correo"));
+
+                                fetch("<?php echo $_ENV['APP_URL']; ?>crudDespuesDeEnviarCorreo/actualizarUsuarios.php", {
+                                        method: "post",
+                                        body: formData2,
+                                    })
+                                    .then(respuesta => respuesta.text())
+                                    .then(() => {
+                                        Swal.fire({
+                                            title: 'Código enviado',
+                                            text: 'Ingresa el código que hemos enviado a tu correo.',
+                                            icon: 'success',
+                                            confirmButtonColor: '#0052d4',
+                                            confirmButtonText: 'Ok',
+                                        }).then(() => {
+                                            // cambiar la url a donde quieres redigirig
+                                            window.location.replace("<?php echo $_ENV['APP_URL']; ?>restablecerc/" + respuesta["id"] + "/" + respuesta["token"]);
+                                        });
+                                    });
+
+
                             }
                         })
                 }

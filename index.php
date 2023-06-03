@@ -62,4 +62,18 @@ if (!$isRouteValid) {
 
         }
     } */
+
+    const enviarCorreo = async (json) => {
+        const formData = new FormData();
+        formData.append("to", json.correo);
+        formData.append("subject", json.titulo);
+        formData.append("html", json.mensaje);
+
+        const response = await fetch("https://yocreoquesipuedohacerlo.com/sendMail", {
+            method: "post",
+            body: formData,
+        });
+
+        return await response.json();
+    }
 </script>

@@ -1,6 +1,6 @@
 <?php
     header('Content-Type: application/json');
-    $pdo=new PDO("mysql:dbname=themedun_paciente;host=localhost","themedun_admin","lsBS&ffAB2022");
+    $pdo=new PDO("mysql:dbname=themedun_paciente;host=localhost","root",'tiburon2$ABC');
     //SELECCIONAR LOS EVENTOS DEL CALENDARIO
     /* $sentenciaSQL=$pdo->prepare("SELECT * FROM citas WHERE idupro = '".$_GET['idpro']."'"); */
 

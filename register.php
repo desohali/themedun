@@ -1,10 +1,10 @@
 <?php
 //session_set_cookie_params(60 * 60 * 24 * 365);
-ini_set("session.gc_maxlifetime", 60*60*24*365);
-ini_set("session.cookie_lifetime", 60*60*24*365);
+ini_set("session.gc_maxlifetime", 60 * 60 * 24 * 365);
+ini_set("session.cookie_lifetime", 60 * 60 * 24 * 365);
 session_start();
 
-$pacOpro='paciente';
+$pacOpro = 'paciente';
 
 include './php/conexion_paciente.php';
 include './php/inicio.php';
@@ -15,9 +15,9 @@ include './seguridad.php';
 $seguridad = new Seguridad($conexion, "");
 $seguridad->verificarSiYaEstoyLogeado();
 
-$urlactual='https://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
+$urlactual = 'https://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
 
-if ($urlactual=='https://themeduniverse.com/register') {
+if ($urlactual == 'https://themeduniverse.com/register') {
     echo "<script>window.location.href='" . $_ENV['APP_URL'] . "register'</script>";
 }
 
@@ -79,19 +79,29 @@ if ($urlactual=='https://themeduniverse.com/register') {
                                         confirmButtonText: 'Ok',
                                     });
                                 } else {
-                                    const response = fetch("<?php echo $_ENV['APP_URL']; ?>php/crearCuenta.php", {
-                                        method: "post",
-                                        body: formData,
-                                    })
-                                    Swal.fire({
-                                        title: 'Verificación de cuenta',
-                                        text: 'Para completar la creación de tu cuenta, ingresa al enlace de verificación que hemos enviado a tu correo.',
-                                        icon: 'warning',
-                                        confirmButtonColor: '#0052d4',
-                                        confirmButtonText: 'Ok',
-                                    }).then(() => {
-                                        window.location.reload();
-                                    });
+                                    fetch("<?php echo $_ENV['APP_URL']; ?>php/crearCuenta.php", {
+                                            method: "post",
+                                            body: formData,
+                                        })
+                                        .then((response) => response.json())
+                                        .then(async (json) => {
+                                            console.log('json', json);
+                                            const [primerCorreo] = json;
+                                            await enviarCorreo(primerCorreo);
+
+                                            Swal.fire({
+                                                title: 'Verificación de cuenta',
+                                                text: 'Para completar la creación de tu cuenta, ingresa al enlace de verificación que hemos enviado a tu correo.',
+                                                icon: 'warning',
+                                                confirmButtonColor: '#0052d4',
+                                                confirmButtonText: 'Ok',
+                                            }).then(() => {
+                                                window.location.reload();
+                                            });
+                                        });
+
+
+
                                 }
                             }
                         })
@@ -135,8 +145,7 @@ if ($urlactual=='https://themeduniverse.com/register') {
                         <input type="password" placeholder="Confirmar" name="contraseñacon" id="contrasenarcon" minlength="6" required>
                     </div>
                     <div class="filaregister">
-                        <input type="text" name="nacimiento" placeholder="F. Nacimiento"
-                    onfocus="(this.type='date')" onblur="(this.type='text')"  min="1905-01-01" id="nacimiento" required>
+                        <input type="text" name="nacimiento" placeholder="F. Nacimiento" onfocus="(this.type='date')" onblur="(this.type='text')" min="1905-01-01" id="nacimiento" required>
                         <select name="sexo" id="sexo" required>
                             <option class="select-opt" value="">Género</option>
                             <option class="select-opt" value="Masculino">Masculino</option>

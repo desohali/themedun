@@ -6,6 +6,7 @@ class Seguridad
 {
 
   public $path;
+  public $conexion;
 
   public $tipoUsuario;
 
@@ -22,6 +23,7 @@ class Seguridad
 
   public $rutasPublicas = [
     "login",
+    "login.php",
     "loginpro",
     "loginadmin",
     "register",

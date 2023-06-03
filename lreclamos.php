@@ -62,13 +62,7 @@ if ($urlactual == 'https://themeduniverse.com/lreclamos') {
                         const [primerCorreo] = json;
                         await enviarCorreo(primerCorreo);
 
-                        fetch("<?php echo $_ENV['APP_URL']; ?>crudDespuesDeEnviarCorreo/insertarReclamos.php", {
-                                method: "post",
-                                body: formData
-                            })
-                            .then((response) => response.text())
-                            .then(async () => {
-                                const text = await Swal.fire({
+                        const text = await Swal.fire({
                                     title: 'Hoja de reclamación enviada',
                                     text: 'Para revisar el estado de su reclamación, ingrese el código que hemos enviado a su correo.',
                                     icon: 'success',
@@ -77,7 +71,6 @@ if ($urlactual == 'https://themeduniverse.com/lreclamos') {
                                 }).then((result) => {
                                     window.location.reload();
                                 });
-                            });
 
 
                     };

@@ -54,6 +54,11 @@
                 <span class="icon-eye eye1" id="icon-eye-reclamos"><i class="fa-solid fa-eye-slash"></i></span>
                 <input style="margin-top:0px;" type="password" placeholder="Código de reclamación" name="codigo" id="codigot" autocomplete="off" minlength="6" required><br>
                 <input type='submit' value="Buscar" id="caenviar" name="caenviar"><br>
+                <hr id="hr-login">
+                <div class="med-logos reclamos">
+                    <p id="fraselogin">TU SALUD IMPORTA</p>
+                    
+                </div>
             </form>
         </div>
         <div class="ctn-contra" id='ctn-dos'>

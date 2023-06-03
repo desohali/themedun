@@ -20,7 +20,7 @@ if (isset($_GET['id']) && @$_GET['id'] == @$_SESSION['idpro']) {
             $especialidad = $row['especialidad'];
             $profesion = "Médico";
             $boton = "https://www.cmp.org.pe/conoce-a-tu-medico/";
-            if ($especialidad == "Psicología"){
+            if ($especialidad == "Psicología") {
                 $profesion = "Psicólogo";
                 $boton = "https://cpsp.pe/colegiados/";
                 $verificar = "Comprobar Psicólogo";
@@ -36,14 +36,14 @@ if (isset($_GET['id']) && @$_GET['id'] == @$_SESSION['idpro']) {
                 $verificar = "Comprobar Médico";
                 $doctor = "Dra.";
                 if ($especialidad == "Psicología") {
-                $verificar = "Comprobar Psicólogo";
-               }
+                    $verificar = "Comprobar Psicólogo";
+                }
             } else {
                 $verificar = "Comprobar Médico";
                 $doctor = "Dr.";
                 if ($especialidad == "Psicología") {
-                $verificar = "Comprobar Psicólogo";
-               }
+                    $verificar = "Comprobar Psicólogo";
+                }
             }
             $timestampNac = strtotime($nacimientopro);
             $newDateNac = date("d/m/Y", $timestampNac);
@@ -229,7 +229,7 @@ if (isset($_GET['id']) && @$_GET['id'] == @$_SESSION['idpro']) {
                             htmlComentarios += ` <strong>${comentario.nombres}:</strong><br> ${comentario.comentario}<br> <span> ${fechaReg}</span></p>`;
                             if ( /* !indice &&  */ currentValue.comentarios.length == 2) {
                                 htmlComentarios += `<a class="verrespuesta" href="" onclick="mostrarRespuestas(event, ${currentValue.id})">Ver respuesta</a>`;
-                            }else if ( /* !indice &&  */ currentValue.comentarios.length > 2) {
+                            } else if ( /* !indice &&  */ currentValue.comentarios.length > 2) {
                                 htmlComentarios += `<a class="verrespuesta" href="" onclick="mostrarRespuestas(event, ${currentValue.id})">Ver ${(currentValue.comentarios.length - 1)} respuestas</a>`;
                             }
                         } else {
@@ -249,20 +249,20 @@ if (isset($_GET['id']) && @$_GET['id'] == @$_SESSION['idpro']) {
                         
                         return `${pV}${html}`;
                     }, ""); */
-                    
-                    if("<?= $estado ?>" == '2'){
+
+                    if ("<?= $estado ?>" == '2') {
                         return `${previousValue} <hr id="hrvc"><div class="box-comentario">${htmlComentarios}</div>`;
-                    }else{
+                    } else {
                         var boxRes = "";
-                        if(currentValue.comentarios.length >= 2){
+                        if (currentValue.comentarios.length >= 2) {
                             var boxRes = "none";
-                        }else{
+                        } else {
                             var boxRes = "block";
                         }
                         const inputRespuesta = `<textarea placeholder="Responder el comentario..." onkeypress="new Valoraciones().responseComentario(event, ${currentValue.id})" class="rescomentario" id="response${currentValue.id}" rows="3" style="display:${boxRes}"></textarea>`;
                         return `${previousValue} <hr id="hrvc"><div class="box-comentario">${htmlComentarios}${inputRespuesta}</div>`;
                     }
-                    
+
                 }, "");
 
             return 3;
@@ -301,8 +301,8 @@ if (isset($_GET['id']) && @$_GET['id'] == @$_SESSION['idpro']) {
                     const valoraciones = await response.text();
 
                     await new Valoraciones().listarValoraciones();
-                    
-                    const boxResponse = document.getElementById("response"+idComentario);
+
+                    const boxResponse = document.getElementById("response" + idComentario);
                     boxResponse.style.display = 'none';
                 }
             } catch (error) {
@@ -368,8 +368,8 @@ if (isset($_GET['id']) && @$_GET['id'] == @$_SESSION['idpro']) {
             const text = await response.text();
 
             await this.listarValoraciones();
-            
-            const boxResponse = document.getElementById("response"+id);
+
+            const boxResponse = document.getElementById("response" + id);
             boxResponse.style.display = 'block';
         };
 
@@ -415,7 +415,9 @@ if (isset($_GET['id']) && @$_GET['id'] == @$_SESSION['idpro']) {
             for (const element of formElements) {
                 if (element.hasAttribute("required")) {
                     if (!new RegExp("\\S{1,}").test(element?.value?.trim())) {
-                        const {isConfirmed} = await Swal.fire({
+                        const {
+                            isConfirmed
+                        } = await Swal.fire({
                             title: 'Información profesional',
                             text: 'Ingrese información acerca de su trayectoria profesional como estudios, trabajos, publicaciones, etc.',
                             icon: 'error',
@@ -452,7 +454,7 @@ if (isset($_GET['id']) && @$_GET['id'] == @$_SESSION['idpro']) {
                     <div class="ctn-previeimage" id="previewperfil">
                         <canvas id="canvasPerfil" style="display:none"></canvas>
                     </div>
-                    <a href="<?php echo $boton;?>" target="_blank" class="colegiatura" id="comprob-coleg2"><?php echo $verificar;?></a>
+                    <a href="<?php echo $boton; ?>" target="_blank" class="colegiatura" id="comprob-coleg2"><?php echo $verificar; ?></a>
                     <div class="ctn-editarfp" id="labelfoto">
                         <input type="file" name="bbfile2" id="bbfile2" accept="image/*">
                         <label for="bbfile2" name="bbfile" id="bbfile">Editar</label>
@@ -500,8 +502,8 @@ if (isset($_GET['id']) && @$_GET['id'] == @$_SESSION['idpro']) {
                     $fecha = time() - strtotime($nacimientopro);
                     $edad = floor($fecha / 31556926);
                     ?>
-                    <p id="nacimientoperfil"><span>Fecha de nacimiento<span class="spanedad"> (Edad)</span>:</span> <?php echo $newDateNac?><span class="spanedad" id="idedad"> (<?php echo $edad?> años)</span></p>
-                    <p id="edadperfil"><span>Edad:</span> <?php echo $edad?> años</p>
+                    <p id="nacimientoperfil"><span>Fecha de nacimiento<span class="spanedad"> (Edad)</span>:</span> <?php echo $newDateNac ?><span class="spanedad" id="idedad"> (<?php echo $edad ?> años)</span></p>
+                    <p id="edadperfil"><span>Edad:</span> <?php echo $edad ?> años</p>
                     <p id="sexoperfil"><span>Género:</span> <?php echo $sexopro ?></p><br>
                     <p id="paisperfil"><span>País (Idioma):</span> <?php echo $paispro ?> (<?php echo $idiomapro ?>)</p>
                     <p id="ciudadperfil"><span>Ciudad:</span> <?php echo $ciudadpro ?></p><br>
@@ -573,30 +575,30 @@ if (isset($_GET['id']) && @$_GET['id'] == @$_SESSION['idpro']) {
                         <hr>
                         <p id="profesionperfil"><span>Profesión:</span> <?php echo $profesion ?></p>
                         <?php
-                        if($especialidad == "Psicología"){
+                        if ($especialidad == "Psicología") {
                             $_POST['especialidad'] = "Psicología";
                         ?>
-                        <p id="especialidadperfil"><span>Especialidad:</span> <?php echo $especialidad ?></p><br>
-                        <?php  
-                        }else{
+                            <p id="especialidadperfil"><span>Especialidad:</span> <?php echo $especialidad ?></p><br>
+                        <?php
+                        } else {
                         ?>
-                        <p id="especialidadperfil"><span>Especialidad:</span><select name="especialidad" id="especialidad">
-                                <option class="select-opt" selected><?php echo $especialidad ?></option>
-                                <?php
+                            <p id="especialidadperfil"><span>Especialidad:</span><select name="especialidad" id="especialidad">
+                                    <option class="select-opt" selected><?php echo $especialidad ?></option>
+                                    <?php
 
-                                include 'conexion_paciente.php';
+                                    include 'conexion_paciente.php';
 
-                                $selectm = "SELECT * FROM especialidades WHERE nombre <> 'Psicología'";
-                                $ejecutar = mysqli_query($conexion, $selectm) or die(mysqli_error($conexion));
+                                    $selectm = "SELECT * FROM especialidades WHERE nombre <> 'Psicología'";
+                                    $ejecutar = mysqli_query($conexion, $selectm) or die(mysqli_error($conexion));
 
-                                ?>
+                                    ?>
 
-                                <?php foreach ($ejecutar as $opciones) : ?>
+                                    <?php foreach ($ejecutar as $opciones) : ?>
 
-                                    <option name="so" id="so" value="<?php echo $opciones['nombre'] ?>"><?php echo $opciones['nombre'] ?></option>
+                                        <option name="so" id="so" value="<?php echo $opciones['nombre'] ?>"><?php echo $opciones['nombre'] ?></option>
 
-                                <?php endforeach ?>
-                            </select></p><br>
+                                    <?php endforeach ?>
+                                </select></p><br>
                         <?php
                         }
                         ?>
@@ -681,15 +683,17 @@ if (isset($_GET['id']) && @$_GET['id'] == @$_SESSION['idpro']) {
                         <h2>OBSERVACIONES DE LA CUENTA</h2>
                     </div>
                     <hr id="edit-infb">
-                    <ul><li><?php echo $indicaciones; ?></li></ul>
+                    <ul>
+                        <li><?php echo $indicaciones; ?></li>
+                    </ul>
                     <p style="width:100%">Para recibir mayor orientación sobre cómo resolver las observaciones de su cuenta, puede contactarnos por correo o WhatsApp.<br><br><a id="awsp" href="https://wa.me/51986206045?text=Hola,%20tengo%20una%20consulta%20%C2%BFpueden%20ayudarme?" target="_blank"><i class="fa-brands fa-whatsapp"></i> : +51 986 206 045</a><br><a id="acorreo" href="mailto:themeduniverse@gmail.com" target="_blank"><i class="fa-regular fa-envelope"></i></i> : themeduniverse@gmail.com</a></p>
                 </div>
-                    <div class="ctn-fotos" id="ctnfotos" style="margin-top:25px">
-                        <form action="" method="post" enctype="multipart/form-data" name="formfotos1" id="formfotos1">
-                            <span>Diploma de título profesional:</span>
+                <div class="ctn-fotos" id="ctnfotos" style="margin-top:25px">
+                    <form action="" method="post" enctype="multipart/form-data" name="formfotos1" id="formfotos1">
+                        <span>Diploma de título profesional:</span>
                         <div class="boxfotos">
                             <div class="fotorevision ctn-fototit">
-                                <img src="<?php echo $_ENV['APP_URL']; ?>titulos/<?php echo $fototitulo. "?v=" . rand() ?>" id="fptit" alt="Diploma de título profesional">
+                                <img src="<?php echo $_ENV['APP_URL']; ?>titulos/<?php echo $fototitulo . "?v=" . rand() ?>" id="fptit" alt="Diploma de título profesional">
                             </div>
                             <div class="ctn-previe" id="previewtit"></div>
                             <div class="ctn-editartit">
@@ -700,12 +704,12 @@ if (isset($_GET['id']) && @$_GET['id'] == @$_SESSION['idpro']) {
                                 <input type="submit" name="edittit" class="lblguardar lblbtn" id="edittit" value="Guardar"><br>
                             </div>
                         </div>
-                        </form>
-                        <form action="" method="post" enctype="multipart/form-data" name="formfotos2" id="formfotos2">
-                            <span>Diploma de colegiatura:</span>
+                    </form>
+                    <form action="" method="post" enctype="multipart/form-data" name="formfotos2" id="formfotos2">
+                        <span>Diploma de colegiatura:</span>
                         <div class="boxfotos">
                             <div class="fotorevision ctn-fotofirma">
-                                <img src="<?php echo $_ENV['APP_URL']; ?>colegiaturas/<?php echo $fotocolegiatura. "?v=" . rand() ?>" id="fpfirma" alt="Diploma de colegiatura">
+                                <img src="<?php echo $_ENV['APP_URL']; ?>colegiaturas/<?php echo $fotocolegiatura . "?v=" . rand() ?>" id="fpfirma" alt="Diploma de colegiatura">
                             </div>
                             <div class="ctn-previe" id="previewfirma"></div>
                             <div class="ctn-editarfirma">
@@ -716,12 +720,12 @@ if (isset($_GET['id']) && @$_GET['id'] == @$_SESSION['idpro']) {
                                 <input type="submit" name="editfirma" class="lblguardar lblbtn" id="editfirma" value="Guardar"><br>
                             </div>
                         </div>
-                        </form>
-                        <form action="" method="post" enctype="multipart/form-data" name="formfotos3" id="formfotos3">
-                            <span>Documento de identidad (ambos lados):</span>
+                    </form>
+                    <form action="" method="post" enctype="multipart/form-data" name="formfotos3" id="formfotos3">
+                        <span>Documento de identidad (ambos lados):</span>
                         <div class="boxfotos">
                             <div class="fotorevision ctn-fotohuella">
-                                <img src="<?php echo $_ENV['APP_URL']; ?>documentos/<?php echo $fotodocumento. "?v=" . rand() ?>" id="fphuella" alt="Documento de identidad">
+                                <img src="<?php echo $_ENV['APP_URL']; ?>documentos/<?php echo $fotodocumento . "?v=" . rand() ?>" id="fphuella" alt="Documento de identidad">
                             </div>
                             <div class="ctn-previe" id="previewhuella"></div>
                             <div class="ctn-editarhuella">
@@ -732,8 +736,8 @@ if (isset($_GET['id']) && @$_GET['id'] == @$_SESSION['idpro']) {
                                 <input type="submit" name="edithuella" class="lblguardar lblbtn" id="edithuella" value="Guardar"><br>
                             </div>
                         </div>
-                        </form>
-                    </div>
+                    </form>
+                </div>
             </div>
             <?php
             if (isset($_POST['edittit'])) {
@@ -748,7 +752,7 @@ if (isset($_GET['id']) && @$_GET['id'] == @$_SESSION['idpro']) {
                 }
                 $sqltit = mysqli_query($conexion, "UPDATE usuariospro SET fototitulo = '$nametit', ultimaedicion = '$fechaHoy' WHERE idpro = '" . $idpro . "' ");
                 if ($sqltit) {
-                    echo "<script>window.location.href='" . $_ENV['APP_URL'] . "perfilpro/".$idpro."'</script>";
+                    echo "<script>window.location.href='" . $_ENV['APP_URL'] . "perfilpro/" . $idpro . "'</script>";
                 }
             }
             if (isset($_POST['editfirma'])) {
@@ -763,7 +767,7 @@ if (isset($_GET['id']) && @$_GET['id'] == @$_SESSION['idpro']) {
                 }
                 $sqlfirma = mysqli_query($conexion, "UPDATE usuariospro SET fotocolegiatura = '$namefirma', ultimaedicion = '$fechaHoy' WHERE idpro = '" . $idpro . "' ");
                 if ($sqlfirma) {
-                    echo "<script>window.location.href='" . $_ENV['APP_URL'] . "perfilpro/".$idpro."'</script>";
+                    echo "<script>window.location.href='" . $_ENV['APP_URL'] . "perfilpro/" . $idpro . "'</script>";
                 }
             }
             if (isset($_POST['edithuella'])) {
@@ -778,42 +782,44 @@ if (isset($_GET['id']) && @$_GET['id'] == @$_SESSION['idpro']) {
                 }
                 $sqlhuella = mysqli_query($conexion, "UPDATE usuariospro SET fotodocumento = '$namehuella', ultimaedicion = '$fechaHoy' WHERE idpro = '" . $idpro . "' ");
                 if ($sqlhuella) {
-                    echo "<script>window.location.href='" . $_ENV['APP_URL'] . "perfilpro/".$idpro."'</script>";
+                    echo "<script>window.location.href='" . $_ENV['APP_URL'] . "perfilpro/" . $idpro . "'</script>";
                 }
             }
             ?>
-        <?php
+            <?php
         } else {
-            if($estado == '2'){
-        ?>
-        <div class="revision" style="margin-bottom:0px">
-            <h2>CUENTA BLOQUEADA...</h2>
-            <p>The Med Universe ha bloqueado su cuenta, por cuestiones de seguridad y/o alguna infracción de los Términos y Condiciones Profesionales de uso de la plataforma. Revise las observaciones de su cuenta y haga las correcciones necesarias.</p>
-        </div>
-        <div class="filatres" id="filatrespro" style="padding-bottom:0px">
-            <div class="ctn-perfil observaciones observapro" id="perfil1">
-                <div class="ctn-editarp">
-                    <h2>OBSERVACIONES DE LA CUENTA</h2>
+            if ($estado == '2') {
+            ?>
+                <div class="revision" style="margin-bottom:0px">
+                    <h2>CUENTA BLOQUEADA...</h2>
+                    <p>The Med Universe ha bloqueado su cuenta, por cuestiones de seguridad y/o alguna infracción de los Términos y Condiciones Profesionales de uso de la plataforma. Revise las observaciones de su cuenta y haga las correcciones necesarias.</p>
                 </div>
-                <hr id="edit-infb">
-                <ul><li><?php echo $indicaciones; ?></li></ul>
-                    <p style="width:100%">Para recibir mayor orientación sobre cómo resolver las observaciones de su cuenta, puede contactarnos por correo o WhatsApp.<br><br><a id="awsp" href="https://wa.me/51986206045?text=Hola,%20tengo%20una%20consulta%20%C2%BFpueden%20ayudarme?" target="_blank"><i class="fa-brands fa-whatsapp"></i> : +51 986 206 045</a><br><a id="acorreo" href="mailto:themeduniverse@gmail.com" target="_blank"><i class="fa-regular fa-envelope"></i></i> : themeduniverse@gmail.com</a></p>
-            </div>
-            <div class="ctn-herramientasperfil" id="herramientas">
-                <a href="<?php echo $_ENV['APP_URL']; ?>historialpro/<?php echo $idpro ?>" id="bcfiled4">Historial de Pagos</a>
-            </div>
-        </div>
-        <?php
-            }else{
-        ?>
-            <div class="ctn-herramientasperfil">
-                <a href="<?php echo $_ENV['APP_URL']; ?>horario/<?php echo $idpro ?>" id="bcfiled1">Horario y Agenda</a>
-                <a href="<?php echo $_ENV['APP_URL']; ?>hpacientes/<?php echo $idpro ?>" id="bcfiled2">Historial de Pacientes</a>
-                <a href="<?php echo $_ENV['APP_URL']; ?>historialpro/<?php echo $idpro ?>" id="bcfiled4">Historial de Pagos</a>
-            </div>
-        <?php
+                <div class="filatres" id="filatrespro" style="padding-bottom:0px">
+                    <div class="ctn-perfil observaciones observapro" id="perfil1">
+                        <div class="ctn-editarp">
+                            <h2>OBSERVACIONES DE LA CUENTA</h2>
+                        </div>
+                        <hr id="edit-infb">
+                        <ul>
+                            <li><?php echo $indicaciones; ?></li>
+                        </ul>
+                        <p style="width:100%">Para recibir mayor orientación sobre cómo resolver las observaciones de su cuenta, puede contactarnos por correo o WhatsApp.<br><br><a id="awsp" href="https://wa.me/51986206045?text=Hola,%20tengo%20una%20consulta%20%C2%BFpueden%20ayudarme?" target="_blank"><i class="fa-brands fa-whatsapp"></i> : +51 986 206 045</a><br><a id="acorreo" href="mailto:themeduniverse@gmail.com" target="_blank"><i class="fa-regular fa-envelope"></i></i> : themeduniverse@gmail.com</a></p>
+                    </div>
+                    <div class="ctn-herramientasperfil" id="herramientas">
+                        <a href="<?php echo $_ENV['APP_URL']; ?>historialpro/<?php echo $idpro ?>" id="bcfiled4">Historial de Pagos</a>
+                    </div>
+                </div>
+            <?php
+            } else {
+            ?>
+                <div class="ctn-herramientasperfil">
+                    <a href="<?php echo $_ENV['APP_URL']; ?>horario/<?php echo $idpro ?>" id="bcfiled1">Horario y Agenda</a>
+                    <a href="<?php echo $_ENV['APP_URL']; ?>hpacientes/<?php echo $idpro ?>" id="bcfiled2">Historial de Pacientes</a>
+                    <a href="<?php echo $_ENV['APP_URL']; ?>historialpro/<?php echo $idpro ?>" id="bcfiled4">Historial de Pagos</a>
+                </div>
+            <?php
             }
-        ?>
+            ?>
             <div class="filados">
                 <div class="ctn-valorcomment">
                     <div class="ctn-valorperfil">
@@ -853,63 +859,64 @@ if (isset($_GET['id']) && @$_GET['id'] == @$_SESSION['idpro']) {
                     </div>
                     <hr id="hrpub">
                     <div class="ctn-infprofesional">
-                    <?php
-                    if($estado == '2'){}else{
-                    ?>
-                        <div class="box-footer">
-                            <form action="" method="post" enctype="multipart/form-data" id="formGuardar">
-                                <!-- <input type="hidden" name="publicar" value="publicar" /> -->
-                                <div class="contpub">
-                                    <div class="ctn-trayec">
-                                        <p id="anadir">Información profesional:</p>
-                                        <!-- onkeypress="return validarn(event)" -->
-                                        <textarea id="publicacion" name="publicacion" placeholder='"Egresado(a) en medicina humana por la universidad ....."
+                        <?php
+                        if ($estado == '2') {
+                        } else {
+                        ?>
+                            <div class="box-footer">
+                                <form action="" method="post" enctype="multipart/form-data" id="formGuardar">
+                                    <!-- <input type="hidden" name="publicar" value="publicar" /> -->
+                                    <div class="contpub">
+                                        <div class="ctn-trayec">
+                                            <p id="anadir">Información profesional:</p>
+                                            <!-- onkeypress="return validarn(event)" -->
+                                            <textarea id="publicacion" name="publicacion" placeholder='"Egresado(a) en medicina humana por la universidad ....."
 "Jefe(a) del departamento de ..... en el hospital ....."
 "Autor(a) de ..... publicado en la revista ....."' class="form-control" rows="6" required></textarea>
-                                        <br>
+                                            <br>
+                                        </div>
+                                        <div class="ctn-imagend">
+                                            <input type="file" name="foto" id="file-1" class="inputfile inputfile-1" accept="image/*" data-multiple-caption="{count} files selected" />
+                                            <p id="comprobar">Imagen evidencial (opcional):</p>
+                                            <div class="ctn-previeimage" id="previewimage"></div>
+                                            <label id="labelimage" for="file-1"><i id="icon-image" class="fa-solid fa-image"></i></label>
+                                        </div>
                                     </div>
-                                    <div class="ctn-imagend">
-                                        <input type="file" name="foto" id="file-1" class="inputfile inputfile-1" accept="image/*" data-multiple-caption="{count} files selected" />
-                                        <p id="comprobar">Imagen evidencial (opcional):</p>
-                                        <div class="ctn-previeimage" id="previewimage"></div>
-                                        <label id="labelimage" for="file-1"><i id="icon-image" class="fa-solid fa-image"></i></label>
-                                    </div>
-                                </div>
-                                <script src="<?php echo $_ENV['APP_URL']; ?>js/previewimage.js"></script>
-                                <!-- END Input file nuevo diseño .-->
-                                <br>
+                                    <script src="<?php echo $_ENV['APP_URL']; ?>js/previewimage.js"></script>
+                                    <!-- END Input file nuevo diseño .-->
+                                    <br>
 
-                                <!-- <button type="button" onclick="test(event)">guardar 2</button> -->
-                                <button id="publicar" onclick="sendForm(event, this, 'formGuardar')" type="button" name="publicar" class="btn btn-primary btn-flat">Guardar</button>
-                                <label id="guardar" for="publicar"><span>Guardar</span></label>
-                            </form>
-                            <?php
-                            if (isset($_POST['publicar'])) {
-                                $publicacion = nl2br(ucfirst($_POST['publicacion']));
+                                    <!-- <button type="button" onclick="test(event)">guardar 2</button> -->
+                                    <button id="publicar" onclick="sendForm(event, this, 'formGuardar')" type="button" name="publicar" class="btn btn-primary btn-flat">Guardar</button>
+                                    <label id="guardar" for="publicar"><span>Guardar</span></label>
+                                </form>
+                                <?php
+                                if (isset($_POST['publicar'])) {
+                                    $publicacion = nl2br(ucfirst($_POST['publicacion']));
 
-                                $result = mysqli_query($conexion, "SHOW TABLE STATUS WHERE `Name` = 'publicaciones'");
-                                $data = mysqli_fetch_assoc($result);
-                                $next_increment = $data['Auto_increment'];
+                                    $result = mysqli_query($conexion, "SHOW TABLE STATUS WHERE `Name` = 'publicaciones'");
+                                    $data = mysqli_fetch_assoc($result);
+                                    $next_increment = $data['Auto_increment'];
 
-                                $alea = substr(strtoupper(md5(microtime(true))), 0, 12);
-                                $code = $next_increment . $alea;
+                                    $alea = substr(strtoupper(md5(microtime(true))), 0, 12);
+                                    $code = $next_increment . $alea;
 
-                                $type = 'jpg';
-                                $rfoto = $_FILES['foto']['tmp_name'];
-                                $name = $code . "." . $type;
+                                    $type = 'jpg';
+                                    $rfoto = $_FILES['foto']['tmp_name'];
+                                    $name = $code . "." . $type;
 
-                                if (is_uploaded_file($rfoto)) {
-                                    $destino = "fotoprofesional/" . $name;
-                                    $nombre = $name;
-                                    copy($rfoto, $destino);
-                                } else {
-                                    $nombre = '';
+                                    if (is_uploaded_file($rfoto)) {
+                                        $destino = "fotoprofesional/" . $name;
+                                        $nombre = $name;
+                                        copy($rfoto, $destino);
+                                    } else {
+                                        $nombre = '';
+                                    }
+
+                                    $subir = mysqli_query($conexion, "INSERT INTO publicaciones (usuario,imagen,contenido) values ('" . $_SESSION['idpro'] . "','$nombre','$publicacion')");
                                 }
-
-                                $subir = mysqli_query($conexion, "INSERT INTO publicaciones (usuario,imagen,contenido) values ('" . $_SESSION['idpro'] . "','$nombre','$publicacion')");
-                            }
-                            ?>
-                        </div>
+                                ?>
+                            </div>
                         <?php
                         }
                         ?>
@@ -935,6 +942,7 @@ if (isset($_GET['id']) && @$_GET['id'] == @$_SESSION['idpro']) {
                                     <hr>
                                     <form action="" method="post" name="form3" id="form3<?= $n ?>">
                                         <input type="number" name="eliminar" id="eliminar" value="<?php echo $lista['idpub']; ?>">
+                                        <input type="text" name="nameImage" id="nameImage" value="<?php echo $lista['imagen']; ?>">
                                         <label id="labelequis" for="equis<?php echo $lista['idpub']; ?>"><i class="fa-solid fa-square-xmark"></i></label>
                                         <input type="button" onclick="sendForm(event, this, 'form3<?= $n ?>')" name="equis" class="equis" id="equis<?php echo $lista['idpub']; ?>">
                                     </form>
@@ -954,12 +962,18 @@ if (isset($_GET['id']) && @$_GET['id'] == @$_SESSION['idpro']) {
                                 <?php
                                 if (isset($_POST['equis'])) {
                                     $idpub = $_POST['eliminar'];
+                                    $nameImage = $_POST['nameImage'];
                                     $sql3 = mysqli_query($conexion, "DELETE FROM publicaciones WHERE idpub = '" . $idpub . "' ");
+                                    unlink(getcwd() . "/fotoprofesional/" . $nameImage);
                                 }
                                 ?>
                             <?php
                             }
                             ?>
+
+
+
+
                         </div>
                     </div>
                 </div>

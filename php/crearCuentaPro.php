@@ -54,7 +54,7 @@ if ($nombrefoto3 != '' && $ruta3 != '') {
     $destino3 = "../documentos/" . $fotodocumento;
 }
 //COMPROBANDO LOS ERRORES DE INPUT ANTES DE GUARDARLOS EN LA BASE DE DATOS
-$sql = "INSERT INTO usuariospro (nombrespro, apellidospro, correopro, contraseñapro, tokenpro, codigopro, nacimientopro, sexopro, especialidad, paispro, ciudadpro, idiomapro, colegiatura, enmu, precio, fototitulo, fotocolegiatura, fotodocumento, fotoperfilpro, estado, indicaciones) VALUES ('$nombrespro', '$apellidospro', '$correopro', '$contraseñapro', '$tokenpro', '$codigopro', '$nacimientopro', '$sexopro', '$especialidad', '$paispro', '$ciudadpro', '$idiomapro', '$colegiatura', '$fecha', '$precio', '$fototitulo', '$fotocolegiatura', '$fotodocumento', 'defect.jpg', '$estado', '$indicaciones')";
+$sql = "INSERT INTO usuariospro (nombrespro, apellidospro, correopro, contraseñapro, tokenpro, codigopro, nacimientopro, sexopro, especialidad, paispro, ciudadpro, idiomapro, colegiatura, enmu, precio, fototitulo, fotocolegiatura, fotodocumento, fotoperfilpro, estado, indicaciones, ultimaedicion) VALUES ('$nombrespro', '$apellidospro', '$correopro', '$contraseñapro', '$tokenpro', '$codigopro', '$nacimientopro', '$sexopro', '$especialidad', '$paispro', '$ciudadpro', '$idiomapro', '$colegiatura', '$fecha', '$precio', '$fototitulo', '$fotocolegiatura', '$fotodocumento', 'defect.jpg', '$estado', '$indicaciones', '$fecha')";
 if (is_uploaded_file($ruta1)) {
     copy($ruta1, $destino1);
 }
@@ -82,7 +82,7 @@ $mensaje = "
 </head>
 <body>
     <h1 style='color:#0052d4; text-align:center'>The Med Universe</h1>
-    <p>" . $estimado . " " . $nombrespro . " " . $apellidospro . ":<br><br>Hemos recibido una solicitud para registrar una cuenta The Med Universe | Profesional con esta dirección de correo electrónico. Para completar la creación de su cuenta, ingrese al siguiente enlace de verificación: <a href='".$_ENV['APP_URL']."verificarpro/" . $idpro . "/" . $tokenpro . "/" . $codigopro . "/" . $currentDateUrl . "'>".$_ENV['APP_URL']."verificarpro/" . $idpro . "/" . $tokenpro . "/" . $codigopro . "/" . $currentDateUrl . "</a><br><br>El enlace de verificación expirará en 24 horas. Si no solicitó una cuenta nueva, háganoslo saber a través de nuestro centro de ayuda: <a href='".$_ENV['APP_URL']."cayuda'>".$_ENV['APP_URL']."cayuda</a></p>
+    <p>" . $estimado . " " . $nombrespro . " " . $apellidospro . ":<br><br>Hemos recibido una solicitud para registrar una cuenta The Med Universe | Profesional con esta dirección de correo electrónico. Para completar la creación de su cuenta, ingrese al siguiente enlace de verificación: <a href='" . $_ENV['APP_URL'] . "verificarpro/" . $idpro . "/" . $tokenpro . "/" . $codigopro . "/" . $currentDateUrl . "'>" . $_ENV['APP_URL'] . "verificarpro/" . $idpro . "/" . $tokenpro . "/" . $codigopro . "/" . $currentDateUrl . "</a><br><br>El enlace de verificación expirará en 24 horas. Si no solicitó una cuenta nueva, háganoslo saber a través de nuestro centro de ayuda: <a href='" . $_ENV['APP_URL'] . "cayuda'>" . $_ENV['APP_URL'] . "cayuda</a></p>
 </body>
 </html>
 ";

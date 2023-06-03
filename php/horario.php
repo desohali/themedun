@@ -93,6 +93,8 @@ if (isset($_GET['id']) && @$_SESSION['idpro'] == @$_GET['id']) {
             calendar.refresh();
         }
 
+        console.log('socket', socket);
+
         socket.on("cita", function(msg) {
             init();
         });

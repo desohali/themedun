@@ -38,12 +38,10 @@ if ($stmt = mysqli_prepare($conexion, $sql)) {
 
                 // Cabeceras adicionales
                 $cabeceras .= 'From: seguridad@themeduniverse.com' . "\r\n";
-                /* if (mail($correo1, $titulo, $mensaje, $cabeceras)) {
-                    $subircon = mysqli_query($conexion, "UPDATE usuarios SET token = '$token', codigo = '$codigo' WHERE correo = '$correo1'");
-                } */
                 $respuesta += ['id' => $id1];
                 $respuesta += ['token' => $token];
                 $respuesta += ['correo' => array('correo' => $correo1, 'titulo' => $titulo,  'mensaje' => $mensaje, 'cabeceras' => $cabeceras)];
+                $subircon = mysqli_query($conexion, "UPDATE usuarios SET token = '$token', codigo = '$codigo' WHERE correo = '$correo1'");
             }
         } else {
             $respuesta += ['correo' => 'Este correo no existe'];

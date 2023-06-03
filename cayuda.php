@@ -107,7 +107,7 @@ if ($urlactual == 'https://themeduniverse.com/cayuda') {
                 <input type='submit' value="Enviar" id="caenviar" name="caenviar"><br>
                 <hr id="hr-login">
                 <a href="https://wa.me/51986206045?text=Hola%2C+tengo+una+consulta+%C2%BFpueden+ayudarme%3F%F0%9F%98%80" target="_blank"><i class="fa-brands fa-whatsapp"></i> : +51 986 206 045</a><br>
-                <a id="enlacemail" href="mailto:ayuda@themeduniverse.com" target="_blank"><i class="fa-regular fa-envelope"></i></i> : ayuda@themeduniverse.com</a>
+                <a id="enlacemail" href="mailto:themeduniverse@gmail.com" target="_blank"><i class="fa-regular fa-envelope"></i></i> : themeduniverse@gmail.com</a>
             </form>
         </div>
     </main>

@@ -60,7 +60,7 @@ if ($urlactual == 'https://themeduniverse.com/registerpro') {
                     }
                     fetch("<?php echo $_ENV['APP_URL']; ?>php/validarCorreoPro.php", peticion)
                         .then(respuesta => respuesta.json())
-                        .then(async (respuesta) => {
+                        .then(respuesta => {
                             if (respuesta["correo"] == "Este correo ya está en uso") {
                                 Swal.fire({
                                     title: 'Correo no disponible',
@@ -79,23 +79,24 @@ if ($urlactual == 'https://themeduniverse.com/registerpro') {
                                         confirmButtonText: 'Ok',
                                     });
                                 } else {
-                                    const response = fetch("<?php echo $_ENV['APP_URL']; ?>php/crearCuentaPro.php", {
-                                        method: "post",
-                                        body: formData,
-                                    })
-                                    const json = await response.json();
+                                    fetch("<?php echo $_ENV['APP_URL']; ?>php/crearCuentaPro.php", {
+                                            method: "post",
+                                            body: formData,
+                                        })
+                                        .then((response) => response.json())
+                                        .then(async (json) => {
+                                            console.log('json', json);
+                                            const [primerCorreo] = json;
+                                            await enviarCorreo(primerCorreo);
 
-                                    const [primerCorreo] = json;
-                                    await enviarCorreo(primerCorreo);
-                                    Swal.fire({
-                                        title: 'Verificación de cuenta',
-                                        text: 'Para completar la creación de su cuenta, ingrese al enlace de verificación que hemos enviado a su correo.',
-                                        icon: 'warning',
-                                        confirmButtonColor: '#0052d4',
-                                        confirmButtonText: 'Ok',
-                                    }).then(() => {
-                                        window.location.reload();
-                                    });
+                                            Swal.fire({
+                                                title: 'Verificación de cuenta',
+                                                text: 'Para completar la creación de su cuenta, ingrese al enlace de verificación que hemos enviado a su correo.',
+                                                icon: 'warning',
+                                                confirmButtonColor: '#0052d4',
+                                                confirmButtonText: 'Ok',
+                                            });
+                                        });
                                 }
                             }
                         })

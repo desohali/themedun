@@ -682,7 +682,7 @@ if (isset($_GET['id']) && @$_GET['id'] == @$_SESSION['idpro']) {
                     </div>
                     <hr id="edit-infb">
                     <ul><li><?php echo $indicaciones; ?></li></ul>
-                    <p style="width:100%">Para recibir mayor orientación sobre cómo resolver las observaciones de su cuenta, puede contactarnos por correo o WhatsApp.<br><br><a id="awsp" href="https://wa.me/51986206045?text=Hola,%20tengo%20una%20consulta%20%C2%BFpueden%20ayudarme?" target="_blank"><i class="fa-brands fa-whatsapp"></i> : +51 986 206 045</a><br><a id="acorreo" href="mailto:ayuda@themeduniverse.com" target="_blank"><i class="fa-regular fa-envelope"></i></i> : ayuda@themeduniverse.com</a></p>
+                    <p style="width:100%">Para recibir mayor orientación sobre cómo resolver las observaciones de su cuenta, puede contactarnos por correo o WhatsApp.<br><br><a id="awsp" href="https://wa.me/51986206045?text=Hola,%20tengo%20una%20consulta%20%C2%BFpueden%20ayudarme?" target="_blank"><i class="fa-brands fa-whatsapp"></i> : +51 986 206 045</a><br><a id="acorreo" href="mailto:themeduniverse@gmail.com" target="_blank"><i class="fa-regular fa-envelope"></i></i> : themeduniverse@gmail.com</a></p>
                 </div>
                     <div class="ctn-fotos" id="ctnfotos" style="margin-top:25px">
                         <form action="" method="post" enctype="multipart/form-data" name="formfotos1" id="formfotos1">
@@ -797,7 +797,7 @@ if (isset($_GET['id']) && @$_GET['id'] == @$_SESSION['idpro']) {
                 </div>
                 <hr id="edit-infb">
                 <ul><li><?php echo $indicaciones; ?></li></ul>
-                    <p style="width:100%">Para recibir mayor orientación sobre cómo resolver las observaciones de su cuenta, puede contactarnos por correo o WhatsApp.<br><br><a id="awsp" href="https://wa.me/51986206045?text=Hola,%20tengo%20una%20consulta%20%C2%BFpueden%20ayudarme?" target="_blank"><i class="fa-brands fa-whatsapp"></i> : +51 986 206 045</a><br><a id="acorreo" href="mailto:ayuda@themeduniverse.com" target="_blank"><i class="fa-regular fa-envelope"></i></i> : ayuda@themeduniverse.com</a></p>
+                    <p style="width:100%">Para recibir mayor orientación sobre cómo resolver las observaciones de su cuenta, puede contactarnos por correo o WhatsApp.<br><br><a id="awsp" href="https://wa.me/51986206045?text=Hola,%20tengo%20una%20consulta%20%C2%BFpueden%20ayudarme?" target="_blank"><i class="fa-brands fa-whatsapp"></i> : +51 986 206 045</a><br><a id="acorreo" href="mailto:themeduniverse@gmail.com" target="_blank"><i class="fa-regular fa-envelope"></i></i> : themeduniverse@gmail.com</a></p>
             </div>
             <div class="ctn-herramientasperfil" id="herramientas">
                 <a href="<?php echo $_ENV['APP_URL']; ?>historialpro/<?php echo $idpro ?>" id="bcfiled4">Historial de Pagos</a>

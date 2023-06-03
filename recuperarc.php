@@ -59,20 +59,8 @@ if ($urlactual == 'https://themeduniverse.com/recuperarc') {
                                     confirmButtonText: 'Ok',
                                 });
                             } else {
-
                                 await enviarCorreo(respuesta["correo"]);
-
-                                const formData2 = new FormData();
-                                formData2.append("token", respuesta["token"]);
-                                formData2.append("correo1", formData.get("correo"));
-
-                                fetch("<?php echo $_ENV['APP_URL']; ?>crudDespuesDeEnviarCorreo/actualizarUsuarios.php", {
-                                        method: "post",
-                                        body: formData2,
-                                    })
-                                    .then(respuesta => respuesta.text())
-                                    .then(() => {
-                                        Swal.fire({
+                                Swal.fire({
                                             title: 'Código enviado',
                                             text: 'Ingresa el código que hemos enviado a tu correo.',
                                             icon: 'success',
@@ -82,7 +70,6 @@ if ($urlactual == 'https://themeduniverse.com/recuperarc') {
                                             // cambiar la url a donde quieres redigirig
                                             window.location.replace("<?php echo $_ENV['APP_URL']; ?>restablecerc/" + respuesta["id"] + "/" + respuesta["token"]);
                                         });
-                                    });
 
 
                             }

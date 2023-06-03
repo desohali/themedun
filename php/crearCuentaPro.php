@@ -82,7 +82,7 @@ $mensaje = "
 </head>
 <body>
     <h1 style='color:#0052d4; text-align:center'>The Med Universe</h1>
-    <p>" . $estimado . " " . $nombrespro . " " . $apellidospro . ":<br><br>Hemos recibido una solicitud para registrar una cuenta The Med Universe | Profesional con esta dirección de correo electrónico. Para completar la creación de su cuenta, ingrese al siguiente enlace de verificación: <a href='".$_ENV['APP_URL']."verificarpro/" . $idpro . "/" . $tokenpro . "/" . $codigopro . "/" . $currentDateUrl . "'>".$_ENV['APP_URL']."verificar/" . $idpro . "/" . $tokenpro . "/" . $codigopro . "/" . $currentDateUrl . "</a><br><br>El enlace de verificación expirará en 24 horas. Si no solicitó una cuenta nueva, háganoslo saber a través de nuestro centro de ayuda: <a href='".$_ENV['APP_URL']."cayuda'>".$_ENV['APP_URL']."cayuda</a></p>
+    <p>" . $estimado . " " . $nombrespro . " " . $apellidospro . ":<br><br>Hemos recibido una solicitud para registrar una cuenta The Med Universe | Profesional con esta dirección de correo electrónico. Para completar la creación de su cuenta, ingrese al siguiente enlace de verificación: <a href='".$_ENV['APP_URL']."verificarpro/" . $idpro . "/" . $tokenpro . "/" . $codigopro . "/" . $currentDateUrl . "'>".$_ENV['APP_URL']."verificarpro/" . $idpro . "/" . $tokenpro . "/" . $codigopro . "/" . $currentDateUrl . "</a><br><br>El enlace de verificación expirará en 24 horas. Si no solicitó una cuenta nueva, háganoslo saber a través de nuestro centro de ayuda: <a href='".$_ENV['APP_URL']."cayuda'>".$_ENV['APP_URL']."cayuda</a></p>
 </body>
 </html>
 ";
@@ -94,5 +94,5 @@ $cabeceras .= 'Content-type: text/html; charset=UTF-8' . "\r\n";
 $cabeceras .= 'From: seguridad@themeduniverse.com' . "\r\n";
 // mail($correopro, $titulo, $mensaje, $cabeceras);
 echo json_encode(array(
-    array('correo' => $correo, 'titulo' => $titulo,  'mensaje' => $mensaje, 'cabeceras' => $cabeceras)
+    array('correo' => $correopro, 'titulo' => $titulo,  'mensaje' => $mensaje, 'cabeceras' => $cabeceras)
 ));

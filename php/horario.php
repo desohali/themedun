@@ -573,6 +573,11 @@ if (isset($_GET['id']) && @$_SESSION['idpro'] == @$_GET['id']) {
                     method: "post",
                     body: formData
                 });
+                const json = await response.json();
+
+                const [primerCorreo] = json;
+                await enviarCorreo(primerCorreo);
+                
                 const text = await Swal.fire({
                     title: 'Solicitud de cita confirmada',
                     text: '',
@@ -763,10 +768,10 @@ if (isset($_GET['id']) && @$_SESSION['idpro'] == @$_GET['id']) {
                             $('#linkcita').html(data.ubicacion);
                             $('#bcfiled2').attr('href', 'https://www.themeduniverse.com/hclinicapro/' + idpac + '/' + data.idpay);
                             if (data.asistencia != "No asistió" && data.asistenciapac != "No asistió") {
-								$('#bcfiled2').css('display', 'block');
-							} else {
-								$('#bcfiled2').css('display', 'none');
-							}
+                                $('#bcfiled2').css('display', 'block');
+                            } else {
+                                $('#bcfiled2').css('display', 'none');
+                            }
                             $("#linkcita").click(function() {
                                 window.open(data.ubicacion, '_blank');
                             });

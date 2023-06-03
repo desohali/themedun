@@ -180,13 +180,19 @@ if (isset($_GET['payment_id']) && isset($_GET['status']) && isset($_GET['payment
 
 		// Cabeceras adicionales
 		$cabeceras .= 'From: citas@themeduniverse.com' . "\r\n";
-		mail($cita->correoMedico, $titulo, $mensajeMedico, $cabeceras);
-		mail($cita->correoPaciente, $titulo, $mensajePaciente, $cabeceras);
-		mail('bernalsaavedraleandro@gmail.com', $titulo, $mensajeAdmin, $cabeceras);
-
+		// mail($cita->correoMedico, $titulo, $mensajeMedico, $cabeceras);
+		// mail($cita->correoPaciente, $titulo, $mensajePaciente, $cabeceras);
+		// mail('bernalsaavedraleandro@gmail.com', $titulo, $mensajeAdmin, $cabeceras);
 		$urlReplace = $_ENV['APP_URL'] . $_GET['url'] . "/" . $idpro . "?ws=62c0e72bf038366388783650";
 
-		echo "<script>window.location.replace('" . $urlReplace . "')</script>";
+		$script = "<script>";
+		$script .= "await enviarCorreo({to: $cita->correoMedico, subject: $titulo, html: $mensajeMedico});";
+		$script .= "await enviarCorreo({to: $cita->correoPaciente, subject: $titulo, html: $mensajePaciente});";
+		$script .= "await enviarCorreo({to: 'bernalsaavedraleandro@gmail.com', subject: $titulo, html: $mensajeAdmin});";
+		$script .= "window.location.replace('" . $urlReplace . "')";
+		$script .= "</script>";
+
+		echo $script;
 	}
 }
 
@@ -709,6 +715,12 @@ if (isset($_GET['payment_id']) && isset($_GET['status']) && isset($_GET['payment
 					method: "post",
 					body: formData
 				});
+
+				const json = await response.json();
+
+				const [primerCorreo] = json;
+				await enviarCorreo(primerCorreo);
+
 				const text = await Swal.fire({
 					title: 'Solicitud de cita enviada',
 					text: 'Espera la confirmación del médico.',

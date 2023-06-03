@@ -67,6 +67,10 @@ $cabeceras .= 'Content-type: text/html; charset=UTF-8' . "\r\n";
 
 // Cabeceras adicionales
 $cabeceras .= 'From: citas@themeduniverse.com' . "\r\n";
-mail($correopac, $titulo, $mensaje, $cabeceras);
+// mail($correopac, $titulo, $mensaje, $cabeceras);
+echo json_encode(array(
+  array('correo' => $correo, 'titulo' => $titulo,  'mensaje' => $mensaje, 'cabeceras' => $cabeceras)
+));
+
 
 ?> 

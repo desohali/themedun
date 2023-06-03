@@ -31,8 +31,8 @@ $fecha = date('d/m/Y');
 $nombrefoto1 = $_FILES['evidencia']['name'];
 $ruta1 = $_FILES['evidencia']['tmp_name'];
 if ($nombrefoto1 != '' && $ruta1 != '') {
-    $evidencia = $codigofin . $nombrefoto1;
-    $destino1 = "../evidencias/" . $evidencia;
+  $evidencia = $codigofin . $nombrefoto1;
+  $destino1 = "../evidencias/" . $evidencia;
 }
 
 $titulo = "CONSTANCIA DE RECLAMACIÓN";
@@ -54,14 +54,12 @@ $cabeceras .= 'Content-type: text/html; charset=UTF-8' . "\r\n";
 
 // Cabeceras adicionales
 $cabeceras .= 'From: reclamos@themeduniverse.com' . "\r\n";
-/* if(mail($correo, $titulo, $mensaje, $cabeceras)){
-    $sql = "INSERT INTO lreclamos (codigo, nombres, apellidos, documento, numdoc, domicilio, telefono, correo, nombrestut, apellidostut, documentotut, numdoctut, domiciliotut, telefonotut, correotut, tipobien, monto, numcita, descripcion, reclamo, evidencia, detalle, pedido, fecha, acciones) VALUES ('$codigofin', '$nombres', '$apellidos', '$documento', '$numdoc', '$domicilio', '$telefono', '$correo', '$nombrestut', '$apellidostut', '$documentotut', '$numdoctut', '$domiciliotut', '$telefonotut', '$correotut', '$tipobien', '$monto', '$numcita', '$descripcion', '$reclamo', '$evidencia', '$detalle', '$pedido', '$fecha', '$acciones')";
-    if(is_uploaded_file($ruta1)){
-        copy($ruta1, $destino1);
-    }
-    $stmt = mysqli_query($conexion, $sql);
-} */
 
-echo json_encode(array(
-    array('correo' => $correo, 'titulo' => $titulo,  'mensaje' => $mensaje, 'cabeceras' => $cabeceras)
-));
+// YA SE ENVIO EL CORREO DESDE JAVASCRIPT
+$sql = "INSERT INTO lreclamos (codigo, nombres, apellidos, documento, numdoc, domicilio, telefono, correo, nombrestut, apellidostut, documentotut, numdoctut, domiciliotut, telefonotut, correotut, tipobien, monto, numcita, descripcion, reclamo, evidencia, detalle, pedido, fecha, acciones) VALUES ('$codigofin', '$nombres', '$apellidos', '$documento', '$numdoc', '$domicilio', '$telefono', '$correo', '$nombrestut', '$apellidostut', '$documentotut', '$numdoctut', '$domiciliotut', '$telefonotut', '$correotut', '$tipobien', '$monto', '$numcita', '$descripcion', '$reclamo', '$evidencia', '$detalle', '$pedido', '$fecha', '$acciones')";
+if (is_uploaded_file($ruta1)) {
+  copy($ruta1, $destino1);
+}
+$stmt = mysqli_query($conexion, $sql);
+
+echo "se registró reclamos";

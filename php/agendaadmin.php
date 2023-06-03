@@ -2,117 +2,117 @@
 include 'conexion_paciente.php';
 
 $idcita = $_POST['idCitas'];
-$consulta = "SELECT * FROM citas WHERE idcita = '".$idcita."' ";
+$consulta = "SELECT * FROM citas WHERE idcita = '" . $idcita . "' ";
 $resultado = mysqli_query($conexion, $consulta);
-    if ($resultado) {
-        while ($row = $resultado->fetch_array()){
-            $id = $row['id'];
-            $idpro = $row['idupro'];
-        }
+if ($resultado) {
+    while ($row = $resultado->fetch_array()) {
+        $id = $row['id'];
+        $idpro = $row['idupro'];
     }
+}
 
-$idpago = 1000000000+$idcita;
+$idpago = 1000000000 + $idcita;
 $metodopago = $_POST['tipoPay'];
 $estadopago = "approved";
 
-	if (isset($idcita)) {
-	    $insert = "INSERT INTO pagos (idpago, usuario, usuariopro, metodopago, fechahorap, estadopago) VALUES ('$idpago', '$id', '$idpro', '$metodopago', now(), '$estadopago')";
-		$sql5 = mysqli_query($conexion, $insert);
+if (isset($idcita)) {
+    $insert = "INSERT INTO pagos (idpago, usuario, usuariopro, metodopago, fechahorap, estadopago) VALUES ('$idpago', '$id', '$idpro', '$metodopago', now(), '$estadopago')";
+    $sql5 = mysqli_query($conexion, $insert);
 
-		include_once 'Zoom_Api.php';
+    include_once 'Zoom_Api.php';
 
-		$query = "SELECT *, id as idu,";
-		$query .= "(select nombrespro from usuariospro where idpro=idupro) as nombresMedico,";
-		$query .= "(select apellidospro from usuariospro where idpro=idupro) as apellidosMedico,";
-		$query .= "(select sexopro from usuariospro where idpro=idupro) as sexoMedico,";
-		$query .= "(select correopro from usuariospro where idpro=idupro) as correoMedico,";
-		$query .= "concat('Medicina, ', (select especialidad from usuariospro where idpro=idupro)) as especialidad,";
-		$query .= "(select nombres from usuarios where id=idu) as nombresPaciente,";
-		$query .= "(select apellidos from usuarios where id=idu) as apellidosPaciente,";
-		$query .= "(select sexo from usuarios where id=idu) as sexoPaciente,";
-		$query .= "(select correo from usuarios where id=idu) as correoPaciente ";
-		$query .= "FROM citas WHERE idcita='" . $idcita . "'";
+    $query = "SELECT *, id as idu,";
+    $query .= "(select nombrespro from usuariospro where idpro=idupro) as nombresMedico,";
+    $query .= "(select apellidospro from usuariospro where idpro=idupro) as apellidosMedico,";
+    $query .= "(select sexopro from usuariospro where idpro=idupro) as sexoMedico,";
+    $query .= "(select correopro from usuariospro where idpro=idupro) as correoMedico,";
+    $query .= "concat('Medicina, ', (select especialidad from usuariospro where idpro=idupro)) as especialidad,";
+    $query .= "(select nombres from usuarios where id=idu) as nombresPaciente,";
+    $query .= "(select apellidos from usuarios where id=idu) as apellidosPaciente,";
+    $query .= "(select sexo from usuarios where id=idu) as sexoPaciente,";
+    $query .= "(select correo from usuarios where id=idu) as correoPaciente ";
+    $query .= "FROM citas WHERE idcita='" . $idcita . "'";
 
-		$result = mysqli_query($conexion, $query);
+    $result = mysqli_query($conexion, $query);
 
-		while ($row = $result->fetch_object()) {
-			$cita = $row;
-		}
+    while ($row = $result->fetch_object()) {
+        $cita = $row;
+    }
 
-		$zoom_meeting = new Zoom_Api();
+    $zoom_meeting = new Zoom_Api();
 
-		$data = array();
-		$data['topic'] 		= 'Cita The Med Universe';
-		$data['timezone'] 	= 'America/Lima';
-		$comienzo = strtotime('-6 hours', strtotime($cita->start));
-		$data['start_time'] = date('Y-m-d H:i:s', $comienzo);
-		$data['duration'] 	= 45;
-		$data['type'] 		= 2;
-		$data['password'] 	= "12345";
+    $data = array();
+    $data['topic']         = 'Cita The Med Universe';
+    $data['timezone']     = 'America/Lima';
+    $comienzo = strtotime('-6 hours', strtotime($cita->start));
+    $data['start_time'] = date('Y-m-d H:i:s', $comienzo);
+    $data['duration']     = 45;
+    $data['type']         = 2;
+    $data['password']     = "12345";
 
-		try {
-			$response = $zoom_meeting->createMeeting($data);
-		} catch (Exception $ex) {
-			echo $ex;
-		};
-		// AQUI SE DEBE DE ACTUALIZAR NO INSERTAR
+    try {
+        $response = $zoom_meeting->createMeeting($data);
+    } catch (Exception $ex) {
+        echo $ex;
+    };
+    // AQUI SE DEBE DE ACTUALIZAR NO INSERTAR
 
-		$query = "UPDATE citas SET title = 'Programada... Únete con el link en la fecha y hora correspondientes.', color = '#0052d4',";
-		$query .= " leido='NO', leidopro='NO', ubicacion = '" . $response->join_url . "', fechanoti=now(), idpay = '" . $idpago . "'";
-		$query .= " WHERE idcita = '" . $idcita . "'";
-		$result = mysqli_query($conexion, $query);
-		// ELIMINAMOS CITAS DE OTROS PACIENTES EN LA MISMA HORA A LOS ESTADOS PENDIENTES Y CONFIRMADOS
+    $query = "UPDATE citas SET title = 'Programada... Únete con el link en la fecha y hora correspondientes.', color = '#0052d4',";
+    $query .= " leido='NO', leidopro='NO', ubicacion = '" . $response->join_url . "', fechanoti=now(), idpay = '" . $idpago . "'";
+    $query .= " WHERE idcita = '" . $idcita . "'";
+    $result = mysqli_query($conexion, $query);
+    // ELIMINAMOS CITAS DE OTROS PACIENTES EN LA MISMA HORA A LOS ESTADOS PENDIENTES Y CONFIRMADOS
 
-		$select = "UPDATE citas SET leido='NO', leidopro='NO', estado='ELIMINADA', fechanoti=NOW() WHERE idupro=" . $idpro;
-		$select .= " AND idcita <> " . $idcita;
-		$select .= " AND start='" . $cita->start . "'";
+    $select = "UPDATE citas SET leido='NO', leidopro='NO', estado='ELIMINADA', fechanoti=NOW() WHERE idupro=" . $idpro;
+    $select .= " AND idcita <> " . $idcita;
+    $select .= " AND start='" . $cita->start . "'";
 
-		$resultSelect = mysqli_query($conexion, $select);
+    $resultSelect = mysqli_query($conexion, $select);
 
-		$sql7 = mysqli_query($conexion, "INSERT INTO hclinica (idhc, idpx, idmed) VALUES ('$idpago', '$id', '$idpro')");
-		
-		if($cita->sexoPaciente=="Femenino"){
-		    $estimadoPaciente = "Estimada";
-		    $elOlaPac = "la";
-		}else{
-		    $estimadoPaciente = "Estimado";
-		    $elOlaPac = "el";
-		}
-		
-		if($cita->sexoMedico=="Femenino"){
-		    $estimadoMedico = "Estimada, Dra.";
-		    $elOlaMed = "la Dra.";
-		}else{
-		    $estimadoMedico = "Estimado, Dr.";
-		    $elOlaMed = "el Dr.";
-		}
-		
-		$titulo = "CITA PROGRAMADA";
-		$mensajePaciente = "
+    $sql7 = mysqli_query($conexion, "INSERT INTO hclinica (idhc, idpx, idmed) VALUES ('$idpago', '$id', '$idpro')");
+
+    if ($cita->sexoPaciente == "Femenino") {
+        $estimadoPaciente = "Estimada";
+        $elOlaPac = "la";
+    } else {
+        $estimadoPaciente = "Estimado";
+        $elOlaPac = "el";
+    }
+
+    if ($cita->sexoMedico == "Femenino") {
+        $estimadoMedico = "Estimada, Dra.";
+        $elOlaMed = "la Dra.";
+    } else {
+        $estimadoMedico = "Estimado, Dr.";
+        $elOlaMed = "el Dr.";
+    }
+
+    $titulo = "CITA PROGRAMADA";
+    $mensajePaciente = "
 		<html>
 		<head>
 			<title>CITA PROGRAMADA</title>
 		</head>
 		<body>
 			<h1 style='color:#0052d4; text-align:center'>The Med Universe</h1>
-			<p>".$estimadoPaciente.", ".$cita->nombresPaciente." ".$cita->apellidosPaciente.":<br><br>Has programado una cita con ".$elOlaMed." ".$cita->nombresMedico." ".$cita->apellidosMedico." para el ".$cita->start.". Únete con este link <a href='".$response->join_url."'>".$response->join_url."</a> en la fecha y hora correspondientes.<br><br>Encontrarás mayor información de tu cita en <a href='https://www.themeduniverse.com/agenda/".$id."'>https://www.themeduniverse.com/agenda/".$id."</a>.</p>
+			<p>" . $estimadoPaciente . ", " . $cita->nombresPaciente . " " . $cita->apellidosPaciente . ":<br><br>Has programado una cita con " . $elOlaMed . " " . $cita->nombresMedico . " " . $cita->apellidosMedico . " para el " . $cita->start . ". Únete con este link <a href='" . $response->join_url . "'>" . $response->join_url . "</a> en la fecha y hora correspondientes.<br><br>Encontrarás mayor información de tu cita en <a href='https://www.themeduniverse.com/agenda/" . $id . "'>https://www.themeduniverse.com/agenda/" . $id . "</a>.</p>
 		</body>
 		</html>
 		";
-		
-		$mensajeMedico = "
+
+    $mensajeMedico = "
 		<html>
 		<head>
 			<title>CITA PROGRAMADA</title>
 		</head>
 		<body>
 			<h1 style='color:#0052d4; text-align:center'>The Med Universe</h1>
-			<p>".$estimadoMedico." ".$cita->nombresMedico." ".$cita->apellidosMedico.":<br><br>Se le ha programado una cita con ".$elOlaPac." paciente ".$cita->nombresPaciente." ".$cita->apellidosPaciente." para el ".$cita->start.". Únase con el link <a href='".$response->join_url."'>".$response->join_url."</a> en la fecha y hora correspondientes.<br><br>Encontrará mayor información de su cita en <a href='https://www.themeduniverse.com/horario/".$idpro."'>https://www.themeduniverse.com/horario/".$idpro."</a>.</p>
+			<p>" . $estimadoMedico . " " . $cita->nombresMedico . " " . $cita->apellidosMedico . ":<br><br>Se le ha programado una cita con " . $elOlaPac . " paciente " . $cita->nombresPaciente . " " . $cita->apellidosPaciente . " para el " . $cita->start . ". Únase con el link <a href='" . $response->join_url . "'>" . $response->join_url . "</a> en la fecha y hora correspondientes.<br><br>Encontrará mayor información de su cita en <a href='https://www.themeduniverse.com/horario/" . $idpro . "'>https://www.themeduniverse.com/horario/" . $idpro . "</a>.</p>
 		</body>
 		</html>
 		";
-		
-		$mensajeAdmin = "
+
+    $mensajeAdmin = "
 		<html>
 		<head>
 			<title>CITA PROGRAMADA</title>
@@ -123,18 +123,26 @@ $estadopago = "approved";
 		</body>
 		</html>
 		";
-		
-		// Para enviar un correo HTML, debe establecerse la cabecera Content-type
-		$cabeceras  = 'MIME-Version: 1.0' . "\r\n";
-		$cabeceras .= 'Content-type: text/html; charset=UTF-8' . "\r\n";
-		
-		// Cabeceras adicionales
-		$cabeceras .= 'From: citas@themeduniverse.com' . "\r\n";
-		mail($cita->correoMedico, $titulo, $mensajeMedico, $cabeceras);
-		mail($cita->correoPaciente, $titulo, $mensajePaciente, $cabeceras);
-		mail('leandrobernal@themeduniverse.com', $titulo, $mensajeAdmin, $cabeceras);
-		echo "<script>window.location.href='" . $_ENV['APP_URL'] . "agendaadmin/" . $_SESSION['idAdmin'] . "'</script>";
-	}
+
+    // Para enviar un correo HTML, debe establecerse la cabecera Content-type
+    $cabeceras  = 'MIME-Version: 1.0' . "\r\n";
+    $cabeceras .= 'Content-type: text/html; charset=UTF-8' . "\r\n";
+
+    // Cabeceras adicionales
+    $cabeceras .= 'From: citas@themeduniverse.com' . "\r\n";
+
+    // mail($cita->correoMedico, $titulo, $mensajeMedico, $cabeceras);
+    // mail($cita->correoPaciente, $titulo, $mensajePaciente, $cabeceras);
+    // mail('leandrobernal@themeduniverse.com', $titulo, $mensajeAdmin, $cabeceras);
+    $script = "<script>";
+    $script .= "await enviarCorreo({to: $cita->correoMedico, subject: $titulo, html: $mensajeMedico});";
+    $script .= "await enviarCorreo({to: $cita->correoPaciente, subject: $titulo, html: $mensajePaciente});";
+    $script .= "await enviarCorreo({to: 'bernalsaavedraleandro@gmail.com', subject: $titulo, html: $mensajeAdmin});";
+    $script .= "window.location.href='" . $_ENV['APP_URL'] . "agendaadmin/" . $_SESSION['idAdmin'] . "'";
+    $script .= "</script>";
+
+    echo $script;
+}
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -179,7 +187,7 @@ $estadopago = "approved";
                 </div>
             </div>
             <script>
-            async function initAgenda() {
+                async function initAgenda() {
                     const response = await fetch("<?php echo $_ENV['APP_URL']; ?>php/eventosadmin.php?idadmin=<?php echo $id ?>");
                     const json = await response.json();
 
@@ -193,7 +201,7 @@ $estadopago = "approved";
                     // finish setting up calendar
                     calendar.refresh();
                 }
-            var _websocketServiceAgenda = new websocketService(initAgenda);
+                var _websocketServiceAgenda = new websocketService(initAgenda);
                 _websocketServiceAgenda.connection();
                 async function aceptarCita() {
                     const {
@@ -295,17 +303,17 @@ $estadopago = "approved";
 
                         if (isConfirmed) {
                             formProgramar.submit();
-                                const text = await Swal.fire({
-                                    title: 'Cita programada',
-                                    text: '',
-                                    icon: 'success',
-                                    confirmButtonColor: '#0052d4',
-                                    confirmButtonText: 'Ok',
-                                }).then((result) => {
-                                    window.location.reload();
-                                });
-                            };
-                        };
+                            const text = await Swal.fire({
+                                title: 'Cita programada',
+                                text: '',
+                                icon: 'success',
+                                confirmButtonColor: '#0052d4',
+                                confirmButtonText: 'Ok',
+                            }).then((result) => {
+                                window.location.reload();
+                            });
+                            /* }; */
+                        }
                     });
                 });
             </script>
@@ -402,7 +410,7 @@ $estadopago = "approved";
                                     $aceptarcita.css('visibility', 'hidden');
                                 }
                             }
-                            if (calEvent.title == "<?= $_ENV['CITA_CONFIRMADA'] ?>"){
+                            if (calEvent.title == "<?= $_ENV['CITA_CONFIRMADA'] ?>") {
                                 $aceptarcita.css('display', 'none');
                             }
 
@@ -504,4 +512,5 @@ $estadopago = "approved";
     </main>
 </body>
 <?php echo footermed(); ?>
+
 </html>

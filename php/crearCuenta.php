@@ -48,7 +48,11 @@ $mensaje = "
 </head>
 <body>
     <h1 style='color:#0052d4; text-align:center'>The Med Universe</h1>
+<<<<<<< HEAD
     <p>" . $estimado . ", " . $nombres . " " . $apellidos . ":<br><br>Hemos recibido una solicitud para registrar una cuenta The Med Universe | Paciente con esta dirección de correo electrónico. Para completar la creación de tu cuenta, ingresa al siguiente enlace de verificación: <a href='".$_ENV['APP_URL']."verificar/" . $id . "/" . $token . "/" . $codigo . "/" . $currentDateUrl . "'>".$_ENV['APP_URL']."verificar/" . $id . "/" . $token . "/" . $codigo . "/" . $currentDateUrl . "</a><br><br>El enlace de verificación expirará en 24 horas. Si no solicitaste una cuenta nueva, háznoslo saber a través de nuestro centro de ayuda: <a href='".$_ENV['APP_URL']."cayuda'>".$_ENV['APP_URL']."cayuda</a>.</p>
+=======
+    <p>" . $estimado . ", " . $nombres . " " . $apellidos . ":<br><br>Hemos recibido una solicitud para registrar una cuenta The Med Universe | Paciente con esta dirección de correo electrónico. Para completar la creación de tu cuenta, ingresa al siguiente enlace de verificación: <a href='https://www.themeduniverse.com/verificar/" . $id . "/" . $token . "/" . $codigo . "/" . $currentDateUrl . "'>https://www.themeduniverse.com/verificar/" . $id . "/" . $token . "/" . $codigo . "/" . $currentDateUrl . "</a><br><br>El enlace de verificación expirará en 24 horas. Si no solicitaste una cuenta nueva, háznoslo saber a través de nuestro centro de ayuda: <a href='https://www.themeduniverse.com/cayuda'>https://www.themeduniverse.com/cayuda</a>.</p>
+>>>>>>> 9842d78816b4a88c3cd3419d5fcb965ec11cb7f5
 </body>
 </html>
 ";

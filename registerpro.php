@@ -84,7 +84,6 @@ if ($urlactual == 'https://themeduniverse.com/registerpro') {
                                         body: formData,
                                     })
                                     const json = await response.json();
-                                    console.log('json', json);
 
                                     const [primerCorreo] = json;
                                     await enviarCorreo(primerCorreo);

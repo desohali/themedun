@@ -58,6 +58,24 @@
                     $peso = $lista['peso'];
                     $talla = $lista['talla'];
                     $imc = $lista['imc'];
+                    if($freccar!=''){
+                        $freccar=$freccar.' lpm';
+                    }
+                    if($frecres!=''){
+                        $frecres=$frecres.' rpm';
+                    }
+                    if($sato!=''){
+                        $sato=$sato.' %';
+                    }
+                    if($temperatura!=''){
+                        $temperatura=$temperatura.' °C';
+                    }
+                    if($peso!=''){
+                        $peso=$peso.' kg';
+                    }
+                    if($talla!=''){
+                        $talla=$talla.' m';
+                    }
                     $evalfisica = $lista['evalfisica'];
                     $prures = $lista['prures'];
                     $diagpre = $lista['diagpre'];
@@ -150,7 +168,7 @@
                 }
             }
         ?>
-                        <li><span style="<?php if($tiempoenfermedad==''){echo 'color:#FFC107;';}else{echo 'color:#00d418;';}?>"><?php echo $newDateFC . ': ';?></span><a href="<?php echo $_ENV['APP_URL'].'hclinicapro/'.$id.'/'.$lista2['idpay'];?>"><span class="spanlista"><?php echo $especialidad2;?></span></a></li>
+                        <a href="<?php echo $_ENV['APP_URL'].'hclinicapro/'.$id.'/'.$lista2['idpay'];?>"><li style="<?php if($lista2['idpay']==$idHistoria){echo 'background:#F0F2F5;';}?>"><span style="<?php if($tiempoenfermedad==''){echo 'color:#FFC107;';}else{echo 'color:#00d418;';}?>"><?php echo $newDateFC . ': ';?></span><span class="spanlista"><?php echo $especialidad2;?></span></li></a>
         <?php
         }
         ?>
@@ -216,10 +234,10 @@
                     </div>
                     <hr>
                     <?php
-                    $fecha = $fechastr - strtotime($nacimiento);
+                    $fecha = $fechastr - strtotime($nacimiento) + 86400;
                     $edad = floor($fecha / 31556926);
 
-                    $fecha2 = $fechastr - strtotime($nacimientopro);
+                    $fecha2 = $fechastr - strtotime($nacimientopro) + 86400;
                     $edad2 = floor($fecha2 / 31556926);
                     ?>
                     <div class="boxhc" id="boxfiliacion">
@@ -240,25 +258,25 @@
                     <div class="boxhc" id="boxanamnesis">
                         <h2>III. ANAMNESIS</h2>
                         <div class="divhisto" id="anamnesis">
-                            <p><textarea id="idtiempo" name="tiempoenf" placeholder='Tiempo de enfermedad' class="txthc" rows="1" required></textarea></p>
+                            <p><textarea id="idtiempo" name="tiempoenf" placeholder='Tiempo de enfermedad' class="txthc" rows="1" maxlength="350" required></textarea></p>
                             <p><select name="inicio" id="idinicio" class="txthc" required><option class="select-opt" value="">Forma de inicio</option><option value="Insidioso">Insidioso</option><option value="Brusco">Brusco</option></select></p>
                         </div>
                         <div class="divhisto" id="anamnesis">
                             <p><select name="curso" id="idcurso" class="txthc" required><option class="select-opt" value="">Curso</option><option value="Progresivo">Progresivo</option><option value="Estacionario">Estacionario</option><option value="Intermitente">Intermitente</option></select></p>
-                            <p><textarea id="idsintomas" name="sintomas" placeholder='Signos y síntomas principales' class="txthc" rows="1" required></textarea></p>
+                            <p><textarea id="idsintomas" name="sintomas" placeholder='Signos y síntomas principales' class="txthc" rows="1" maxlength="350" required></textarea></p>
                         </div>
-                        <p id="filrelato"><textarea name="relato" placeholder='Relato cronológico' class="txthc" id="idrelato" rows="3" required></textarea></p>
+                        <p id="filrelato"><textarea name="relato" placeholder='Relato cronológico' class="txthc" id="idrelato" rows="3" maxlength="1000" required></textarea></p>
                     </div>
                     <hr>
                     <div class="boxhc" id="boxantecedentes">
                         <h2>IV. ANTECEDENTES</h2>
                         <div class="divhisto" id="antecedentes">
-                            <p><textarea id="idantuno" name="anthf" placeholder='Antecedentes heredo - familiares' class="txthc" rows="3" required></textarea></p>
-                            <p><textarea id="idantdos" name="antpp" placeholder='Antecedentes personales - patológicos' class="txthc" rows="3" required></textarea></p>
+                            <p><textarea id="idantuno" name="anthf" placeholder='Antecedentes heredo - familiares' class="txthc" rows="3" maxlength="350" required></textarea></p>
+                            <p><textarea id="idantdos" name="antpp" placeholder='Antecedentes personales - patológicos' class="txthc" rows="3" maxlength="350" required></textarea></p>
                         </div>
                         <div class="divhisto" id="antecedentes2">
-                            <p><textarea id="idmedicamentos" name="medicamentos" placeholder='Medicamentos' class="txthc" rows="1" required></textarea></p>
-                            <p><textarea id="idalergias" name="alergias" placeholder='Alergias' class="txthc" rows="1" required></textarea></p>
+                            <p><textarea id="idmedicamentos" name="medicamentos" placeholder='Medicamentos' class="txthc" rows="1" maxlength="350" required></textarea></p>
+                            <p><textarea id="idalergias" name="alergias" placeholder='Alergias' class="txthc" rows="1" maxlength="350" required></textarea></p>
                         </div>
                     </div>
                     <hr>
@@ -266,55 +284,67 @@
                         <h2>V. EXAMEN FÍSICO (OPCIONAL)</h2>
                         <div class="divhisto" id="exafisico">
                             <div class="divhisto" id="fisi10">
-                                <p id="idfreccar" class="fisizq"><input type="number" placeholder="Frec. cardiaca (lpm)" id="txtfreccar" min="0" name="freccar" class="txthc"></p>
-                                <p id="idfrecres" class="fisder"><input type="number" placeholder="Frec. respiratoria (rpm)" id="txtfrecres" min="0" name="frecres" class="txthc"></p>
+                                <p id="idfreccar" class="fisizq"><input type="number" placeholder="Frec. cardiaca (lpm)" id="txtfreccar" min="0" max="1000" name="freccar" class="txthc"></p>
+                                <p id="idfrecres" class="fisder"><input type="number" placeholder="Frec. respiratoria (rpm)" id="txtfrecres" min="0" max="100" name="frecres" class="txthc"></p>
                             </div>
                             <div class="divhisto" id="fisi11">
-                                <p id="idsat" class="fisizq"><input type="number" placeholder="Sat. de oxígeno (%)" id="txtsato" min="0" name="sato" class="txthc"></p>
-                                <p id="idpresion" class="fisder"><input type="text" placeholder="Presión arterial (S/D)" id="txtpresion" min="0" name="presion" class="txthc"></p>
+                                <p id="idsat" class="fisizq"><input type="number" placeholder="Sat. de oxígeno (%)" id="txtsato" min="0" max="100" name="sato" class="txthc"></p>
+                                <p id="idpresion" class="fisder"><input type="text" placeholder="Presión arterial (S/D)" id="txtpresion" name="presion" class="txthc" maxlength="15"></p>
                             </div>
                         </div>
                         <div class="divhisto" id="exafisico2">
                             <div class="divhisto" id="fisi20">
-                                <p id="idtemperatura" class="fisizq"><input type="number" placeholder="Temperatura (°C)" id="txttemperatura" min="0" name="temperatura" class="txthc" step=".1"></p>
-                                <p id="idpeso" class="fisder"><input type="number" placeholder="Peso (Kg)" id="txtpeso" min="0" name="peso" class="txthc" step=".01"></p>
+                                <p id="idtemperatura" class="fisizq"><input type="number" placeholder="Temperatura (°C)" id="txttemperatura" min="0" max="100" name="temperatura" class="txthc" step=".1"></p>
+                                <p id="idpeso" class="fisder"><input type="number" placeholder="Peso (kg)" id="txtpeso" min="0" max="1000" name="peso" class="txthc" step=".1"></p>
                             </div>
                             <div class="divhisto" id="fisi21">
-                                <p id="idtalla" class="fisizq"><input type="number" placeholder="Talla (m)" id="txttalla" min="0" name="talla" class="txthc" step=".01"></p>
-                                <p id="idimc" class="fisder"><input type="number" placeholder="Índice de Masa Corporal" id="txtimc" min="0" name="imc" class="txthc" step=".01" disabled><br><input type="button" name="calcularimc" value="Calcular" onclick="calculaimc()"></input></p>
+                                <p id="idtalla" class="fisizq"><input type="number" placeholder="Talla (m)" id="txttalla" min="0" max="10" name="talla" class="txthc" step=".01"></p>
+                                <p id="idimc" class="fisder"><input type="text" placeholder="Índice de Masa Corporal" id="txtimc" name="imc" class="txthc" maxlength="25" readonly><br><input type="button" name="calcularimc" value="Calcular IMC" onclick="calculaimc()" id="calcularIMC"></input></p>
                             </div>
                         </div>
-                        <p id="filef"><textarea name="evalfisica" placeholder='Evaluación física' class="txthc" id="txtevalf" rows="3"></textarea></p>
+                        <p id="filef"><textarea name="evalfisica" placeholder='Evaluación física' class="txthc" id="txtevalf" rows="3" maxlength="1000"></textarea></p>
                     </div>
                     <script type="text/javascript">
                         function calculaimc(){
                             var peso = Number(document.getElementById('txtpeso').value);
                             var talla = Number(document.getElementById('txttalla').value);
                             var imc = (peso/(talla*talla)).toFixed(2);
-                            document.getElementById('txtimc').value = imc;
+                            if(imc < 18.5){
+                                var condicion = imc+' (Bajo peso)';
+                            }else if(imc >= 18.5 && imc < 25){
+                                var condicion = imc+' (Peso saludable)';
+                            }else if(imc >= 25 && imc < 30){
+                                var condicion = imc+' (Sobrepeso)';
+                            }else if(imc >= 30){
+                                var condicion = imc+' (Obesidad)';
+                            }else{
+                                var condicion = '';
+                            }
+
+                            document.getElementById('txtimc').value = condicion;
                         }
                     </script>
                     <hr>
                     <div class="boxhc" id="boxexacomple">
                         <h2>VI. EXÁMENES COMPLEMENTARIOS (OPCIONAL)</h2>
-                        <p id="filpru"><textarea id="idpruebas" name="prures" placeholder='Pruebas y resultados' class="txthc" rows="3"></textarea></p>
+                        <p id="filpru"><textarea id="idpruebas" name="prures" placeholder='Pruebas y resultados' class="txthc" rows="3" maxlength="1000"></textarea></p>
                     </div>
                     <hr>
                     <div class="boxhc" id="boxdiagnostico">
                         <h2>VII. DIAGNÓSTICOS</h2>
                         <ul><li id="licodigo">Encontrará el código CIE-10 del diagnóstico en: <a id="codigocie" href="https://eciemaps.mscbs.gob.es/ecieMaps/browser/index_10_mc.html" target="_blank">Buscar código CIE-10</a>.</li></ul>
                         <div class="divhisto" id="diagnostico">
-                            <p><textarea id="iddiaguno" name="diagpre"  placeholder='Diagnósticos presuntivos con CIE-10' class="txthc" rows="3" required></textarea></p>
-                            <p><textarea id="iddiagdos" name="diagdef" placeholder='Diagnósticos definitivos con CIE-10' class="txthc" rows="3" required></textarea></p>
+                            <p><textarea id="iddiaguno" name="diagpre"  placeholder='Diagnósticos presuntivos con CIE-10' class="txthc" rows="3" maxlength="350" required></textarea></p>
+                            <p><textarea id="iddiagdos" name="diagdef" placeholder='Diagnósticos definitivos con CIE-10' class="txthc" rows="3" maxlength="350" required></textarea></p>
                         </div>
                     </div>
                     <hr>
                     <div class="boxhc" id="boxtratamiento">
                         <h2>VIII. PLAN DE TRABAJO</h2>
-                        <p id="filtrata"><textarea id="idtratamiento" name="tratfarm" placeholder='Tratamiento farmacológico' class="txthc" rows="3" required></textarea></p>
+                        <p id="filtrata"><textarea id="idtratamiento" name="tratfarm" placeholder='Tratamiento farmacológico' class="txthc" rows="3" maxlength="1000" required></textarea></p>
                         <div class="divhisto" id="tratamiento">
-                            <p><textarea id="idindiuno" name="indicec" placeholder='Indicaciones de exámenes complementarios' class="txthc" rows="3" required></textarea></p>
-                            <p><textarea id="idindidos" name="indicesp" placeholder='Indicaciones adicionales' class="txthc" rows="3" required></textarea></p>
+                            <p><textarea id="idindiuno" name="indicec" placeholder='Indicaciones de exámenes complementarios' class="txthc" rows="3" maxlength="350" required></textarea></p>
+                            <p><textarea id="idindidos" name="indicesp" placeholder='Indicaciones adicionales' class="txthc" rows="3" maxlength="350" required></textarea></p>
                         </div>
                     </div>
                     <hr>
@@ -343,12 +373,12 @@
                         <h2>X. ANEXOS DEL PACIENTE</h2>
                     </div>
                     <div class="divhisto" id="anexos">
-                        <p><span>Documento o imagen de ayuda diagnóstica:</span><br><a href="<?php echo $_ENV['APP_URL'].'/anexos/'.$anexouno;?>" download="<?php $_ENV['APP_URL'].'/anexos/'.$anexouno;?>"><?php if($anexouno!=''){echo 'Descargar archivo';};?></a></p>
-                        <p><span>Documento o imagen de ayuda diagnóstica:</span><br><a href="<?php echo $_ENV['APP_URL'].'/anexos/'.$anexodos;?>" download="<?php echo $_ENV['APP_URL'].'/anexos/'.$anexodos;?>"><?php if($anexodos!=''){echo 'Descargar archivo';};?></a></p>
+                        <p><span>Documento o imagen de ayuda diagnóstica:</span><br><a href="<?php echo $_ENV['APP_URL'].'anexos/'.$anexouno;?>" download><?php if($anexouno!=''){echo 'Descargar archivo';};?></a></p>
+                        <p><span>Documento o imagen de ayuda diagnóstica:</span><br><a href="<?php echo $_ENV['APP_URL'].'anexos/'.$anexodos;?>" download><?php if($anexodos!=''){echo 'Descargar archivo';};?></a></p>
                     </div>
                     <div class="divhisto" id="anexos">
-                        <p><span>Documento o imagen de ayuda diagnóstica:</span><br><a href="<?php echo $_ENV['APP_URL'].'/anexos/'.$anexotres;?>" download="<?php echo $_ENV['APP_URL'].'/anexos/'.$anexotres;?>"><?php if($anexotres!=''){echo 'Descargar archivo';};?></a></p>
-                        <p><span>Documento o imagen de ayuda diagnóstica:</span><br><a href="<?php echo $_ENV['APP_URL'].'/anexos/'.$anexocuatro;?>" download="<?php echo $_ENV['APP_URL'].'/anexos/'.$anexocuatro;?>"><?php if($anexocuatro!=''){echo 'Descargar archivo';};?></a></p>
+                        <p><span>Documento o imagen de ayuda diagnóstica:</span><br><a href="<?php echo $_ENV['APP_URL'].'anexos/'.$anexotres;?>" download><?php if($anexotres!=''){echo 'Descargar archivo';};?></a></p>
+                        <p><span>Documento o imagen de ayuda diagnóstica:</span><br><a href="<?php echo $_ENV['APP_URL'].'anexos/'.$anexocuatro;?>" download><?php if($anexocuatro!=''){echo 'Descargar archivo';};?></a></p>
                     </div>
                     <p id="filrelato"><span>Motivo de consulta:</span><br><?php echo $comentario;?></p>
                 </div>
@@ -394,10 +424,10 @@
                 </div>
                 <hr>
                 <?php
-                $fecha = $fechastr - strtotime($nacimiento);
+                $fecha = $fechastr - strtotime($nacimiento) + 86400;
                 $edad = floor($fecha / 31556926);
 
-                $fecha2 = $fechastr - strtotime($nacimientopro);
+                $fecha2 = $fechastr - strtotime($nacimientopro) + 86400;
                 $edad2 = floor($fecha2 / 31556926);
                 ?>
                 <div class="boxhc" id="boxfiliacion">
@@ -448,12 +478,12 @@
                         <h2>X. ANEXOS DEL PACIENTE</h2>
                     </div>
                     <div class="divhisto" id="anexos">
-                        <p><span>Documento o imagen de ayuda diagnóstica:</span><br><a href="<?php echo $_ENV['APP_URL'].'/anexos/'.$anexouno;?>" download="<?php echo $_ENV['APP_URL'].'/anexos/'.$anexouno;?>"><?php if($anexouno!=''){echo 'Descargar archivo';};?></a></p>
-                        <p><span>Documento o imagen de ayuda diagnóstica:</span><br><a href="<?php echo $_ENV['APP_URL'].'/anexos/'.$anexodos;?>" download="<?php echo $_ENV['APP_URL'].'/anexos/'.$anexodos;?>"><?php if($anexodos!=''){echo 'Descargar archivo';};?></a></p>
+                        <p><span>Documento o imagen de ayuda diagnóstica:</span><br><a href="<?php echo $_ENV['APP_URL'].'anexos/'.$anexouno;?>" download><?php if($anexouno!=''){echo 'Descargar archivo';};?></a></p>
+                        <p><span>Documento o imagen de ayuda diagnóstica:</span><br><a href="<?php echo $_ENV['APP_URL'].'anexos/'.$anexodos;?>" download><?php if($anexodos!=''){echo 'Descargar archivo';};?></a></p>
                     </div>
                     <div class="divhisto" id="anexos">
-                        <p><span>Documento o imagen de ayuda diagnóstica:</span><br><a href="<?php echo $_ENV['APP_URL'].'/anexos/'.$anexotres;?>" download="<?php echo $_ENV['APP_URL'].'/anexos/'.$anexotres;?>"><?php if($anexotres!=''){echo 'Descargar archivo';};?></a></p>
-                        <p><span>Documento o imagen de ayuda diagnóstica:</span><br><a href="<?php echo $_ENV['APP_URL'].'/anexos/'.$anexocuatro;?>" download="<?php echo $_ENV['APP_URL'].'/anexos/'.$anexocuatro;?>"><?php if($anexocuatro!=''){echo 'Descargar archivo';};?></a></p>
+                        <p><span>Documento o imagen de ayuda diagnóstica:</span><br><a href="<?php echo $_ENV['APP_URL'].'anexos/'.$anexotres;?>" download><?php if($anexotres!=''){echo 'Descargar archivo';};?></a></p>
+                        <p><span>Documento o imagen de ayuda diagnóstica:</span><br><a href="<?php echo $_ENV['APP_URL'].'anexos/'.$anexocuatro;?>" download><?php if($anexocuatro!=''){echo 'Descargar archivo';};?></a></p>
                     </div>
                     <p id="filrelato"><span>Motivo de consulta:</span><br><?php echo $comentario;?></p>
                 </div>
@@ -494,10 +524,10 @@
                 </div>
                 <hr>
                 <?php
-                $fecha = $fechastr - strtotime($nacimiento);
+                $fecha = $fechastr - strtotime($nacimiento) + 86400;
                 $edad = floor($fecha / 31556926);
 
-                $fecha2 = $fechastr - strtotime($nacimientopro);
+                $fecha2 = $fechastr - strtotime($nacimientopro) + 86400;
                 $edad2 = floor($fecha2 / 31556926);
                 ?>
                 <div class="boxhc" id="boxfiliacion">
@@ -517,11 +547,11 @@
                 <hr>
                 <div class="boxhc" id="boxanamnesis">
                     <h2>III. ANAMNESIS</h2>
-                    <div class="divhisto" id="anamnesis">
+                    <div class="divhisto guardado" id="anamnesis">
                         <p><span>Tiempo de enfermedad:</span><br><?php echo $tiempoenf?></p>
                         <p><span>Forma de inicio:</span><br><?php echo $inicio?></p>
                     </div>
-                    <div class="divhisto" id="anamnesis">
+                    <div class="divhisto guardado" id="anamnesis">
                         <p><span>Curso:</span><br><?php echo $curso?></p>
                         <p><span>Signos y síntomas principales:</span><br><?php echo $sintomas?></p>
                     </div>
@@ -530,11 +560,11 @@
                 <hr>
                 <div class="boxhc" id="boxantecedentes">
                     <h2>IV. ANTECEDENTES</h2>
-                    <div class="divhisto" id="antecedentes">
+                    <div class="divhisto guardado" id="antecedentes">
                         <p><span>Antecedentes heredo - familiares:</span><br><?php echo $anthf?></p>
                         <p><span>Antecedentes personales - patológicos:</span><br><?php echo $antpp?></p>
                     </div>
-                    <div class="divhisto" id="antecedentes2">
+                    <div class="divhisto guardado" id="antecedentes2">
                         <p><span>Medicamentos:</span><br><?php echo $medicamentos?></p>
                         <p><span>Alergias:</span><br><?php echo $alergias?></p>
                     </div>
@@ -544,21 +574,21 @@
                     <h2>V. EXAMEN FÍSICO (OPCIONAL)</h2>
                     <div class="divhisto" id="exafisico">
                         <div class="divhisto" id="fisi10">
-                            <p><span>Frec. cardiaca:</span><br><?php echo $freccar?> lpm</p>
-                            <p><span>Frec. respiratoria:</span><br><?php echo $frecres?> rpm</p>
+                            <p><span>Frec. cardiaca:</span><br><?php echo $freccar?></p>
+                            <p><span>Frec. respiratoria:</span><br><?php echo $frecres?></p>
                         </div>
                         <div class="divhisto" id="fisi11">
-                            <p><span>Sat. de oxígeno:</span><br><?php echo $sato?>%</p>
+                            <p><span>Sat. de oxígeno:</span><br><?php echo $sato?></p>
                             <p><span>Presión arterial:</span><br><?php echo $presion?></p>
                         </div>
                     </div>
                     <div class="divhisto" id="exafisico2">
                         <div class="divhisto" id="fisi20">
-                            <p><span>Temperatura:</span><br><?php echo $temperatura?> °C</p>
-                            <p><span>Peso:</span><br><?php echo $peso?> Kg</p>
+                            <p><span>Temperatura:</span><br><?php echo $temperatura?></p>
+                            <p><span>Peso:</span><br><?php echo $peso?></p>
                         </div>
                         <div class="divhisto" id="fisi21">
-                            <p><span>Talla:</span><br><?php echo $talla?> m</p>
+                            <p><span>Talla:</span><br><?php echo $talla?></p>
                             <p><span>Índice de Masa Corporal:</span><br><?php echo $imc?></p>
                         </div>
                     </div>
@@ -572,7 +602,7 @@
                 <hr>
                 <div class="boxhc" id="boxdiagnostico">
                     <h2>VII. DIAGNÓSTICOS</h2>
-                    <div class="divhisto" id="diagnostico">
+                    <div class="divhisto guardado" id="diagnostico">
                         <p><span>Diagnósticos presuntivos:</span><br><?php echo $diagpre?></p>
                         <p><span>Diagnósticos definitivos:</span><br><?php echo $diagdef?></p>
                     </div>
@@ -581,7 +611,7 @@
                 <div class="boxhc" id="boxtratamiento">
                     <h2>VIII. PLAN DE TRABAJO</h2>
                     <p id="filtrata"><span>Tratamiento farmacológico:</span><br><?php echo $tratfarm?></p>
-                    <div class="divhisto" id="tratamiento">
+                    <div class="divhisto guardado" id="tratamiento">
                         <p><span>Indicaciones de exámenes complementarios:</span><br><?php echo $indicec?></p>
                         <p><span>Indicaciones adicionales:</span><br><?php echo $indicesp?></p>
                     </div>
@@ -589,9 +619,9 @@
                 <hr>
                 <div class="boxhc" id="boxanexos">
                     <h2>IX. ANEXOS DEL PROFESIONAL</h2>
-                    <div class="divhisto" id="anexos">
-                        <p><span>Imagen de receta médica:</span><br><a href="<?php echo $_ENV['APP_URL'].'/complementarios/'.$archivoc;?>" download="<?php echo $_ENV['APP_URL'].'/complementarios/'.$archivoc;?>"><?php if($archivoc!=''){echo 'Descargar receta';};?></a></p>
-                        <p><span>Documento o imagen de orientación:</span><br><a href="<?php echo $_ENV['APP_URL'].'/grabaciones/'.$grabacion;?>" download="<?php echo $_ENV['APP_URL'].'/grabaciones/'.$grabacion;?>"><?php if($grabacion!=''){echo 'Descargar archivo';};?></a></p>
+                    <div class="divhisto guardado" id="anexos">
+                        <p><span>Imagen de receta médica:</span><br><a href="<?php echo $_ENV['APP_URL'].'complementarios/'.$archivoc;?>" download><?php if($archivoc!=''){echo 'Descargar receta';};?></a></p>
+                        <p><span>Documento o imagen de orientación:</span><br><a href="<?php echo $_ENV['APP_URL'].'grabaciones/'.$grabacion;?>" download><?php if($grabacion!=''){echo 'Descargar archivo';};?></a></p>
                     </div>
                 </div>
                 <hr>
@@ -599,13 +629,13 @@
                     <div class="ctn-editarp">
                         <h2>X. ANEXOS DEL PACIENTE</h2>
                     </div>
-                    <div class="divhisto" id="anexos">
-                        <p><span>Documento o imagen de ayuda diagnóstica:</span><br><a href="<?php echo $_ENV['APP_URL'].'/anexos/'.$anexouno;?>" download="<?php echo $_ENV['APP_URL'].'/anexos/'.$anexouno;?>"><?php if($anexouno!=''){echo 'Descargar archivo';};?></a></p>
-                        <p><span>Documento o imagen de ayuda diagnóstica:</span><br><a href="<?php echo $_ENV['APP_URL'].'/anexos/'.$anexodos;?>" download="<?php echo $_ENV['APP_URL'].'/anexos/'.$anexodos;?>"><?php if($anexodos!=''){echo 'Descargar archivo';};?></a></p>
+                    <div class="divhisto guardado" id="anexos">
+                        <p><span>Documento o imagen de ayuda diagnóstica:</span><br><a href="<?php echo $_ENV['APP_URL'].'anexos/'.$anexouno;?>" download><?php if($anexouno!=''){echo 'Descargar archivo';};?></a></p>
+                        <p><span>Documento o imagen de ayuda diagnóstica:</span><br><a href="<?php echo $_ENV['APP_URL'].'anexos/'.$anexodos;?>" download><?php if($anexodos!=''){echo 'Descargar archivo';};?></a></p>
                     </div>
-                    <div class="divhisto" id="anexos">
-                        <p><span>Documento o imagen de ayuda diagnóstica:</span><br><a href="<?php echo $_ENV['APP_URL'].'/anexos/'.$anexotres;?>" download="<?php echo $_ENV['APP_URL'].'/anexos/'.$anexotres;?>"><?php if($anexotres!=''){echo 'Descargar archivo';};?></a></p>
-                        <p><span>Documento o imagen de ayuda diagnóstica:</span><br><a href="<?php echo $_ENV['APP_URL'].'/anexos/'.$anexocuatro;?>" download="<?php echo $_ENV['APP_URL'].'/anexos/'.$anexocuatro;?>"><?php if($anexocuatro!=''){echo 'Descargar archivo';};?></a></p>
+                    <div class="divhisto guardado" id="anexos">
+                        <p><span>Documento o imagen de ayuda diagnóstica:</span><br><a href="<?php echo $_ENV['APP_URL'].'anexos/'.$anexotres;?>" download><?php if($anexotres!=''){echo 'Descargar archivo';};?></a></p>
+                        <p><span>Documento o imagen de ayuda diagnóstica:</span><br><a href="<?php echo $_ENV['APP_URL'].'anexos/'.$anexocuatro;?>" download><?php if($anexocuatro!=''){echo 'Descargar archivo';};?></a></p>
                     </div>
                     <p id="filrelato"><span>Motivo de consulta:</span><br><?php echo $comentario;?></p>
                 </div>

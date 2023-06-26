@@ -12,7 +12,7 @@ include './configuracion.php';
 $urlactual='https://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
 
 if ($urlactual=='https://themeduniverse.com/404') {
-    echo "<script>window.location.href='" . $_ENV['APP_URL'] . "404'</script>";
+    //echo "<script>window.location.href='" . $_ENV['APP_URL'] . "404'</script>";
 }
 
 ?>

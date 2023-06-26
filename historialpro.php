@@ -44,6 +44,10 @@ if (isset($_GET['id']) && @$_GET['id'] == @$_SESSION['idpro']){
             }else{
                 $doctor = "Dr.";
             }
+            if (@$estadoMedico != 1) {
+                $url = "<script>window.location.href='" . $_ENV['APP_URL'];
+                echo $url . "perfilpro/" . $_SESSION['idpro'] . "'</script>";
+            }
 include './php/historialpro.php';
         }
     }

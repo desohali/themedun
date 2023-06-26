@@ -79,7 +79,7 @@ if (isset($_GET['id']) && @$_GET['id']==@$medicosRegistrados){
             $newDateEnmu = date("d/m/Y", $timestampEnmu );
         }
     }
-    $consulta2 = "SELECT COUNT(title) FROM citas WHERE idupro = '".$_GET['id']."' AND idpay <> '0' ";
+    $consulta2 = "SELECT COUNT(title) FROM citas WHERE idupro = '".$_GET['id']."' AND idpay <> '0' AND asistencia <> 'No asistió' AND asistenciapac <> 'No asistió' ";
     $resultado2 = mysqli_query($conexion, $consulta2);
     if ($resultado2) {
         while ($row2 = $resultado2->fetch_array()){

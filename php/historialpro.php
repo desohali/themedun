@@ -27,29 +27,33 @@
         <?php
             include './php/conexion_paciente.php';
             $TotalPagosNoAbonados=$TotalPagosAbonados=$TotalPagosNoCobrados=$TotalPagosCobrados='0';
-            $consultap="SELECT SUM(localizacion) as TotalPagosNoAbonados FROM citas WHERE idupro = '".$idpro."' AND idpay <> 0 AND abonado = 'NO'";
+            $consultap="SELECT SUM(localizacion) as TotalPagosNoAbonados, COUNT(localizacion) as NumPagNoAbo FROM citas WHERE idupro = '".$idpro."' AND idpay <> 0 AND abonado = 'NO'";
             $resultadop=mysqli_query($conexion, $consultap);
             $filap=$resultadop->fetch_assoc();
             if(isset($filap['TotalPagosNoAbonados'])){
                 $TotalPagosNoAbonados=$filap['TotalPagosNoAbonados'];
+                $NumPagNoAbo=$filap['NumPagNoAbo'];
             }
-            $consultap2="SELECT SUM(localizacion) as TotalPagosAbonados FROM citas WHERE idupro = '".$idpro."' AND idpay <> 0 AND abonado = 'SI'";
+            $consultap2="SELECT SUM(localizacion) as TotalPagosAbonados, COUNT(localizacion) as NumPagAbo FROM citas WHERE idupro = '".$idpro."' AND idpay <> 0 AND abonado = 'SI'";
             $resultadop2=mysqli_query($conexion, $consultap2);
             $filap2=$resultadop2->fetch_assoc();
             if(isset($filap2['TotalPagosAbonados'])){
                 $TotalPagosAbonados=$filap2['TotalPagosAbonados'];
+                $NumPagAbo=$filap2['NumPagAbo'];
             }
-            $consultap3="SELECT SUM(localizacion) as TotalPagosNoCobrados FROM citas WHERE idupro = '".$idpro."' AND idpay <> 0 AND abonado = 'F'";
+            $consultap3="SELECT SUM(localizacion) as TotalPagosNoCobrados, COUNT(localizacion) as NumPagNoCo FROM citas WHERE idupro = '".$idpro."' AND idpay <> 0 AND abonado = 'F'";
             $resultadop3=mysqli_query($conexion, $consultap3);
             $filap3=$resultadop3->fetch_assoc();
             if(isset($filap3['TotalPagosNoCobrados'])){
                 $TotalPagosNoCobrados=$filap3['TotalPagosNoCobrados'];
+                $NumPagNoCo=$filap3['NumPagNoCo'];
             }
-            $consultap4="SELECT SUM(localizacion) as TotalPagosCobrados FROM citas WHERE idupro = '".$idpro."' AND idpay <> 0 AND abonado = 'P'";
+            $consultap4="SELECT SUM(localizacion) as TotalPagosCobrados, COUNT(localizacion) as NumPagCo FROM citas WHERE idupro = '".$idpro."' AND idpay <> 0 AND abonado = 'P'";
             $resultadop4=mysqli_query($conexion, $consultap4);
             $filap4=$resultadop4->fetch_assoc();
             if(isset($filap4['TotalPagosCobrados'])){
                 $TotalPagosCobrados=$filap4['TotalPagosCobrados'];
+                $NumPagCo=$filap4['NumPagCo'];
             }
             $nombres=$apellidos=$nombresyape=$apellidosyape=$yape=$tipodoc=$newDateNac=$timestampNac=$numdoc=$nacimiento=$direccion=$banco=$tipocuenta=$codigocuenta='';
             $consultacuenta = "SELECT * FROM cuentabancaria WHERE idpro = '".$_SESSION['idpro']."' ";
@@ -218,7 +222,7 @@
 														<div class="columnasimg">
 															<img src="<?php echo $_ENV['APP_URL']; ?>images/Yape-TMU.jpg">
 														</div>
-														<br><a id="awsp" href="https://wa.me/51986206045?text=Hola%2C+realic%C3%A9+el+pago+de+mi+cita+y+adjunto+el+comprobante+de+pago+para+que+puedan+actualizar+su+programaci%C3%B3n.%F0%9F%98%80" target="_blank"><i class="fa-brands fa-whatsapp"></i> : +51 986 206 045</a><br><a id="acorreo" href="mailto:themeduniverse@gmail.com" target="_blank"><i class="fa-regular fa-envelope"></i></i> : themeduniverse@gmail.com</a>
+														<br><a id="awsp" href="https://api.whatsapp.com/send?phone=51986206045&text=Hola,%20tengo%20una%20consulta%20%C2%BFpueden%20ayudarme?%20%F0%9F%A4%94" target="_blank"><i class="fa-brands fa-whatsapp"></i> : +51 986 206 045</a><br><a id="acorreo" href="mailto:ayuda@themeduniverse.com" target="_blank"><i class="fa-regular fa-envelope"></i></i> : ayuda@themeduniverse.com</a>
 													</div>
 												</div>
 											</div>
@@ -232,12 +236,12 @@
                 <div class="box-body">
                     <div class="boxhisto1">
                         <div class="historia1">
-                            <p><span style="color:#00D418">Ganancia abonada:</span><br>S/ <?php echo (82*$TotalPagosAbonados)/100?></p>
-                            <p><span style="color:#FFC107">Ganancia por abonar:</span><br>S/ <?php echo (82*($TotalPagosNoAbonados))/100?></p>
+                            <p><span style="color:#00D418">Ganancia abonada:</span><br>S/ <?php echo round(82.01*$TotalPagosAbonados/100 - $NumPagAbo - 18*(17.99*$TotalPagosAbonados/100 + $NumPagAbo)/100, 1)?></p>
+                            <p><span style="color:#FFC107">Ganancia por abonar:</span><br>S/ <?php echo round(82.01*$TotalPagosNoAbonados/100 - $NumPagNoAbo - 18*(17.99*$TotalPagosNoAbonados/100 + $NumPagNoAbo)/100, 1)?></p>
                         </div>
                         <div class="historia2">
-                            <p><span style="color:#FF0800">Deuda pagada (Inasistencia):</span><br>S/ <?php echo (18*($TotalPagosCobrados))/100?></p>
-                            <p><span style="color:#FFC107">Deuda por pagar (Inasistencia):</span><br>S/ <?php echo (18*($TotalPagosNoCobrados))/100?></p>
+                            <p><span style="color:#00D418">Deuda pagada (Inasistencia):</span><br>S/ <?php echo round(17.99*$TotalPagosCobrados/100 + $NumPagCo + 18*(17.99*$TotalPagosCobrados/100 + $NumPagCo)/100, 1)?></p>
+                            <p><span style="color:#FF0000">Deuda por pagar (Inasistencia):</span><br>S/ <?php echo round(17.99*$TotalPagosNoCobrados/100 + $NumPagNoCo + 18*(17.99*$TotalPagosNoCobrados/100 + $NumPagNoCo)/100, 1)?></p>
                         </div>
                     </div>
                     <div class="boxhisto2" style="align-items:center;">
@@ -270,16 +274,16 @@
                                         <form id="formCuentaBancaria" method="POST" class="formulario__register">
                                             <p class="pdatos"><span>I. DATOS DEL TITULAR:</span></p>
                                             <div class="filaregister">
-                                                <input type="text" placeholder="Nombres" name="nombres" id="nombres" required>
-                                                <input type="text" placeholder="Apellidos" name="apellidos" id="apellidos" required><br>
+                                                <input type="text" placeholder="Nombres" name="nombres" id="nombres" maxlength="50" required>
+                                                <input type="text" placeholder="Apellidos" name="apellidos" id="apellidos" maxlength="50" required><br>
                                             </div>
                                             <div class="filaregister">
                                                 <select name="documento" id="doctitular" required><option class="select-opt" value="">Documento de identidad</option><option value="DNI">DNI</option><option value="Carnet de extranjería">Carnet de extranjería</option><option value="Pasaporte">Pasaporte</option><option value="Permiso temporal de permanencia">Permiso temporal de permanencia</option></select>
-                                                <input type="number" placeholder="N° de documento" name="numdoc" id="numdoctitular" min="0" required>
+                                                <input type="text" placeholder="N° de documento" name="numdoc" id="numdoctitular" maxlength="15" required>
                                             </div>
                                             <div class="filaregister">
-                                                <input type="date" name="nacimiento" id="nactitular" min="1905-01-01"  required>
-                                                <input type="text" placeholder="Domicilio" name="domicilio" id="domiciliotitular" required>
+                                                <input type="text" name="nacimiento" placeholder="F. Nacimiento" onfocus="(this.type='date')" onblur="(this.type='text')"  min="1905-01-01" id="nactitular" required>
+                                                <input type="text" placeholder="Domicilio" name="domicilio" id="domiciliotitular" maxlength="50" required>
                                             </div>
                                             <p class="pdatos"><span>II. DATOS DE LA CUENTA:</span></p>
                                             <div class="filaregister">
@@ -307,7 +311,7 @@
                                                 </select>
                                             </div>
                                             <div class="filaregister">
-                                                <input type="number" placeholder="Código de Cuenta Interbancario (CCI)" name="codigocuenta" id="codigocuenta" min="0" required>
+                                                <input type="number" placeholder="Código de Cuenta Interbancario (CCI)" name="codigocuenta" id="codigocuenta" min="0" max="1000000000000000000000000" required>
                                                 <input type="number" id="inputIdpro" style="visibility:hidden" value="<?php echo $idpro;?>">
                                             </div>
                                             <hr id="hr-register">
@@ -354,16 +358,16 @@
                                         <form id="formCuentaEditar" method="POST" class="formulario__register">
                                             <p class="pdatos"><span>I. DATOS DEL TITULAR:</span></p>
                                             <div class="filaregister">
-                                                <input type="text" placeholder="Nombres" name="nombres" id="nombres" value="<?php echo $nombres?>" required>
-                                                <input type="text" placeholder="Apellidos" name="apellidos" id="apellidos" value="<?php echo $apellidos?>" required>
+                                                <input type="text" placeholder="Nombres" name="nombres" id="nombres" value="<?php echo $nombres?>" maxlength="50" required>
+                                                <input type="text" placeholder="Apellidos" name="apellidos" id="apellidos" value="<?php echo $apellidos?>" maxlength="50" required>
                                             </div>
                                             <div class="filaregister">
                                                 <select name="documento" id="doctitular" required><option class="select-opt" value="<?php echo $tipodoc?>" selected><?php echo $tipodoc?></option><option value="DNI">DNI</option><option value="Carnet de extranjería">Carnet de extranjería</option><option value="Pasaporte">Pasaporte</option><option value="Permiso temporal de permanencia">Permiso temporal de permanencia</option></select>
-                                                <input type="number" placeholder="N° de documento" name="numdoc" id="numdoctitular" min="0" value="<?php echo $numdoc?>" required>
+                                                <input type="text" placeholder="N° de documento" name="numdoc" id="numdoctitular" maxlength="15" value="<?php echo $numdoc?>" required>
                                             </div>
                                             <div class="filaregister">
                                                 <input type="date" name="nacimiento" id="nactitular" min="1905-01-01"  value="<?php echo $nacimiento?>" required>
-                                                <input type="text" placeholder="Domicilio" name="domicilio" id="domiciliotitular" value="<?php echo $direccion?>" required>
+                                                <input type="text" placeholder="Domicilio" name="domicilio" id="domiciliotitular" maxlength="50" value="<?php echo $direccion?>" required>
                                             </div>
                                             <p class="pdatos"><span>II. DATOS DE LA CUENTA:</span></p>
                                             <div class="filaregister">
@@ -391,7 +395,7 @@
                                                 </select>
                                             </div>
                                             <div class="filaregister">
-                                                <input type="number" placeholder="Código de Cuenta Interbancario (CCI)" name="codigocuenta" id="codigocuenta" min="0" value="<?php echo $codigocuenta?>" required>
+                                                <input type="number" placeholder="Código de Cuenta Interbancario (CCI)" name="codigocuenta" id="codigocuenta" min="0" max="1000000000000000000000000" value="<?php echo $codigocuenta?>" required>
                                                 <input type="number" id="inputIdpro2" style="visibility:hidden" value="<?php echo $idpro;?>">
                                             </div>
                                             <hr id="hr-register">
@@ -430,12 +434,12 @@
                                         <form id="formYape" method="POST" class="formulario__register">
                                             <p class="pdatos"><span>I. DATOS DEL TITULAR:</span></p>
                                             <div class="filaregister">
-                                                <input type="text" placeholder="Nombres" name="nombresyape" id="nombresyape" required>
-                                                <input type="text" placeholder="Apellidos" name="apellidosyape" id="apellidosyape" required><br>
+                                                <input type="text" placeholder="Nombres" name="nombresyape" id="nombresyape" maxlength="50" required>
+                                                <input type="text" placeholder="Apellidos" name="apellidosyape" id="apellidosyape" maxlength="50" required><br>
                                             </div>
                                             <p class="pdatos"><span>II. DATOS DE LA CUENTA:</span></p>
                                             <div class="filaregister">
-                                                <input type="number" placeholder="(+51) N° de teléfono" name="yape" id="yape" min="0" required>
+                                                <input type="text" placeholder="N° de celular" name="yape" id="yape"  maxlength="15" required>
                                             </div>
                                             <div class="filaregister">
                                                 <input type="number" id="inputIdpro" style="display:none" value="<?php echo $idpro;?>">
@@ -458,7 +462,7 @@
                                             </div>
                                             <p class="pdatos"><span>II. DATOS DE LA CUENTA:</span></p>
                                             <div class="filaregister">
-                                                <p class="pmedio"><span>N° de teléfono:</span><br><?php echo $yape?></p>
+                                                <p class="pmedio"><span>N° de celular:</span><br><?php echo $yape?></p>
                                             </div>
                                             <hr id="hr-register">
                                             <div class="filaregister" id="filaEditar">
@@ -472,12 +476,12 @@
                                         <form id="formYapeEditar" method="POST" class="formulario__register">
                                             <p class="pdatos"><span>I. DATOS DEL TITULAR:</span></p>
                                             <div class="filaregister">
-                                                <input type="text" placeholder="Nombres" name="nombresyape" id="nombresyape" value="<?php echo $nombresyape?>" required>
-                                                <input type="text" placeholder="Apellidos" name="apellidosyape" id="apellidosyape" value="<?php echo $apellidosyape?>" required>
+                                                <input type="text" placeholder="Nombres" name="nombresyape" id="nombresyape" maxlength="50" value="<?php echo $nombresyape?>" required>
+                                                <input type="text" placeholder="Apellidos" name="apellidosyape" id="apellidosyape" maxlength="50" value="<?php echo $apellidosyape?>" required>
                                             </div>
                                             <p class="pdatos"><span>II. DATOS DE LA CUENTA:</span></p>
                                             <div class="filaregister">
-                                                <input type="number" placeholder="(+51) N° de teléfono" name="yape" id="yape" min="0" value="<?php echo $yape?>" required>
+                                                <input type="text" placeholder="N° de celular" name="yape" id="yape" maxlength="15" value="<?php echo $yape?>" required>
                                                 <input type="number" id="inputIdpro2" style="display:none" value="<?php echo $idpro;?>">
                                             </div>
                                             <hr id="hr-register">
@@ -514,7 +518,7 @@
                 //Operacion matematica para mostrar los siquientes datos.
                 $IncrimentNum =(($compag +1)<=$TotalRegistro)?($compag +1):0;
                 //Consulta SQL
-                $consultavistas ="SELECT *, idpago as idpagos, (select start from citas where idpay=idpagos) as startCitas FROM pagos WHERE usuariopro = '".$idpro."' ORDER BY startCitas DESC LIMIT ".(($compag-1)*$CantidadMostrar)." , ".$CantidadMostrar;
+                $consultavistas ="SELECT *, idpago as idpagos, (select start from citas where idpay=idpagos) as startCitas, (select tiempoenf from hclinica where idhc=idpagos) as llenadoHC FROM pagos WHERE usuariopro = '".$idpro."' ORDER BY startCitas DESC LIMIT ".(($compag-1)*$CantidadMostrar)." , ".$CantidadMostrar;
                 $consultares=mysqli_query($conexion, $consultavistas);
                 while ($lista=mysqli_fetch_array($consultares)) {
                     $consultacita = "SELECT *, id as idu,(select nombres from usuarios where id=idu) as nombresPaciente, (select apellidos from usuarios where id=idu) as apellidosPaciente FROM citas WHERE idpay = '".$lista['idpago']."' ";
@@ -532,6 +536,14 @@
                             $horafinal = explode(":00", $hora);
                             $timestamp = strtotime($fecha);
                             $newFecha = date("d/m/Y", $timestamp);
+                            if($lista['llenadoHC']==""){
+                                $llenadoHC="No enviada";
+                            }else{
+                                $llenadoHC="Enviada";
+                            }
+                            if($rowcita['asistencia']=="No asistió" || $rowcita['asistenciapac']=="No asistió"){
+                                $llenadoHC="Cita no realizada";
+                            }
                         }
                     }
                 ?>
@@ -540,36 +552,36 @@
                     <div class="boxhisto1">
                         <div class="historia1">
                             <p><span>N° de cita:</span><br><?php echo $idcita?></p>
-                            <p><span>Fecha y hora de cita:</span><br><?php echo $newFecha . " a las " . $horafinal[0] . ":00";?></p>
+                            <p><span>Fecha y hora:</span><br><?php echo $newFecha . " a las " . $horafinal[0] . ":00";?></p>
                         </div>
                         <div class="historia2">
                             <p><span>Pagado por:</span><br><?php echo $paciente?></p>
-                            <p><span>Método de pago:</span><br><?php echo $lista['metodopago']?></p>
+                            <p style="<?php if ($llenadoHC == 'No enviada') { ?>color:#FFC107<?php } ?>"><span style="color:black">Historia Clínica:</span><br><?php echo $llenadoHC;?></p>
                         </div>
                     </div>
                     <div class="boxhisto2">
                         <div class="historia3">
                             <p><span>Pagado a:</span><br><?php echo $doctor.' '.$nombrespro.' '.$apellidospro?></p>
-                            <p><span>Asistencia:</span><br><?php echo $asistencia?></p>
+                            <p style="<?php if ($asistencia == 'No asistió') { ?>color:#ff0000<?php } ?>"><span style="color:black">Asistencia:</span><br><?php echo $asistencia?></p>
                         </div>
                         <div class="historia4">
                             <p><span>Precio de cita:</span><br>S/ <?php echo $costo?></p>
                             <?php
                             if($abonado=='NO'){
                             ?>
-                            <p><span style="color:#FFC107">Por abonar (82% Precio de cita):</span><br>S/ <?php echo (82*$costo)/100?></p>
+                            <p><span style="color:#FFC107">Ganancia por abonar:</span><br>S/ <?php echo round(82.01*$costo/100 - 1 - 18*(17.99*$costo/100 + 1)/100, 1)?></p>
                             <?php
                             }else if($abonado=='F'){
                             ?>
-                            <p><span style="color:#FFC107">Por pagar (18% Precio de cita):</span><br>S/ <?php echo (18*$costo)/100?></p>
+                            <p><span style="color:#FF0800">Deuda por pagar (Inasistencia):</span><br>S/ <?php echo round(17.99*$costo/100 + 1 + 18*(17.99*$costo/100 + 1)/100, 1)?></p>
                             <?php
                             }else if($abonado=='P'){
                             ?>
-                            <p><span style="color:#FF0800">Pagado (18% Precio de cita):</span><br>S/ <?php echo (18*$costo)/100?></p>
+                            <p><span style="color:#00D418">Deuda pagada (Inasistencia):</span><br>S/ <?php echo round(17.99*$costo/100 + 1 + 18*(17.99*$costo/100 + 1)/100, 1)?></p>
                             <?php
                             }else{
                             ?>
-                            <p><span style="color:#00d418">Abonado (82% Precio de cita):</span><br>S/ <?php echo (82*$costo)/100?></p>
+                            <p><span style="color:#00d418">Ganancia abonada:</span><br>S/ <?php echo round(82.01*$costo/100 - 1 - 18*(17.99*$costo/100 + 1)/100, 1)?></p>
                             <?php
                             }
                             ?>

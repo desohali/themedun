@@ -71,14 +71,6 @@ select{
     padding: 5px 0px;
 }
 
-.listarecord li a{
-    color: black;
-}
-
-.spanlista:hover{
-    text-decoration:underline;
-}
-
 .ctn-record{
     overflow-y:scroll;
     height: 255px;
@@ -201,12 +193,13 @@ select{
     background: white;
     border: 1px solid #0052d4;
     transition: all 200ms;
-    font-weight: 600;
+    font-weight: 500;
     cursor: pointer;
     color: #0052D4;
     outline: none;
     text-align:center;
     border-radius: 5px;
+    width: 100px;
 }
 
 #guardarap, .ctn-editarp label{
@@ -279,8 +272,51 @@ select{
     
 }
 
+#anexos p a{
+    color:#0052d4;
+}
+
 #anexos p a:hover{
     text-decoration:underline;
+}
+
+.listarecord a li:hover{
+    background: #F0F2F5;
+}
+
+.listarecord a li .spanlista{
+    color:black;
+}
+
+#txtimc{
+    border-bottom-left-radius: 0%;
+    border-bottom-right-radius: 0%;
+    cursor:context-menu;
+}
+
+#calcularIMC{
+    width:90%;
+    padding: 2px;
+    background: #00d418;
+    color:white;
+    border: none;
+    transition: all 200ms;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+#calcularIMC:hover{
+    background: #00ee1b;
+}
+
+.boxhc .guardado{
+    justify-content: space-between !important;
+}
+
+.boxhc .guardado p{
+    width:48% !important;
 }
 
 @media screen and (max-width: 415px){
@@ -341,7 +377,7 @@ select{
         font-size:12px;
     }
     #filiacion1, #filiacion2, #exafisico, #fisi10, #fisi11, #fisi20, #fisi21, #idinicio, #idcurso, #anamnesis p, #antecedentes p, #antecedentes2 p, #fisi10 p, #fisi11 p, #fisi20 p, #fisi21 p, #diagnostico p, #tratamiento p, #anexos p, #medtratante p{
-        width: 100%;
+        width: 100% !important;
         font-size:12px;
     }
     #fisi10 .fisizq, #fisi11 .fisizq, #fisi20 .fisizq, #fisi21 .fisizq{
@@ -362,6 +398,7 @@ select{
         display:block;
         width:100%;
         margin:15px 0px 0px 0px;
+        max-width: 100%;
     }
     .ctn-editarp{
         display: block;
@@ -375,5 +412,8 @@ select{
     }
     #boxclini2, #formHistoria{
         width:90%;
+    }
+    #calcularIMC{
+        width:96.5%;
     }
 }

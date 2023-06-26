@@ -25,15 +25,15 @@ if ($resultado) {
     }
 }
 
-$titulo = "CUENTA APROBADA";
+$titulo = "CUENTA PROFESIONAL APROBADA";
 $mensaje = "
 <html>
 <head>
-    <title>CUENTA APROBADA</title>
+    <title>CUENTA PROFESIONAL APROBADA</title>
 </head>
 <body>
     <h1 style='color:#0052d4; text-align:center'>The Med Universe</h1>
-    <p>" . $estimado . " " . $nombrespro . " " . $apellidospro . ":<br><br>Hemos aprobado la creación de su cuenta The Med Universe | Profesional tras verificar que sus datos personales son exactos, actuales y veraces.<br><br>Ya puede empezar a generar ingresos con citas en sus tiempos libres. Ingrese a través del siguiente enlace: <a href='https://themeduniverse.com/loginpro'>https://themeduniverse.com/loginpro</a></p>
+    <p>" . $estimado . " " . $nombrespro . " " . $apellidospro . ":<br><br>Hemos aprobado la creación de su cuenta The Med Universe | Profesional tras verificar que sus datos personales son exactos, actuales y verdaderos.<br><br>Ya puede empezar a generar ingresos con citas en sus tiempos libres. Ingrese a través del siguiente enlace: <a href='https://themeduniverse.com/loginpro'>https://themeduniverse.com/loginpro</a></p>
 </body>
 </html>
 ";
@@ -45,5 +45,5 @@ $cabeceras .= 'Content-type: text/html; charset=UTF-8' . "\r\n";
 $cabeceras .= 'From: seguridad@themeduniverse.com' . "\r\n";
 // mail($correopro, $titulo, $mensaje, $cabeceras);
 echo json_encode(array(
-    array('correo' => $correo, 'titulo' => $titulo,  'mensaje' => $mensaje, 'cabeceras' => $cabeceras)
+    array('correo' => $correopro, 'titulo' => $titulo,  'mensaje' => $mensaje, 'cabeceras' => $cabeceras)
 ));

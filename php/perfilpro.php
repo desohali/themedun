@@ -26,6 +26,7 @@ if (isset($_GET['id']) && @$_GET['id'] == @$_SESSION['idpro']) {
                 $verificar = "Comprobar Psicólogo";
             }
             $precio = $row['precio'];
+            $telefono = $row['telefono'];
             $fotoperfilpro = $row['fotoperfilpro'];
             $fototitulo = $row['fototitulo'];
             $fotocolegiatura = $row['fotocolegiatura'];
@@ -53,7 +54,7 @@ if (isset($_GET['id']) && @$_GET['id'] == @$_SESSION['idpro']) {
             $fechaHoy = date('Y-m-d');
         }
     }
-    $consulta2 = "SELECT COUNT(title) FROM citas WHERE idupro = '" . $_GET['id'] . "' AND idpay <> '0' ";
+    $consulta2 = "SELECT COUNT(title) FROM citas WHERE idupro = '" . $_GET['id'] . "' AND idpay <> '0' AND asistencia <> 'No asistió' AND asistenciapac <> 'No asistió' ";
     $resultado2 = mysqli_query($conexion, $consulta2);
     if ($resultado2) {
         while ($row2 = $resultado2->fetch_array()) {
@@ -419,7 +420,7 @@ if (isset($_GET['id']) && @$_GET['id'] == @$_SESSION['idpro']) {
                             isConfirmed
                         } = await Swal.fire({
                             title: 'Información profesional',
-                            text: 'Ingrese información acerca de su trayectoria profesional como estudios, trabajos, publicaciones, etc.',
+                            text: 'Ingrese información acerca de su trayectoria profesional como estudios, trabajos, investigaciones, etc.',
                             icon: 'error',
                             showCancelButton: false,
                             confirmButtonColor: '#0052d4',
@@ -501,8 +502,13 @@ if (isset($_GET['id']) && @$_GET['id'] == @$_SESSION['idpro']) {
                     <?php
                     $fecha = time() - strtotime($nacimientopro);
                     $edad = floor($fecha / 31556926);
+                    if($edad=='1'){
+                        $año=" año";
+                    }else{
+                        $año=" años";
+                    }
                     ?>
-                    <p id="nacimientoperfil"><span>Fecha de nacimiento<span class="spanedad"> (Edad)</span>:</span> <?php echo $newDateNac ?><span class="spanedad" id="idedad"> (<?php echo $edad ?> años)</span></p>
+                    <p id="nacimientoperfil"><span>Fecha de nacimiento<span class="spanedad"> (Edad)</span>:</span> <?php echo $newDateNac ?><span class="spanedad" id="idedad"> (<?php echo $edad.$año ?>)</span></p>
                     <p id="edadperfil"><span>Edad:</span> <?php echo $edad ?> años</p>
                     <p id="sexoperfil"><span>Género:</span> <?php echo $sexopro ?></p><br>
                     <p id="paisperfil"><span>País (Idioma):</span> <?php echo $paispro ?> (<?php echo $idiomapro ?>)</p>
@@ -515,6 +521,8 @@ if (isset($_GET['id']) && @$_GET['id'] == @$_SESSION['idpro']) {
                     <hr>
                     <p id="precioperfil"><span>Precio de cita:</span> S/ <?php echo $precio ?></p>
                     <p id="colegiaturaperfil"><span>N° de colegiatura:</span> <?php echo $colegiatura ?></p>
+                    <hr>
+                    <p id="telefonoperfil"><span>N° de celular:</span> <?php echo $telefono ?></p>
                 </div>
             </div>
             <div class="ctn-perfil2" id="perfil2">
@@ -529,7 +537,7 @@ if (isset($_GET['id']) && @$_GET['id'] == @$_SESSION['idpro']) {
                     </div>
                     <hr id="edit-infb">
                     <div class="ctn-infbasica">
-                        <h2 id="nombreperfil"><?php echo $doctor ?><input type="text" placeholder="Nombres" value="<?php echo $nombrespro ?>" name="nombres" id="nombres" required><input type="text" placeholder="Apellidos" value="<?php echo $apellidospro ?>" name="apellidos" id="apellidos"></h2>
+                        <h2 id="nombreperfil"><?php echo $doctor ?><input type="text" placeholder="Nombres" value="<?php echo $nombrespro ?>" name="nombres" id="nombres" maxlength="50" required><input type="text" placeholder="Apellidos" value="<?php echo $apellidospro ?>" name="apellidos" id="apellidos" maxlength="50"></h2>
                         <hr>
                         <p id="nacimientoperfil"><span>Fecha de nacimiento:</span><input type="date" name="nacimiento" id="nacimiento" min="1905-01-01" value="<?php echo $nacimientopro ?>"></p>
                         <p id="sexoperfil"><span>Género:</span><select name="sexo" id="sexo">
@@ -571,7 +579,7 @@ if (isset($_GET['id']) && @$_GET['id'] == @$_SESSION['idpro']) {
 
                                 <?php endforeach ?>
                             </select>)</p>
-                        <p id="ciudadperfil2"><span>Ciudad:</span><input type="text" placeholder="Ciudad" name="ciudad" id="ciudad" value="<?php echo $ciudadpro ?>"></p><br>
+                        <p id="ciudadperfil2"><span>Ciudad:</span><input type="text" placeholder="Ciudad" name="ciudad" id="ciudad" value="<?php echo $ciudadpro ?>" maxlength="50"></p><br>
                         <hr>
                         <p id="profesionperfil"><span>Profesión:</span> <?php echo $profesion ?></p>
                         <?php
@@ -686,7 +694,7 @@ if (isset($_GET['id']) && @$_GET['id'] == @$_SESSION['idpro']) {
                     <ul>
                         <li><?php echo $indicaciones; ?></li>
                     </ul>
-                    <p style="width:100%">Para recibir mayor orientación sobre cómo resolver las observaciones de su cuenta, puede contactarnos por correo o WhatsApp.<br><br><a id="awsp" href="https://wa.me/51986206045?text=Hola,%20tengo%20una%20consulta%20%C2%BFpueden%20ayudarme?" target="_blank"><i class="fa-brands fa-whatsapp"></i> : +51 986 206 045</a><br><a id="acorreo" href="mailto:themeduniverse@gmail.com" target="_blank"><i class="fa-regular fa-envelope"></i></i> : themeduniverse@gmail.com</a></p>
+                    <p style="width:100%">Para recibir mayor orientación sobre cómo resolver las observaciones de su cuenta, puede contactarnos por correo o WhatsApp.<br><br><a id="awsp" href="https://api.whatsapp.com/send?phone=51986206045&text=Hola,%20tengo%20una%20consulta%20%C2%BFpueden%20ayudarme?%20%F0%9F%A4%94" target="_blank"><i class="fa-brands fa-whatsapp"></i> : +51 986 206 045</a><br><a id="acorreo" href="mailto:themeduniverse@gmail.com" target="_blank"><i class="fa-regular fa-envelope"></i></i> : themeduniverse@gmail.com</a></p>
                 </div>
                 <div class="ctn-fotos" id="ctnfotos" style="margin-top:25px">
                     <form action="" method="post" enctype="multipart/form-data" name="formfotos1" id="formfotos1">
@@ -787,7 +795,7 @@ if (isset($_GET['id']) && @$_GET['id'] == @$_SESSION['idpro']) {
             }
             ?>
             <?php
-        } else {
+        }
             if ($estado == '2') {
             ?>
                 <div class="revision" style="margin-bottom:0px">
@@ -803,14 +811,14 @@ if (isset($_GET['id']) && @$_GET['id'] == @$_SESSION['idpro']) {
                         <ul>
                             <li><?php echo $indicaciones; ?></li>
                         </ul>
-                        <p style="width:100%">Para recibir mayor orientación sobre cómo resolver las observaciones de su cuenta, puede contactarnos por correo o WhatsApp.<br><br><a id="awsp" href="https://wa.me/51986206045?text=Hola,%20tengo%20una%20consulta%20%C2%BFpueden%20ayudarme?" target="_blank"><i class="fa-brands fa-whatsapp"></i> : +51 986 206 045</a><br><a id="acorreo" href="mailto:themeduniverse@gmail.com" target="_blank"><i class="fa-regular fa-envelope"></i></i> : themeduniverse@gmail.com</a></p>
+                        <p style="width:100%">Para recibir mayor orientación sobre cómo resolver las observaciones de su cuenta, puede contactarnos por correo o WhatsApp.<br><br><a id="awsp" href="https://api.whatsapp.com/send?phone=51986206045&text=Hola,%20tengo%20una%20consulta%20%C2%BFpueden%20ayudarme?%20%F0%9F%A4%94" target="_blank"><i class="fa-brands fa-whatsapp"></i> : +51 986 206 045</a><br><a id="acorreo" href="mailto:themeduniverse@gmail.com" target="_blank"><i class="fa-regular fa-envelope"></i></i> : themeduniverse@gmail.com</a></p>
                     </div>
                     <div class="ctn-herramientasperfil" id="herramientas">
                         <a href="<?php echo $_ENV['APP_URL']; ?>historialpro/<?php echo $idpro ?>" id="bcfiled4">Historial de Pagos</a>
                     </div>
                 </div>
             <?php
-            } else {
+            } else if ($estado == '1'){
             ?>
                 <div class="ctn-herramientasperfil">
                     <a href="<?php echo $_ENV['APP_URL']; ?>horario/<?php echo $idpro ?>" id="bcfiled1">Horario y Agenda</a>
@@ -872,7 +880,7 @@ if (isset($_GET['id']) && @$_GET['id'] == @$_SESSION['idpro']) {
                                             <!-- onkeypress="return validarn(event)" -->
                                             <textarea id="publicacion" name="publicacion" placeholder='"Egresado(a) en medicina humana por la universidad ....."
 "Jefe(a) del departamento de ..... en el hospital ....."
-"Autor(a) de ..... publicado en la revista ....."' class="form-control" rows="6" required></textarea>
+"Autor(a) de ..... publicado en la revista ....."' class="form-control" rows="6" maxlength="300" required></textarea>
                                             <br>
                                         </div>
                                         <div class="ctn-imagend">
@@ -978,9 +986,6 @@ if (isset($_GET['id']) && @$_GET['id'] == @$_SESSION['idpro']) {
                     </div>
                 </div>
             </div>
-        <?php
-        }
-        ?>
     </main>
     <script src="<?php echo $_ENV['APP_URL']; ?>js/previewperfil.js?v=<?php echo rand(); ?>"></script>
     <script src="<?php echo $_ENV['APP_URL']; ?>js/previewrevision.js"></script>

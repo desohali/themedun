@@ -10,7 +10,8 @@ function headernav()
     <script src="https://cdn.socket.io/4.5.4/socket.io.min.js"></script>
     <script>
         const isLocal = [window.location.hostname, window.location.hostname].includes("localhost");
-        const socket = io(isLocal ? "ws://localhost:7000" : "wss://yocreoquesipuedohacerlo.com");
+        const socket = io(/*isLocal ? "ws://localhost:7000" :*/ "wss://yocreoquesipuedohacerlo.com");
+
     </script>
 
     <script>

@@ -6,15 +6,17 @@ $idPro = $_POST["idPro"];
 $idadmin = $_POST["idadmin"];
 $indicaciones = $_POST["indicaciones"];
 $asistencia = $_POST["asistencia"];
-$abonado = '';
-if($_POST["asistencia"] = 'No asisti®Æ'){
-    $abonado = 'F';
+$abonado = "";
+if($asistencia == "No asisti√≥"){
+    $abonado = "F";
+    $notificacion = "NO";
 }else{
-    $abonado = 'NO';
+    $abonado = "NO";
+    $notificacion = "SI";
 }
 $asistenciapac = ucfirst($_POST["asistenciapac"]);
 
-$query = "UPDATE citas SET asistencia = '$asistencia', asistenciapac = '$asistenciapac', abonado = '$abonado', fechaabono = NOW() WHERE idcita='" . $idcita . "'";
+$query = "UPDATE citas SET asistencia = '$asistencia', asistenciapac = '$asistenciapac', abonado = '$abonado', leidoabono = '$notificacion', fechaabono = NOW() WHERE idcita='" . $idcita . "'";
 $result = mysqli_query($conexion, $query);
 
 $query2 = "SELECT COUNT(*) as conteo FROM citas WHERE idupro='" . $idPro . "' AND abonado='F' ";

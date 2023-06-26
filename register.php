@@ -18,7 +18,7 @@ $seguridad->verificarSiYaEstoyLogeado();
 $urlactual = 'https://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
 
 if ($urlactual == 'https://themeduniverse.com/register') {
-    echo "<script>window.location.href='" . $_ENV['APP_URL'] . "register'</script>";
+    //echo "<script>window.location.href='" . $_ENV['APP_URL'] . "register'</script>";
 }
 
 ?>
@@ -132,17 +132,17 @@ if ($urlactual == 'https://themeduniverse.com/register') {
                 <form id="formRegistrarPaciente" method="POST" class="formulario__register">
                     <h2>REGÍSTRATE</h2>
                     <div class="filaregister">
-                        <input type="text" placeholder="Nombres" name="nombres" id="nombres" required>
-                        <input type="text" placeholder="Apellidos" name="apellidos" id="apellidos" required><br>
+                        <input type="text" placeholder="Nombres" name="nombres" id="nombres" maxlength="50" required>
+                        <input type="text" placeholder="Apellidos" name="apellidos" id="apellidos" maxlength="50" required><br>
                     </div>
                     <div class="filaregister">
-                        <input type="email" placeholder="Correo electrónico" name="correo" id="correo" required>
+                        <input type="email" placeholder="Correo electrónico" name="correo" id="correo" maxlength="75" required>
                     </div>
                     <div class="filaregister">
                         <span class="icon-eye eye1"><i class="fa-solid fa-eye-slash"></i></span>
-                        <input type="password" placeholder="Contraseña" name="contraseña" id="contrasenar" minlength="6" required>
+                        <input type="password" placeholder="Contraseña" name="contraseña" id="contrasenar" minlength="6" maxlength="75" required>
                         <span class="icon-eye eye2"><i class="fa-solid fa-eye-slash"></i></span>
-                        <input type="password" placeholder="Confirmar" name="contraseñacon" id="contrasenarcon" minlength="6" required>
+                        <input type="password" placeholder="Confirmar" name="contraseñacon" id="contrasenarcon" minlength="6" maxlength="75" required>
                     </div>
                     <div class="filaregister">
                         <input type="text" name="nacimiento" placeholder="F. Nacimiento" onfocus="(this.type='date')" onblur="(this.type='text')" min="1905-01-01" id="nacimiento" required>
@@ -171,7 +171,7 @@ if ($urlactual == 'https://themeduniverse.com/register') {
 
                             <?php endforeach ?>
                         </select>
-                        <input type="text" placeholder="Ciudad" name="ciudad" id="ciudad" required><br>
+                        <input type="text" placeholder="Ciudad" name="ciudad" id="ciudad" maxlength="50" required><br>
                     </div>
                     <hr id="hr-register">
                     <p>Al hacer clic en "Registrarte", aceptas nuestros <a href="<?php echo $_ENV['APP_URL']; ?>terycon">Términos y Condiciones</a>, la

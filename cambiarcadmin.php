@@ -1,4 +1,7 @@
 <?php
+ini_set("session.gc_maxlifetime", 60*60*24*365);
+ini_set("session.cookie_lifetime", 60*60*24*365);
+session_start();
 include './php/conexion_paciente.php';
 include './configuracion.php';
 
@@ -11,7 +14,7 @@ $seguridad->verificarSiYaEstoyLogeado();
 $urlactual='https://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
 
 if ($urlactual=='https://themeduniverse.com/cambiarcadmin') {
-    echo "<script>window.location.href='" . $_ENV['APP_URL'] . "cambiarcadmin'</script>";
+    //echo "<script>window.location.href='" . $_ENV['APP_URL'] . "cambiarcadmin'</script>";
 }
 
 ?>
@@ -77,9 +80,9 @@ if ($urlactual=='https://themeduniverse.com/cambiarcadmin') {
             <form id="nueva-contra" method="POST" class="form-contra">
                 <h2>RECUPERE SU CUENTA</h2>
                 <span class="icon-eye" id="icon-eye-login1"><i class="fa-solid fa-eye-slash"></i></span>
-                <input type="password" placeholder="Nueva contraseña" name="contraseña" id="contraseña" minlength="6" required><br>
+                <input type="password" placeholder="Nueva contraseña" name="contraseña" id="contraseña" minlength="6" maxlength="75" required><br>
                 <span class="icon-eye" id="icon-eye-login2"><i class="fa-solid fa-eye-slash"></i></span>
-                <input type="password" placeholder="Confirmar nueva contraseña" name="contraseñac" id="contraseñac" minlength="6" required><br>
+                <input type="password" placeholder="Confirmar nueva contraseña" name="contraseñac" id="contraseñac" minlength="6" maxlength="75" required><br>
                 <input type='submit' value="Guardar" id="ccambiar" name="iniciar_sesion"><br>
                 <hr id="hr-login">
                 <div class="med-logos">

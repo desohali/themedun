@@ -170,7 +170,7 @@ if (isset($_GET['id']) && @$_GET['id']==@$administradoresRegistrados){
                 <form id="formBloquear" method="post">
                     <br><input class="btnbloquear" type="submit" name="bloquear" id="editfoto" value="Bloquear" style="margin-top:0px">
                     <hr id="edit-infb">
-                    <textarea style="margin-bottom:0px" name="observaciones" placeholder='Observaciones a corregir por el administrador.' rows="5" required></textarea>
+                    <textarea style="margin-bottom:0px" name="observaciones" placeholder='Observaciones a corregir por el administrador.' rows="5" maxlength="500" required></textarea>
                 </form>
                 </div>
                 <?php
@@ -216,7 +216,7 @@ if (isset($_GET['id']) && @$_GET['id']==@$administradoresRegistrados){
             </div>
             <hr id="edit-infb">
             <ul><li><?php echo $indicaciones; ?></li></ul>
-                    <p style="width:100%">Para recibir mayor orientación sobre cómo establecer las observaciones de esta cuenta, puede contactarnos por correo o WhatsApp.<br><a id="awsp" href="https://wa.me/51986206045?text=Hola,%20tengo%20una%20consulta%20%C2%BFpueden%20ayudarme?" target="_blank"><i class="fa-brands fa-whatsapp"></i> : +51 986 206 045</a><br><a id="acorreo" href="mailto:themeduniverse@gmail.com" target="_blank"><i class="fa-regular fa-envelope"></i></i> : themeduniverse@gmail.com</a></p>
+                    <p style="width:100%">Para recibir mayor orientación sobre cómo establecer las observaciones de esta cuenta, puede contactarnos por correo o WhatsApp.<br><a id="awsp" href="https://api.whatsapp.com/send?phone=51986206045&text=Hola,%20tengo%20una%20consulta%20%C2%BFpueden%20ayudarme?%20%F0%9F%A4%94" target="_blank"><i class="fa-brands fa-whatsapp"></i> : +51 986 206 045</a><br><a id="acorreo" href="mailto:themeduniverse@gmail.com" target="_blank"><i class="fa-regular fa-envelope"></i></i> : themeduniverse@gmail.com</a></p>
         </div>
             <div class="ctn-perfil2 observaciones" id="perfil4">
                 <form action="" method="post">
@@ -230,7 +230,7 @@ if (isset($_GET['id']) && @$_GET['id']==@$administradoresRegistrados){
                 </div>
                 <hr id="edit-infb">
                 <textarea class="txtobserva3" name="observaciones3" id="txtobserva" rows="3" required><?php echo $indica?></textarea>
-                    <p style="width:100%">Para recibir mayor orientación sobre cómo establecer las observaciones de esta cuenta, puede contactarnos por correo o WhatsApp.<br><a id="awsp" href="https://wa.me/51986206045?text=Hola,%20tengo%20una%20consulta%20%C2%BFpueden%20ayudarme?" target="_blank"><i class="fa-brands fa-whatsapp"></i> : +51 986 206 045</a><br><a id="acorreo" href="mailto:themeduniverse@gmail.com" target="_blank"><i class="fa-regular fa-envelope"></i></i> : themeduniverse@gmail.com</a></p>
+                    <p style="width:100%">Para recibir mayor orientación sobre cómo establecer las observaciones de esta cuenta, puede contactarnos por correo o WhatsApp.<br><a id="awsp" href="https://api.whatsapp.com/send?phone=51986206045&text=Hola,%20tengo%20una%20consulta%20%C2%BFpueden%20ayudarme?%20%F0%9F%A4%94" target="_blank"><i class="fa-brands fa-whatsapp"></i> : +51 986 206 045</a><br><a id="acorreo" href="mailto:themeduniverse@gmail.com" target="_blank"><i class="fa-regular fa-envelope"></i></i> : themeduniverse@gmail.com</a></p>
                 </form>
             </div>
         <?php

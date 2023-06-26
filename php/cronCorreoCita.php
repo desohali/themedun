@@ -54,6 +54,19 @@ while ($obj = $result->fetch_object()) {
         $cita = $obj->start;
         $link = $obj->ubicacion;
 
+        $fechapago = $cita;
+		list($fecha, $hora) = explode(" ", $fechapago);
+		$horafinal = explode(":00", $hora);
+		$timestamp = strtotime($fecha);
+		$newFecha = date("d/m/Y", $timestamp);
+		if($horafinal[0]=='01'){
+		  $enlace=" a la ";
+		}else{
+		  $enlace=" a las ";
+		}
+		$tiempoFinal=$newFecha . $enlace . $horafinal[0] . ":00";
+
+
 //
 // Para enviar un correo HTML, debe establecerse la cabecera Content-type
 $cabeceras  = 'MIME-Version: 1.0' . "\r\n";
@@ -75,7 +88,7 @@ $mensajeMedico = "
 </head>
 <body>
     <h1 style='color:#0052d4; text-align:center'>The Med Universe</h1>
-    <p>".$estimadopro." ".$nombrespro." ".$apellidospro.":<br><br>Le recordamos que tiene una cita programada con ".$elola." ".$nombres." ".$apellidos." para el ".$cita.". Puede ir ingresando con este link <a href='".$link."'>".$link."</a>, uno de nuestros asistentes ".$lopro." estará esperando para ".$acompañar.".<br><br>Encontrará mayor información de su cita en <a href='https://www.themeduniverse.com/horario/".$idMed."'>https://www.themeduniverse.com/horario/".$idMed."</a>.</p>
+    <p>".$estimadopro." ".$nombrespro." ".$apellidospro.":<br><br>Le recordamos que tiene una cita programada con ".$elola." ".$nombres." ".$apellidos." para el ".$tiempoFinal.". Puede ir ingresando con este link <a href='".$link."'>".$link."</a>, uno de nuestros asistentes ".$lopro." estará esperando para ".$acompañar.".<br><br>Encontrará mayor información de su cita en <a href='https://www.themeduniverse.com/horario/".$idMed."'>https://www.themeduniverse.com/horario/".$idMed."</a>.</p>
 </body>
 </html>
 ";
@@ -86,7 +99,7 @@ $mensajePaciente = "
 </head>
 <body>
     <h1 style='color:#0052d4; text-align:center'>The Med Universe</h1>
-    <p>".$estimado.", ".$nombres." ".$apellidos.":<br><br>Te recordamos que tienes una cita programada con ".$elolapro." ".$nombrespro." ".$apellidospro." para el ".$cita.". Puedes ir ingresando con este link <a href='".$link."'>".$link."</a>, uno de nuestros asistentes te estará esperando para acompañarte.<br><br>Encontrarás mayor información de tu cita en <a href='https://www.themeduniverse.com/agenda/".$idPac."'>https://www.themeduniverse.com/agenda/".$idPac."</a>.</p>
+    <p>".$estimado.", ".$nombres." ".$apellidos.":<br><br>Te recordamos que tienes una cita programada con ".$elolapro." ".$nombrespro." ".$apellidospro." para el ".$tiempoFinal.". Puedes ir ingresando con este link <a href='".$link."'>".$link."</a>, uno de nuestros asistentes te estará esperando para acompañarte.<br><br>Encontrarás mayor información de tu cita en <a href='https://www.themeduniverse.com/agenda/".$idPac."'>https://www.themeduniverse.com/agenda/".$idPac."</a>.</p>
 </body>
 </html>
 ";

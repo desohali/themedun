@@ -28,13 +28,13 @@
         const form = document.getElementById(idForm);
         
         const {isConfirmed} = await Swal.fire({
-            title: 'Abono Pendiente',
-            text: "¿Está seguro de haber pagado el abono pendiente? Ya no lo podrá modificar.",
+            title: 'Abono de la ganancia',
+            text: "¿Está seguro de haber realizado el abono de la ganancia? Ya no lo podrá modificar.",
             icon: 'question',
             showCancelButton: true,
             confirmButtonColor: '#00d418',
             cancelButtonColor: '#0052d4',
-            confirmButtonText: 'Sí, Pagado',
+            confirmButtonText: 'Sí, realizado',
             cancelButtonText: 'No'
         });
         if (isConfirmed) {
@@ -45,7 +45,7 @@
             });
             await response.text();
             const text = await Swal.fire({
-                title: 'Abono Pendiente Pagado',
+                title: 'Abono de la ganancia realizado',
                 text: '',
                 icon: 'success',
                 confirmButtonColor: '#0052d4',
@@ -97,13 +97,13 @@
         const form = document.getElementById(idForm);
         
         const {isConfirmed} = await Swal.fire({
-            title: 'Cobro Pendiente',
-            text: "¿Está seguro de haber recibido el cobro pendiente? Ya no lo podrá modificar.",
+            title: 'Pago de la deuda',
+            text: "¿Está seguro de haber recibido el pago de la deduda? Ya no lo podrá modificar.",
             icon: 'question',
             showCancelButton: true,
             confirmButtonColor: '#00d418',
             cancelButtonColor: '#0052d4',
-            confirmButtonText: 'Sí, Recibido',
+            confirmButtonText: 'Sí, recibido',
             cancelButtonText: 'No'
         });
         if (isConfirmed) {
@@ -114,7 +114,7 @@
             });
             await response.text();
             const text = await Swal.fire({
-                title: 'Cobro Pendiente Recibido',
+                title: 'Pago de la deuda recibido',
                 text: '',
                 icon: 'success',
                 confirmButtonColor: '#0052d4',
@@ -132,29 +132,33 @@
         <?php
             include './php/conexion_paciente.php';
             $TotalPagosNoAbonados=$TotalPagosAbonados=$TotalPagosNoCobrados=$TotalPagosCobrados='0';
-            $consultap="SELECT SUM(localizacion) as TotalPagosNoAbonados FROM citas WHERE idupro = '".$idpro."' AND idpay <> 0 AND abonado = 'NO'";
+            $consultap="SELECT SUM(localizacion) as TotalPagosNoAbonados, COUNT(localizacion) as NumPagNoAbo FROM citas WHERE idupro = '".$idpro."' AND idpay <> 0 AND abonado = 'NO'";
             $resultadop=mysqli_query($conexion, $consultap);
             $filap=$resultadop->fetch_assoc();
             if(isset($filap['TotalPagosNoAbonados'])){
                 $TotalPagosNoAbonados=$filap['TotalPagosNoAbonados'];
+                $NumPagNoAbo=$filap['NumPagNoAbo'];
             }
-            $consultap2="SELECT SUM(localizacion) as TotalPagosAbonados FROM citas WHERE idupro = '".$idpro."' AND idpay <> 0 AND abonado = 'SI'";
+            $consultap2="SELECT SUM(localizacion) as TotalPagosAbonados, COUNT(localizacion) as NumPagAbo FROM citas WHERE idupro = '".$idpro."' AND idpay <> 0 AND abonado = 'SI'";
             $resultadop2=mysqli_query($conexion, $consultap2);
             $filap2=$resultadop2->fetch_assoc();
             if(isset($filap2['TotalPagosAbonados'])){
                 $TotalPagosAbonados=$filap2['TotalPagosAbonados'];
+                $NumPagAbo=$filap2['NumPagAbo'];
             }
-            $consultap3="SELECT SUM(localizacion) as TotalPagosNoCobrados FROM citas WHERE idupro = '".$idpro."' AND idpay <> 0 AND abonado = 'F'";
+            $consultap3="SELECT SUM(localizacion) as TotalPagosNoCobrados, COUNT(localizacion) as NumPagNoCo FROM citas WHERE idupro = '".$idpro."' AND idpay <> 0 AND abonado = 'F'";
             $resultadop3=mysqli_query($conexion, $consultap3);
             $filap3=$resultadop3->fetch_assoc();
             if(isset($filap3['TotalPagosNoCobrados'])){
                 $TotalPagosNoCobrados=$filap3['TotalPagosNoCobrados'];
+                $NumPagNoCo=$filap3['NumPagNoCo'];
             }
-            $consultap4="SELECT SUM(localizacion) as TotalPagosCobrados FROM citas WHERE idupro = '".$idpro."' AND idpay <> 0 AND abonado = 'P'";
+            $consultap4="SELECT SUM(localizacion) as TotalPagosCobrados, COUNT(localizacion) as NumPagCo FROM citas WHERE idupro = '".$idpro."' AND idpay <> 0 AND abonado = 'P'";
             $resultadop4=mysqli_query($conexion, $consultap4);
             $filap4=$resultadop4->fetch_assoc();
             if(isset($filap4['TotalPagosCobrados'])){
                 $TotalPagosCobrados=$filap4['TotalPagosCobrados'];
+                $NumPagCo=$filap4['NumPagCo'];
             }
             $nombres=$apellidos=$tipodoc=$newDateNac=$timestampNac=$numdoc=$nacimiento=$direccion=$banco=$tipocuenta=$codigocuenta='';
             $consultacuenta = "SELECT * FROM cuentabancaria WHERE idpro = '".$idpro."' ";
@@ -188,12 +192,12 @@
                 <div class="box-body">
                     <div class="boxhisto1">
                         <div class="historia1">
-                            <p><span style="color:#00D418">Total Abonado:</span><br>S/. <?php echo (82*$TotalPagosAbonados)/100?></p>
-                            <p><span style="color:#FFC107">Total por Abonar:</span><br>S/. <?php echo (82*($TotalPagosNoAbonados))/100?></p>
+                            <p><span style="color:#00D418">Ganancia abonada:</span><br>S/ <?php echo round(82.01*$TotalPagosAbonados/100 - $NumPagAbo - 18*(17.99*$TotalPagosAbonados/100 + $NumPagAbo)/100, 1)?></p>
+                            <p><span style="color:#FFC107">Ganancia por abonar:</span><br>S/ <?php echo round(82.01*$TotalPagosNoAbonados/100 - $NumPagNoAbo - 18*(17.99*$TotalPagosNoAbonados/100 + $NumPagNoAbo)/100, 1)?></p>
                         </div>
                         <div class="historia2">
-                            <p><span style="color:#FF0800">Total Cobrado:</span><br>S/. <?php echo (18*($TotalPagosCobrados))/100?></p>
-                            <p><span style="color:#FFC107">Total por Cobrar:</span><br>S/. <?php echo (18*($TotalPagosNoCobrados))/100?></p>
+                            <p><span style="color:#00D418">Deuda pagada (Inasistencia):</span><br>S/ <?php echo round(17.99*$TotalPagosCobrados/100 + $NumPagCo + 18*(17.99*$TotalPagosCobrados/100 + $NumPagCo)/100, 1)?></p>
+                            <p><span style="color:#FF0000">Deuda por pagar (Inasistencia):</span><br>S/ <?php echo round(17.99*$TotalPagosNoCobrados/100 + $NumPagNoCo + 18*(17.99*$TotalPagosNoCobrados/100 + $NumPagNoCo)/100, 1)?></p>
                         </div>
                     </div>
                     <div class="boxhisto2" style="align-items:center;">
@@ -305,7 +309,7 @@
                 //Operacion matematica para mostrar los siquientes datos.
                 $IncrimentNum =(($compag +1)<=$TotalRegistro)?($compag +1):0;
                 //Consulta SQL
-                $consultavistas ="SELECT *, idpago as idpagos, (select start from citas where idpay=idpagos) as startCitas FROM pagos WHERE usuariopro = '".$idpro."' ORDER BY startCitas DESC LIMIT ".(($compag-1)*$CantidadMostrar)." , ".$CantidadMostrar;
+                $consultavistas ="SELECT *, idpago as idpagos, (select start from citas where idpay=idpagos) as startCitas, (select tiempoenf from hclinica where idhc=idpagos) as llenadoHC FROM pagos WHERE usuariopro = '".$idpro."' ORDER BY startCitas DESC LIMIT ".(($compag-1)*$CantidadMostrar)." , ".$CantidadMostrar;
                 $consultares=mysqli_query($conexion, $consultavistas);
                 while ($lista=mysqli_fetch_array($consultares)) {
                     $consultacita = "SELECT *, id as idu,(select nombres from usuarios where id=idu) as nombresPaciente, (select apellidos from usuarios where id=idu) as apellidosPaciente FROM citas WHERE idpay = '".$lista['idpago']."' ";
@@ -318,8 +322,21 @@
                             $abonado = $rowcita['abonado'];
                             $asistencia = $rowcita['asistencia'];
                             $fechacitas = $rowcita['start'];
+                            $fechapago = $fechacitas;
+                            list($fecha, $hora) = explode(" ", $fechapago);
+                            $horafinal = explode(":00", $hora);
+                            $timestamp = strtotime($fecha);
+                            $newFecha = date("d/m/Y", $timestamp);
                             $timestampFyH = strtotime($fechacitas); 
                             $newDateFyH = date("d-m-Y H:i:s", $timestampFyH );
+                            if($lista['llenadoHC']==""){
+                                $llenadoHC="No enviada";
+                            }else{
+                                $llenadoHC="Enviada";
+                            }
+                            if($rowcita['asistencia']=="No asistió" || $rowcita['asistenciapac']=="No asistió"){
+                                $llenadoHC="Cita no realizada";
+                            }
                         }
                     }
                     $n = rand();
@@ -329,17 +346,17 @@
                     <div class="boxhisto1">
                         <div class="historia1">
                             <p><span>N° de cita:</span><br><?php echo $idcita?></p>
-                            <p><span>Fecha y hora:</span><br><?php echo $newDateFyH?></p>
+                            <p><span>Fecha y hora:</span><br><?php echo $newFecha . " a las " . $horafinal[0] . ":00";?></p>
                         </div>
                         <div class="historia2">
                             <p><span>Pagado por:</span><br><?php echo $paciente?></p>
-                            <p><span>Método de pago:</span><br><?php echo $lista['metodopago']?></p>
+                            <p style="<?php if ($llenadoHC == 'No enviada') { ?>color:#FFC107<?php } ?>"><span style="color:black">Historia Clínica:</span><br><?php echo $llenadoHC;?></p>
                         </div>
                     </div>
                     <div class="boxhisto2">
                         <div class="historia3">
                             <p><span>Pagado a:</span><br><?php echo $doctor.' '.$nombrespro.' '.$apellidospro?></p>
-                            <p><span>Asistencia:</span><br><?php echo $asistencia?></p>
+                            <p style="<?php if ($asistencia == 'No asistió') { ?>color:#ff0000<?php } ?>"><span style="color:black">Asistencia:</span><br><?php echo $asistencia?></p>
                         </div>
                         <div class="historia4">
                             <p><span>Precio de cita:</span><br>S/ <?php echo $costo?></p>
@@ -347,7 +364,7 @@
                             if($abonado=='NO'){
                             ?>
                             <form id="formPagar<?= $n ?>" method="POST">
-                                <p class="pprepago"><span style="color:#FFC107">Por abonar (82% del Precio de cita):</span></p><p class="ppago">S/ <?php echo (82*$costo)/100?><label id="labelequal" for="equal<?= $n ?>"><i class="fa-solid fa-square-caret-down"></i></label><label id="labelmas" for="mas<?= $n ?>"><i class="fa-solid fa-square-plus"></i></label></p>
+                                <p class="pprepago"><span style="color:#FFC107">Ganancia por abonar:</span></p><div class="ppago"><p id="montoPago">S/ <?php echo round(82.01*$costo/100 - 1 - 18*(17.99*$costo/100 + 1)/100, 1)?></p><div class="botonesPago"><?php if($asistencia=="No asistió"){ ?><label id="labelequal" for="equal<?= $n ?>"><i class="fa-solid fa-square-caret-down"></i></label><?php } ?><?php if($llenadoHC!="No enviada" && $asistencia=="Asistió"){ ?><label id="labelmas" for="mas<?= $n ?>"><i class="fa-solid fa-square-plus"></i></label><?php } ?></div></div>
                                 <input type="hidden" name="numbercita" id="numbercita" value="<?php echo $idcita ?>">
                                 <input type="button" onclick="sendFormEqual(event, this, 'formPagar<?= $n ?>')" id="equal<?= $n ?>" name="generardeuda" style="display:none">
                                 <input type="button" onclick="sendForm(event, this, 'formPagar<?= $n ?>')" id="mas<?= $n ?>" name="pagar" style="display:none">
@@ -356,7 +373,7 @@
                             } else if($abonado=='F'){
                             ?>
                             <form id="formPagar<?= $n ?>" method="POST">
-                                <p class="pprepago"><span style="color:#FFC107">Por cobrar (18% del Precio de cita):</span></p><p class="ppago">S/ <?php echo (18*$costo)/100?><label id="labelminus" for="minus<?= $n ?>"><i class="fa-solid fa-square-minus"></i></label></p>
+                                <p class="pprepago"><span style="color:#FF0000">Deuda por pagar (Inasistencia):</span></p><div class="ppago"><p id="montoPago">S/ <?php echo round(17.99*$costo/100 + 1 + 18*(17.99*$costo/100 + 1)/100, 1)?></p><div class="botonesPago"><?php if($asistencia=="No asistió"){ ?><label id="labelminus" for="minus<?= $n ?>"><i class="fa-solid fa-square-minus"></i></label><?php } ?></div></div>
                                 <input type="hidden" name="numbercita" id="numbercita" value="<?php echo $idcita ?>">
                                 <input type="hidden" name="idPro" id="idPro" value="<?php echo $idpro ?>">
                                 <input type="button" onclick="sendFormMinus(event, this, 'formPagar<?= $n ?>')" id="minus<?= $n ?>" name="deuda" style="display:none">
@@ -364,11 +381,11 @@
                             <?php
                             } else if($abonado=='P'){
                             ?>
-                            <p><span style="color:#ff0800">Cobrado (18% del Precio de cita):</span><br>S/ <?php echo (18*$costo)/100?></p>
+                            <p><span style="color:#00D418">Deuda pagada (Inasistencia):</span><br>S/ <?php echo round(17.99*$costo/100 + 1 + 18*(17.99*$costo/100 + 1)/100, 1)?></p>
                             <?php
                             } else{
                             ?>
-                            <p><span style="color:#00d418">Abonado (82% del Precio de cita):</span><br>S/ <?php echo (82*$costo)/100?></p>
+                            <p><span style="color:#00d418">Ganancia abonada:</span><br>S/ <?php echo round(82.01*$costo/100 - 1 - 18*(17.99*$costo/100 + 1)/100, 1)?></p>
                             <?php
                             }
                             ?>

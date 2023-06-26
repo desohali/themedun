@@ -17,7 +17,7 @@ if (isset($_SESSION['idpro'])) {
         $estadoMedico = $listaMedico['estado'];
     }
 }
-if (@$estadoMedico == 2) {
+if (@$estadoMedico != 1) {
     $url = "<script>window.location.href='" . $_ENV['APP_URL'];
     echo $url . "perfilpro/" . $_SESSION['idpro'] . "'</script>";
 }

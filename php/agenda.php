@@ -250,7 +250,7 @@
                             $('#nombreprocita').html(`${doctor} ${calEvent.nombresMedico} ${calEvent.apellidosMedico}`);
                             $('#profcita').html(`${psico}`);
                             $('#preciocita').html(`S/ ${calEvent.localizacion}`);
-                            $('#bcfiled2').attr('href', 'https://www.themeduniverse.com/hclinica/' + idpac + '/' + calEvent.idpay);
+                            $('#bcfiled2').attr('href', '<?= $_ENV['APP_URL'] ?>hclinica/' + idpac + '/' + calEvent.idpay);
                             if (calEvent.asistencia != "No asistió" && calEvent.asistenciapac != "No asistió") {
 								$('#bcfiled2').css('display', 'block');
 							} else {
@@ -373,7 +373,7 @@
                                                         <div class="columnasimg">
                                                             <img src="<?php echo $_ENV['APP_URL']; ?>images/Yape-TMU.jpg">
                                                         </div>
-                                                        <br><a id="awsp" href="https://wa.me/51986206045?text=Hola%2C+realic%C3%A9+el+pago+de+mi+cita+y+adjunto+el+comprobante+de+pago+para+que+puedan+actualizar+su+programaci%C3%B3n.%F0%9F%98%80" target="_blank"><i class="fa-brands fa-whatsapp"></i> : +51 986 206 045</a><br><a id="acorreo" href="mailto:themeduniverse@gmail.com" target="_blank"><i class="fa-regular fa-envelope"></i></i> : themeduniverse@gmail.com</a>
+                                                        <br><a id="awsp" href="https://api.whatsapp.com/send?phone=51986206045&text=Hola,%20tengo%20una%20consulta%20%C2%BFpueden%20ayudarme?%20%F0%9F%A4%94" target="_blank"><i class="fa-brands fa-whatsapp"></i> : +51 986 206 045</a><br><a id="acorreo" href="mailto:themeduniverse@gmail.com" target="_blank"><i class="fa-regular fa-envelope"></i></i> : themeduniverse@gmail.com</a>
                                                     </div>
                                                 </div>
                                             </div>

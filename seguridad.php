@@ -18,12 +18,12 @@ class Seguridad
     "privacidad",
     "cookies",
     "cayuda",
+    "404",
     /* agregar mas rutas... */
   ];
 
   public $rutasPublicas = [
     "login",
-    "login.php",
     "loginpro",
     "loginadmin",
     "register",
@@ -39,7 +39,22 @@ class Seguridad
     "cambiarcpro",
     "verificar",
     "verificarpro",
-    "404"
+    "login.php",
+    "loginpro.php",
+    "loginadmin.php",
+    "register.php",
+    "registerpro.php",
+    "recuperarc.php",
+    "recuperarcadmin.php",
+    "recuperarcpro.php",
+    "restablecerc.php",
+    "restablecercadmin.php",
+    "restablecercpro.php",
+    "cambiarc.php",
+    "cambiarcadmin.php",
+    "cambiarcpro.php",
+    "verificar.php",
+    "verificarpro.php",
     /* agregar mas rutas... */
   ];
 
@@ -99,7 +114,7 @@ class Seguridad
 
     if ($this->tipoUsuario == "PACIENTE") {
       if (!$this->verificarInicioDeSesionPaciente()) {
-        header("Location: " . $_ENV['APP_URL'] . "login");
+        header("Location: " . $_ENV['APP_URL']);
       } else {
         if (!$this->verificarRutasPaciente()) {
           echo "<script>window.history.back();</script>";

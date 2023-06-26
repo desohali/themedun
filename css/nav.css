@@ -490,7 +490,7 @@ h1 .logo:hover{
         left: 23px;
     }
     #box-search{
-        top: 142.5px;
+        top: 144.5px;
         padding: 10px 10px 0px 10px;
         width: 100%;
     }
@@ -499,7 +499,7 @@ h1 .logo:hover{
         left: 82.5%;
     }
     #box_filter{
-        top: 142.5px;
+        top: 144.5px;
         padding: 10px;
         width: 100%;
     }
@@ -518,7 +518,7 @@ h1 .logo:hover{
         font-size:20px;
     }
     #more, #box-noti{
-        top: 142.5px;
+        top: 144.5px;
         padding: 10px 10px 0px 10px;
         width: 50%;
         max-height: 50%;

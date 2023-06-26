@@ -116,6 +116,7 @@ if (isset($_GET['payment_id']) && isset($_GET['status']) && isset($_GET['payment
 		$select = "UPDATE citas SET leido='NO', leidopro='NO', estado='ELIMINADA', fechanoti=NOW() WHERE idupro=" . $idpro;
 		$select .= " AND idcita <> " . $order['firstItem']['id'];
 		$select .= " AND start='" . $cita->start . "'";
+		$select .= " AND estado <> 'CANCELADA' AND estado <> 'RECHAZADA'";
 
 		$resultSelect = mysqli_query($conexion, $select);
 
@@ -137,6 +138,19 @@ if (isset($_GET['payment_id']) && isset($_GET['status']) && isset($_GET['payment
 			$elOlaMed = "el Dr.";
 		}
 
+
+		$fechapago = $cita->start;
+		list($fecha, $hora) = explode(" ", $fechapago);
+		$horafinal = explode(":00", $hora);
+		$timestamp = strtotime($fecha);
+		$newFecha = date("d/m/Y", $timestamp);
+		if($horafinal[0]=='01'){
+		  $enlace=" a la ";
+		}else{
+		  $enlace=" a las ";
+		}
+		$tiempoFinal=$newFecha . $enlace . $horafinal[0] . ":00";
+
 		$titulo = "CITA PROGRAMADA";
 		$mensajePaciente = "
 		<html>
@@ -145,7 +159,7 @@ if (isset($_GET['payment_id']) && isset($_GET['status']) && isset($_GET['payment
 		</head>
 		<body>
 			<h1 style='color:#0052d4; text-align:center'>TheMedUniverse</h1>
-			<p>" . $estimadoPaciente . ", " . $cita->nombresPaciente . " " . $cita->apellidosPaciente . ":<br><br>Has programado una cita con " . $elOlaMed . " " . $cita->nombresMedico . " " . $cita->apellidosMedico . " para el " . $cita->start . ". Únete con este link <a href='" . $response->join_url . "'>" . $response->join_url . "</a> en la fecha y hora correspondientes.<br><br>Encontrarás mayor información de tu cita en <a href='https://www.themeduniverse.com/agenda/" . $_SESSION['id'] . "'>https://www.themeduniverse.com/cita/" . $_SESSION['id'] . "</a>.</p>
+			<p>" . $estimadoPaciente . ", " . $cita->nombresPaciente . " " . $cita->apellidosPaciente . ":<br><br>Has programado una cita con " . $elOlaMed . " " . $cita->nombresMedico . " " . $cita->apellidosMedico . " para el " . $tiempoFinal . ". Únete con este link <a href='" . $response->join_url . "'>" . $response->join_url . "</a> en la fecha y hora correspondientes.<br><br>Encontrarás mayor información de tu cita en <a href='".$_ENV['APP_URL']."agenda/" . $_SESSION['id'] . "'>".$_ENV['APP_URL']."cita/" . $_SESSION['id'] . "</a>.</p>
 		</body>
 		</html>
 		";
@@ -157,7 +171,7 @@ if (isset($_GET['payment_id']) && isset($_GET['status']) && isset($_GET['payment
 		</head>
 		<body>
 			<h1 style='color:#0052d4; text-align:center'>The Med Universe</h1>
-			<p>" . $estimadoMedico . " " . $cita->nombresMedico . " " . $cita->apellidosMedico . ":<br><br>Se le ha programado una cita con " . $elOlaPac . " paciente " . $cita->nombresPaciente . " " . $cita->apellidosPaciente . " para el " . $cita->start . ". Únase con el link <a href='" . $response->join_url . "'>" . $response->join_url . "</a> en la fecha y hora correspondientes.<br><br>Encontrará mayor información de su cita en <a href='https://www.themeduniverse.com/horario/" . $idpro . "'>https://www.themeduniverse.com/horario/" . $idpro . "</a>.</p>
+			<p>" . $estimadoMedico . " " . $cita->nombresMedico . " " . $cita->apellidosMedico . ":<br><br>Se le ha programado una cita con " . $elOlaPac . " paciente " . $cita->nombresPaciente . " " . $cita->apellidosPaciente . " para el " . $tiempoFinal . ". Únase con el link <a href='" . $response->join_url . "'>" . $response->join_url . "</a> en la fecha y hora correspondientes.<br><br>Encontrará mayor información de su cita en <a href='".$_ENV['APP_URL']."horario/" . $idpro . "'>".$_ENV['APP_URL']."horario/" . $idpro . "</a>.</p>
 		</body>
 		</html>
 		";
@@ -169,7 +183,7 @@ if (isset($_GET['payment_id']) && isset($_GET['status']) && isset($_GET['payment
 		</head>
 		<body>
 			<h1 style='color:#0052d4; text-align:center'>The Med Universe</h1>
-			<p>Estimado, Gerente General Leandro Santiago Bernal Saavedra:<br><br>Se ha programado una cita entre " . $elOlaMed . " " . $cita->nombresMedico . " " . $cita->apellidosMedico . " y " . $elOlaPac . " paciente " . $cita->nombresPaciente . " " . $cita->apellidosPaciente . " para el " . $cita->start . ". El link de unión a la teleconsulta es el siguiente: <a href='" . $response->join_url . "'>" . $response->join_url . "</a><br><br>Encontrará mayor información de la cita en <a href='https://www.themeduniverse.com/agendaadmin/1'>https://www.themeduniverse.com/agendaadmin/1</a></p>
+			<p>Estimado, Gerente General Leandro Santiago Bernal Saavedra:<br><br>Se ha programado una cita entre " . $elOlaMed . " " . $cita->nombresMedico . " " . $cita->apellidosMedico . " y " . $elOlaPac . " paciente " . $cita->nombresPaciente . " " . $cita->apellidosPaciente . " para el " . $tiempoFinal . ". El link de unión a la teleconsulta es el siguiente: <a href='" . $response->join_url . "'>" . $response->join_url . "</a><br><br>Encontrará mayor información de la cita en <a href='".$_ENV['APP_URL']."agendaadmin/1'>".$_ENV['APP_URL']."agendaadmin/1</a></p>
 		</body>
 		</html>
 		";
@@ -254,6 +268,7 @@ if (isset($_GET['payment_id']) && isset($_GET['status']) && isset($_GET['payment
 			calendar.refresh();
 		}
 
+		console.log('socket', socket);
 		socket.on("cita", function(msg) {
 			initCita();
 		});
@@ -756,10 +771,16 @@ if (isset($_GET['payment_id']) && isset($_GET['status']) && isset($_GET['payment
 				const formData = new FormData();
 				formData.append("idcita", $("#idCita").val());
 
-				const response = await fetch("<?php echo $_ENV['APP_URL']; ?>php/cancelarSolicitudCita.php", {
+				const response = await fetch("<?php echo $_ENV['APP_URL']; ?>php/cancelarSolicitudCita.php", {					
 					method: "post",
 					body: formData
 				});
+				
+				const json = await response.json();
+
+				const [primerCorreo] = json;
+				await enviarCorreo(primerCorreo);
+
 				const text = await Swal.fire({
 					title: 'Solicitud de cita cancelada',
 					text: '',
@@ -1178,7 +1199,7 @@ if (isset($_GET['payment_id']) && isset($_GET['status']) && isset($_GET['payment
 							$('#nombreprocita').html(`${doctor} ${data.nombresMedico} ${data.apellidosMedico}`);
 							$('#profcita').html(`${psico}`);
 							$('#preciocita').html(`S/ ${data.localizacion}`);
-							$('#bcfiled2').attr('href', 'https://www.themeduniverse.com/hclinica/' + idpac + '/' + data.idpay);
+							$('#bcfiled2').attr('href', '<?= $_ENV['APP_URL'] ?>hclinica/' + idpac + '/' + data.idpay);
 							$('#linkcita').html(data.ubicacion);
 							if (data.title == "<?= $_ENV['CITA_PROGRAMADA'] ?>") {
 								$('#informes').css('display', 'flex');
@@ -1307,7 +1328,7 @@ if (isset($_GET['payment_id']) && isset($_GET['status']) && isset($_GET['payment
 														<div class="columnasimg">
 															<img src="<?php echo $_ENV['APP_URL']; ?>images/Yape-TMU.jpg">
 														</div>
-														<br><a id="awsp" href="https://wa.me/51986206045?text=Hola%2C+realic%C3%A9+el+pago+de+mi+cita+y+adjunto+el+comprobante+de+pago+para+que+puedan+actualizar+su+programaci%C3%B3n.%F0%9F%98%80" target="_blank"><i class="fa-brands fa-whatsapp"></i> : +51 986 206 045</a><br><a id="acorreo" href="mailto:themeduniverse@gmail.com" target="_blank"><i class="fa-regular fa-envelope"></i></i> : themeduniverse@gmail.com</a>
+														<br><a id="awsp" href="https://api.whatsapp.com/send?phone=51986206045&text=Hola,%20tengo%20una%20consulta%20%C2%BFpueden%20ayudarme?%20%F0%9F%A4%94" target="_blank"><i class="fa-brands fa-whatsapp"></i> : +51 986 206 045</a><br><a id="acorreo" href="mailto:themeduniverse@gmail.com" target="_blank"><i class="fa-regular fa-envelope"></i></i> : themeduniverse@gmail.com</a>
 													</div>
 												</div>
 											</div>
@@ -1787,7 +1808,7 @@ if (isset($_GET['payment_id']) && isset($_GET['status']) && isset($_GET['payment
 								</div>
 								<div class="modal-footer">
 									<!-- data-dismiss="modal"  -->
-									<button type="button" class="btn btn-primary" id="btnenviar" style="background:#00d418;border:none;font-size:14px;font-weight:500;padding:8px 20px" onmouseover="this.style.background='#00c118';" onmouseout="this.style.background='#00d418';" onclick="enviarSolicitud('<?php echo $nombres ?>', '<?php echo $apellidos ?>')">Enviar Solicitud</button>
+									<button type="button" class="btn btn-primary" id="btnenviar" style="background:#00d418;border:1px solid #00d418;font-size:14px;font-weight:500;padding:8px 20px" onmouseover="this.style.background='#00ee1b';this.style.border='1px solid #00ee1b';" onmouseout="this.style.background='#00d418';this.style.border='1px solid #00d418';" onclick="enviarSolicitud('<?php echo $nombres ?>', '<?php echo $apellidos ?>')">Enviar Solicitud</button>
 								</div>
 							</div>
 						</div>

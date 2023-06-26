@@ -1,4 +1,7 @@
 <?php
+ini_set("session.gc_maxlifetime", 60*60*24*365);
+ini_set("session.cookie_lifetime", 60*60*24*365);
+session_start();
 include './php/conexion_paciente.php';
 include './configuracion.php';
 include './php/verificarpro.php';
@@ -11,7 +14,7 @@ $seguridad->verificarSiYaEstoyLogeado();
 $urlactual='https://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
 
 if ($urlactual=='https://themeduniverse.com/verificarpro') {
-    echo "<script>window.location.href='" . $_ENV['APP_URL'] . "verificarpro'</script>";
+    //echo "<script>window.location.href='" . $_ENV['APP_URL'] . "verificarpro'</script>";
 }
 
 ?>

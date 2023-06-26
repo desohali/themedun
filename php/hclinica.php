@@ -83,6 +83,11 @@
                     $anexocuatro = $lista['anexocuatro'];
                     $comentario = $lista['comentario'];
                     $comen = preg_replace("/<br \/>/" , "" , $comentario);
+                    if($horafinal[0]=='01'){
+                        $enlace=" a la ";
+                    }else{
+                        $enlace=" a las ";
+                    }
                 }
             }
             $consultamed = "SELECT * FROM usuariospro WHERE idpro = '".$idmed."' ";
@@ -154,7 +159,7 @@
                 }
             }
         ?>
-                        <li><span style="<?php if($tiempoenfermedad==''){echo 'color:#FFC107;';}else{echo 'color:#00d418;';}?>"><?php echo $newDateFC . ': ';?></span><a href="<?php echo $_ENV['APP_URL'].'hclinica/'.$id.'/'.$idpagos2;?>"><span class="spanlista"><?php echo $especialidad2;?></span></a></li>
+                        <a href="<?php echo $_ENV['APP_URL'].'hclinica/'.$id.'/'.$idpagos2;?>"><li style="<?php if($lista2['idpay']==$idHistoria){echo 'background:#F0F2F5;';}?>"><span style="<?php if($tiempoenfermedad==''){echo 'color:#FFC107;';}else{echo 'color:#00d418;';}?>"><?php echo $newDateFC . ': ';?></span><span class="spanlista"><?php echo $especialidad2;?></span></li></a>
         <?php
         }
         ?>
@@ -174,15 +179,15 @@
                     <h2>I. REGISTRO DE CITA</h2>
                     <div class="divhisto" id="introcita">
                         <p><span>N° de cita:</span><br><?php echo $nrocita?></p>
-                        <p><span>Fecha y hora de cita:</span><br><?php echo $newFecha . " a las " . $horafinal[0] . ":00";?></p>
+                        <p><span>Fecha y hora de cita:</span><br><?php echo $newFecha . $enlace . $horafinal[0] . ":00";?></p>
                     </div>
                 </div>
                 <hr>
                 <?php
-                $fecha = $fechastr - strtotime($nacimiento);
+                $fecha = $fechastr - strtotime($nacimiento) + 86400;
                 $edad = floor($fecha / 31556926);
 
-                $fecha2 = $fechastr - strtotime($nacimientopro);
+                $fecha2 = $fechastr - strtotime($nacimientopro) + 86400;
                 $edad2 = floor($fecha2 / 31556926);
                 ?>
                 <div class="boxhc" id="boxfiliacion">
@@ -323,7 +328,7 @@
                                 document.querySelector('.ccuatro').style.color = '#777777';
                             }}</script>
                         </div>
-                        <p id="filrelato"><textarea name="comentario" placeholder='Cuéntale al profesional el motivo de tu consulta...' class="txthc" id="comentario" rows="3"></textarea></p>
+                        <p id="filrelato"><textarea name="comentario" placeholder='Cuéntale al profesional el motivo de tu consulta...' class="txthc" id="comentario" rows="5" maxlength="1000"></textarea></p>
                 </div>
                 </form>
                 <?php
@@ -376,12 +381,12 @@
                         </div>
                     </div>
                     <div class="divhisto" id="anexos">
-                        <p><span>Documento o imagen de ayuda diagnóstica:</span><br><a href="<?php echo $_ENV['APP_URL'].'/anexos/'.$anexouno;?>" download="<?php echo $_ENV['APP_URL'].'/anexos/'.$anexouno;?>"><?php if($anexouno!=''){echo 'Descargar archivo';};?></a></p>
-                        <p><span>Documento o imagen de ayuda diagnóstica:</span><br><a href="<?php echo $_ENV['APP_URL'].'/anexos/'.$anexodos;?>" download="<?php echo $_ENV['APP_URL'].'/anexos/'.$anexodos;?>"><?php if($anexodos!=''){echo 'Descargar archivo';};?></a></p>
+                        <p><span>Documento o imagen de ayuda diagnóstica:</span><br><a href="<?php echo $_ENV['APP_URL'].'anexos/'.$anexouno;?>" download><?php if($anexouno!=''){echo 'Descargar archivo';};?></a></p>
+                        <p><span>Documento o imagen de ayuda diagnóstica:</span><br><a href="<?php echo $_ENV['APP_URL'].'anexos/'.$anexodos;?>" download><?php if($anexodos!=''){echo 'Descargar archivo';};?></a></p>
                     </div>
                     <div class="divhisto" id="anexos">
-                        <p><span>Documento o imagen de ayuda diagnóstica:</span><br><a href="<?php echo $_ENV['APP_URL'].'/anexos/'.$anexotres;?>" download="<?php echo $_ENV['APP_URL'].'/anexos/'.$anexotres;?>"><?php if($anexotres!=''){echo 'Descargar archivo';};?></a></p>
-                        <p><span>Documento o imagen de ayuda diagnóstica:</span><br><a href="<?php echo $_ENV['APP_URL'].'/anexos/'.$anexocuatro;?>" download="<?php echo $_ENV['APP_URL'].'/anexos/'.$anexocuatro;?>"><?php if($anexocuatro!=''){echo 'Descargar archivo';};?></a></p>
+                        <p><span>Documento o imagen de ayuda diagnóstica:</span><br><a href="<?php echo $_ENV['APP_URL'].'anexos/'.$anexotres;?>" download><?php if($anexotres!=''){echo 'Descargar archivo';};?></a></p>
+                        <p><span>Documento o imagen de ayuda diagnóstica:</span><br><a href="<?php echo $_ENV['APP_URL'].'anexos/'.$anexocuatro;?>" download><?php if($anexocuatro!=''){echo 'Descargar archivo';};?></a></p>
                     </div>
                     <p id="filrelato"><span>Motivo de consulta:</span><br><?php echo $comentario;?></p>
                 </div>
@@ -426,7 +431,7 @@
                                 document.querySelector('.ccuatro').style.color = '#777777';
                             }}</script>
                         </div>
-                        <p id="filrelato"><textarea name="comentario" placeholder='Cuéntale al profesional el motivo de tu consulta' class="txthc" id="comentario" rows="3"><?php echo $comen;?></textarea></p>
+                        <p id="filrelato"><textarea name="comentario" placeholder='Cuéntale al profesional el motivo de tu consulta...' class="txthc" id="comentario" rows="5" maxlength="1000"><?php echo $comen;?></textarea></p>
                 </div>
                 </form>
 <script>
@@ -474,15 +479,15 @@ function mostrar_editinfper() {
                     <h2>I. REGISTRO DE CITA</h2>
                     <div class="divhisto" id="introcita">
                         <p><span>Número de cita:</span><br><?php echo $nrocita?></p>
-                        <p><span>Fecha y hora de cita:</span><br><?php echo $newFecha . " a las " . $horafinal[0] . ":00";?></p>
+                        <p><span>Fecha y hora de cita:</span><br><?php echo $newFecha . $enlace . $horafinal[0] . ":00";?></p>
                     </div>
                 </div>
                 <hr>
                 <?php
-                $fecha = $fechastr - strtotime($nacimiento);
+                $fecha = $fechastr - strtotime($nacimiento) + 86400;
                 $edad = floor($fecha / 31556926);
 
-                $fecha2 = $fechastr - strtotime($nacimientopro);
+                $fecha2 = $fechastr - strtotime($nacimientopro) + 86400;
                 $edad2 = floor($fecha2 / 31556926);
                 ?>
                 <div class="boxhc" id="boxfiliacion">
@@ -502,11 +507,11 @@ function mostrar_editinfper() {
                 <hr>
                 <div class="boxhc" id="boxanamnesis">
                     <h2>III. ANAMNESIS</h2>
-                    <div class="divhisto" id="anamnesis">
+                    <div class="divhisto guardado" id="anamnesis">
                         <p><span>Tiempo de enfermedad:</span><br><?php echo $tiempoenf?></p>
                         <p><span>Forma de inicio:</span><br><?php echo $inicio?></p>
                     </div>
-                    <div class="divhisto" id="anamnesis">
+                    <div class="divhisto guardado" id="anamnesis">
                         <p><span>Curso:</span><br><?php echo $curso?></p>
                         <p><span>Signos y síntomas principales:</span><br><?php echo $sintomas?></p>
                     </div>
@@ -515,11 +520,11 @@ function mostrar_editinfper() {
                 <hr>
                 <div class="boxhc" id="boxantecedentes">
                     <h2>IV. ANTECEDENTES</h2>
-                    <div class="divhisto" id="antecedentes">
+                    <div class="divhisto guardado" id="antecedentes">
                         <p><span>Antecedentes heredo - familiares:</span><br><?php echo $anthf?></p>
                         <p><span>Antecedentes personales - patológicos:</span><br><?php echo $antpp?></p>
                     </div>
-                    <div class="divhisto" id="antecedentes2">
+                    <div class="divhisto guardado" id="antecedentes2">
                         <p><span>Medicamentos:</span><br><?php echo $medicamentos?></p>
                         <p><span>Alergias:</span><br><?php echo $alergias?></p>
                     </div>
@@ -557,7 +562,7 @@ function mostrar_editinfper() {
                 <hr>
                 <div class="boxhc" id="boxdiagnostico">
                     <h2>VII. DIAGNÓSTICOS</h2>
-                    <div class="divhisto" id="diagnostico">
+                    <div class="divhisto guardado" id="diagnostico">
                         <p><span>Diagnósticos presuntivos:</span><br><?php echo $diagpre?></p>
                         <p><span>Diagnósticos definitivos:</span><br><?php echo $diagdef?></p>
                     </div>
@@ -566,7 +571,7 @@ function mostrar_editinfper() {
                 <div class="boxhc" id="boxtratamiento">
                     <h2>VIII. PLAN DE TRABAJO</h2>
                     <p id="filtrata"><span>Tratamiento farmacológico:</span><br><?php echo $tratfarm?></p>
-                    <div class="divhisto" id="tratamiento">
+                    <div class="divhisto guardado" id="tratamiento">
                         <p><span>Indicaciones de exámenes complementarios:</span><br><?php echo $indicec?></p>
                         <p><span>Indicaciones adicionales:</span><br><?php echo $indicesp?></p>
                     </div>
@@ -574,9 +579,9 @@ function mostrar_editinfper() {
                 <hr>
                 <div class="boxhc" id="boxanexos">
                     <h2>IX. ANEXOS DEL PROFESIONAL</h2>
-                    <div class="divhisto" id="anexos">
-                        <p><span>Imagen de receta médica:</span><br><a href="<?php echo $_ENV['APP_URL'].'/complementarios/'.$archivoc;?>" download="<?php echo $_ENV['APP_URL'].'/complementarios/'.$archivoc;?>"><?php if($archivoc!=''){echo 'Descargar receta';};?></a></p>
-                        <p><span>Documento o imagen de orientación:</span><br><a href="<?php echo $_ENV['APP_URL'].'/grabaciones/'.$grabacion;?>" download="<?php echo $_ENV['APP_URL'].'/grabaciones/'.$grabacion;?>"><?php if($grabacion!=''){echo 'Descargar archivo';};?></a></p>
+                    <div class="divhisto guardado" id="anexos">
+                        <p><span>Imagen de receta médica:</span><br><a href="<?php echo $_ENV['APP_URL'].'complementarios/'.$archivoc;?>" download><?php if($archivoc!=''){echo 'Descargar receta';};?></a></p>
+                        <p><span>Documento o imagen de orientación:</span><br><a href="<?php echo $_ENV['APP_URL'].'grabaciones/'.$grabacion;?>" download><?php if($grabacion!=''){echo 'Descargar archivo';};?></a></p>
                     </div>
                 </div>
                 <hr>
@@ -584,13 +589,13 @@ function mostrar_editinfper() {
                     <div class="ctn-editarp">
                         <h2>X. ANEXOS DEL PACIENTE</h2>
                     </div>
-                    <div class="divhisto" id="anexos">
-                        <p><span>Documento o imagen de ayuda diagnóstica:</span><br><a href="<?php echo $_ENV['APP_URL'].'/anexos/'.$anexouno;?>" download="<?php echo $_ENV['APP_URL'].'/anexos/'.$anexouno;?>"><?php if($anexouno!=''){echo 'Descargar archivo';};?></a></p>
-                        <p><span>Documento o imagen de ayuda diagnóstica:</span><br><a href="<?php echo $_ENV['APP_URL'].'/anexos/'.$anexodos;?>" download="<?php echo $_ENV['APP_URL'].'/anexos/'.$anexodos;?>"><?php if($anexodos!=''){echo 'Descargar archivo';};?></a></p>
+                    <div class="divhisto guardado" id="anexos">
+                        <p><span>Documento o imagen de ayuda diagnóstica:</span><br><a href="<?php echo $_ENV['APP_URL'].'anexos/'.$anexouno;?>" download><?php if($anexouno!=''){echo 'Descargar archivo';};?></a></p>
+                        <p><span>Documento o imagen de ayuda diagnóstica:</span><br><a href="<?php echo $_ENV['APP_URL'].'anexos/'.$anexodos;?>" download><?php if($anexodos!=''){echo 'Descargar archivo';};?></a></p>
                     </div>
-                    <div class="divhisto" id="anexos">
-                        <p><span>Documento o imagen de ayuda diagnóstica:</span><br><a href="<?php echo $_ENV['APP_URL'].'/anexos/'.$anexotres;?>" download="<?php echo $_ENV['APP_URL'].'/anexos/'.$anexotres;?>"><?php if($anexotres!=''){echo 'Descargar archivo';};?></a></p>
-                        <p><span>Documento o imagen de ayuda diagnóstica:</span><br><a href="<?php echo $_ENV['APP_URL'].'/anexos/'.$anexocuatro;?>" download="<?php echo $_ENV['APP_URL'].'/anexos/'.$anexocuatro;?>"><?php if($anexocuatro!=''){echo 'Descargar archivo';};?></a></p>
+                    <div class="divhisto guardado" id="anexos">
+                        <p><span>Documento o imagen de ayuda diagnóstica:</span><br><a href="<?php echo $_ENV['APP_URL'].'anexos/'.$anexotres;?>" download><?php if($anexotres!=''){echo 'Descargar archivo';};?></a></p>
+                        <p><span>Documento o imagen de ayuda diagnóstica:</span><br><a href="<?php echo $_ENV['APP_URL'].'anexos/'.$anexocuatro;?>" download><?php if($anexocuatro!=''){echo 'Descargar archivo';};?></a></p>
                     </div>
                     <p id="filrelato"><span>Motivo de consulta:</span><br><?php echo $comentario;?></p>
                 </div>

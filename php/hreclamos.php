@@ -56,7 +56,7 @@
                 <input type='submit' value="Buscar" id="caenviar" name="caenviar"><br>
                 <hr id="hr-login">
                 <div class="med-logos reclamos">
-                    <p id="fraselogin">TU SALUD IMPORTA</p>
+                    <p id="fraselogin">TU SALUD EN BUENAS MANOS</p>
                     
                 </div>
             </form>
@@ -91,7 +91,7 @@
                             <p><span>Domicilio:</span><br><?php echo $domicilio;?></p>
                         </div>
                         <div class="divhisto" id="idcon2">
-                            <p><span>N° de teléfono:</span><br><?php echo $telefono;?></p>
+                            <p><span>N° de celular:</span><br><?php echo $telefono;?></p>
                         </div>
                         <div class="divhisto" id="idcon2">
                             <p><span>Correo electrónico:</span><br><?php echo $correo;?></p>
@@ -116,7 +116,7 @@
                             <p><span>Domicilio:</span><br><?php echo $domiciliotut;?></p>
                         </div>
                         <div class="divhisto" id="idcon2">
-                            <p><span>N° de teléfono:</span><br><?php echo $telefonotut;?></p>
+                            <p><span>N° de celular:</span><br><?php echo $telefonotut;?></p>
                         </div>
                         <div class="divhisto" id="idcon2">
                             <p class="ultimo"><span>Correo electrónico:</span><br><?php echo $correotut;?></p>
@@ -132,7 +132,7 @@
                         </div>
                         <div class="divhisto" id="idbien">
                             <p><span>Monto reclamado:</span><br><?php echo 'S/ '.$monto;?></p>
-                            <p><span>N° de cita (opcional):</span><br><?php echo $numcita;?></p>
+                            <p><span>N° de cita:</span><br><?php echo $numcita;?></p>
                         </div>
                     </div>
                     <div class="divhisto" id="idbien2">
@@ -147,8 +147,8 @@
                             <p><span>Tipo de solicitud:</span><br><?php echo $reclamo;?></p>
                         </div>
                         <div class="divhisto" id="idcon2">
-                            <p id="pevidencia"><span>Documento o imagen evidencial (opcional):</span><br>
-                                <a href="../evidencias/<?php echo $evidencia;?>" download="../evidencias/<?php echo $evidencia;?>"><?php echo 'Descargar evidencia';?></a>
+                            <p id="pevidencia"><span>Documento o imagen evidencial:</span><br>
+                                <a href="../evidencias/<?php echo $evidencia;?>" download><?php echo 'Descargar evidencia';?></a>
                             </p>
                         </div>
                     </div>

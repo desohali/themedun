@@ -1,6 +1,6 @@
 <?php
 include 'conexion_paciente.php';
-
+include '../configuracion.php';
 $idcita = $_POST["idcita"];
 
 $consultacita = "SELECT * FROM citas WHERE idcita = '".$idcita."' ";
@@ -10,6 +10,17 @@ if ($resultadocita) {
     $idpac = $rowcita['id'];
     $idpro = $rowcita['idupro'];
     $start = $rowcita['start'];
+    $fechapago = $start;
+    list($fecha, $hora) = explode(" ", $fechapago);
+    $horafinal = explode(":00", $hora);
+    $timestamp = strtotime($fecha);
+    $newFecha = date("d/m/Y", $timestamp);
+    if($horafinal[0]=='01'){
+      $enlace=" a la ";
+    }else{
+      $enlace=" a las ";
+    }
+    $tiempoFinal=$newFecha . $enlace . $horafinal[0] . ":00";
   }
 }
 
@@ -57,7 +68,7 @@ $mensaje = "
 </head>
 <body>
     <h1 style='color:#0052d4; text-align:center'>The Med Universe</h1>
-    <p>".$estimado.", ".$nombrespac." ".$apellidospac.":<br><br>Has recibido la confirmacion de tu solicitud de cita ".$del." ".$nombrespro." ".$apellidospro." para el ".$start.". Para pagar y programar la cita, ingresa a <a href='https://www.themeduniverse.com/cita/".$idpro."'>https://www.themeduniverse.com/cita/".$idpro."</a></p>
+    <p>".$estimado.", ".$nombrespac." ".$apellidospac.":<br><br>Has recibido la confirmacion de tu solicitud de cita ".$del." ".$nombrespro." ".$apellidospro." para el ".$tiempoFinal.". Para pagar y programar la cita, ingresa a <a href='".$_ENV['APP_URL']."cita/".$idpro."'>".$_ENV['APP_URL']."cita/".$idpro."</a></p>
 </body>
 </html>
 ";
@@ -69,7 +80,7 @@ $cabeceras .= 'Content-type: text/html; charset=UTF-8' . "\r\n";
 $cabeceras .= 'From: citas@themeduniverse.com' . "\r\n";
 // mail($correopac, $titulo, $mensaje, $cabeceras);
 echo json_encode(array(
-  array('correo' => $correo, 'titulo' => $titulo,  'mensaje' => $mensaje, 'cabeceras' => $cabeceras)
+  array('correo' => $correopac, 'titulo' => $titulo,  'mensaje' => $mensaje, 'cabeceras' => $cabeceras)
 ));
 
 

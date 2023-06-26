@@ -7,7 +7,7 @@
 $urlactual='https://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
 
 if ($urlactual=='https://themeduniverse.com/hreclamos') {
-    echo "<script>window.location.href='" . $_ENV['APP_URL'] . "hreclamos'</script>";
+    //echo "<script>window.location.href='" . $_ENV['APP_URL'] . "hreclamos'</script>";
 }
 
 $_GET['codigo'] = explode("/", $_GET['view'])[1];

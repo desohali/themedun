@@ -7,12 +7,12 @@ include './configuracion.php';
 
 // VERIFICAR Y ACTUALIZAR CITAS VENCIDAS
 $count = "SELECT * FROM citas WHERE ";
-$count .=  "(SELECT STR_TO_DATE(start, '%Y-%m-%d %T') < NOW()) AND title NOT IN ('" . $_ENV['CITA_PROGRAMADA'] . "', '" . $_ENV['CITA_VENCIDA'] . "') AND estado <> 'RECHAZADA'";
+$count .=  "(SELECT STR_TO_DATE(start, '%Y-%m-%d %T') < NOW()) AND title NOT IN ('" . $_ENV['CITA_PROGRAMADA'] . "', '" . $_ENV['CITA_VENCIDA'] . "') AND estado <> 'RECHAZADA' AND estado <> 'CANCELADA' AND estado <> 'ELIMINADA'";
 $resultCitasVencidas = mysqli_query($conexion, $count) or die(mysqli_error($conexion));
 
 if ($resultCitasVencidas->num_rows) {
   $query = "UPDATE citas SET color='#ff0000', leido='NO', leidopro='NO', fechanoti=now(), title='" . $_ENV['CITA_VENCIDA'] . "'";
-  $query .= " WHERE (SELECT STR_TO_DATE(start, '%Y-%m-%d %T') < NOW()) AND title NOT IN ('" . $_ENV['CITA_PROGRAMADA'] . "', '" . $_ENV['CITA_VENCIDA'] . "')";
+  $query .= " WHERE (SELECT STR_TO_DATE(start, '%Y-%m-%d %T') < NOW()) AND title NOT IN ('" . $_ENV['CITA_PROGRAMADA'] . "', '" . $_ENV['CITA_VENCIDA'] . "') AND estado <> 'RECHAZADA' AND estado <> 'CANCELADA' AND estado <> 'ELIMINADA'";
   $result = mysqli_query($conexion, $query) or die(mysqli_error($conexion));
 }
 

@@ -291,13 +291,13 @@ main{
         margin: 10px 10px 15px 10px;
     }
     #fecharec, #fecharec2{
-        top: 205px;
+        top: 285px;
         left: 75%;
         width: 62px;
         font-size: 70%;
     }
     #fecharec2{
-        top: 205px;
+        top: 285px;
     }
     .ctn-contra .form-contra .boxhc h2{
         margin: 0px;

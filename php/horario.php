@@ -25,7 +25,7 @@ if (isset($_GET['id']) && @$_SESSION['idpro'] == @$_GET['id']) {
             } else {
                 $doctor = "Dr.";
             }
-            if (@$estadoMedico == 2) {
+            if (@$estadoMedico != 1) {
                 $url = "<script>window.location.href='" . $_ENV['APP_URL'];
                 echo $url . "perfilpro/" . $_SESSION['idpro'] . "'</script>";
             }
@@ -426,14 +426,14 @@ if (isset($_GET['id']) && @$_SESSION['idpro'] == @$_GET['id']) {
                         if (ESTADO) {
                             table += `<div class="ctn-si" >
                                 <label class="si">Disponible</label>
-                                <label id="labelminus" for="minus" onclick="cambiarDisponibilidad('ELIMINAR', '${DIAS[0]}', '${NUMERO_DIA}')">
+                                <label class="labelminus" for="minus" onclick="cambiarDisponibilidad('ELIMINAR', '${DIAS[0]}', '${NUMERO_DIA}')">
                                     <i class="fa-solid fa-square-minus"></i>
                                 </label>
                             </div>`;
                         } else {
                             table += `<div class="ctn-no">
                                 <label class="no">No disponible</label>
-                                <label id="labelmas" for="mas" onclick="cambiarDisponibilidad('AÑADIR', '${DIAS[0]}', '${NUMERO_DIA}')">
+                                <label class="labelmas" for="mas" onclick="cambiarDisponibilidad('AÑADIR', '${DIAS[0]}', '${NUMERO_DIA}')">
                                     <i class="fa-solid fa-square-plus"></i>
                                 </label>
                             </div>`;
@@ -539,6 +539,11 @@ if (isset($_GET['id']) && @$_SESSION['idpro'] == @$_GET['id']) {
                     method: "post",
                     body: formData
                 });
+
+                const json = await response.json();
+
+                const [primerCorreo] = json;
+                await enviarCorreo(primerCorreo);
                 const text = await Swal.fire({
                     title: 'Solicitud de cita rechazada',
                     text: '',
@@ -768,7 +773,7 @@ if (isset($_GET['id']) && @$_SESSION['idpro'] == @$_GET['id']) {
                             $('#profcita').html(`${psico}`);
                             $('#preciocita').html(`S/ ${data.localizacion}`);
                             $('#linkcita').html(data.ubicacion);
-                            $('#bcfiled2').attr('href', 'https://www.themeduniverse.com/hclinicapro/' + idpac + '/' + data.idpay);
+                            $('#bcfiled2').attr('href', '<?= $_ENV['APP_URL'] ?>hclinicapro/' + idpac + '/' + data.idpay);
                             if (data.asistencia != "No asistió" && data.asistenciapac != "No asistió") {
                                 $('#bcfiled2').css('display', 'block');
                             } else {
@@ -988,10 +993,10 @@ if (isset($_GET['id']) && @$_SESSION['idpro'] == @$_GET['id']) {
                                 <a href="<?php echo $_ENV['APP_URL']; ?>hclinicapro/" id="bcfiled2">Historia Clínica</a>
                             </div>
                             <input type="text" id="ocultfeho" name="ocultfeho">
-                            <button onClick="aceptarCita()" type="submit" class="btn btn-success" id="aceptarcita" style="background:#00d418;border:none;position:relative;top:unset;left:unset;font-size:14px;font-weight:500;padding:8px 20px" onmouseover="this.style.background='#00ee1b';" onmouseout="this.style.background='#00d418';">
+                            <button onClick="aceptarCita()" type="submit" class="btn btn-success" id="aceptarcita" style="background:#00d418;border:1px solid #00d418;position:relative;top:unset;left:unset;font-size:14px;font-weight:500;padding:8px 20px" onmouseover="this.style.background='#00ee1b';this.style.border='1px solid #00ee1b';" onmouseout="this.style.background='#00d418';this.style.border='1px solid #00d418';">
                                 Confirmar Cita
                             </button>
-                            <button onClick="rechazarCita()" type="submit" class="btn btn-danger" id="rechazarcita" style="background:#ff0800;border:none;font-size:14px;font-weight:500;padding:8px 20px" onmouseover="this.style.background='#e10800';" onmouseout="this.style.background='#ff0000';">
+                            <button onClick="rechazarCita()" type="submit" class="btn btn-danger" id="rechazarcita" style="background:#ff0000;border:1px solid #ff0000;font-size:14px;font-weight:500;padding:8px 20px" onmouseover="this.style.background='#e10800';this.style.border='1px solid #e10800';" onmouseout="this.style.background='#ff0000';this.style.border='1px solid #ff0000';">
                                 Rechazar Cita
                             </button>
                         </div>

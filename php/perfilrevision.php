@@ -554,7 +554,7 @@
                             <form id="formBloquear" method="post">
                                 <input class="btnbloquear" type="submit" name="bloquear" id="editfoto" value="Bloquear" style="margin-top:0px">
                                 <hr id="edit-infb">
-                                <textarea style="margin-bottom:0px" name="observaciones" onkeypress="return validarn(event)" placeholder='Observaciones a corregir por el profesional.' rows="3" required></textarea>
+                                <textarea style="margin-bottom:0px" name="observaciones" onkeypress="return validarn(event)" placeholder='Observaciones a corregir por el profesional.' maxlength="500" rows="3" required></textarea>
                             </form>
                         </div>
                     <?php
@@ -610,7 +610,7 @@
                                         </div>
                                     </div>
                                     <hr id="edit-infb">
-                                    <textarea name="observaciones" onkeypress="return validarn(event)" placeholder='Observaciones a corregir por el profesional.' rows="3" required></textarea>
+                                    <textarea name="observaciones" onkeypress="return validarn(event)" placeholder='Observaciones a corregir por el profesional.' maxlength="500" rows="3" required></textarea>
                                 </form>
                             <?php
                             } else {
@@ -625,7 +625,7 @@
                                 <ul>
                                     <li><?php echo $indicaciones; ?></li>
                                 </ul>
-                                <p style="width:100%">Para recibir mayor orientación sobre cómo establecer las observaciones de esta cuenta, puede contactarnos por correo o WhatsApp.<br><a id="awsp" href="https://wa.me/51986206045?text=Hola,%20tengo%20una%20consulta%20%C2%BFpueden%20ayudarme?" target="_blank"><i class="fa-brands fa-whatsapp"></i> : +51 986 206 045</a><br><a id="acorreo" href="mailto:themeduniverse@gmail.com" target="_blank"><i class="fa-regular fa-envelope"></i></i> : themeduniverse@gmail.com</a></p>
+                                <p style="width:100%">Para recibir mayor orientación sobre cómo establecer las observaciones de esta cuenta, puede contactarnos por correo o WhatsApp.<br><a id="awsp" href="https://api.whatsapp.com/send?phone=51986206045&text=Hola,%20tengo%20una%20consulta%20%C2%BFpueden%20ayudarme?%20%F0%9F%A4%94" target="_blank"><i class="fa-brands fa-whatsapp"></i> : +51 986 206 045</a><br><a id="acorreo" href="mailto:themeduniverse@gmail.com" target="_blank"><i class="fa-regular fa-envelope"></i></i> : themeduniverse@gmail.com</a></p>
                             <?php
                             }
                             ?>
@@ -642,7 +642,7 @@
                                 </div>
                                 <hr id="edit-infb">
                                 <textarea name="observaciones2" id="txtobserva" rows="3" required><?php echo $indica ?></textarea>
-                                <p style="width:100%">Para recibir mayor orientación sobre cómo establecer las observaciones de esta cuenta, puede contactarnos por correo o WhatsApp.<br><a id="awsp" href="https://wa.me/51986206045?text=Hola,%20tengo%20una%20consulta%20%C2%BFpueden%20ayudarme?" target="_blank"><i class="fa-brands fa-whatsapp"></i> : +51 986 206 045</a><br><a id="acorreo" href="mailto:themeduniverse@gmail.com" target="_blank"><i class="fa-regular fa-envelope"></i></i> : themeduniverse@gmail.com</a></p>
+                                <p style="width:100%">Para recibir mayor orientación sobre cómo establecer las observaciones de esta cuenta, puede contactarnos por correo o WhatsApp.<br><a id="awsp" href="https://api.whatsapp.com/send?phone=51986206045&text=Hola,%20tengo%20una%20consulta%20%C2%BFpueden%20ayudarme?%20%F0%9F%A4%94" target="_blank"><i class="fa-brands fa-whatsapp"></i> : +51 986 206 045</a><br><a id="acorreo" href="mailto:themeduniverse@gmail.com" target="_blank"><i class="fa-regular fa-envelope"></i></i> : themeduniverse@gmail.com</a></p>
                             </form>
                         </div>
                         <div class="ctn-fotos" style="margin-top:25px">
@@ -651,21 +651,21 @@
                                 <div class="fotorevision ctn-fototit">
                                     <img src="<?php echo $_ENV['APP_URL']; ?>titulos/<?php echo $fototitulo ?>" id="fptit" alt="Diploma de título profesional">
                                 </div><br>
-                                <p class="previa"><a href="../titulos/<?php echo $fototitulo; ?>" download="../titulos/<?php echo $fototitulo; ?>">Descargar archivo</a></p><br>
+                                <p class="previa"><a href="../titulos/<?php echo $fototitulo; ?>" download>Descargar archivo</a></p><br>
                             </div>
                             <div class="boxfotos reviadmin">
                                 <p class="previ"><span>Diploma de colegiatura:</span></p><br>
                                 <div class="fotorevision ctn-fotofirma">
                                     <img src="<?php echo $_ENV['APP_URL']; ?>colegiaturas/<?php echo $fotocolegiatura ?>" id="fpfirma" alt="Diploma de Colegiatura">
                                 </div><br>
-                                <p class="previa"><a href="../colegiaturas/<?php echo $fotocolegiatura; ?>" download="../colegiaturas/<?php echo $fotocolegiatura; ?>">Descargar archivo</a></p><br>
+                                <p class="previa"><a href="../colegiaturas/<?php echo $fotocolegiatura; ?>" download>Descargar archivo</a></p><br>
                             </div>
                             <div class="boxfotos reviadmin">
                                 <p class="previ"><span>Documento de identidad (ambos lados):</span></p><br>
                                 <div class="fotorevision ctn-fotohuella">
                                     <img src="<?php echo $_ENV['APP_URL']; ?>documentos/<?php echo $fotodocumento ?>" id="fphuella" alt="Documento de Identidad">
                                 </div><br>
-                                <p class="previa"><a href="../documentos/<?php echo $fotodocumento; ?>" download="../documentos/<?php echo $fotodocumento; ?>">Descargar archivo</a></p><br>
+                                <p class="previa"><a href="../documentos/<?php echo $fotodocumento; ?>" download>Descargar archivo</a></p><br>
                             </div>
                         </div>
                         <?php
@@ -691,7 +691,7 @@
                         ?>
                     </div>
                     <?php
-                } else {
+                }
                     if ($estado == '2') {
                     ?>
                         <div class="revision">
@@ -710,7 +710,7 @@
                                 <ul>
                                     <li><?php echo $indicaciones; ?></li>
                                 </ul>
-                                <p style="width:100%">Para recibir mayor orientación sobre cómo establecer las observaciones de esta cuenta, puede contactarnos por correo o WhatsApp.<br><a id="awsp" href="https://wa.me/51986206045?text=Hola,%20tengo%20una%20consulta%20%C2%BFpueden%20ayudarme?" target="_blank"><i class="fa-brands fa-whatsapp"></i> : +51 986 206 045</a><br><a id="acorreo" href="mailto:themeduniverse@gmail.com" target="_blank"><i class="fa-regular fa-envelope"></i></i> : themeduniverse@gmail.com</a></p>
+                                <p style="width:100%">Para recibir mayor orientación sobre cómo establecer las observaciones de esta cuenta, puede contactarnos por correo o WhatsApp.<br><a id="awsp" href="https://api.whatsapp.com/send?phone=51986206045&text=Hola,%20tengo%20una%20consulta%20%C2%BFpueden%20ayudarme?%20%F0%9F%A4%94" target="_blank"><i class="fa-brands fa-whatsapp"></i> : +51 986 206 045</a><br><a id="acorreo" href="mailto:themeduniverse@gmail.com" target="_blank"><i class="fa-regular fa-envelope"></i></i> : themeduniverse@gmail.com</a></p>
                             </div>
                             <div class="ctn-perfil2 observaciones" id="perfil2">
                                 <form action="" method="post">
@@ -724,7 +724,7 @@
                                     </div>
                                     <hr id="edit-infb">
                                     <textarea class="txtobserva3" name="observaciones3" id="txtobserva" rows="3" required><?php echo $indica ?></textarea>
-                                    <p style="width:100%">Para recibir mayor orientación sobre cómo establecer las observaciones de esta cuenta, puede contactarnos por correo o WhatsApp.<br><a id="awsp" href="https://wa.me/51986206045?text=Hola,%20tengo%20una%20consulta%20%C2%BFpueden%20ayudarme?" target="_blank"><i class="fa-brands fa-whatsapp"></i> : +51 986 206 045</a><br><a id="acorreo" href="mailto:themeduniverse@gmail.com" target="_blank"><i class="fa-regular fa-envelope"></i></i> : themeduniverse@gmail.com</a></p>
+                                    <p style="width:100%">Para recibir mayor orientación sobre cómo establecer las observaciones de esta cuenta, puede contactarnos por correo o WhatsApp.<br><a id="awsp" href="https://api.whatsapp.com/send?phone=51986206045&text=Hola,%20tengo%20una%20consulta%20%C2%BFpueden%20ayudarme?%20%F0%9F%A4%94" target="_blank"><i class="fa-brands fa-whatsapp"></i> : +51 986 206 045</a><br><a id="acorreo" href="mailto:themeduniverse@gmail.com" target="_blank"><i class="fa-regular fa-envelope"></i></i> : themeduniverse@gmail.com</a></p>
                                 </form>
                             </div>
                         </div>
@@ -743,7 +743,7 @@
                     }
                     ?>
 
-                    <div class="filados" style="padding-top:0px">
+                    <div class="filados" style="<?php if($estado == '1'){echo "padding-top:0px";}?>">
                         <div class="ctn-valorcomment">
 
                             <div class="ctn-valorperfil">
@@ -831,9 +831,6 @@
                             </div>
                         </div>
                     </div>
-                <?php
-                }
-                ?>
     </main>
     <script src="<?php echo $_ENV['APP_URL']; ?>js/previewobservaciones.js"></script>
 </body>

@@ -25,7 +25,9 @@ $idiomapro = trim($_POST["idioma"]);
 $especialidad = trim($_POST["especialidad"]);
 $colegiatura = trim($_POST["colegiatura"]);
 $precio = trim($_POST["precio"]);
-$indicaciones = "Aún no hay observaciones.";
+$indicaciones = "1. FOTO DE PERFIL: Suba una foto donde se le vea utilizando uniforme médico.
+2. INFORMACIÓN PROFESIONAL: Publique información acerca de su trayectoria profesional como estudios, trabajos, investigaciones, etc.";
+$indicaciones = nl2br(ucfirst(trim($indicaciones)));
 $estado = "V";
 if ($sexopro == "Femenino") {
     $estimado = "Estimada, Dra.";
@@ -55,6 +57,7 @@ if ($nombrefoto3 != '' && $ruta3 != '') {
 }
 //COMPROBANDO LOS ERRORES DE INPUT ANTES DE GUARDARLOS EN LA BASE DE DATOS
 $sql = "INSERT INTO usuariospro (nombrespro, apellidospro, correopro, contraseñapro, tokenpro, codigopro, nacimientopro, sexopro, especialidad, paispro, ciudadpro, idiomapro, colegiatura, enmu, precio, fototitulo, fotocolegiatura, fotodocumento, fotoperfilpro, estado, indicaciones, ultimaedicion) VALUES ('$nombrespro', '$apellidospro', '$correopro', '$contraseñapro', '$tokenpro', '$codigopro', '$nacimientopro', '$sexopro', '$especialidad', '$paispro', '$ciudadpro', '$idiomapro', '$colegiatura', '$fecha', '$precio', '$fototitulo', '$fotocolegiatura', '$fotodocumento', 'defect.jpg', '$estado', '$indicaciones', '$fecha')";
+
 if (is_uploaded_file($ruta1)) {
     copy($ruta1, $destino1);
 }

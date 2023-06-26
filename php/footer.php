@@ -12,10 +12,11 @@ function footermed()
             <div class="divfoot">
                 <h2 class="hfoot">Síguenos</h2>
                 <div class="divicons">
-                    <a href="https://www.facebook.com/themeduniverse" target="_blank"><i class="fa-brands fa-facebook-square"></i> : The Med Universe</a><br><br>
+                    <a href="https://www.facebook.com/themeduniverse" target="_blank"><i class="fa-brands fa-facebook"></i> : The Med Universe</a><br><br>
                     <a href="https://www.instagram.com/the_med_universe/" target="_blank"><i class="fa-brands fa-instagram"></i> : @the_med_universe</a><br><br>
-                    <a href="https://www.tiktok.com/@the_med_universe" target="_blank"><i class="fa-brands fa-tiktok"></i> : @the_med_universe</a><br><br>
-                    <a href="https://wa.me/51986206045?text=Hola%2C+tengo+una+consulta+%C2%BFpueden+ayudarme%3F%F0%9F%98%80" target="_blank"><i class="fa-brands fa-whatsapp"></i> : +51 986 206 045</a>
+                    <!--<a href="https://www.tiktok.com/@the_med_universe" target="_blank"><i class="fa-brands fa-tiktok"></i> : @the_med_universe</a><br><br>-->
+                    <a href="https://api.whatsapp.com/send?phone=51986206045&text=Hola,%20tengo%20una%20consulta%20%C2%BFpueden%20ayudarme?%20%F0%9F%A4%94" target="_blank"><i class="fa-brands fa-whatsapp"></i> : +51 986 206 045</a><br><br>
+                    <a href="https://www.youtube.com/@the_med_universe" target="_blank"><i class="fa-brands fa-youtube"></i> : The Med Universe</a>
                 </div>
             </div>
             <div class="divfoot">

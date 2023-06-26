@@ -1,4 +1,8 @@
 <?php
+ini_set("session.gc_maxlifetime", 60*60*24*365);
+ini_set("session.cookie_lifetime", 60*60*24*365);
+session_start();
+
 include './php/conexion_paciente.php';
 include './php/footer.php';
 include './configuracion.php';
@@ -10,7 +14,7 @@ $seguridad->verificarSiYaEstoyLogeado();
 $urlactual = 'https://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
 
 if ($urlactual == 'https://themeduniverse.com/recuperarc') {
-    echo "<script>window.location.href='" . $_ENV['APP_URL'] . "recuperarc'</script>";
+    //echo "<script>window.location.href='" . $_ENV['APP_URL'] . "recuperarc'</script>";
 }
 
 ?>
@@ -87,7 +91,7 @@ if ($urlactual == 'https://themeduniverse.com/recuperarc') {
                 <input type='submit' value="Enviar" name="iniciar_sesion"><br>
                 <hr id="hr-login">
                 <div class="med-logos recuperar">
-                    <p id="fraselogin">EL FUTURO ES HOY, ACOMPÁÑANOS</p>
+                    <p id="fraselogin">EL FUTURO ES HOY... ACOMPÁÑANOS</p>
                 </div>
             </form>
         </div>

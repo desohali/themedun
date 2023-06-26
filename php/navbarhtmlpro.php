@@ -129,9 +129,11 @@ function headernav()
             const minutos = Math.round(segundos / 60);
             const horas = Math.round(minutos / 60);
             const dias = Math.round(horas / 24);
+            console.log('fechaNotificacion', fechaNotificacion);
+            console.log('moment().format("YYYY-MM-DD HH:mm:ss")', moment().format("YYYY-MM-DD HH:mm:ss"));
 
             const myDate = [
-                ['dias', dias],
+                ['días', dias],
                 ['horas', horas],
                 ['minutos', minutos],
                 ['segundos', segundos]
@@ -145,6 +147,16 @@ function headernav()
                     msg['cantidad'] = value;
                     break;
                 }
+            }
+
+            if(msg.cantidad=='1' && msg.nombre=='segundos'){
+                msg.nombre='segundo';
+            }else if(msg.cantidad=='1' && msg.nombre=='minutos'){
+                msg.nombre='minuto';
+            }else if(msg.cantidad=='1' && msg.nombre=='horas'){
+                msg.nombre='hora';
+            }else if(msg.cantidad=='1' && msg.nombre=='días'){
+                msg.nombre='día';
             }
 
             return `Hace ${msg.cantidad} ${msg.nombre}`;

@@ -23,7 +23,7 @@ if (isset($_GET['id']) && @$_GET['id'] == @$_SESSION['id']){
             $newDateEnmu = date("d/m/Y", $timestampEnmu );
         }
     }
-    $consulta2 = "SELECT COUNT(title) FROM citas WHERE id = '".$_GET['id']."' AND idpay <> '0' ";
+    $consulta2 = "SELECT COUNT(title) FROM citas WHERE id = '".$_GET['id']."' AND idpay <> '0' AND asistencia <> 'No asistió' AND asistenciapac <> 'No asistió' ";
     $resultado2 = mysqli_query($conexion, $consulta2);
     if ($resultado2) {
         while ($row2 = $resultado2->fetch_array()){
@@ -143,7 +143,7 @@ if (isset($_GET['id']) && @$_GET['id'] == @$_SESSION['id']){
                 </div>
                 <hr id="edit-infb">
                 <div class="ctn-infbasica">
-                    <h2 id="nombreperfil"><input type="text" placeholder="Nombres" value="<?php echo $nombres?>" name="nombres" id="nombres"><input type="text" placeholder="Apellidos" value="<?php echo $apellidos?>" name="apellidos" id="apellidos"></h2>
+                    <h2 id="nombreperfil"><input type="text" placeholder="Nombres" value="<?php echo $nombres?>" name="nombres" id="nombres" maxlength="50"><input type="text" placeholder="Apellidos" value="<?php echo $apellidos?>" name="apellidos" id="apellidos" maxlength="50"></h2>
                     <hr>
                     <p id="nacimientoperfil"><span>Fecha de nacimiento:</span><input type="date" name="nacimiento" id="nacimiento" min="1905-01-01" value="<?php echo $nacimiento?>"></p>
                     <p id="sexoperfil"><span>Género:</span><select name="sexo" id="sexo"><option class="select-opt" selected><?php echo $sexo?></option><option value="Masculino">Masculino</option><option value="Femenino">Femenino</option><option value="Otro">Otro</option></select></p><br>
@@ -164,7 +164,7 @@ if (isset($_GET['id']) && @$_GET['id'] == @$_SESSION['id']){
 
                     <?php endforeach?>
                     </select></p>
-                    <p id="ciudadperfil2"><span>Ciudad:</span><input type="text" placeholder="Ciudad" name="ciudad" id="ciudad" value="<?php echo $ciudad?>"></p><br>
+                    <p id="ciudadperfil2"><span>Ciudad:</span><input type="text" placeholder="Ciudad" name="ciudad" id="ciudad" value="<?php echo $ciudad?>" maxlength="50"></p><br>
                     <hr>
                     <p id="enmudesde"><span>En The Med Universe desde:</span> <?php echo $newDateEnmu?></p>
                     <p id="consultasperfil"><span>Citas en The Med Universe:</span> <?php echo $nrocitas?></p><br>
@@ -225,7 +225,7 @@ if (isset($_GET['id']) && @$_GET['id'] == @$_SESSION['id']){
                 </div>
                 <hr id="edit-infb">
                 <ul><li><?php echo $indicaciones; ?></li></ul>
-                    <p style="width:100%">Para recibir mayor orientación sobre cómo resolver las observaciones de tu cuenta, puedes contactarnos por correo o WhatsApp.<br><br><a id="awsp" href="https://wa.me/51986206045?text=Hola,%20tengo%20una%20consulta%20%C2%BFpueden%20ayudarme?" target="_blank"><i class="fa-brands fa-whatsapp"></i> : +51 986 206 045</a><br><a id="acorreo" href="mailto:themeduniverse@gmail.com" target="_blank"><i class="fa-regular fa-envelope"></i></i> : themeduniverse@gmail.com</a></p>
+                    <p style="width:100%">Para recibir mayor orientación sobre cómo resolver las observaciones de tu cuenta, puedes contactarnos por correo o WhatsApp.<br><br><a id="awsp" href="https://api.whatsapp.com/send?phone=51986206045&text=Hola,%20tengo%20una%20consulta%20%C2%BFpueden%20ayudarme?%20%F0%9F%A4%94" target="_blank"><i class="fa-brands fa-whatsapp"></i> : +51 986 206 045</a><br><a id="acorreo" href="mailto:themeduniverse@gmail.com" target="_blank"><i class="fa-regular fa-envelope"></i></i> : themeduniverse@gmail.com</a></p>
             </div>
         </div>
         <?php

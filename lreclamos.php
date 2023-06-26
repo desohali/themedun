@@ -7,7 +7,7 @@ include './seguridad.php';
 $urlactual = 'https://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
 
 if ($urlactual == 'https://themeduniverse.com/lreclamos') {
-    echo "<script>window.location.href='" . $_ENV['APP_URL'] . "lreclamos'</script>";
+    //echo "<script>window.location.href='" . $_ENV['APP_URL'] . "lreclamos'</script>";
 }
 
 ?>
@@ -119,7 +119,7 @@ if ($urlactual == 'https://themeduniverse.com/lreclamos') {
                 <input type='submit' value="Buscar" id="caenviar" name="caenviar"><br>
                 <hr id="hr-login">
                 <div class="med-logos reclamos">
-                    <p id="fraselogin">TU SALUD IMPORTA</p>
+                    <p id="fraselogin">TU SALUD EN BUENAS MANOS</p>
                 </div>
             </form>
         </div>
@@ -144,8 +144,8 @@ if ($urlactual == 'https://themeduniverse.com/lreclamos') {
                     <h2>II. IDENTIFICACIÓN DEL CONSUMIDOR RECLAMANTE</h2>
                     <div class="sobrehisto">
                         <div class="divhisto" id="idcon">
-                            <p><input type="text" placeholder="Nombres" name="nombres" id="nombres" required></p>
-                            <p class="espacio"><input type="text" placeholder="Apellidos" name="apellidos" id="apellidos" required></p>
+                            <p><input type="text" placeholder="Nombres" name="nombres" id="nombres" maxlength="50" required></p>
+                            <p class="espacio"><input type="text" placeholder="Apellidos" name="apellidos" id="apellidos" maxlength="50" required></p>
                         </div>
                         <div class="divhisto" id="idcon">
                             <p><select name="documento" id="documento" required>
@@ -155,18 +155,18 @@ if ($urlactual == 'https://themeduniverse.com/lreclamos') {
                                     <option value="Pasaporte">Pasaporte</option>
                                     <option value="Permiso temporal de permanencia">Permiso temporal de permanencia</option>
                                 </select></p>
-                            <p class="ultimo"><input type="text" placeholder="N° de documento" name="numdoc" id="numdoc" min="0" required></p>
+                            <p class="ultimo"><input type="text" placeholder="N° de documento" name="numdoc" id="numdoc" min="0" maxlength="15" required></p>
                         </div>
                     </div>
                     <div class="sobrehisto">
                         <div class="divhisto" id="idcon2">
-                            <p class="espacio" id="pdomi"><input type="text" placeholder="Domicilio" name="domicilio" id="domicilio" required></p>
+                            <p class="espacio" id="pdomi"><input type="text" placeholder="Domicilio" name="domicilio" id="domicilio" maxlength="50" required></p>
                         </div>
                         <div class="divhisto" id="idcon2">
-                            <p class="espacio"><input type="text" placeholder="N° de celular" name="telefono" id="telefono" min="0" required></p>
+                            <p class="espacio"><input type="text" placeholder="N° de celular" name="telefono" id="telefono" min="0" maxlength="15" required></p>
                         </div>
                         <div class="divhisto" id="idcon2">
-                            <p class="ultimo"><input type="email" placeholder="Correo electrónico" name="correo" id="correo" required></p>
+                            <p class="ultimo"><input type="email" placeholder="Correo electrónico" name="correo" id="correo" maxlength="75" required></p>
                         </div>
                     </div>
                 </div>
@@ -175,8 +175,8 @@ if ($urlactual == 'https://themeduniverse.com/lreclamos') {
                     <h2>III. IDENTIFICACIÓN DEL PADRE, MADRE O TUTOR (SI EL CONSUMIDOR RECLAMANTE ES MENOR DE EDAD)</h2>
                     <div class="sobrehisto">
                         <div class="divhisto" id="idcon">
-                            <p><input type="text" placeholder="Nombres" name="nombrestut"></p>
-                            <p class="espacio"><input type="text" placeholder="Apellidos" name="apellidostut"></p>
+                            <p><input type="text" placeholder="Nombres" name="nombrestut" maxlength="50"></p>
+                            <p class="espacio"><input type="text" placeholder="Apellidos" name="apellidostut" maxlength="50"></p>
                         </div>
                         <div class="divhisto" id="idcon">
                             <p><select name="documentotut">
@@ -186,18 +186,18 @@ if ($urlactual == 'https://themeduniverse.com/lreclamos') {
                                     <option value="Pasaporte">Pasaporte</option>
                                     <option value="Permiso temporal de permanencia">Permiso temporal de permanencia</option>
                                 </select></p>
-                            <p class="ultimo"><input type="text" placeholder="N° de documento" name="numdoctut" min="0"></p>
+                            <p class="ultimo"><input type="text" placeholder="N° de documento" name="numdoctut" min="0" maxlength="15"></p>
                         </div>
                     </div>
                     <div class="sobrehisto">
                         <div class="divhisto" id="idcon2">
-                            <p class="espacio"><input type="text" placeholder="Domicilio" name="domiciliotut"></p>
+                            <p class="espacio"><input type="text" placeholder="Domicilio" name="domiciliotut" maxlength="50"></p>
                         </div>
                         <div class="divhisto" id="idcon2">
-                            <p class="espacio"><input type="text" placeholder="N° de celular" name="telefonotut" min="0"></p>
+                            <p class="espacio"><input type="text" placeholder="N° de celular" name="telefonotut" min="0" maxlength="15"></p>
                         </div>
                         <div class="divhisto" id="idcon2">
-                            <p class="ultimo"><input type="email" placeholder="Correo electrónico" name="correotut"></p>
+                            <p class="ultimo"><input type="email" placeholder="Correo electrónico" name="correotut" maxlength="75"></p>
                         </div>
                     </div>
                 </div>
@@ -213,12 +213,12 @@ if ($urlactual == 'https://themeduniverse.com/lreclamos') {
                                 </select></p>
                         </div>
                         <div class="divhisto idbienclass">
-                            <p><input type="text" placeholder="Monto reclamado" name="monto" id="monto" min="0" required></p>
+                            <p><input type="number" placeholder="(S/) Monto reclamado" name="monto" id="monto" min="0" required></p>
                             <p class="ultimo"><input type="number" placeholder="N° de cita (opcional)" name="numcita" id="numcita" min="0"></p>
                         </div>
                     </div>
                     <div class="divhisto" id="idbien2">
-                        <p id="pdescri"><textarea name="descripcion" id="descripcion" onkeypress="return validarn(event)" placeholder='Descripción' class="txtdes" rows="5" required></textarea></p>
+                        <p id="pdescri"><textarea name="descripcion" id="descripcion" onkeypress="return validarn(event)" placeholder='Descripción' class="txtdes" rows="5" maxlength="500" required></textarea></p>
                     </div>
                 </div>
                 <hr class="hrlr">
@@ -248,10 +248,10 @@ if ($urlactual == 'https://themeduniverse.com/lreclamos') {
                         </div>
                     </div>
                     <div class="divhisto" id="idbien2">
-                        <p id="pdet"><textarea name="detalle" id="detalle" onkeypress="return validarn(event)" placeholder='Detalle' class="txtdeta" rows="5" required></textarea></p>
+                        <p id="pdet"><textarea name="detalle" id="detalle" onkeypress="return validarn(event)" placeholder='Detalle' class="txtdeta" rows="5" maxlength="500" required></textarea></p>
                     </div>
                     <div class="divhisto" id="idbien2">
-                        <p id="pped"><textarea name="pedido" id="pedido" onkeypress="return validarn(event)" placeholder='Pedido' class="txtpedi" rows="5" required></textarea></p>
+                        <p id="pped"><textarea name="pedido" id="pedido" onkeypress="return validarn(event)" placeholder='Pedido' class="txtpedi" rows="5" maxlength="500" required></textarea></p>
                     </div>
                 </div>
                 <hr class="hrlr">

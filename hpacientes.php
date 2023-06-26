@@ -32,7 +32,7 @@ if (isset($_GET['id']) && @$_SESSION['idpro'] == @$_GET['id']){
             $precio = $row['precio'];
             $estadoMedico = $row['estado'];
             $fotoperfilpro = $row['fotoperfilpro'];
-            if (@$estadoMedico == 2) {
+            if (@$estadoMedico != 1) {
                 $url = "<script>window.location.href='" . $_ENV['APP_URL'];
                 echo $url . "perfilpro/" . $_SESSION['idpro'] . "'</script>";
             }

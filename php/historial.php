@@ -59,6 +59,11 @@
                                 $doctor = "Dr.";
                             }
                             $medico = $doctor.' '.$rowcita['nombresMedico'].' '.$rowcita['apellidosMedico'];
+                            if($horafinal[0]=='01'){
+                                $enlace=" a la ";
+                            }else{
+                                $enlace=" a las ";
+                            }
                         }
                     }
                 ?>
@@ -67,17 +72,18 @@
                     <div class="boxhisto1">
                         <div class="historia1">
                             <p><span>N° de cita:</span><br><?php echo $idcita?></p>
-                            <p><span>Fecha y hora de cita:</span><br><?php echo $newFecha . " a las " . $horafinal[0] . ":00";?></p>
+                            <p><span>Fecha y hora de cita:</span><br><?php echo $newFecha . $enlace . $horafinal[0] . ":00";?></p>
                         </div>
+
                         <div class="historia2">
                             <p><span>Pagado por:</span><br><?php echo $nombres.' '.$apellidos?></p>
-                            <p><span>Pagado a:</span><br><?php echo $medico?></p>
+                            <p><span>Método de pago:</span><br><?php echo $lista['metodopago']?></p>
                         </div>
                     </div>
                     <div class="boxhisto2">
                         <div class="historia3">
-                            <p><span>Método de pago:</span><br><?php echo $lista['metodopago']?></p>
-                            <p><span>Asistencia paciente:</span><br><?php echo $asistenciapac?></p>
+                            <p><span>Pagado a:</span><br><?php echo $medico?></p>
+                            <p><span>Asistencia:</span><br><?php echo $asistenciapac?></p>
                         </div>
                         <div class="historia4">
                             <p><span>Precio de cita:</span><br>S/ <?php echo $costo?></p>

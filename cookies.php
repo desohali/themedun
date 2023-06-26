@@ -7,7 +7,7 @@
 $urlactual='https://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
 
 if ($urlactual=='https://themeduniverse.com/cookies') {
-    echo "<script>window.location.href='" . $_ENV['APP_URL'] . "cookies'</script>";
+    //echo "<script>window.location.href='" . $_ENV['APP_URL'] . "cookies'</script>";
 }
 
 ?>
@@ -67,7 +67,7 @@ if ($urlactual=='https://themeduniverse.com/cookies') {
             <p>En The Med Universe estaremos disponibles para atender a cualquier consulta que no esté especificada en esta política sobre cómo utilizamos las Cookies. Puede comunicarse con The Med Universe mediante el Centro de Ayuda y/o mensajes por WhatsApp al número telefónico disponible en la Plataforma. Sea cual fuere el medio de comunicación elegido por el Usuario Profesional, en el mismo deberá de identificarse apropiadamente, señalando nombres, apellidos, correo electrónico, número de teléfono, país y ciudad, autorizando desde este momento que toda comunicación le pueda ser remitida, a discreción de The Med Universe, a dicho correo electrónico y/o WhatsApp. No será nunca necesaria la confirmación de recepción para que las comunicaciones dirigidas al correo electrónico y/o WhatsApp se tengan por bien recibidas.</p><br><br>
             <h2>Cambios a la Política de Cookies</h2><br>
             <p>Como siempre buscamos mejorar nuestros sitios, esta Política de Cookies puede sufrir actualizaciones. Por lo tanto, le recomendamos que visite esta página periódicamente para que sepas sobre los cambios. Si se llegaran a realizar cambios relevantes que requieran un nuevo consentimiento de su parte, publicaremos esta actualización y le notificaremos los mismos para su nuevo consentimiento.</p><br><br>
-            <p><span>Última actualización: </span>01 de marzo de 2023.</p>
+            <p><span>Última actualización: </span>23 de junio de 2023.</p>
         </div>
     </main>
 </body>

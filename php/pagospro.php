@@ -38,7 +38,7 @@
                 //Operacion matematica para mostrar los siquientes datos.
                 $IncrimentNum =(($compag +1)<=$TotalRegistro)?($compag +1):0;
                 //Consulta SQL
-                $consultavistas ="SELECT distinct idupro, idupro as idpro,(select nombrespro from usuariospro where idpro=idpro limit 1) as nombresMedico, (select apellidospro from usuariospro where idpro=idpro limit 1) as apellidosMedico FROM citas WHERE abonado = 'NO' AND idpay <> '0' or abonado = 'F' AND idpay <> '0' ORDER BY start ASC LIMIT ".(($compag-1)*$CantidadMostrar)." , ".$CantidadMostrar;
+                $consultavistas ="SELECT idupro, idupro as idpro, (select MIN(start) from citas where idupro=idpro AND abonado = 'NO' AND idpay <> '0' or idupro=idpro AND abonado = 'F' AND idpay <> '0') as minCita FROM citas WHERE abonado = 'NO' AND idpay <> '0' or abonado = 'F' AND idpay <> '0' GROUP BY idupro ORDER BY minCita ASC LIMIT ".(($compag-1)*$CantidadMostrar)." , ".$CantidadMostrar;
                 $consultares=mysqli_query($conexion, $consultavistas);
                 while ($lista=mysqli_fetch_array($consultares)) {
                     $consultacita = "SELECT * FROM usuariospro WHERE idpro = '".$lista['idupro']."' ";
@@ -69,7 +69,7 @@
                         <p id="p2ciudad"><span>Ciudad:</span> <?php echo $ciudadpro?></p>
                     </div>
                     <div class="historia3" id="parte3">
-                        <a href="<?php echo $_ENV['APP_URL'];?>abonospro/<?php echo $idpro?>" id="bcfiled2">Pagos Pendientes</a>
+                        <a href="<?php echo $_ENV['APP_URL'];?>abonospro/<?php echo $idpro?>" id="bcfiled2">Historial de Pagos</a>
                     </div>
                 </div>
                 <?php

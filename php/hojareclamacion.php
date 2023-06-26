@@ -51,7 +51,7 @@
                             <p><span>Domicilio:</span><br><?php echo $domicilio;?></p>
                         </div>
                         <div class="divhisto" id="idcon2">
-                            <p><span>N° de teléfono:</span><br><?php echo $telefono;?></p>
+                            <p><span>N° de celular:</span><br><?php echo $telefono;?></p>
                         </div>
                         <div class="divhisto" id="idcon2">
                             <p><span>Correo electrónico:</span><br><?php echo $correo;?></p>
@@ -76,7 +76,7 @@
                             <p><span>Domicilio:</span><br><?php echo $domiciliotut;?></p>
                         </div>
                         <div class="divhisto" id="idcon2">
-                            <p><span>N° de teléfono:</span><br><?php echo $telefonotut;?></p>
+                            <p><span>N° de celular:</span><br><?php echo $telefonotut;?></p>
                         </div>
                         <div class="divhisto" id="idcon2">
                             <p><span>Correo electrónico:</span><br><?php echo $correotut;?></p>
@@ -108,7 +108,7 @@
                         </div>
                         <div class="divhisto" id="idcon2">
                             <p id="pevidencia"><span>Documento o imagen evidencial (opcional):</span><br>
-                                <a href="../evidencias/<?php echo $evidencia;?>" download="../evidencias/<?php echo $evidencia;?>"><?php echo 'Descargar evidencia';?></a>
+                                <a href="../evidencias/<?php echo $evidencia;?>" download><?php echo 'Descargar evidencia';?></a>
                             </p>
                         </div>
                     </div>
@@ -132,7 +132,7 @@
                             </div>
                         </div>
                         <div class="divhisto" id="idbien2">
-                            <textarea name="observaciones" onkeypress="return validarn(event)" placeholder='Observaciones y acciones a considerar por The Med Universe S.A.C.S.' rows="5" required></textarea>
+                            <textarea name="observaciones" onkeypress="return validarn(event)" placeholder='Observaciones y acciones a considerar por The Med Universe S.A.C.S.' rows="5" maxlength="500" required></textarea>
                         </div>
                     </form>
                     <?php

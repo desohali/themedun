@@ -7,7 +7,7 @@
 $urlactual='https://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
 
 if ($urlactual=='https://themeduniverse.com/privacidad') {
-    echo "<script>window.location.href='" . $_ENV['APP_URL'] . "privacidad'</script>";
+    //echo "<script>window.location.href='" . $_ENV['APP_URL'] . "privacidad'</script>";
 }
 
 ?>
@@ -70,15 +70,15 @@ if ($urlactual=='https://themeduniverse.com/privacidad') {
             <ul>
                 <li>Si usted es un Usuario Profesional.</li>
             </ul><br>
-            <p>Entidad: Bluehost, Inc.<br><br>Finalidad: Hosting.<br><br>Domicilio: 5335 Gate Pkwy, 2nd Floor, Jacksonville, FL 32256, USA.<br><br>Entidad: The Med Universe S.A.C.S.<br><br>Finalidad: Servicios de Tecnología.<br><br>Domicilio: Calle Ceferino Ramirez N° 265 (Lima - Huaura - Santa María).</p><br>
+            <p>Entidad: Oracle Corporation.<br><br>Finalidad: Hosting.<br><br>Domicilio: 2300 Oracle Way, Austin, TX 78741, USA.<br><br>Entidad: The Med Universe S.A.C.S.<br><br>Finalidad: Servicios de Tecnología.<br><br>Domicilio: Calle Ceferino Ramirez N° 265 (Lima - Huaura - Santa María).</p><br>
             <ul>
                 <li>Si usted es un Usuario.</li>
             </ul><br>
-            <p>Entidad: Bluehost, Inc.<br><br>Finalidad: Hosting.<br><br>Domicilio: 5335 Gate Pkwy, 2nd Floor, Jacksonville, FL 32256, USA.<br><br>Entidad: The Med Universe S.A.C.S.<br><br>Finalidad: Servicios de Tecnología.<br><br>Domicilio: Calle Ceferino Ramirez N° 265 (Lima - Huaura - Santa María).</p><br>
+            <p>Entidad: Oracle Corporation.<br><br>Finalidad: Hosting.<br><br>Domicilio: 2300 Oracle Way, Austin, TX 78741, USA.<br><br>Entidad: The Med Universe S.A.C.S.<br><br>Finalidad: Servicios de Tecnología.<br><br>Domicilio: Calle Ceferino Ramirez N° 265 (Lima - Huaura - Santa María).</p><br>
             <ul>
                 <li>Si usted utiliza nuestro Libro de Reclamaciones.</li>
             </ul><br>
-            <p>Entidad: Bluehost, Inc.<br><br>Finalidad: Hosting.<br><br>Domicilio: 5335 Gate Pkwy, 2nd Floor, Jacksonville, FL 32256, USA.<br><br>Entidad: The Med Universe S.A.C.S.<br><br>Finalidad: Servicios de Tecnología y Soporte del Libro de Reclamaciones.<br><br>Domicilio: Calle Ceferino Ramirez N° 265 (Lima - Huaura - Santa María).<br><br>Otras categorías de posibles encargados de tratamiento de datos personales podrían ser: Empresas de estudios de mercado.<br><br>En los casos que exista flujo transfronterizo de su Información Personal, The Med Universe garantiza que será tratada con niveles adecuados de protección.</p><br><br>
+            <p>Entidad: Oracle Corporation.<br><br>Finalidad: Hosting.<br><br>Domicilio: 2300 Oracle Way, Austin, TX 78741, USA.<br><br>Entidad: The Med Universe S.A.C.S.<br><br>Finalidad: Servicios de Tecnología y Soporte del Libro de Reclamaciones.<br><br>Domicilio: Calle Ceferino Ramirez N° 265 (Lima - Huaura - Santa María).<br><br>Otras categorías de posibles encargados de tratamiento de datos personales podrían ser: Empresas de estudios de mercado.<br><br>En los casos que exista flujo transfronterizo de su Información Personal, The Med Universe garantiza que será tratada con niveles adecuados de protección.</p><br><br>
             <h2>4. Confidencialidad de la Información Personal</h2><br>
             <p>4.1. The Med Universe no venderá, intercambiará, alquilará o compartirá la Información Personal del Titular excepto en las formas establecidas en esta Política.</p><br><br>
             <h2>5. Contraseña</h2><br>
@@ -89,7 +89,7 @@ if ($urlactual=='https://themeduniverse.com/privacidad') {
             <p>7.1. The Med Universe cooperará con las autoridades competentes y con otros terceros para garantizar el cumplimiento de las leyes. The Med Universe podrá revelar la Información Personal del Titular sin su consentimiento únicamente cuando esté permitido por ley, requerido por mandato judicial, o en casos de prevención de lavado de activos o financiamiento del terrorismo o el caso que dicho Titular participa de actividades ilegales. En tales situaciones, The Med Universe colaborará con las autoridades competentes con el fin de salvaguardar la integridad y la seguridad de la comunidad y la de sus Titulares de los datos.</p><br><br>
             <h2>8. Seguridad y Almacenamiento de la Información Personal</h2><br>
             <p>8.1. En el tratamiento de la Información Personal, The Med Universe garantiza que ha adoptado medidas técnicas para garantizar la seguridad de sus datos personales. Sin perjuicio de lo expuesto, considerando que internet es un sistema abierto, de acceso público, The Med Universe no puede garantizar que terceros no autorizados no puedan eventualmente superar las medidas de seguridad y utilizar la Información Personal en forma indebida, por tratarse de eventos imprevisibles.<br><br>8.2. El Titular conoce y acepta expresamente que The Med Universe, a su exclusivo criterio, recabe, almacene y eventualmente monitoree las grabaciones de las Citas programadas, los comentarios en los perfiles de los Usuarios Profesionales, la Información Personal y/o profesional de los Usuarios y Usuarios Profesionales mediante la Plataforma, con el único objetivo de contribuir a la seguridad de las relaciones y comunicaciones que se desarrollan a través de éstas.</p><br><br>
-            <p><span>Última actualización: </span>01 de marzo de 2023.</p>
+            <p><span>Última actualización: </span>23 de junio de 2023.</p>
         </div>
     </main>
 </body>

@@ -101,13 +101,13 @@ class Notificaciones
 
       if ($obj->estadoPaciente == "1") {
 
-        if ($obj->estado == "RECHAZADA") {
+        if ($obj->estado == "RECHAZADA" && $obj->title != $_ENV['CITA_VENCIDA']) {
 
           $obj->notificacion = "<span class='spanbolder'>Cita: </span>" . $newFecha . " a las " . $horafinal[0] . ":00";
           $obj->notificacion .= "<br><span>" . $profesion.": </span>" . $sexo . $obj->nombresMedico . " " . $obj->apellidosMedico;
           $obj->notificacion .= "<br>Solicitud de cita <span style='color:#ff0800'>RECHAZADA</span> por " . $profedos;
           $obj->notificacion .= ". Selecciona otra fecha disponible.";
-        } else if ($obj->estado == "ELIMINADA") {
+        } else if ($obj->estado == "ELIMINADA" && $obj->title != $_ENV['CITA_VENCIDA']) {
 
           $obj->notificacion = "<span class='spanbolder'>Cita: </span>" . $newFecha . " a las " . $horafinal[0] . ":00";
           $obj->notificacion .= "<br><span>" . $profesion.": </span>" . $sexo . $obj->nombresMedico . " " . $obj->apellidosMedico;
@@ -184,7 +184,6 @@ class Notificaciones
 
       $timestamp = strtotime($fecha);
       $newFecha = date("d/m/Y", $timestamp);
-      if ($obj->estadopro == "1") {
       $obj->notidicacionDeAbono = true;
 
       if ($obj->abonado == $enumKeys[1]) {
@@ -194,11 +193,11 @@ class Notificaciones
       } else if ($obj->abonado == $enumKeys[2]) {
         $obj->notificacion = "<span class='spanbolder'>Cita <span style='color:#ff0800'>(No Asistió)</span>: </span>" . $newFecha . " a las " . $horafinal[0] . ":00";
         $obj->notificacion .= "<br><span>Paciente: </span>" . $obj->nombresPaciente . " " . $obj->apellidosPaciente;
-        $obj->notificacion .= "<br>La comisión que le corresponde a The Med Universe por esta cita será <span style='color:#ffc107'>DESCONTADA</span> de su próxima cita.";
+        $obj->notificacion .= "<br>Se ha generado una deuda por <span style='color:#ff0000'>INASISTENCIA</span> a esta cita. En el “Historial de Pagos” encontrará los métodos de pago para saldar su deuda.";
       } else if ($obj->abonado == $enumKeys[3]) {
         $obj->notificacion = "<span class='spanbolder'>Cita <span style='color:#ff0800'>(No Asistió)</span>: </span>" . $newFecha . " a las " . $horafinal[0] . ":00";
         $obj->notificacion .= "<br><span>Paciente: </span>" . $obj->nombresPaciente . " " . $obj->apellidosPaciente;
-        $obj->notificacion .= "<br>La comisión que le corresponde a The Med Universe por esta cita fue <span style='color:#ff0800'>COBRADA</span>.";
+        $obj->notificacion .= "<br>Su deuda por inasistencia ha sido <span style='color:#00d418'>PAGADA</span>.";
       } else {
         $obj->notificacion = "";
       }
@@ -209,7 +208,6 @@ class Notificaciones
       $obj->tiempoSegundos = $obj->fechaabono ? (($fechaActualMilisegundos - $fechaNotificacionMilisegundos) / 1000) : 0;
 
       array_push($arrayJson, $obj);
-      }
     }
 
     return $arrayJson;
@@ -244,7 +242,6 @@ class Notificaciones
       $timestamp = strtotime($fecha);
       $newFecha = date("d/m/Y", $timestamp);
 
-      if ($obj->estadopro == "1") {
 
         $obj->notificacion = "";
         if ($obj->estado == "CANCELADA") {
@@ -285,7 +282,6 @@ class Notificaciones
         $obj->tiempoSegundos = $obj->fechanoti ? (($fechaActualMilisegundos - $fechaNotificacionMilisegundos) / 1000) : 0;
 
         array_push($arrayJson, $obj);
-      }
     }
 
     return $arrayJson;
@@ -306,7 +302,6 @@ class Notificaciones
     $fechaActualMilisegundos = (strtotime($this->currentDate->format('Y-m-d H:i:s')) * 1000);
 
     while ($obj = $result->fetch_object()) {
-      if ($obj->estadopro == "1") {
         $obj->notificacion = "<span class='spanbolder'>Nueva Valoración:</span> " . $obj->valoracion;
         $obj->notificacion .= " estrellas<br><span class='spanbolder'>Paciente:</span> ";
         $obj->notificacion .= $obj->nombresPaciente . " ";
@@ -315,7 +310,6 @@ class Notificaciones
         $obj->tiempo = $obj->fechanoti ? $this->tiempoTranscurrido($obj->fechanoti) : '';
 
         array_push($arrayJson, $obj);
-      }
     }
 
     return $arrayJson;
@@ -336,7 +330,6 @@ class Notificaciones
     /* $PACIENTE  .  "te ha dejado un nuevo comentario" */
 
     while ($obj = $result->fetch_object()) {
-      if ($obj->estadopro == "1") {
         /* $obj->notificacion = "<span class='spanbolder'>Nueva Valoración:</span> " . $obj->valoracion;
         $obj->notificacion .= " estrellas.<br><span class='spanbolder'>Paciente:</span> ";
         $obj->notificacion .= $obj->nombresPaciente . " ";
@@ -349,7 +342,6 @@ class Notificaciones
         $obj->tiempoSegundos = $obj->fechanoti ? (($fechaActualMilisegundos - $fechaNotificacionMilisegundos) / 1000) : 0;
 
         array_push($arrayJson, $obj);
-      }
     }
 
     return $arrayJson;

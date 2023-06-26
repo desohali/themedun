@@ -6,7 +6,7 @@
 $urlactual='https://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
 
 if ($urlactual=='https://themeduniverse.com/terycon') {
-    echo "<script>window.location.href='" . $_ENV['APP_URL'] . "terycon'</script>";
+    //echo "<script>window.location.href='" . $_ENV['APP_URL'] . "terycon'</script>";
 }
     
 ?>
@@ -62,13 +62,14 @@ if ($urlactual=='https://themeduniverse.com/terycon') {
                 <li>Pagar cualquier deuda que genere en virtud del uso de la Plataforma. Asimismo, el Usuario reconoce y acepta que The Med Universe podrá descontar el valor de la deuda de cualquier método de pago registrado en la Plataforma.</li><br>
                 <li>Abstenerse de solicitar compensaciones, por cualquier medio, que falten a la verdad.</li><br>
                 <li>Verificar que la Cita programada a través de la Plataforma corresponda a lo solicitado por el Usuario, antes de llegar a la fecha y hora registradas en la misma.</li><br>
-                <li>Adjuntar imágenes y/o documentos de ayuda diagnóstica, así como la descripción del motivo de consulta en la hoja de historia clínica correspondiente a la Cita programada, antes de llegar a la fecha y hora registradas en la misma./li><br>
+                <li>Adjuntar imágenes y/o documentos de ayuda diagnóstica, así como la descripción del motivo de consulta en la hoja de historia clínica correspondiente a la Cita programada, antes de llegar a la fecha y hora registradas en la misma.</li><br>
                 <li>Informarse sobre las instrucciones de participación en la Cita programada a través de la Plataforma.</li><br>
                 <li>Asegurarse de contar con los recursos necesarios (dispositivo móvil y/o portátil, conexión estable a internet, entre otros) para poder recibir los servicios comprados. El Usuario reconoce y acepta que, de carecer de algún recurso que imposibilite su asistencia a la Cita programada, carece el derecho a presentar cualquier tipo de reclamo y/o petición de devolución del dinero pagado por la misma.</li><br>
                 <li>Asistir a la Cita programada a través de la Plataforma. De no ser así, el Usuario carece el derecho a presentar cualquier tipo de reclamo y/o petición de devolución del dinero pagado por dicha Cita.</li><br>
                 <li>Asistir a la Cita programada a través de la Plataforma, de preferencia, con cinco (5) minutos de anticipación. El Usuario reconoce y acepta que, de tener una tardanza de más de quince (15) minutos desde la hora programada en la Cita, carece el derecho a presentar cualquier tipo de reclamo y/o petición de devolución del dinero pagado por dicha Cita, en caso de que el Usuario Profesional decida ya no participar de la misma.</li><br>
                 <li>Tratar de manera respetuosa a los Usuarios Profesionales y a los agentes de servicio al cliente.</li><br>
                 <li>Abstenerse de entablar relaciones con los Usuarios Profesionales para realizar actividades ilícitas y/o contrarias a la moral, al orden público y a las buenas costumbres.</li><br>
+                <li>Abstenerse de intercambiar números de teléfono o medio de contacto con los Usuarios Profesionales por la Plataforma, toda interacción es por medio de la misma.</li><br>
                 <li>Abstenerse de suplantar la identidad de otros Usuarios y/o hacer uso de datos y/o información que no le corresponda.</li><br>
                 <li>Abstenerse de tener más de una (1) Cuenta en la Plataforma con los mismos Datos Personales. El Usuario reconoce y acepta que The Med Universe se reserva el derecho de desactivar, bloquear y/o eliminar temporal y/o definitivamente las Cuentas que no cumplan con estos parámetros. </li><br>
                 <li>Los representantes legales de los Usuarios que sean menores de edad declaran expresamente que han autorizado a estos últimos su registro en la Plataforma, entendiéndose que son responsables por el uso de la Plataforma por parte de los Usuarios menores de edad.</li><br>
@@ -128,7 +129,7 @@ if ($urlactual=='https://themeduniverse.com/terycon') {
             <p>El Usuario podrá contactar a The Med Universe mediante comunicación escrita dirigida a Calle Ceferino Ramirez N° 265 (Lima – Huaura – Santa María), por medio del Centro de Ayuda y/o mensajes por WhatsApp al número telefónico disponible en la Plataforma. Sea cual fuere el medio de comunicación elegido por el Usuario, en el mismo deberá de identificarse apropiadamente, señalando nombres, apellidos, correo electrónico, número de teléfono, país y ciudad, autorizando desde este momento que toda comunicación le pueda ser remitida, a discreción de The Med Universe, a dicho correo electrónico y/o WhatsApp. No será nunca necesaria la confirmación de recepción para que las comunicaciones dirigidas al correo electrónico y/o WhatsApp se tengan por bien recibidas.</p><br><br>
             <h2>Libro de Reclamaciones</h2><br>
             <p>The Med Universe cuenta con un Libro de Reclamaciones Virtual, el cual se encuentra a su disposición mediante la Plataforma. En dicho libro podrán presentarse los reclamos por los servicios que brinda The Med Universe. Cualquier reclamo presentado por servicios que no son brindados por The Med Universe, será derivado a los Usuarios Profesionales o terceros que tuvieren la obligación de atenderlos, acto al cual usted brinda su consentimiento.</p><br><br>
-            <p><span>Última actualización: </span>01 de marzo de 2023.</p>
+            <p><span>Última actualización: </span>23 de junio de 2023.</p>
         </div>
     </main>
 </body>

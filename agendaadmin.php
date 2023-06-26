@@ -10,7 +10,7 @@
     include './configuracion.php';
     if(!isset($_SESSION["loggedin"]))
     {
-        header("Location: loginadmin");
+        /*header("Location: loginadmin");*/
     }
 ?>
 <?php

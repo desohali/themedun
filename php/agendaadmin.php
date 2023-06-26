@@ -66,6 +66,7 @@ if (isset($idcita)) {
     $select = "UPDATE citas SET leido='NO', leidopro='NO', estado='ELIMINADA', fechanoti=NOW() WHERE idupro=" . $idpro;
     $select .= " AND idcita <> " . $idcita;
     $select .= " AND start='" . $cita->start . "'";
+    $select .= " AND estado <> 'CANCELADA' AND estado <> 'RECHAZADA'";
 
     $resultSelect = mysqli_query($conexion, $select);
 
@@ -87,6 +88,18 @@ if (isset($idcita)) {
         $elOlaMed = "el Dr.";
     }
 
+    $fechapago = $cita->start;
+		list($fecha, $hora) = explode(" ", $fechapago);
+		$horafinal = explode(":00", $hora);
+		$timestamp = strtotime($fecha);
+		$newFecha = date("d/m/Y", $timestamp);
+		if($horafinal[0]=='01'){
+		  $enlace=" a la ";
+		}else{
+		  $enlace=" a las ";
+		}
+		$tiempoFinal=$newFecha . $enlace . $horafinal[0] . ":00";
+
     $titulo = "CITA PROGRAMADA";
     $mensajePaciente = "
 		<html>
@@ -95,7 +108,7 @@ if (isset($idcita)) {
 		</head>
 		<body>
 			<h1 style='color:#0052d4; text-align:center'>The Med Universe</h1>
-			<p>" . $estimadoPaciente . ", " . $cita->nombresPaciente . " " . $cita->apellidosPaciente . ":<br><br>Has programado una cita con " . $elOlaMed . " " . $cita->nombresMedico . " " . $cita->apellidosMedico . " para el " . $cita->start . ". Únete con este link <a href='" . $response->join_url . "'>" . $response->join_url . "</a> en la fecha y hora correspondientes.<br><br>Encontrarás mayor información de tu cita en <a href='https://www.themeduniverse.com/agenda/" . $id . "'>https://www.themeduniverse.com/agenda/" . $id . "</a>.</p>
+			<p>" . $estimadoPaciente . ", " . $cita->nombresPaciente . " " . $cita->apellidosPaciente . ":<br><br>Has programado una cita con " . $elOlaMed . " " . $cita->nombresMedico . " " . $cita->apellidosMedico . " para el " . $tiempoFinal . ". Únete con este link <a href='" . $response->join_url . "'>" . $response->join_url . "</a> en la fecha y hora correspondientes.<br><br>Encontrarás mayor información de tu cita en <a href='".$_ENV['APP_URL']."agenda/" . $id . "'>".$_ENV['APP_URL']."agenda/" . $id . "</a>.</p>
 		</body>
 		</html>
 		";
@@ -107,7 +120,7 @@ if (isset($idcita)) {
 		</head>
 		<body>
 			<h1 style='color:#0052d4; text-align:center'>The Med Universe</h1>
-			<p>" . $estimadoMedico . " " . $cita->nombresMedico . " " . $cita->apellidosMedico . ":<br><br>Se le ha programado una cita con " . $elOlaPac . " paciente " . $cita->nombresPaciente . " " . $cita->apellidosPaciente . " para el " . $cita->start . ". Únase con el link <a href='" . $response->join_url . "'>" . $response->join_url . "</a> en la fecha y hora correspondientes.<br><br>Encontrará mayor información de su cita en <a href='https://www.themeduniverse.com/horario/" . $idpro . "'>https://www.themeduniverse.com/horario/" . $idpro . "</a>.</p>
+			<p>" . $estimadoMedico . " " . $cita->nombresMedico . " " . $cita->apellidosMedico . ":<br><br>Se le ha programado una cita con " . $elOlaPac . " paciente " . $cita->nombresPaciente . " " . $cita->apellidosPaciente . " para el " . $tiempoFinal . ". Únase con el link <a href='" . $response->join_url . "'>" . $response->join_url . "</a> en la fecha y hora correspondientes.<br><br>Encontrará mayor información de su cita en <a href='".$_ENV['APP_URL']."horario/" . $idpro . "'>".$_ENV['APP_URL']."horario/" . $idpro . "</a>.</p>
 		</body>
 		</html>
 		";
@@ -119,7 +132,7 @@ if (isset($idcita)) {
 		</head>
 		<body>
 			<h1 style='color:#0052d4; text-align:center'>The Med Universe</h1>
-			<p>Estimado, Gerente General Leandro Santiago Bernal Saavedra:<br><br>Se ha programado una cita entre " . $elOlaMed . " " . $cita->nombresMedico . " " . $cita->apellidosMedico . " y " . $elOlaPac . " paciente " . $cita->nombresPaciente . " " . $cita->apellidosPaciente . " para el " . $cita->start . ". El link de unión a la teleconsulta es el siguiente: <a href='" . $response->join_url . "'>" . $response->join_url . "</a><br>Encontrará mayor información de la cita en <a href='https://www.themeduniverse.com/agendaadmin/1'>https://www.themeduniverse.com/agendaadmin/1</a></p>
+			<p>Estimado, Gerente General Leandro Santiago Bernal Saavedra:<br><br>Se ha programado una cita entre " . $elOlaMed . " " . $cita->nombresMedico . " " . $cita->apellidosMedico . " y " . $elOlaPac . " paciente " . $cita->nombresPaciente . " " . $cita->apellidosPaciente . " para el " . $tiempoFinal . ". El link de unión a la teleconsulta es el siguiente: <a href='" . $response->join_url . "'>" . $response->join_url . "</a><br>Encontrará mayor información de la cita en <a href='".$_ENV['APP_URL']."agendaadmin/1'>".$_ENV['APP_URL']."agendaadmin/1</a></p>
 		</body>
 		</html>
 		";
@@ -393,7 +406,7 @@ if (isset($idcita)) {
                                     window.open(calEvent.ubicacion, '_blank');
                                 });
                                 $aceptarcita.css('display', 'none');
-                                if (calEvent.asistencia == '') {
+                                if (calEvent.asistencia == null || calEvent.asistencia == '') {
                                     $('#formInforme').css('display', 'flex');
                                     $('#informes').css('display', 'none');
                                 } else {
@@ -474,7 +487,7 @@ if (isset($idcita)) {
                                         <option value="No asistió">No asistió</option>
                                     </select>
                                 </div>
-                                <button type="submit" class="btn btn-success" id="informecita" style="background:#00d418;border:none;font-size:14px;font-weight:600;padding:10px 20px;" onmouseover="this.style.background='#00c118';" onmouseout="this.style.background='#00d418';">
+                                <button type="submit" class="btn btn-success" id="informecita" style="background:#00d418;border:1px solid #00d418;font-size:14px;font-weight:600;padding:10px 20px;" onmouseover="this.style.background='#00ee1b';this.style.border='1px solid #00ee1b';" onmouseout="this.style.background='#00d418';this.style.border='1px solid #00d418';">
                                     Enviar informe
                                 </button>
                             </form>
@@ -488,7 +501,7 @@ if (isset($idcita)) {
                                     <p id="pasistenciapac"></p>
                                 </div>
                             </div>
-                            <button onClick="aceptarCita()" type="submit" class="btn btn-success" id="aceptarcita" style="background:#00d418;border:none;position:relative;top:unset;left:unset;font-size:14px;font-weight:600;padding:10px 20px" onmouseover="this.style.background='#00c118';" onmouseout="this.style.background='#00d418';">
+                            <button onClick="aceptarCita()" type="submit" class="btn btn-success" id="aceptarcita" style="background:#00d418;border:1px solid #00d418;position:relative;top:unset;left:unset;font-size:14px;font-weight:600;padding:10px 20px" onmouseover="this.style.background='#00ee1b';this.style.border='1px solid #00ee1b';" onmouseout="this.style.background='#00d418';this.style.border='1px solid #00d418';">
                                 Administrar cita
                             </button>
                             <form id="formProgramar" method="POST">
@@ -500,7 +513,7 @@ if (isset($idcita)) {
                                     </select>
                                     <input id="idCitas" name="idCitas" type="hidden">
                                 </div>
-                                <button type="submit" class="btn btn-success" id="programarcita" style="background:#00d418;border:none;font-size:14px;font-weight:600;padding:10px 20px;" onmouseover="this.style.background='#00c118';" onmouseout="this.style.background='#00d418';">
+                                <button type="submit" class="btn btn-success" id="programarcita" style="background:#00d418;border:1px solid #00d418;font-size:14px;font-weight:600;padding:10px 20px;" onmouseover="this.style.background='#00ee1b';this.style.border='1px solid #00ee1b';" onmouseout="this.style.background='#00d418';this.style.border='1px solid #00d418';">
                                     Programar cita
                                 </button>
                             </form>

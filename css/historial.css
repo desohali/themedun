@@ -48,7 +48,6 @@ h1{
     outline: none;
     margin: 8px auto;
     border-radius:5px;
-    box-shadow: 0px 0px 3px 1px white;
 }
 
 #pais{
@@ -62,8 +61,7 @@ h1{
 #nombres:focus,#nombresyape:focus,#apellidosyape:focus,#yape:focus, #doctitular:focus, #numdoctitular:focus, #domiciliotitular:focus, #nombrebanco:focus, #tipocuenta:focus, #codigocuenta:focus, #apellidos:focus, #sexo:focus, #especialidad:focus,.formulario__register input[type="password"]:focus, 
 .formulario__register input[type="email"]:focus, .formulario__register input[type="date"]:focus, 
 #pais:focus, #idioma:focus, #ciudad:focus, #colegiatura:focus, #especialidad:focus, #precio:focus, .formulario__register input[type="text"]:focus, #contrasenar:focus, #contrasenarcon:focus{
-    border: 1px solid #F2F2F2;
-    box-shadow: 0px 0px 3px 1px #0052d4;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
 }
 
 .formulario__register input[type="email"], .formulario__register input[type="password"], #contrasenar, #contrasenarcon{
@@ -562,7 +560,7 @@ h1{
 
 #historia4{
     width:auto;
-    margin-right:2.7%;
+    margin-right:2.5%;
 }
 
 .boxhistorial span{
@@ -663,7 +661,7 @@ h1{
 
 #btndeuda, #btncuenta, #btnyape{
     background:white;
-    border:none;
+    border:1px solid #0052d4;
     font-size:14px;
     font-weight:500;
     padding:10px 20px;
@@ -674,24 +672,23 @@ h1{
     box-shadow: none !important;
     -moz-box-shadow: none !important;
     -webkit-box-shadow: none !important;
-    box-shadow:0px 0px 3px 1px #0052d4 !important;
     border-radius:5px !important;
 }
 
 #btndeuda{
     color:white;
     margin-top:-5px;
-    box-shadow:0px 0px 3px 1px white !important;
     background:#00d418;
+    border:1px solid #00d418;
 }
 
 #btndeuda:hover{
     background:#00ee1b;
+    border:1px solid #00ee1b;
     color:white;
 }
 
 #btncuenta:hover, #btnyape:hover{
-    box-shadow:0px 0px 3px 1px white !important;
     background:#0052d4;
     color:white;
 }
@@ -750,14 +747,13 @@ h1{
     font-size: 14px;
     background: white;
     transition: all 200ms;
-    border:none;
+    border:1px solid #0052d4;
     font-weight: 500;
     cursor: pointer;
     color: #0052D4;
     outline: none;
     text-align:center;
     border-radius: 5px;
-    box-shadow: 0px 0px 3px 1px #0052d4;
     margin:10px;
     margin-left:3px;
 }
@@ -765,7 +761,6 @@ h1{
 .filaregister label:hover{
     background: #0052d4;
     color:white;
-    box-shadow: 0px 0px 3px 1px white;
 }
 
 #labelEditar{
@@ -851,6 +846,23 @@ h1{
 
 .modyape .modsegundo{
     width:30%;
+}
+
+.botonesPago{
+    display: flex;
+    text-align: center;
+}
+
+.historia4 #montoPago,.botonesPago{
+    width: 50%;
+}
+
+.historia4 #montoPago{
+    margin-top: 0px;
+}
+
+#labelequal{
+    margin-right: 20px;
 }
 
 @media screen and (max-width: 415px){

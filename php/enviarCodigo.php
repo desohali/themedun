@@ -1,5 +1,6 @@
 <?php
 include 'conexion_paciente.php';
+include '../configuracion.php';
 $respuesta = [];
 //VALIDAR CREDENCIALES
 $sql = "SELECT id, nombres, apellidos, correo, contraseña, nacimiento, sexo, pais, ciudad, enmu, fotoperfil FROM usuarios WHERE correo = '" . $_POST['correo'] . "' AND estado <> 'V'";
@@ -28,7 +29,7 @@ if ($stmt = mysqli_prepare($conexion, $sql)) {
                 </head>
                 <body>
                     <h1 style='color:#0052d4; text-align:center'>The Med Universe</h1>
-                    <p>" . $estimado . ", " . $nombres . " " . $apellidos . ":<br><br>Hemos recibido una solicitud para restablecer tu contraseña de The Med Universe | Paciente. Para restablecer tu contraseña, ingresa el siguiente código: " . $codigo . "<br><br>Si no solicitaste una nueva contraseña, háznoslo saber a través de nuestro Centro de Ayuda: <a href='https://www.themeduniverse.com/cayuda'>https://www.themeduniverse.com/cayuda</a></p>
+                    <p>" . $estimado . ", " . $nombres . " " . $apellidos . ":<br><br>Hemos recibido una solicitud para restablecer tu contraseña de The Med Universe | Paciente. Para restablecer tu contraseña, ingresa el siguiente código: " . $codigo . "<br><br>Si no solicitaste una nueva contraseña, háznoslo saber a través de nuestro Centro de Ayuda: <a href='".$_ENV['APP_URL']."cayuda'>".$_ENV['APP_URL']."cayuda</a></p>
                 </body>
                 </html>
                 ";

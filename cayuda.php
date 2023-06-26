@@ -6,7 +6,7 @@ include './seguridad.php';
 $urlactual = 'https://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
 
 if ($urlactual == 'https://themeduniverse.com/cayuda') {
-    echo "<script>window.location.href='" . $_ENV['APP_URL'] . "cayuda'</script>";
+    //echo "<script>window.location.href='" . $_ENV['APP_URL'] . "cayuda'</script>";
 }
 
 ?>
@@ -106,7 +106,7 @@ if ($urlactual == 'https://themeduniverse.com/cayuda') {
                 <textarea id="cuenta" name="cuenta" onkeypress="return validarn(event)" placeholder='Cuéntanos, ¿cómo te podemos ayudar?' class="txtcuenta" rows="5" required></textarea>
                 <input type='submit' value="Enviar" id="caenviar" name="caenviar"><br>
                 <hr id="hr-login">
-                <a href="https://wa.me/51986206045?text=Hola%2C+tengo+una+consulta+%C2%BFpueden+ayudarme%3F%F0%9F%98%80" target="_blank"><i class="fa-brands fa-whatsapp"></i> : +51 986 206 045</a><br>
+                <a href="https://api.whatsapp.com/send?phone=51986206045&text=Hola,%20tengo%20una%20consulta%20%C2%BFpueden%20ayudarme?%20%F0%9F%A4%94" target="_blank"><i class="fa-brands fa-whatsapp"></i> : +51 986 206 045</a><br>
                 <a id="enlacemail" href="mailto:themeduniverse@gmail.com" target="_blank"><i class="fa-regular fa-envelope"></i></i> : themeduniverse@gmail.com</a>
             </form>
         </div>

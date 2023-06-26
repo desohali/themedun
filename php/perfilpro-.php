@@ -15,12 +15,11 @@
             $numeroCitas = $rowPrevia['numeroCitas'];
         }
     }
-    $consultaComen = "SELECT COUNT(idu) as conteoComen, fechaRegistro FROM valoraciones WHERE idu = '". $id . "' AND idupro = '". $idpro . "' AND valoracion = '0'";
+    $consultaComen = "SELECT COUNT(idu) as conteoComen FROM valoraciones WHERE idu = '". $id . "' AND idupro = '". $idpro . "' AND valoracion = '0'";
     $resultadoComen = mysqli_query($conexion, $consultaComen);
     if ($resultadoComen) {
         while ($rowComen = $resultadoComen->fetch_array()) {
             $conteoComen = $rowComen['conteoComen'];
-            $fechaComen = $rowComen['fechaRegistro'];
         }
     }
 ?>
@@ -271,7 +270,7 @@
                     "esMedicoOPaciente": "PACIENTE",
                     "comentario": $comentario.val().trim(),
                     leido: "NO",
-                    fecha: moment().format("YYYY-MM-DD hh:mm:ss")
+                    fecha: moment().format("YYYY-MM-DD HH:mm:ss")
                 })
             });
             await new Valoraciones().listarValoraciones();
@@ -420,8 +419,13 @@
                     <?php
                     $fecha = time() - strtotime($nacimientopro);
                     $edad = floor($fecha / 31556926);
+                    if($edad=='1'){
+                        $año=" año";
+                    }else{
+                        $año=" años";
+                    }
                     ?>
-                    <p id="nacimientoperfil"><span>Fecha de nacimiento<span class="spanedad"> (Edad)</span>:</span> <?php echo $newDateNac?><span class="spanedad" id="idedad"> (<?php echo $edad?> años)</span></p>
+                    <p id="nacimientoperfil"><span>Fecha de nacimiento<span class="spanedad"> (Edad)</span>:</span> <?php echo $newDateNac?><span class="spanedad" id="idedad"> (<?php echo $edad.$año?>)</span></p>
                     <p id="edadperfil"><span>Edad:</span> <?php echo $edad?> años</p>
                     <p id="sexoperfil"><span>Género:</span> <?php echo $sexopro ?></p><br>
                     <p id="paisperfil"><span>País (Idioma):</span> <?php echo $paispro ?> (<?php echo $idiomapro ?>)</p>

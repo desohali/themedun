@@ -49,7 +49,6 @@ if (isset(explode("/", $_GET['view'])[2]) && isset(explode("/", $_GET['view'])[3
 if (isset($_GET['payment_id']) && isset($_GET['status']) && isset($_GET['payment_type']) && isset($_GET['merchant_order_id'])) {
 
 	/* setcookie("ws", "pagarCita", time() + (86400 * 30), "*"); */
-
 	$idpago = $_GET['payment_id'];
 	$estadopago = $_GET['status'];
 	$metodopago = $_GET['payment_type'];
@@ -60,9 +59,11 @@ if (isset($_GET['payment_id']) && isset($_GET['status']) && isset($_GET['payment
 		$metodopago = "Tarjeta de débito";
 	}
 	if ($estadopago = "approved") {
+
 		$sql5 = mysqli_query($conexion, "INSERT INTO pagos (idpago, usuario, usuariopro, metodopago, fechahorap, estadopago) VALUES ('$idpago', '$id', '$idpro', '$metodopago', now(), '$estadopago')");
 
 		include_once 'Zoom_Api.php';
+
 		include_once 'getOrderMercadoPago.php';
 
 		$order =  getItem($merchantorder);
@@ -85,6 +86,7 @@ if (isset($_GET['payment_id']) && isset($_GET['status']) && isset($_GET['payment
 
 		$result = mysqli_query($conexion, $query);
 
+
 		while ($row = $result->fetch_object()) {
 			$cita = $row;
 		}
@@ -105,6 +107,8 @@ if (isset($_GET['payment_id']) && isset($_GET['status']) && isset($_GET['payment
 		} catch (Exception $ex) {
 			echo $ex;
 		};
+
+
 		// AQUI SE DEBE DE ACTUALIZAR NO INSERTAR
 
 		$query = "UPDATE citas SET title = 'Programada... Únete con el link en la fecha y hora correspondientes.', color = '#0052d4',";
@@ -144,49 +148,69 @@ if (isset($_GET['payment_id']) && isset($_GET['status']) && isset($_GET['payment
 		$horafinal = explode(":00", $hora);
 		$timestamp = strtotime($fecha);
 		$newFecha = date("d/m/Y", $timestamp);
-		if($horafinal[0]=='01'){
-		  $enlace=" a la ";
-		}else{
-		  $enlace=" a las ";
+		if ($horafinal[0] == '01') {
+			$enlace = " a la ";
+		} else {
+			$enlace = " a las ";
 		}
-		$tiempoFinal=$newFecha . $enlace . $horafinal[0] . ":00";
+		$tiempoFinal = $newFecha . $enlace . $horafinal[0] . ":00";
 
 		$titulo = "CITA PROGRAMADA";
-		$mensajePaciente = "
+		/* $mensajePaciente = "
 		<html>
 		<head>
 			<title>CITA PROGRAMADA</title>
 		</head>
 		<body>
 			<h1 style='color:#0052d4; text-align:center'>TheMedUniverse</h1>
-			<p>" . $estimadoPaciente . ", " . $cita->nombresPaciente . " " . $cita->apellidosPaciente . ":<br><br>Has programado una cita con " . $elOlaMed . " " . $cita->nombresMedico . " " . $cita->apellidosMedico . " para el " . $tiempoFinal . ". Únete con este link <a href='" . $response->join_url . "'>" . $response->join_url . "</a> en la fecha y hora correspondientes.<br><br>Encontrarás mayor información de tu cita en <a href='".$_ENV['APP_URL']."agenda/" . $_SESSION['id'] . "'>".$_ENV['APP_URL']."cita/" . $_SESSION['id'] . "</a>.</p>
+			<p>" . $estimadoPaciente . ", " . $cita->nombresPaciente . " " . $cita->apellidosPaciente . ":<br><br>Has programado una cita con " . $elOlaMed . " " . $cita->nombresMedico . " " . $cita->apellidosMedico . " para el " . $tiempoFinal . ". Únete con este link <a href='" . $response->join_url . "'>" . $response->join_url . "</a> en la fecha y hora correspondientes.<br><br>Encontrarás mayor información de tu cita en <a href='" . $_ENV['APP_URL'] . "agenda/" . $_SESSION['id'] . "'>" . $_ENV['APP_URL'] . "cita/" . $_SESSION['id'] . "</a>.</p>
 		</body>
 		</html>
-		";
+		"; */
 
-		$mensajeMedico = "
+		$mensajePaciente = "<html>";
+		$mensajePaciente .= "<head>";
+		$mensajePaciente .= "<title>CITA PROGRAMADA</title>";
+		$mensajePaciente .= "</head>";
+		$mensajePaciente .= "<body>";
+		$mensajePaciente .= '<h1 style="color:#0052d4; text-align:center">TheMedUniverse</h1>';
+		$mensajePaciente .= "<p>" . $estimadoPaciente . ", " . $cita->nombresPaciente . " " . $cita->apellidosPaciente . ":<br><br>Has programado una cita con " . $elOlaMed . " " . $cita->nombresMedico . " " . $cita->apellidosMedico . " para el " . $tiempoFinal . ". Únete con este link ";
+		$mensajePaciente .= '<a href="' . $response->join_url . '">' . $response->join_url . '</a> en la fecha y hora correspondientes.<br><br>Encontrarás mayor información de tu cita en <a href="' . $_ENV['APP_URL'] . 'agenda/' . $_SESSION['id'] . '">' . $_ENV['APP_URL'] . 'cita/' . $_SESSION['id'] . '</a>.</p>';
+		$mensajePaciente .= "</body>";
+		$mensajePaciente .= "</html>";
+
+		/* $mensajeMedico = "
 		<html>
 		<head>
 			<title>CITA PROGRAMADA</title>
 		</head>
 		<body>
 			<h1 style='color:#0052d4; text-align:center'>The Med Universe</h1>
-			<p>" . $estimadoMedico . " " . $cita->nombresMedico . " " . $cita->apellidosMedico . ":<br><br>Se le ha programado una cita con " . $elOlaPac . " paciente " . $cita->nombresPaciente . " " . $cita->apellidosPaciente . " para el " . $tiempoFinal . ". Únase con el link <a href='" . $response->join_url . "'>" . $response->join_url . "</a> en la fecha y hora correspondientes.<br><br>Encontrará mayor información de su cita en <a href='".$_ENV['APP_URL']."horario/" . $idpro . "'>".$_ENV['APP_URL']."horario/" . $idpro . "</a>.</p>
+			<p>" . $estimadoMedico . " " . $cita->nombresMedico . " " . $cita->apellidosMedico . ":<br><br>Se le ha programado una cita con " . $elOlaPac . " paciente " . $cita->nombresPaciente . " " . $cita->apellidosPaciente . " para el " . $tiempoFinal . ". Únase con el link <a href='" . $response->join_url . "'>" . $response->join_url . "</a> en la fecha y hora correspondientes.<br><br>Encontrará mayor información de su cita en <a href='" . $_ENV['APP_URL'] . "horario/" . $idpro . "'>" . $_ENV['APP_URL'] . "horario/" . $idpro . "</a>.</p>
 		</body>
 		</html>
-		";
+		"; */
+		$mensajeMedico = "<html>";
+		$mensajeMedico .= "<head>";
+		$mensajeMedico .= "<title>CITA PROGRAMADA</title>";
+		$mensajeMedico .= "</head>";
+		$mensajeMedico .= "<body>";
+		$mensajeMedico .= '<h1 style="color:#0052d4; text-align:center">The Med Universe</h1>';
+		$mensajeMedico .= "<p>" . $estimadoMedico . " " . $cita->nombresMedico . " " . $cita->apellidosMedico . ":<br><br>Se le ha programado una cita con " . $elOlaPac . " paciente " . $cita->nombresPaciente . " " . $cita->apellidosPaciente . " para el " . $tiempoFinal . ". Únase con el link ";
+		$mensajeMedico .= '<a href="' . $response->join_url . '">' . $response->join_url . '</a> en la fecha y hora correspondientes.<br><br>Encontrará mayor información de su cita en <a href="' . $_ENV['APP_URL'] . 'horario/' . $idpro . '">' . $_ENV['APP_URL'] . 'horario/' . $idpro . '</a>.</p>';
+		$mensajeMedico .= "</body>";
+		$mensajeMedico .= "</html>";
 
-		$mensajeAdmin = "
-		<html>
-		<head>
-			<title>CITA PROGRAMADA</title>
-		</head>
-		<body>
-			<h1 style='color:#0052d4; text-align:center'>The Med Universe</h1>
-			<p>Estimado, Gerente General Leandro Santiago Bernal Saavedra:<br><br>Se ha programado una cita entre " . $elOlaMed . " " . $cita->nombresMedico . " " . $cita->apellidosMedico . " y " . $elOlaPac . " paciente " . $cita->nombresPaciente . " " . $cita->apellidosPaciente . " para el " . $tiempoFinal . ". El link de unión a la teleconsulta es el siguiente: <a href='" . $response->join_url . "'>" . $response->join_url . "</a><br><br>Encontrará mayor información de la cita en <a href='".$_ENV['APP_URL']."agendaadmin/1'>".$_ENV['APP_URL']."agendaadmin/1</a></p>
-		</body>
-		</html>
-		";
+		$mensajeAdmin = "<html>";
+		$mensajeAdmin .= "<head>";
+		$mensajeAdmin .= "<title>CITA PROGRAMADA</title>";
+		$mensajeAdmin .= "</head>";
+		$mensajeAdmin .= "<body>";
+		$mensajeAdmin .= '<h1 style="color:#0052d4; text-align:center">The Med Universe</h1>';
+		$mensajeAdmin .= "<p>Estimado, Gerente General Leandro Santiago Bernal Saavedra:<br><br>Se ha programado una cita entre " . $elOlaMed . " " . $cita->nombresMedico . " " . $cita->apellidosMedico . " y " . $elOlaPac . " paciente " . $cita->nombresPaciente . " " . $cita->apellidosPaciente . " para el " . $tiempoFinal . ". El link de unión a la teleconsulta es el siguiente:";
+		$mensajeAdmin .= '<a href="' .  $response->join_url . '"> ' . $response->join_url . '</a><br><br>Encontrará mayor información de la cita en <a href="' . $_ENV['APP_URL'] . 'agendaadmin/1">' . $_ENV['APP_URL'] . 'agendaadmin/1</a></p>';
+		$mensajeAdmin .= "</body>";
+		$mensajeAdmin .= "</html>";
 
 		// Para enviar un correo HTML, debe establecerse la cabecera Content-type
 		$cabeceras  = 'MIME-Version: 1.0' . "\r\n";
@@ -200,10 +224,27 @@ if (isset($_GET['payment_id']) && isset($_GET['status']) && isset($_GET['payment
 		$urlReplace = $_ENV['APP_URL'] . $_GET['url'] . "/" . $idpro . "?ws=62c0e72bf038366388783650";
 
 		$script = "<script>";
-		$script .= "await enviarCorreo({to: $cita->correoMedico, subject: $titulo, html: $mensajeMedico});";
-		$script .= "await enviarCorreo({to: $cita->correoPaciente, subject: $titulo, html: $mensajePaciente});";
-		$script .= "await enviarCorreo({to: 'bernalsaavedraleandro@gmail.com', subject: $titulo, html: $mensajeAdmin});";
+		$script .= '
+		const enviarCorreoClone = async (json) => {
+			const formData = new FormData();
+			formData.append("to", json.correo);
+			formData.append("subject", json.titulo);
+			formData.append("html", json.mensaje);
+
+			const response = await fetch("https://yocreoquesipuedohacerlo.com/sendMail", {
+					method: "post",
+					body: formData,
+			});
+
+			return await response.json();
+		}
+		';
+		$script .= "(async () => {";
+		$script .= "await enviarCorreoClone({correo: '$cita->correoMedico', titulo: '$titulo', mensaje: '$mensajeMedico'});";
+		$script .= "await enviarCorreoClone({correo: '$cita->correoPaciente', titulo: '$titulo', mensaje: '$mensajePaciente'});";
+		$script .= "await enviarCorreoClone({correo: 'bernalsaavedraleandro@gmail.com', titulo: '$titulo', mensaje: '$mensajeAdmin'});";
 		$script .= "window.location.replace('" . $urlReplace . "')";
+		$script .= "})()";
 		$script .= "</script>";
 
 		echo $script;
@@ -771,11 +812,11 @@ if (isset($_GET['payment_id']) && isset($_GET['status']) && isset($_GET['payment
 				const formData = new FormData();
 				formData.append("idcita", $("#idCita").val());
 
-				const response = await fetch("<?php echo $_ENV['APP_URL']; ?>php/cancelarSolicitudCita.php", {					
+				const response = await fetch("<?php echo $_ENV['APP_URL']; ?>php/cancelarSolicitudCita.php", {
 					method: "post",
 					body: formData
 				});
-				
+
 				const json = await response.json();
 
 				const [primerCorreo] = json;

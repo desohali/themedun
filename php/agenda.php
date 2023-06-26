@@ -44,6 +44,7 @@
                 async function initAgenda() {
                     const response = await fetch("<?php echo $_ENV['APP_URL']; ?>php/eventoss.php?id=<?php echo $id ?>");
                     const json = await response.json();
+                    console.log('json', json)
 
                     const calendar = $('#CalendarioWeb').fullCalendar('getCalendar');
                     // extend object (could be its own function, etc.)
@@ -189,8 +190,17 @@
                     const $checkoutBtn = $("#btnpago");
                     $checkoutBtn.css('visibility', 'hidden');
 
+
+
                     $('#CalendarioWeb').fullCalendar({
-                        events: '<?php echo $_ENV['APP_URL']; ?>php/eventoss.php?id=<?php echo $id ?>',
+                        events: await new Promise(async (resolve) => {
+                            const response = await fetch("<?php echo $_ENV['APP_URL']; ?>php/eventoss.php?id=<?php echo $id ?>");
+                            const json = await response.json();
+
+                            /* const jsonCitasDesabilitadas = await listarFechasDesabilitadas(); */
+                            resolve(json);
+                        }),
+                        //events: '<?php echo $_ENV['APP_URL']; ?>php/eventoss.php?id=<?php echo $id ?>',
                         eventClick: async function(calEvent, jsEvent, view) {
 
                             const titulos = [
@@ -252,10 +262,10 @@
                             $('#preciocita').html(`S/ ${calEvent.localizacion}`);
                             $('#bcfiled2').attr('href', '<?= $_ENV['APP_URL'] ?>hclinica/' + idpac + '/' + calEvent.idpay);
                             if (calEvent.asistencia != "No asistió" && calEvent.asistenciapac != "No asistió") {
-								$('#bcfiled2').css('display', 'block');
-							} else {
-								$('#bcfiled2').css('display', 'none');
-							}
+                                $('#bcfiled2').css('display', 'block');
+                            } else {
+                                $('#bcfiled2').css('display', 'none');
+                            }
                             $('#linkcita').html(calEvent.ubicacion);
                             $("#linkcita").click(function() {
                                 window.open(calEvent.ubicacion, '_blank');

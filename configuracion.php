@@ -2,7 +2,7 @@
 
 $_ENV['APP_URL'] = $_SERVER['SERVER_NAME'] == "localhost" ?
   "http://localhost/themeduni/" :
-  "https://themeduniverse.com/";
+  "https://www.themeduniverse.com/";
 
 // ESTADOS CITAS
 $_ENV['CITA_ENVIADA'] = "Enviada... Espera la confirmación de tu solicitud de cita.";

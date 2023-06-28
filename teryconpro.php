@@ -7,7 +7,7 @@
 $urlactual='https://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
 
 if ($urlactual=='https://themeduniverse.com/teryconpro') {
-    //echo "<script>window.location.href='" . $_ENV['APP_URL'] . "teryconpro'</script>";
+    echo "<script>window.location.href='" . $_ENV['APP_URL'] . "teryconpro'</script>";
 }
     
 ?>

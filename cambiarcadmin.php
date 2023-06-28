@@ -14,7 +14,7 @@ $seguridad->verificarSiYaEstoyLogeado();
 $urlactual='https://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
 
 if ($urlactual=='https://themeduniverse.com/cambiarcadmin') {
-    //echo "<script>window.location.href='" . $_ENV['APP_URL'] . "cambiarcadmin'</script>";
+    echo "<script>window.location.href='" . $_ENV['APP_URL'] . "cambiarcadmin'</script>";
 }
 
 ?>

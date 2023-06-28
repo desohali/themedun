@@ -611,7 +611,7 @@ if (isset($_GET['payment_id']) && isset($_GET['status']) && isset($_GET['payment
 			const [horaInicial /* , horaFinal */ ] = hora.split("-");
 			const horaActual = new Date().getHours();
 			const dateCurrent = moment().format("YYYY-MM-DD");
-			if (horaActual >= Number(horaInicial.split(":")[0]) && dateCurrent == sessionStorage.getItem("dateCurrent")) {
+			if (horaActual+1 >= Number(horaInicial.split(":")[0]) && dateCurrent == sessionStorage.getItem("dateCurrent") || horaActual-23 == 0 && Number(horaInicial.split(":")[0]) == 0 && dateCurrentDos == sessionStorage.getItem("dateCurrent")) {
 				return false;
 			}
 
@@ -650,11 +650,13 @@ if (isset($_GET['payment_id']) && isset($_GET['status']) && isset($_GET['payment
 						if (ESTADO) {
 
 							const dateCurrent = moment().format("YYYY-MM-DD");
+							const dateCurrentDos = moment().add(1, 'days').format("YYYY-MM-DD");
 
 							const [horaInicial /* , horaFinal */ ] = DIAS[0].split("-");
 							const isSelect = (
-								horaActual >= Number(horaInicial.split(":")[0]) &&
-								dateCurrent == sessionStorage.getItem("dateCurrent")
+								horaActual+1 >= Number(horaInicial.split(":")[0]) &&
+								dateCurrent == sessionStorage.getItem("dateCurrent") ||
+								horaActual-23 == 0 && Number(horaInicial.split(":")[0]) == 0 && dateCurrentDos == sessionStorage.getItem("dateCurrent")
 							);
 
 							const findMergeCita = listaCitasMedico.find(({
@@ -669,6 +671,10 @@ if (isset($_GET['payment_id']) && isset($_GET['status']) && isset($_GET['payment
 
 							console.log('isSelect', isSelect);
 							console.log('findMergeCita', findMergeCita);
+							console.log('horaActual', horaActual);
+							console.log('horaInicial', Number(horaInicial.split(":")[0]));
+							console.log('dateCurrentDos', dateCurrentDos);
+							console.log('sessionStorage.getItem("dateCurrent")', sessionStorage.getItem("dateCurrent"));
 
 							table += `<div class="ctn-1 ${ isSelect || findMergeCita ? 'ctn' : "ctn-si"}" onclick="setTimeCurrent('${DIAS[0]}', ${findMergeCita ? true : false})">
 															<label class="${ isSelect || findMergeCita ? 'si-disabled' : "si"}">Disponible</label>

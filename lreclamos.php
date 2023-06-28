@@ -7,7 +7,7 @@ include './seguridad.php';
 $urlactual = 'https://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
 
 if ($urlactual == 'https://themeduniverse.com/lreclamos') {
-    //echo "<script>window.location.href='" . $_ENV['APP_URL'] . "lreclamos'</script>";
+    echo "<script>window.location.href='" . $_ENV['APP_URL'] . "lreclamos'</script>";
 }
 
 ?>

@@ -67,41 +67,49 @@ class DesabilitarAtencionMedica
     while ($obj = $result->fetch_object()) {
       $sexo = $obj->sexopro == "Masculino" ? "Dr. " : "Dra. ";
       list($fecha, $hora) = explode(" ", $obj->start);
+      $horafinal = explode(":00", $hora);
 
       $timestamp = strtotime($fecha);
-      $newFecha = date("d-m-Y", $timestamp);
+      $newFecha = date("d/m/Y", $timestamp);
+      
+      if($horafinal[0]=='01'){
+        $enlace=" a la ";
+      }else{
+        $enlace=" a las ";
+      }
+      $tiempoFinal=$newFecha . $enlace . $horafinal[0] . ":00";
 
       if ($obj->estadoPaciente == "1") {
 
         if ($obj->estado == "RECHAZADA") {
 
-          $obj->notificacion = "<span class='spanbolder'>Cita: </span>" . $newFecha . " a las " . $hora;
+          $obj->notificacion = "<span class='spanbolder'>Cita: </span>" . $tiempoFinal;
           $obj->notificacion .= ".<br><span>Médico: </span>" . $sexo . $obj->nombresMedico . " " . $obj->apellidosMedico;
           $obj->notificacion .= ".<br>Solicitud de cita <span style='color:#ff0800'>RECHAZADA</span>";
           $obj->notificacion .= ". Selecciona otra fecha disponible.";
         } else if ($obj->estado == "ELIMINADA") {
 
-          $obj->notificacion = "<span class='spanbolder'>Cita: </span>" . $newFecha . " a las " . $hora;
+          $obj->notificacion = "<span class='spanbolder'>Cita: </span>" . $tiempoFinal;
           $obj->notificacion .= ".<br><span>Médico: </span>" . $sexo . $obj->nombresMedico . " " . $obj->apellidosMedico;
           $obj->notificacion .= ".<br>Solicitud de cita <span style='color:#ff0800'>CANCELADA</span>. Otro paciente realizó el pago antes";
           $obj->notificacion .= ", selecciona otra fecha disponible.";
         } else if ($obj->title == $_ENV['CITA_ENVIADA'] && $obj->estado != "CANCELADA") {
 
-          $obj->notificacion = "<span class='spanbolder'>Cita: </span>" . $newFecha . " a las " . $hora;
+          $obj->notificacion = "<span class='spanbolder'>Cita: </span>" . $tiempoFinal;
           $obj->notificacion .= ".<br><span>Médico: </span>" . $sexo . $obj->nombresMedico . " " . $obj->apellidosMedico;
           $obj->notificacion .= ".<br>Solicitud de cita <span style='color:#FFC107'>ENVIADA</span>. Espera a que el médico realice la confirmación.";
         } else if ($obj->title == $_ENV['CITA_CONFIRMADA'] && $obj->estado != "CANCELADA") {
 
-          $obj->notificacion = "<span class='spanbolder'>Cita: </span>" . $newFecha . " a las " . $hora;
+          $obj->notificacion = "<span class='spanbolder'>Cita: </span>" . $tiempoFinal;
           $obj->notificacion .= ".<br><span>Médico: </span>" . $sexo . $obj->nombresMedico . " " . $obj->apellidosMedico;
           $obj->notificacion .= ".<br>Solicitud de cita <span style='color:#00d418'>CONFIRMADA</span>. Realiza el pago lo antes posible.";
         } else if ($obj->title == $_ENV['CITA_PROGRAMADA'] && $obj->estado != "CANCELADA") {
           /* Tu cita con el $medico ha sido programada. Únete con este link $link el $fecha a las $hora. */
-          $obj->notificacion = "<span class='spanbolder'>Cita: </span>" . $newFecha . " a las " . $hora;
+          $obj->notificacion = "<span class='spanbolder'>Cita: </span>" . $tiempoFinal;
           $obj->notificacion .= ".<br><span>Médico: </span>" . $sexo . $obj->nombresMedico . " " . $obj->apellidosMedico;
           $obj->notificacion .= ".<br>Cita <span style='color:#0052d4'>PROGRAMADA</span>. Únete con el link en la fecha y hora correspondientes.";/*  . $obj->ubicacion; */
         } else if ($obj->title == $_ENV['CITA_VENCIDA']) {
-          $obj->notificacion = "<span class='spanbolder'>Cita: </span>" . $newFecha . " a las " . $hora;
+          $obj->notificacion = "<span class='spanbolder'>Cita: </span>" . $tiempoFinal;
           $obj->notificacion .= ".<br><span>Médico: </span>" . $sexo . $obj->nombresMedico . " " . $obj->apellidosMedico;
           $obj->notificacion .= ".<br>Solicitud de cita <span style='color:#ff0800'>VENCIDA</span>. Selecciona otra fecha disponible.";
         } else {
@@ -200,11 +208,19 @@ class DesabilitarAtencionMedica
     $fechaActualMilisegundos = (strtotime($this->currentDate->format('Y-m-d H:i:s')) * 1000);
 
     while ($obj = $result->fetch_object()) {
-      /* $sexo = $obj->sexopro == "Masculino" ? "Dr. " : "Dra. "; */
+
       list($fecha, $hora) = explode(" ", $obj->start);
+      $horafinal = explode(":00", $hora);
 
       $timestamp = strtotime($fecha);
-      $newFecha = date("d-m-Y", $timestamp);
+      $newFecha = date("d/m/Y", $timestamp);
+      
+      if($horafinal[0]=='01'){
+        $enlace=" a la ";
+      }else{
+        $enlace=" a las ";
+      }
+      $tiempoFinal=$newFecha . $enlace . $horafinal[0] . ":00";
 
       if ($obj->estadopro == "1") {
 
@@ -217,23 +233,23 @@ class DesabilitarAtencionMedica
           $obj->notificacion .= ". Selecciona otra fecha disponible."; */
         } else if ($obj->estado == "ELIMINADA") {
 
-          $obj->notificacion = "<span class='spanbolder'>Cita: </span>" . $newFecha . " a las " . $hora;
+          $obj->notificacion = "<span class='spanbolder'>Cita: </span>" . $tiempoFinal;
           $obj->notificacion .= ".<br><span>Paciente: </span>" .  $obj->nombresPaciente . " " . $obj->apellidosPaciente;
           $obj->notificacion .= ".<br>Solicitud de cita <span style='color:#ff0800'>CANCELADA</span>";
           $obj->notificacion .= ". Otro paciente realizó el pago antes.";
         } else if ($obj->title == $_ENV['CITA_ENVIADA'] && $obj->estado != "CANCELADA") {
           /* Has RECIBIDO una solicitud de cita. Realiza su confirmación. */
-          $obj->notificacion = "<span class='spanbolder'>Cita: </span>" . $newFecha . " a las " . $hora;
+          $obj->notificacion = "<span class='spanbolder'>Cita: </span>" . $tiempoFinal;
           $obj->notificacion .= ".<br><span>Paciente: </span>" . $obj->nombresPaciente . " " . $obj->apellidosPaciente;
           $obj->notificacion .= ".<br>Solicitud de cita <span style='color:#FFC107'>RECIBIDA</span>. Realice su confirmación lo antes posible.";
         } else if ($obj->title == $_ENV['CITA_CONFIRMADA'] && $obj->estado != "CANCELADA") {
           /* Has CONFIRMADO una solicitud de cita. Espere a que el paciente realice el pago. */
-          $obj->notificacion = "<span class='spanbolder'>Cita: </span>" . $newFecha . " a las " . $hora;
+          $obj->notificacion = "<span class='spanbolder'>Cita: </span>" . $tiempoFinal;
           $obj->notificacion .= ".<br><span>Paciente: </span>" . $obj->nombresPaciente . " " . $obj->apellidosPaciente;
           $obj->notificacion .= ".<br>Solicitud de cita <span style='color:#00d418'>CONFIRMADA</span>. Espere a que el paciente realice el pago.";
         } else if ($obj->title == $_ENV['CITA_PROGRAMADA'] && $obj->estado != "CANCELADA") {
           /* Tu cita con el $medico ha sido programada. Únete con este link $link el $fecha a las $hora. */
-          $obj->notificacion = "<span class='spanbolder'>Cita: </span>" . $newFecha . " a las " . $hora;
+          $obj->notificacion = "<span class='spanbolder'>Cita: </span>" . $tiempoFinal;
           $obj->notificacion .= ".<br><span>Paciente: </span>" . $obj->nombresPaciente . " " . $obj->apellidosPaciente;
           $obj->notificacion .= ".<br>Cita <span style='color:#0052d4'>PROGRAMADA</span>. Únete con el link en la fecha y hora correspondientes.";/*  . $obj->ubicacion; */
         }

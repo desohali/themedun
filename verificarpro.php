@@ -14,7 +14,7 @@ $seguridad->verificarSiYaEstoyLogeado();
 $urlactual='https://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
 
 if ($urlactual=='https://themeduniverse.com/verificarpro') {
-    //echo "<script>window.location.href='" . $_ENV['APP_URL'] . "verificarpro'</script>";
+    echo "<script>window.location.href='" . $_ENV['APP_URL'] . "verificarpro'</script>";
 }
 
 ?>

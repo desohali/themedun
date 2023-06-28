@@ -536,6 +536,12 @@
                             $horafinal = explode(":00", $hora);
                             $timestamp = strtotime($fecha);
                             $newFecha = date("d/m/Y", $timestamp);
+                            if($horafinal[0]=='01'){
+                                $enlace=" a la ";
+                            }else{
+                            $enlace=" a las ";
+                            }
+                            $tiempoFinal=$newFecha . $enlace . $horafinal[0] . ":00";
                             if($lista['llenadoHC']==""){
                                 $llenadoHC="No enviada";
                             }else{
@@ -552,7 +558,7 @@
                     <div class="boxhisto1">
                         <div class="historia1">
                             <p><span>N° de cita:</span><br><?php echo $idcita?></p>
-                            <p><span>Fecha y hora:</span><br><?php echo $newFecha . " a las " . $horafinal[0] . ":00";?></p>
+                            <p><span>Fecha y hora:</span><br><?php echo $tiempoFinal;?></p>
                         </div>
                         <div class="historia2">
                             <p><span>Pagado por:</span><br><?php echo $paciente?></p>

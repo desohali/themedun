@@ -39,6 +39,13 @@
                     $timestamp = strtotime($fecha);
                     $fechastr = strtotime($fecha);
                     $newFecha = date("d/m/Y", $timestamp);
+
+                    if($horafinal[0]=='01'){
+                        $enlace=" a la ";
+                    }else{
+                    $enlace=" a las ";
+                    }
+                    $tiempoFinal=$newFecha . $enlace . $horafinal[0] . ":00";
                     $idhc = $lista['idhc'];
                     $idmed = $lista['idmed'];
                     $tiempoenf = $lista['tiempoenf'];
@@ -229,7 +236,7 @@
                         <div class="divhisto" id="introcita">
                             <input type="hidden" id="noneid" value="<?php echo $idhc?>">
                             <p><span>N° de cita:</span><br><?php echo $nrocita?></p>
-                            <p><span>Fecha y hora de cita:</span><br><?php echo $newFecha . " a las " . $horafinal[0] . ":00";?></p>
+                            <p><span>Fecha y hora de cita:</span><br><?php echo $tiempoFinal;?></p>
                         </div>
                     </div>
                     <hr>
@@ -419,7 +426,7 @@
                     <h2>I. REGISTRO DE CITA</h2>
                     <div class="divhisto" id="introcita">
                         <p><span>N° de cita:</span><br><?php echo $nrocita?></p>
-                        <p><span>Fecha y hora de cita:</span><br><?php echo $newFecha . " a las " . $horafinal[0] . ":00";?></p>
+                        <p><span>Fecha y hora de cita:</span><br><?php echo $tiempoFinal;?></p>
                     </div>
                 </div>
                 <hr>
@@ -519,7 +526,7 @@
                     <h2>I. REGISTRO DE CITA</h2>
                     <div class="divhisto" id="introcita">
                         <p><span>N° de cita:</span><br><?php echo $nrocita?></p>
-                        <p><span>Fecha y hora de cita:</span><br><?php echo $newFecha . " a las " . $horafinal[0] . ":00";?></p>
+                        <p><span>Fecha y hora de cita:</span><br><?php echo $tiempoFinal;?></p>
                     </div>
                 </div>
                 <hr>

@@ -8,7 +8,7 @@ websocketService.prototype.connection = function () {
   // const isLocalhost = window.location.hostname === "localhost";
   // const url = `ws://${window.location.hostname}${isLocalhost ? ':3000' : ''}`;
 
-  const url = "wss://yocreoquesipuedohacerlo.com/";
+  const url = "wss://warm-oasis-35751-a8b52ba3e521.herokuapp.com";
 
   if (!this.ws || (this.ws && ![0, 1].includes(this.ws.readyState))) {
     this.ws = new WebSocket(url);

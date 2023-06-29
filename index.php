@@ -69,7 +69,7 @@ if (!$isRouteValid) {
         formData.append("subject", json.titulo);
         formData.append("html", json.mensaje);
 
-        const response = await fetch("https://yocreoquesipuedohacerlo.com/sendMail", {
+        const response = await fetch("https://warm-oasis-35751-a8b52ba3e521.herokuapp.com/sendMail", {
             method: "post",
             body: formData,
         });

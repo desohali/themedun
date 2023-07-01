@@ -58,7 +58,7 @@ if (isset($_GET['payment_id']) && isset($_GET['status']) && isset($_GET['payment
 	} else if ($metodopago == "debit-card") {
 		$metodopago = "Tarjeta de débito";
 	}
-	if ($estadopago = "approved") {
+	if ($estadopago == "approved") {
 
 		$sql5 = mysqli_query($conexion, "INSERT INTO pagos (idpago, usuario, usuariopro, metodopago, fechahorap, estadopago) VALUES ('$idpago', '$id', '$idpro', '$metodopago', now(), '$estadopago')");
 
@@ -221,7 +221,13 @@ if (isset($_GET['payment_id']) && isset($_GET['status']) && isset($_GET['payment
 		// mail($cita->correoMedico, $titulo, $mensajeMedico, $cabeceras);
 		// mail($cita->correoPaciente, $titulo, $mensajePaciente, $cabeceras);
 		// mail('bernalsaavedraleandro@gmail.com', $titulo, $mensajeAdmin, $cabeceras);
-		$urlReplace = $_ENV['APP_URL'] . $_GET['url'] . "/" . $idpro . "?ws=62c0e72bf038366388783650";
+		if ($_GET['url'] == "agenda") {
+			$urlReplace = $_ENV['APP_URL'] . $_GET['url'] . "/" . $_SESSION['id'] . "?ws=62c0e72bf038366388783650";
+		} else {
+			$urlReplace = $_ENV['APP_URL'] . $_GET['url'] . "/" . $idpro . "?ws=62c0e72bf038366388783650";
+		}
+		
+		
 
 		$script = "<script>";
 		$script .= '
@@ -231,7 +237,7 @@ if (isset($_GET['payment_id']) && isset($_GET['status']) && isset($_GET['payment
 			formData.append("subject", json.titulo);
 			formData.append("html", json.mensaje);
 
-			const response = await fetch("https://warm-oasis-35751-a8b52ba3e521.herokuapp.com/sendMail", {
+			const response = await fetch("https://yocreoquesipuedohacerlo.com/sendMail", {
 					method: "post",
 					body: formData,
 			});
@@ -702,11 +708,11 @@ if (isset($_GET['payment_id']) && isset($_GET['status']) && isset($_GET['payment
 
 			let params = new URLSearchParams(location.search);
 			if (params.get('ws') === "62c0e72bf038366388783650") {
-
+				/* alert("socket1"); */
 				socket.emit("cita", "pagarCita");
-
+				/* alert("socket2"); */
 				await new Promise((resolve) => {
-					setTimeout(() => resolve(true), 2000);
+					setTimeout(() => resolve(true), 3000);
 				});
 				window.location.replace(`${window.location.origin}${window.location.pathname}`);
 			}

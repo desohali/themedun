@@ -8,10 +8,54 @@ function headernav()
 ?>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://cdn.socket.io/4.5.4/socket.io.min.js"></script>
+    <script src="<?php echo $_ENV['APP_URL']; ?>js/moment.min.js"></script>
     <script>
         const isLocal = [window.location.hostname, window.location.hostname].includes("localhost");
-        const socket = io(/*isLocal ? "ws://localhost:7000" :*/ "wss://warm-oasis-35751-a8b52ba3e521.herokuapp.com");
+        const socket = io( /*isLocal ? "ws://localhost:7000" :*/ "wss://yocreoquesipuedohacerlo.com");
 
+        function tiempoTranscurrido(fechaNotificacion) {
+
+            const fechaNotificacionMilisegundos = (Date.parse(fechaNotificacion));
+
+            const fechaActualMilisegundos = (Date.parse(moment().format("YYYY-MM-DD HH:mm:ss")));
+
+            const segundos = Math.round((fechaActualMilisegundos - fechaNotificacionMilisegundos) / 1000);
+            const minutos = Math.round(segundos / 60);
+            const horas = Math.round(minutos / 60);
+            const dias = Math.round(horas / 24);
+            console.log('fechaNotificacion', fechaNotificacion);
+            console.log('moment().format("YYYY-MM-DD HH:mm:ss")', moment().format("YYYY-MM-DD HH:mm:ss"));
+
+            const myDate = [
+                ['días', dias],
+                ['horas', horas],
+                ['minutos', minutos],
+                ['segundos', segundos]
+            ];
+
+            const msg = {};
+            for (const [key, value] of myDate) {
+
+                if (value > 0) {
+                    msg['nombre'] = key;
+                    msg['cantidad'] = value;
+                    break;
+                }
+            }
+
+            if (msg.cantidad == '1' && msg.nombre == 'segundos') {
+                msg.nombre = 'segundo';
+            } else if (msg.cantidad == '1' && msg.nombre == 'minutos') {
+                msg.nombre = 'minuto';
+            } else if (msg.cantidad == '1' && msg.nombre == 'horas') {
+                msg.nombre = 'hora';
+            } else if (msg.cantidad == '1' && msg.nombre == 'días') {
+                msg.nombre = 'día';
+            }
+
+            return `Hace ${msg.cantidad} ${msg.nombre}`;
+
+        }
     </script>
 
     <script>
@@ -26,15 +70,70 @@ function headernav()
 
         async function initNav(msg) {
             if (!["eliminarFechasDesabilitadas", "registrarFechasDesabilitadas"].includes(msg)) {
+
                 const notificacionesNoLeidas = await mostrarNotificaciones();
                 notification(`Tiene ${notificacionesNoLeidas} notificaciones no leídas.`);
             }
         }
 
+        async function listarNotificacionesComentariosPaciente() {
+            const formData = new FormData();
+            formData.append("method", "listarNotificacionesComentariosPaciente");
+            formData.append("id", <?= $_SESSION['id'] ?>);
+
+            const response = await fetch("<?php echo $_ENV['APP_URL']; ?>php/classNotificaciones.php", {
+                    method: "post",
+                    body: formData
+                }),
+                json = await response.json();
+
+
+            const listaDeComentariosMap = json.map(({
+                comentarios,
+                ...others
+            }) => {
+
+                const comentariosArray = JSON.parse(comentarios) || [];
+                return {
+                    ...others,
+                    comentarios: comentariosArray.filter((comentario) => {
+                        const comentarioObject = JSON.parse(comentario) || {};
+                        return (comentarioObject.esMedicoOPaciente == "MEDICO");
+                    }).map((comentario) => {
+                        const comentarioObject = JSON.parse(comentario) || {};
+                        const fechaActualMilisegundos = (Date.parse(moment().format("YYYY-MM-DD HH:mm:ss")));
+                        const fechaNotificacionMilisegundos = (Date.parse(comentarioObject.fecha));
+
+                        return {
+                            ...comentarioObject,
+                            notificacion: `<span class='spanbolder'>respuesta médico:</span> "${comentarioObject.comentario}"<br><span class='spanbolder'>Paciente:</span> ${comentarioObject.nombres}.`,
+                            tiempo: tiempoTranscurrido(comentarioObject.fecha),
+                            tiempoSegundos: ((fechaActualMilisegundos - fechaNotificacionMilisegundos) / 1000),
+                            respuestaDeMedico: true
+                        };
+                    })
+                };
+            });
+
+            const listaDeComentariosReducer = listaDeComentariosMap.reduce((previousValue, currentValue) => {
+                return [...previousValue, ...currentValue.comentarios];
+            }, []).filter((comentario) => {
+                // DESDE AQUI FILTRAMOS SOLO LAS NOTIFICACIONES DE COMENTARIOS HACE MENOS DE UNA SEMANA
+                const fechaActualMilisegundosMenos7Dias = (Date.parse(moment().subtract(30, 'days').format("YYYY-MM-DD hh:mm:ss")));
+                const fechaNotificacionMilisegundos = (Date.parse(comentario.fecha));
+
+                return (fechaNotificacionMilisegundos > fechaActualMilisegundosMenos7Dias);
+            });
+
+            console.log('listaDeComentariosReducer', listaDeComentariosReducer)
+            return listaDeComentariosReducer;
+
+        }
+
         socket.on("notificaciones", initNav);
 
 
-        window.addEventListener("DOMContentLoaded", function() {
+        window.addEventListener("DOMContentLoaded", async function() {
 
             /* _websocketService.ws.addEventListener("message", async function(e) {
 
@@ -108,22 +207,36 @@ function headernav()
         async function mostrarNotificaciones() {
             const listaDeNotificaciones = await listarNotificacionesPaciente();
 
+            const mapNotificacionesPaciente = await listarNotificacionesComentariosPaciente();
+            /* console.log('mapNotificacionesPaciente', mapNotificacionesPaciente) */
+            /* const mapNotificacionesPaciente = nuevasNotificacionesPaciente.map((comentarioObject) => {
+
+                const fechaActualMilisegundos = (Date.parse(moment().format("YYYY-MM-DD HH:mm:ss")));
+                const fechaNotificacionMilisegundos = (Date.parse(comentarioObject.fecha));
+                return {
+                    ...comentarioObject,
+                    notificacion: `<span class='spanbolder'>Respuesta Comentario:</span> "${comentarioObject.comentario}"<br><span class='spanbolder'>Médico:</span> ${comentarioObject.nombres}.`,
+                    tiempo: tiempoTranscurrido(comentarioObject.fecha),
+                    tiempoSegundos: ((fechaActualMilisegundos - fechaNotificacionMilisegundos) / 1000),
+                }
+            }); */
 
             // FILTRAMOS Y ORDEMANOS LAS NOTIFICACIONES DE FORMA ASCENDENTE
-            const notificacionesOrdenadas = listaDeNotificaciones.filter((notificacion) => {
+            const notificacionesOrdenadas = [...listaDeNotificaciones, ...mapNotificacionesPaciente].filter((notificacion) => {
                 return notificacion.tiempoSegundos;
             }).sort(function(a, b) {
                 return a.tiempoSegundos - b.tiempoSegundos;
             });
-            console.log('notificacionesOrdenadas', notificacionesOrdenadas)
+            /* console.log('notificacionesOrdenadas', notificacionesOrdenadas) */
             // UNIMOS TODAS LAS NOTIFICACIONES YA ORDENADAS
             const notificacionesListas = [
+                /* ...mapNotificacionesPaciente, */
                 ...notificacionesOrdenadas,
                 ...listaDeNotificaciones.filter((n) => !n.tiempoSegundos)
             ];
 
             // FILTRAMOS Y MSOSTRAMOS LAS NOTIFICACIONES NO LEIDAS
-            const notificacionesNoLeidas = (notificacionesListas.filter((notificacion) => notificacion.leido == "NO") || []);
+            const notificacionesNoLeidas = (notificacionesListas.filter((notificacion) => notificacion.leido == "NO" || notificacion.visto == "NO") || []);
             const _nuevasNotificaciones = document.getElementById("nuevasNotificaciones");
             if (notificacionesNoLeidas.length) {
                 Object.assign(_nuevasNotificaciones.style, {
@@ -147,10 +260,20 @@ function headernav()
                     estado
                 }) => !["CANCELADA"].includes(estado))
                 .reduce((previousValue, currentValue) => {
-                    return previousValue + `<li><a href="<?php echo $_ENV['APP_URL']; ?>agenda/${currentValue.id}">
-                    <p id="pnotif">${currentValue?.notificacion}<br>
-                    <small><strong>${currentValue?.tiempo}</strong></small></p>
-                </a></li>`;
+                    /* console.log('currentValue', currentValue) */
+                    let urlNotificacion;
+                    if (currentValue?.respuestaDeMedico) {
+                        urlNotificacion = `<li><a href="<?php echo $_ENV['APP_URL']; ?>perfilproo/${currentValue.idUser}">
+                            <p id="pnotif">${currentValue?.notificacion}<br>
+                            <small><strong>${currentValue?.tiempo}</strong></small></p>
+                        </a></li>`;
+                    } else {
+                        urlNotificacion = `<li><a href="<?php echo $_ENV['APP_URL']; ?>agenda/${currentValue.id}">
+                            <p id="pnotif">${currentValue?.notificacion}<br>
+                            <small><strong>${currentValue?.tiempo}</strong></small></p>
+                        </a></li>`;
+                    }
+                    return previousValue + urlNotificacion;
                 }, "");
 
             return notificacionesNoLeidas.length;

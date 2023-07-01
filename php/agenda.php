@@ -98,6 +98,22 @@
                     }
                 }
             </script>
+
+            <script>
+                window.addEventListener("DOMContentLoaded", async () => {
+                    let params = new URLSearchParams(location.search);
+                    /* alert(params.get('ws') + " url :" + JSON.stringify(location)) */
+                    if (params.get('ws') === "62c0e72bf038366388783650") {
+                        /* alert("socket_agenda1"); */
+                        socket.emit("cita", "pagarCita");
+                        /* alert("socket_agenda2"); */
+                        await new Promise((resolve) => {
+                            setTimeout(() => resolve(true), 3000);
+                        });
+                        window.location.replace(`${window.location.origin}${window.location.pathname}`);
+                    }
+                });
+            </script>
             <script>
                 $(document).ready(async function() {
 
@@ -140,17 +156,17 @@
                             document.body.appendChild(script);
                         }
                     });
-
-                    let params = new URLSearchParams(location.search);
+                    // MOVIMOS ESTE SCRIPT COMENTADO A DOMCONTENTLOADED
+                    /* let params = new URLSearchParams(location.search);
                     if (params.get('ws') === "62c0e72bf038366388783650") {
 
                         socket.emit("cita", "pagarCita");
 
                         await new Promise((resolve) => {
-                            setTimeout(() => resolve(true), 5000);
+                            setTimeout(() => resolve(true), 3000);
                         });
                         window.location.replace(`${window.location.origin}${window.location.pathname}`);
-                    }
+                    } */
 
 
                     const MERCADO_PAGO = new MercadoPago('TEST-585234f9-d099-4007-99ad-cdbb0757471b', {

@@ -292,7 +292,8 @@ if (isset($_GET['id']) && @$_GET['id'] == @$_SESSION['idpro']) {
                         nombres: "<?= $nombresMedico ?>",
                         esMedicoOPaciente: "MEDICO",
                         comentario: e.target.value.trim(),
-                        fecha: moment().format("YYYY-MM-DD hh:mm:ss")
+                        visto: "NO",
+                        fecha: moment().format("YYYY-MM-DD HH:mm:ss")
                     }));
 
                     const response = await fetch("<?php echo $_ENV['APP_URL']; ?>php/classValoraciones.php", {

@@ -96,6 +96,7 @@ if (isset($_GET['id']) && @$_SESSION['idpro'] == @$_GET['id']) {
         console.log('socket', socket);
 
         socket.on("cita", function(msg) {
+            console.log('socket listener', 'socket listener')
             init();
         });
 

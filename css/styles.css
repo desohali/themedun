@@ -309,8 +309,6 @@ input[type="password"], .formulario__login input[type="text"], .form-contra inpu
     border:1px solid #00ee1b;
 }
 
-
-
 @media screen and (max-width: 415px){
     .titulo__frase{
         width: 90%;

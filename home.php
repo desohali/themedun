@@ -48,6 +48,7 @@ if (@$estadoPaciente == 2) {
 include './php/navbar.php'; ?>
 
 <body id="body">
+<a href="https://api.whatsapp.com/send?phone=51986206045&text=Hola,%20tengo%20una%20consulta%20%C2%BFpueden%20ayudarme?%20%F0%9F%A4%94" target="_blank" class="btn-wsp"><i class="fa-brands fa-whatsapp"></i></a>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.3.2/jquery.rateyo.min.js"></script>
     <script src="<?php echo $_ENV['APP_URL']; ?>js/buscador.js"></script>

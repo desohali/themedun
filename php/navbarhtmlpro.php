@@ -125,12 +125,16 @@ function headernav()
             
             const fechaActualMilisegundos = (Date.parse(moment().format("YYYY-MM-DD HH:mm:ss")));
             
-            const segundos = Math.round((fechaActualMilisegundos - fechaNotificacionMilisegundos) / 1000);
-            const minutos = Math.round(segundos / 60);
-            const horas = Math.round(minutos / 60);
-            const dias = Math.round(horas / 24);
-            console.log('fechaNotificacion', fechaNotificacion);
+            const segundos = Math.floor((fechaActualMilisegundos - fechaNotificacionMilisegundos) / 1000);
+            const minutos = Math.floor(segundos / 60);
+            const horas = Math.floor(minutos / 60);
+            const dias = Math.floor(horas / 24);
+            /*console.log('fechaNotificacion', fechaNotificacion);
             console.log('moment().format("YYYY-MM-DD HH:mm:ss")', moment().format("YYYY-MM-DD HH:mm:ss"));
+            console.log('segundos', segundos);
+            console.log('minutos', minutos);
+            console.log('horas', horas);
+            console.log('dias', dias);*/
 
             const myDate = [
                 ['días', dias],
@@ -188,7 +192,7 @@ function headernav()
 
                         return {
                             ...comentarioObject,
-                            notificacion: `<span class='spanbolder'>Nuevo Comentario:</span> "${comentarioObject.comentario}"<br><span class='spanbolder'>Paciente:</span> ${comentarioObject.nombres}.`,
+                            notificacion: `<span class='spanbolder'>Nuevo Comentario:</span> "${comentarioObject.comentario}"<br><span class='spanbolder'>Paciente:</span> ${comentarioObject.nombres}`,
                             tiempo: tiempoTranscurrido(comentarioObject.fecha),
                             tiempoSegundos: ((fechaActualMilisegundos - fechaNotificacionMilisegundos) / 1000),
                         };

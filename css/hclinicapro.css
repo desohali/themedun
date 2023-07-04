@@ -330,7 +330,7 @@ select{
         padding: 20px;
         margin-left: 5%;
         margin-bottom:25px;
-        max-height:395px;
+        max-height:445px;
     }
     .ctn-fotoperfil, .ctn-titrecord{
         padding-right:0px;
@@ -342,7 +342,7 @@ select{
         font-size:12px;
     }
     .ctn-record{
-        height:105px;
+        height:155px;
     }
     #boxclini2{
         padding-top:0px;

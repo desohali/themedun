@@ -26,7 +26,7 @@ $especialidad = trim($_POST["especialidad"]);
 $colegiatura = trim($_POST["colegiatura"]);
 $precio = trim($_POST["precio"]);
 $indicaciones = "1. FOTO DE PERFIL: Suba una foto donde se le vea utilizando uniforme médico.
-2. INFORMACIÓN PROFESIONAL: Publique información acerca de su trayectoria profesional como estudios, trabajos, investigaciones, etc.";
+2. INFORMACIÓN PROFESIONAL: Publique información acerca de su trayectoria profesional como estudios, experiencia laboral, investigaciones, etc.";
 $indicaciones = nl2br(ucfirst(trim($indicaciones)));
 $estado = "V";
 if ($sexopro == "Femenino") {

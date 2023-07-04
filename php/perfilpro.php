@@ -90,6 +90,7 @@ if (isset($_GET['id']) && @$_GET['id'] == @$_SESSION['idpro']) {
 </head>
 
 <body id="body">
+<a href="https://api.whatsapp.com/send?phone=51986206045&text=Hola,%20tengo%20una%20consulta%20%C2%BFpueden%20ayudarme?%20%F0%9F%A4%94" target="_blank" class="btn-wsp"><i class="fa-brands fa-whatsapp"></i></a>
     <?php echo headernav() ?>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="<?php echo $_ENV['APP_URL']; ?>js/m&obpro.js"></script>
@@ -421,7 +422,7 @@ if (isset($_GET['id']) && @$_GET['id'] == @$_SESSION['idpro']) {
                             isConfirmed
                         } = await Swal.fire({
                             title: 'Información profesional',
-                            text: 'Ingrese información acerca de su trayectoria profesional como estudios, trabajos, investigaciones, etc.',
+                            text: 'Ingrese información acerca de su trayectoria profesional como estudios, experiencia laboral, investigaciones, etc.',
                             icon: 'error',
                             showCancelButton: false,
                             confirmButtonColor: '#0052d4',
@@ -522,8 +523,6 @@ if (isset($_GET['id']) && @$_GET['id'] == @$_SESSION['idpro']) {
                     <hr>
                     <p id="precioperfil"><span>Precio de cita:</span> S/ <?php echo $precio ?></p>
                     <p id="colegiaturaperfil"><span>N° de colegiatura:</span> <?php echo $colegiatura ?></p>
-                    <hr>
-                    <p id="telefonoperfil"><span>N° de celular:</span> <?php echo $telefono ?></p>
                 </div>
             </div>
             <div class="ctn-perfil2" id="perfil2">

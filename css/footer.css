@@ -58,6 +58,29 @@
     text-decoration: none;
 }
 
+.btn-wsp{
+    position: fixed;
+    width: 55px;
+    height: 55px;
+    line-height: 55px !important;
+    bottom: 50px;
+    right: 30px;
+    background: #25d366;
+    color: #fff;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    transition: all 200ms;
+}
+
+.btn-wsp:hover{
+    text-decoration: none;
+    color: #25d366;
+    background: #fff;
+}
+
 @media screen and (max-width: 415px){
     .footmed{
         padding: 25px;
@@ -89,5 +112,13 @@
     .copyr{
         font-size: 100%;
         padding: 10px 5%;
+    }
+    .btn-wsp{
+        width: 45px;
+        height: 45px;
+        line-height: 45px !important;
+        bottom: 35px;
+        right: 15px;
+        font-size: 25px;
     }
 }

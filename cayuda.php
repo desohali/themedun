@@ -29,6 +29,7 @@ if ($urlactual == 'https://themeduniverse.com/cayuda') {
 </head>
 
 <body>
+    <a href="https://api.whatsapp.com/send?phone=51986206045&text=Hola,%20tengo%20una%20consulta%20%C2%BFpueden%20ayudarme?%20%F0%9F%A4%94" target="_blank" class="btn-wsp"><i class="fa-brands fa-whatsapp"></i></a>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script>
         window.addEventListener("DOMContentLoaded", function() {
@@ -106,8 +107,9 @@ if ($urlactual == 'https://themeduniverse.com/cayuda') {
                 <textarea id="cuenta" name="cuenta" onkeypress="return validarn(event)" placeholder='Cuéntanos, ¿cómo te podemos ayudar?' class="txtcuenta" rows="5" required></textarea>
                 <input type='submit' value="Enviar" id="caenviar" name="caenviar"><br>
                 <hr id="hr-login">
-                <a href="https://api.whatsapp.com/send?phone=51986206045&text=Hola,%20tengo%20una%20consulta%20%C2%BFpueden%20ayudarme?%20%F0%9F%A4%94" target="_blank"><i class="fa-brands fa-whatsapp"></i> : +51 986 206 045</a><br>
-                <a id="enlacemail" href="mailto:themeduniverse@gmail.com" target="_blank"><i class="fa-regular fa-envelope"></i></i> : themeduniverse@gmail.com</a>
+                <div class="med-logos">
+                    <p id="fraselogin">TE ESCUCHAMOS LAS 24 HORAS</p>
+                </div>
             </form>
         </div>
     </main>

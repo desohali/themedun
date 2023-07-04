@@ -284,6 +284,7 @@ if (isset($_GET['payment_id']) && isset($_GET['status']) && isset($_GET['payment
 </head>
 
 <body id="body">
+<a href="https://api.whatsapp.com/send?phone=51986206045&text=Hola,%20tengo%20una%20consulta%20%C2%BFpueden%20ayudarme?%20%F0%9F%A4%94" target="_blank" class="btn-wsp"><i class="fa-brands fa-whatsapp"></i></a>
 	<?php echo headernav();
 	include './php/navbar.php'; ?>
 	<script src="<?php echo $_ENV['APP_URL']; ?>js/buscador.js"></script>

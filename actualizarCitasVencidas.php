@@ -37,5 +37,5 @@ $data = array(
 $jsonString = json_encode($data); */
 
 echo "data: {$resultCitasVencidas->num_rows}\n\n";
-echo "retry: 3000\n"; // set time execute
+echo "retry: 60000\n"; // set time execute
 flush();

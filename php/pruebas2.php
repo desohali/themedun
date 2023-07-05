@@ -23,8 +23,15 @@ if ( $minutosTrans >= 1) {
 } */
 include 'conexion_paciente.php';
 
-
 try {
+  $sql = "INSERT INTO test(nombre) VALUES('themedun')";
+  $result = mysqli_query($conexion, $query) or die(mysqli_error($conexion));
+
+  echo "success";
+} catch (\Throwable $th) {
+  echo "error";
+}
+/* try {
   $idupro = 1;
 $estadoLeido = "SI";
 
@@ -73,5 +80,4 @@ echo "Actualizaciones :" . count($comentariosAActualizar).$result->num_rows;
   //throw $th;
 
   echo "error";
-}
-?>
+} */

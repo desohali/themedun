@@ -304,7 +304,7 @@ function headernav()
             await mostrarNotificaciones();
 
             // VERIFICAR Y NOTIFICAR CITAS PROGRAMADAS FALTANDO 10 MINUTOS
-            let showNotification = true;
+            /* let showNotification = true;
             setInterval(async () => {
                 const citasEn10 = await verificarCitasProgramadas10MinutosAntes();
                 if (citasEn10 > 0) {
@@ -317,7 +317,7 @@ function headernav()
                         }, 240000);
                     }
                 }
-            }, 3000);
+            }, 3000); */
 
             var source = new EventSource("<?php echo $_ENV['APP_URL']; ?>actualizarCitasVencidas.php");
             source.onmessage = function(event) {

@@ -40,7 +40,7 @@
                 //Operacion matematica para mostrar los siquientes datos.
                 $IncrimentNum =(($compag +1)<=$TotalRegistro)?($compag +1):0;
                 //Consulta SQL
-                $consultavistas ="SELECT distinct idpx, idpx as idu,(select nombres from usuarios where id=idu) as nombresPaciente, (select apellidos from usuarios where id=idu) as apellidosPaciente, (select pais from usuarios where id=idu) as paisPaciente, (select ciudad from usuarios where id=idu) as ciudadPaciente FROM hclinica WHERE idmed = '".$idpro."' AND tiempoenf = '' ORDER BY nombresPaciente ASC LIMIT ".(($compag-1)*$CantidadMostrar)." , ".$CantidadMostrar;
+                $consultavistas ="SELECT distinct idpx, idpx as idu,(select nombres from usuarios where id=idu) as nombresPaciente, (select apellidos from usuarios where id=idu) as apellidosPaciente, (select pais from usuarios where id=idu) as paisPaciente, (select ciudad from usuarios where id=idu) as ciudadPaciente FROM hclinica WHERE idmed = '".$idpro."' AND tiempoenf is null ORDER BY nombresPaciente ASC LIMIT ".(($compag-1)*$CantidadMostrar)." , ".$CantidadMostrar;
                 $consultares=mysqli_query($conexion, $consultavistas);
                 while ($lista=mysqli_fetch_array($consultares)) {
                     $consultacita = "SELECT idpay FROM citas WHERE idpay <> '0' AND start=(SELECT MAX(start) FROM citas WHERE id='".$lista['idpx']."' AND idpay <> '0' AND asistenciapac <> 'No Asistió' AND asistencia <> 'No Asistió')";

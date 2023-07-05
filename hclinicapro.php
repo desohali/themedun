@@ -28,7 +28,7 @@ if (explode("/", $_GET['view'])[1]=='' || explode("/", $_GET['view'])[2]==''){
 $_GET['id'] = explode("/", $_GET['view'])[1];
 $_GET['idHistoria'] = explode("/", $_GET['view'])[2];
 $hcpaciente='';
-$consultavistas ="SELECT distinct idpx, (select idhc from hclinica where idhc='".$_GET['idHistoria']."') as idHistoria, (select idpay from citas where idpay='".$_GET['idHistoria']."' AND (asistenciapac = 'No Asistió' OR asistencia = 'No Asistió')) as idInasistencia FROM hclinica WHERE idmed = '".$_SESSION['idpro']."' AND idpx = '".$_GET['id']."' AND tiempoenf = ''";
+$consultavistas ="SELECT distinct idpx, (select idhc from hclinica where idhc='".$_GET['idHistoria']."') as idHistoria, (select idpay from citas where idpay='".$_GET['idHistoria']."' AND (asistenciapac = 'No Asistió' OR asistencia = 'No Asistió')) as idInasistencia FROM hclinica WHERE idmed = '".$_SESSION['idpro']."' AND idpx = '".$_GET['id']."' AND tiempoenf is null";
 $consultares=mysqli_query($conexion, $consultavistas);
 while ($lista=mysqli_fetch_array($consultares)) {
     $hcpaciente = $lista['idpx'];

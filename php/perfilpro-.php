@@ -43,7 +43,18 @@
 
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.3.2/jquery.rateyo.min.css">
+    <!-- SOLO SE MUESTRA EL BOTON DE COMENTARIO SI SE TARTA DE TABLED O MOVIL -->
+    <style>
+        .isMovil {
+            display: block !important;
+        }
 
+        @media screen and (min-width: 768px) {
+            .isMovil {
+                display: none !important;
+            }
+        }
+    </style>
 
 </head>
 
@@ -257,7 +268,7 @@
 
         Valoraciones.prototype.registrarComentario = async function(e) {
 
-            if (!new RegExp("\\S{1,}").test(e.target.value)) {
+            if (!new RegExp("\\S{1,}").test(e?.target?.value || comentario?.value)) {
                 // quizas se agrega alguna laerta o texto
                 return;
             }
@@ -269,7 +280,7 @@
                     "idUser": <?= $_SESSION['id'] ?>,
                     "nombres": "<?= $nombres . " " . $apellidos ?>",
                     "esMedicoOPaciente": "PACIENTE",
-                    "comentario": $comentario.val().trim(),
+                    "comentario": $comentario.val().trim().replace(/[^\x20-\x7E]/gmi, "").replace(/(\r\n|\n|\r)/gm, ""),// remplazamos los saltos de linea y retornos de carro
                     leido: "NO",
                     fecha: moment().format("YYYY-MM-DD HH:mm:ss")
                 })
@@ -475,7 +486,8 @@
             ?>
                 <div id="rateYo" style="margin:auto;padding: 10px 0px 5px 0px;"></div>
                 <div class="ctn-commentperfil" id="boxComen" style="display:<?php if($conteoComen == '0'){echo 'block';}else{echo 'none';} ?>">
-                    <textarea placeholder="Escribe un comentario..." onkeypress="event.keyCode == 13 ? new Valoraciones().registrarComentario(event): true" id="comentario" class="w-100 form-control" rows="3"></textarea>
+                    <textarea placeholder="Escribe un comentario..." onkeypress="event.keyCode == 13 && window.innerWidth > 768 ? new Valoraciones().registrarComentario(event): true" id="comentario" class="w-100 form-control" rows="3"></textarea>
+                    <button class="btn btn-primary btn-block isMovil" onclick="new Valoraciones().registrarComentario()">Publicar</button>
                     <!-- <button id="publicarComentario" class="btn btn-primary btn-block">Publicar</button> -->
                 </div>
             <?php

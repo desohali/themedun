@@ -19,7 +19,7 @@ if (isset($idcita)) {
     $insert = "INSERT INTO pagos (idpago, usuario, usuariopro, metodopago, fechahorap, estadopago) VALUES ('$idpago', '$id', '$idpro', '$metodopago', now(), '$estadopago')";
     $sql5 = mysqli_query($conexion, $insert);
 
-    include_once 'Zoom_Api.php';
+    include_once 'zoom_api_new.php';
 
     $query = "SELECT *, id as idu,";
     $query .= "(select nombrespro from usuariospro where idpro=idupro) as nombresMedico,";
@@ -39,7 +39,7 @@ if (isset($idcita)) {
         $cita = $row;
     }
 
-    $zoom_meeting = new Zoom_Api();
+    $zoom_meeting = new Zoom_Api_New();
 
     $data = array();
     $data['topic']         = 'Cita The Med Universe';
@@ -148,10 +148,12 @@ if (isset($idcita)) {
     // mail($cita->correoPaciente, $titulo, $mensajePaciente, $cabeceras);
     // mail('leandrobernal@themeduniverse.com', $titulo, $mensajeAdmin, $cabeceras);
     $script = "<script>";
+    $script .= "(async () => {";
     $script .= "await enviarCorreo({to: $cita->correoMedico, subject: $titulo, html: $mensajeMedico});";
     $script .= "await enviarCorreo({to: $cita->correoPaciente, subject: $titulo, html: $mensajePaciente});";
     $script .= "await enviarCorreo({to: 'bernalsaavedraleandro@gmail.com', subject: $titulo, html: $mensajeAdmin});";
     $script .= "window.location.href='" . $_ENV['APP_URL'] . "agendaadmin/" . $_SESSION['idAdmin'] . "'";
+    $script .= "})()";
     $script .= "</script>";
 
     echo $script;

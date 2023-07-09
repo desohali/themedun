@@ -62,7 +62,7 @@ if (isset($_GET['payment_id']) && isset($_GET['status']) && isset($_GET['payment
 
 		$sql5 = mysqli_query($conexion, "INSERT INTO pagos (idpago, usuario, usuariopro, metodopago, fechahorap, estadopago) VALUES ('$idpago', '$id', '$idpro', '$metodopago', now(), '$estadopago')");
 
-		include_once 'Zoom_Api.php';
+		include_once 'zoom_api_new.php';
 
 		include_once 'getOrderMercadoPago.php';
 
@@ -91,7 +91,7 @@ if (isset($_GET['payment_id']) && isset($_GET['status']) && isset($_GET['payment
 			$cita = $row;
 		}
 
-		$zoom_meeting = new Zoom_Api();
+		$zoom_meeting = new Zoom_Api_New();
 
 		$data = array();
 		$data['topic'] 		= 'Cita The Med Universe';
@@ -226,8 +226,8 @@ if (isset($_GET['payment_id']) && isset($_GET['status']) && isset($_GET['payment
 		} else {
 			$urlReplace = $_ENV['APP_URL'] . $_GET['url'] . "/" . $idpro . "?ws=62c0e72bf038366388783650";
 		}
-		
-		
+
+
 
 		$script = "<script>";
 		$script .= '
@@ -284,7 +284,7 @@ if (isset($_GET['payment_id']) && isset($_GET['status']) && isset($_GET['payment
 </head>
 
 <body id="body">
-<a href="https://api.whatsapp.com/send?phone=51986206045&text=Hola,%20tengo%20una%20consulta%20%C2%BFpueden%20ayudarme?%20%F0%9F%A4%94" target="_blank" class="btn-wsp"><i class="fa-brands fa-whatsapp"></i></a>
+	<a href="https://api.whatsapp.com/send?phone=51986206045&text=Hola,%20tengo%20una%20consulta%20%C2%BFpueden%20ayudarme?%20%F0%9F%A4%94" target="_blank" class="btn-wsp"><i class="fa-brands fa-whatsapp"></i></a>
 	<?php echo headernav();
 	include './php/navbar.php'; ?>
 	<script src="<?php echo $_ENV['APP_URL']; ?>js/buscador.js"></script>
@@ -618,7 +618,7 @@ if (isset($_GET['payment_id']) && isset($_GET['status']) && isset($_GET['payment
 			const [horaInicial /* , horaFinal */ ] = hora.split("-");
 			const horaActual = new Date().getHours();
 			const dateCurrent = moment().format("YYYY-MM-DD");
-			if (horaActual+1 >= Number(horaInicial.split(":")[0]) && dateCurrent == sessionStorage.getItem("dateCurrent") || horaActual-23 == 0 && Number(horaInicial.split(":")[0]) == 0 && dateCurrentDos == sessionStorage.getItem("dateCurrent")) {
+			if (horaActual + 1 >= Number(horaInicial.split(":")[0]) && dateCurrent == sessionStorage.getItem("dateCurrent") || horaActual - 23 == 0 && Number(horaInicial.split(":")[0]) == 0 && dateCurrentDos == sessionStorage.getItem("dateCurrent")) {
 				return false;
 			}
 
@@ -661,9 +661,9 @@ if (isset($_GET['payment_id']) && isset($_GET['status']) && isset($_GET['payment
 
 							const [horaInicial /* , horaFinal */ ] = DIAS[0].split("-");
 							const isSelect = (
-								horaActual+1 >= Number(horaInicial.split(":")[0]) &&
+								horaActual + 1 >= Number(horaInicial.split(":")[0]) &&
 								dateCurrent == sessionStorage.getItem("dateCurrent") ||
-								horaActual-23 == 0 && Number(horaInicial.split(":")[0]) == 0 && dateCurrentDos == sessionStorage.getItem("dateCurrent")
+								horaActual - 23 == 0 && Number(horaInicial.split(":")[0]) == 0 && dateCurrentDos == sessionStorage.getItem("dateCurrent")
 							);
 
 							const findMergeCita = listaCitasMedico.find(({

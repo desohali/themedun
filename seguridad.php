@@ -11,6 +11,7 @@ class Seguridad
   public $tipoUsuario;
 
   public $rutasSiempreAccesibles = [
+    "zoom",
     "lreclamos",
     "hreclamos",
     "terycon",

@@ -68,6 +68,13 @@ h2{
     z-index: 8;
 }
 
+.jq-ry-container .jq-ry-group > .jq-ry-rated-group > .jq-ry-star {
+    border-radius: 50%;
+  }
+  .jq-ry-container .jq-ry-group > .jq-ry-unrated-group > .jq-ry-star {
+    border-radius: 50%;
+  }
+
 #comment{
     position: absolute;
     margin-left: 555px;

@@ -75,6 +75,7 @@ if (isset($_GET['id']) && @$_GET['id'] == @$_SESSION['idpro']) {
     <title><?php echo $doctor . ' ' . $nombrespro . ' ' . $apellidospro ?> - The Med Universe | Profesional</title>
     <meta name="author" content="The Med Universe S.A.C.S." />
     <meta name="description" content="The Med Universe es una plataforma en la que encontrarás una amplia gama de médicos y psicólogos distribuidos por todo el mundo que exhiben sus servicios de salud para que los puedas contactar de una manera rápida y sencilla." />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <script src="<?php echo $_ENV['APP_URL']; ?>js/jquery.min.js"></script>
@@ -93,6 +94,7 @@ if (isset($_GET['id']) && @$_GET['id'] == @$_SESSION['idpro']) {
 <a href="https://api.whatsapp.com/send?phone=51986206045&text=Hola,%20tengo%20una%20consulta%20%C2%BFpueden%20ayudarme?%20%F0%9F%A4%94" target="_blank" class="btn-wsp"><i class="fa-brands fa-whatsapp"></i></a>
     <?php echo headernav() ?>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"></script>
     <script src="<?php echo $_ENV['APP_URL']; ?>js/m&obpro.js"></script>
 
     <!-- Latest compiled and minified JavaScript -->
@@ -452,7 +454,7 @@ if (isset($_GET['id']) && @$_GET['id'] == @$_SESSION['idpro']) {
             <div class="ctn-sideperfil">
                 <form id="formFoto" action="" method="post" enctype="multipart/form-data" name="form1" id="form1">
                     <div class="ctn-fotoperfil">
-                        <img src="<?php echo $_ENV['APP_URL'] . 'fotoperfilpro/mini_' . $fotoperfilpro . "?v=" . rand() ?>" id="fppro" alt="Foto de perfil">
+                        <img src="<?php echo $_ENV['APP_URL'] . 'fotoperfilpro/mini_' . $fotoperfilpro . "?v=" . rand() ?>" class="zoom-effect" id="fppro" alt="Foto de perfil" data-toggle="modal" data-target="#modalFotoPerfil">
                     </div>
                     <div class="ctn-previeimage" id="previewperfil">
                         <canvas id="canvasPerfil" style="display:none"></canvas>
@@ -467,6 +469,16 @@ if (isset($_GET['id']) && @$_GET['id'] == @$_SESSION['idpro']) {
                     </div>
                 </form>
             </div>
+            <!-- Modal -->
+<div class="modal fade" id="modalFotoPerfil" tabindex="-1" role="dialog" aria-labelledby="modalFotoPerfilLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-body">
+                <img src="<?php echo $_ENV['APP_URL'] . "fotoperfilpro/" . $fotoperfilpro . "?v=" . rand()?>" alt="Foto de perfil agrandada" id="modalFotoAgrandada">
+            </div>
+        </div>
+    </div>
+</div>
             <?php
             if (isset($_POST['editfoto'])) {
                 $tips = 'jpg';
@@ -701,7 +713,7 @@ if (isset($_GET['id']) && @$_GET['id'] == @$_SESSION['idpro']) {
                         <span>Diploma de título profesional:</span>
                         <div class="boxfotos">
                             <div class="fotorevision ctn-fototit">
-                                <img src="<?php echo $_ENV['APP_URL']; ?>titulos/<?php echo $fototitulo . "?v=" . rand() ?>" id="fptit" alt="Diploma de título profesional">
+                                <img src="<?php echo $_ENV['APP_URL']; ?>titulos/<?php echo $fototitulo . "?v=" . rand() ?>" id="fptit" alt="Diploma de título profesional" class="zoom-effect" data-toggle="modal" data-target="#modalFotoTit">
                             </div>
                             <div class="ctn-previe" id="previewtit"></div>
                             <div class="ctn-editartit">
@@ -712,12 +724,22 @@ if (isset($_GET['id']) && @$_GET['id'] == @$_SESSION['idpro']) {
                                 <input type="submit" name="edittit" class="lblguardar lblbtn" id="edittit" value="Guardar"><br>
                             </div>
                         </div>
+                        <!-- Modal -->
+<div class="modal fade" id="modalFotoTit" tabindex="-1" role="dialog" aria-labelledby="modalFotoPerfilLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-body">
+                <img src="<?php echo $_ENV['APP_URL']; ?>titulos/<?php echo $fototitulo . "?v=" . rand() ?>" alt="Foto de título agrandada" id="modalFotoAgrandada"><br>
+            </div>
+        </div>
+    </div>
+</div>
                     </form>
                     <form action="" method="post" enctype="multipart/form-data" name="formfotos2" id="formfotos2">
                         <span>Diploma de colegiatura:</span>
                         <div class="boxfotos">
                             <div class="fotorevision ctn-fotofirma">
-                                <img src="<?php echo $_ENV['APP_URL']; ?>colegiaturas/<?php echo $fotocolegiatura . "?v=" . rand() ?>" id="fpfirma" alt="Diploma de colegiatura">
+                                <img src="<?php echo $_ENV['APP_URL']; ?>colegiaturas/<?php echo $fotocolegiatura . "?v=" . rand() ?>" id="fpfirma" alt="Diploma de colegiatura" class="zoom-effect" data-toggle="modal" data-target="#modalFotoCole">
                             </div>
                             <div class="ctn-previe" id="previewfirma"></div>
                             <div class="ctn-editarfirma">
@@ -728,12 +750,22 @@ if (isset($_GET['id']) && @$_GET['id'] == @$_SESSION['idpro']) {
                                 <input type="submit" name="editfirma" class="lblguardar lblbtn" id="editfirma" value="Guardar"><br>
                             </div>
                         </div>
+                        <!-- Modal -->
+<div class="modal fade" id="modalFotoCole" tabindex="-1" role="dialog" aria-labelledby="modalFotoPerfilLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-body">
+                <img src="<?php echo $_ENV['APP_URL']; ?>colegiaturas/<?php echo $fotocolegiatura . "?v=" . rand() ?>" alt="Foto de colegiatura agrandada" id="modalFotoAgrandada"><br>
+            </div>
+        </div>
+    </div>
+</div>
                     </form>
                     <form action="" method="post" enctype="multipart/form-data" name="formfotos3" id="formfotos3">
                         <span>Documento de identidad (ambos lados):</span>
                         <div class="boxfotos">
                             <div class="fotorevision ctn-fotohuella">
-                                <img src="<?php echo $_ENV['APP_URL']; ?>documentos/<?php echo $fotodocumento . "?v=" . rand() ?>" id="fphuella" alt="Documento de identidad">
+                                <img src="<?php echo $_ENV['APP_URL']; ?>documentos/<?php echo $fotodocumento . "?v=" . rand() ?>" id="fphuella" alt="Documento de identidad" class="zoom-effect" data-toggle="modal" data-target="#modalFotoDoc">
                             </div>
                             <div class="ctn-previe" id="previewhuella"></div>
                             <div class="ctn-editarhuella">
@@ -744,6 +776,16 @@ if (isset($_GET['id']) && @$_GET['id'] == @$_SESSION['idpro']) {
                                 <input type="submit" name="edithuella" class="lblguardar lblbtn" id="edithuella" value="Guardar"><br>
                             </div>
                         </div>
+                        <!-- Modal -->
+<div class="modal fade" id="modalFotoDoc" tabindex="-1" role="dialog" aria-labelledby="modalFotoPerfilLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-body">
+                <img src="<?php echo $_ENV['APP_URL']; ?>documentos/<?php echo $fotodocumento . "?v=" . rand() ?>" alt="Foto de documento agrandada" id="modalFotoAgrandada"><br>
+            </div>
+        </div>
+    </div>
+</div>
                     </form>
                 </div>
             </div>
@@ -960,8 +1002,18 @@ if (isset($_GET['id']) && @$_GET['id'] == @$_SESSION['idpro']) {
                                             if ($lista['imagen'] != '') {
                                             ?>
                                         <div class="ctn-imagepub">
-                                            <img src="<?php echo $_ENV['APP_URL']; ?>fotoprofesional/<?php echo $lista['imagen']; ?>" ALIGN="MIDDLE">
+                                            <img src="<?php echo $_ENV['APP_URL']; ?>fotoprofesional/<?php echo $lista['imagen']; ?>" ALIGN="MIDDLE" class="zoom-effect" data-toggle="modal" data-target="#modalFotoPub<?php echo $lista['idpub']; ?>">
                                         </div>
+                                        <!-- Modal -->
+<div class="modal fade" id="modalFotoPub<?php echo $lista['idpub']; ?>" tabindex="-1" role="dialog" aria-labelledby="modalFotoPerfilLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-body">
+                <img src="<?php echo $_ENV['APP_URL'] . 'fotoprofesional/' . $lista['imagen']; ?>" alt="Foto de pub agrandada" id="modalFotoAgrandada"><br>
+            </div>
+        </div>
+    </div>
+</div>
                                     <?php
                                             }
                                     ?>

@@ -32,6 +32,7 @@
     <title><?php echo $doctor . ' ' . $nombrespro . ' ' . $apellidospro ?> - The Med Universe | Paciente</title>
     <meta name="author" content="The Med Universe S.A.C.S." />
     <meta name="description" content="The Med Universe es una plataforma en la que encontrarás una amplia gama de médicos distribuidos por todo el mundo que exhiben sus servicios de salud para que los puedas contactar de una manera rápida y sencilla." />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <link rel="stylesheet" href="<?php echo $_ENV['APP_URL']; ?>css/nav.css">
@@ -43,8 +44,6 @@
 
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.3.2/jquery.rateyo.min.css">
-
-
 </head>
 
 <body id="body">
@@ -54,6 +53,7 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.3.2/jquery.rateyo.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"></script>
     <script src="<?php echo $_ENV['APP_URL']; ?>js/buscador.js"></script>
     <script src="<?php echo $_ENV['APP_URL']; ?>js/m&ob.js"></script>
 
@@ -402,13 +402,24 @@
     </script>
     <main>
         <div class="filauno">
-            <div class="ctn-sideperfil">
-                <div class="ctn-fotoperfil">
-                    <img src="<?php echo $_ENV['APP_URL'] . "fotoperfilpro/mini_" . $fotoperfilpro . "?v=" . rand()?>" id="fppro" alt="Foto de perfil"><br>
-                </div>
-                <a href="<?php echo $boton;?>" target="_blank" class="colegiatura" id="comprob-coleg"><button><?php echo $verificar;?></button></a><br>
-                <a href="<?php echo $_ENV['APP_URL'] . 'cita/' . $idpro; ?>" id="prog-cita"><button>Programar Cita</button></a>
+        <div class="ctn-sideperfil">
+    <div class="ctn-fotoperfil">
+        <img src="<?php echo $_ENV['APP_URL'] . "fotoperfilpro/mini_" . $fotoperfilpro . "?v=" . rand()?>" class="zoom-effect" id="fppro" alt="Foto de perfil" data-toggle="modal" data-target="#modalFotoPerfil"><br>
+    </div>
+    <a href="<?php echo $boton;?>" target="_blank" class="colegiatura" id="comprob-coleg"><button><?php echo $verificar;?></button></a><br>
+    <a href="<?php echo $_ENV['APP_URL'] . 'cita/' . $idpro; ?>" id="prog-cita"><button>Programar Cita</button></a>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="modalFotoPerfil" tabindex="-1" role="dialog" aria-labelledby="modalFotoPerfilLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-body">
+                <img src="<?php echo $_ENV['APP_URL'] . "fotoperfilpro/" . $fotoperfilpro . "?v=" . rand()?>" alt="Foto de perfil agrandada" id="modalFotoAgrandada">
             </div>
+        </div>
+    </div>
+</div>
             <div class="ctn-perfil" id="perfilpro-">
                 <div class="ctn-editarp">
                     <h2>INFORMACIÓN PERSONAL</h2>
@@ -514,8 +525,18 @@
                                         if ($lista['imagen'] != '') {
                                         ?>
                                     <div class="ctn-imagepub">
-                                        <img src="<?php echo $_ENV['APP_URL'] . 'fotoprofesional/' . $lista['imagen']; ?>" ALIGN="MIDDLE">
+                                        <img src="<?php echo $_ENV['APP_URL'] . 'fotoprofesional/' . $lista['imagen']; ?>" ALIGN="MIDDLE" class="zoom-effect" data-toggle="modal" data-target="#modalFotoPub<?php echo $lista['idpub']; ?>">
                                     </div>
+                                    <!-- Modal -->
+<div class="modal fade" id="modalFotoPub<?php echo $lista['idpub']; ?>" tabindex="-1" role="dialog" aria-labelledby="modalFotoPerfilLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-body">
+                <img src="<?php echo $_ENV['APP_URL'] . 'fotoprofesional/' . $lista['imagen']; ?>" alt="Foto de pub agrandada" id="modalFotoAgrandada">
+            </div>
+        </div>
+    </div>
+</div>
                                 <?php
                                         }
                                 ?>

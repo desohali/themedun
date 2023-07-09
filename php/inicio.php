@@ -104,8 +104,8 @@ function iniciomed($pacOpro)
         <div class="datosclave">
             <ul>
                 <li><p>Alrededor de una tercera parte de las personas en los países de las Américas (29.3%) reportaron no buscar atención en salud cuando lo necesitaron debido a múltiples barreras de acceso.</p></li>
-                <li><p>Entre los que reportaron no buscar atención, el 17.2% atribuyó su decisión a barreras organizativas (ej. largos tiempos de espera, horas de atención inadecuadas, requisitos administrativos engorrosos).</p></li>                
-                <li><p>La disponibilidad inadecuada de recursos (ej. falta personal de salud) fue reportada en el 8.4% de los casos y las barreras geográficas en el 5.4% de los casos.</p></li>
+                <li><p>Entre los que reportaron no buscar atención, el 17.2% atribuyó su decisión a barreras organizativas, como largos tiempos de espera, horarios de atención inadecuados y requisitos administrativos complicados.</p></li>                
+                <li><p>La disponibilidad inadecuada de recursos, como falta de personal de salud, fue reportada en el 8.4% de los casos y las barreras geográficas en el 5.4% de los casos.</p></li>
             </ul>
             <img src="https://www.paho.org/sites/default/files/salud_universal_gif.gif" id="img-salud">
         </div>

@@ -45,6 +45,7 @@ if (isset($_GET['id']) && @$_GET['id'] == @$_SESSION['id']){
     <title><?php echo $nombres.' '.$apellidos?> - The Med Universe | Paciente</title>
     <meta name="author" content="The Med Universe S.A.C.S."/>
     <meta name="description" content="The Med Universe es una plataforma en la que encontrarás una amplia gama de médicos distribuidos por todo el mundo que exhiben sus servicios de salud para que los puedas contactar de una manera rápida y sencilla." />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <link rel="stylesheet" href="<?php echo $_ENV['APP_URL'];?>css/nav.css">
@@ -56,6 +57,7 @@ if (isset($_GET['id']) && @$_GET['id'] == @$_SESSION['id']){
 <body id="body">
 <a href="https://api.whatsapp.com/send?phone=51986206045&text=Hola,%20tengo%20una%20consulta%20%C2%BFpueden%20ayudarme?%20%F0%9F%A4%94" target="_blank" class="btn-wsp"><i class="fa-brands fa-whatsapp"></i></a>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"></script>
     <script src="<?php echo $_ENV['APP_URL'];?>js/buscador.js"></script>
     <script src="<?php echo $_ENV['APP_URL'];?>js/m&ob.js"></script>
     <main>
@@ -63,7 +65,7 @@ if (isset($_GET['id']) && @$_GET['id'] == @$_SESSION['id']){
         <div class="ctn-sideperfil" id="sideperfil">
             <form id="formFoto" action="" method="post" enctype="multipart/form-data" name="form1" id="form1">
                 <div class="ctn-fotoperfil">
-                    <img src="<?php echo $_ENV['APP_URL'].'fotoperfil/mini_'.$fotoperfil. "?v=". rand()?>" id="fppro" alt="Foto de perfil">
+                    <img src="<?php echo $_ENV['APP_URL'].'fotoperfil/mini_'.$fotoperfil. "?v=". rand()?>" class="zoom-effect" id="fppro" alt="Foto de perfil" data-toggle="modal" data-target="#modalFotoPerfil">
                 </div>
                 <div class="ctn-previeimage" id="previewperfil">
                     <!-- <input type="range" id="zoomPerfil" name="zoomPerfil" value="0" step="2" min="0" max="500" style="width: 200px!important;"> -->
@@ -78,6 +80,17 @@ if (isset($_GET['id']) && @$_GET['id'] == @$_SESSION['id']){
                 </div>
             </form>
         </div>
+
+<!-- Modal -->
+<div class="modal fade" id="modalFotoPerfil" tabindex="-1" role="dialog" aria-labelledby="modalFotoPerfilLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-body">
+                <img src="<?php echo $_ENV['APP_URL'] . "fotoperfil/" . $fotoperfil . "?v=" . rand()?>" alt="Foto de perfil agrandada" id="modalFotoAgrandada">
+            </div>
+        </div>
+    </div>
+</div>
         
         <?php
         if(isset($_POST['editfoto'])){

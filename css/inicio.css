@@ -73,7 +73,7 @@ iframe{
 }
 
 .divdatos ul li{
-    color:#0052d4;
+    color:#ff0000;
 }
 
 .divdatos ul li p{
@@ -197,6 +197,7 @@ iframe{
     }
     .saludtit{
         margin-top: 10px;
+        padding: 0px 20px;
     }
     .divdatos ul li, .datosmisvis{
         width: 88%;
@@ -269,25 +270,36 @@ iframe{
         padding: 25px 10px;
     }
     .fraseinic h2{
-        font-size: 400%;
+        font-size: 28px;
+    }
+    .secundi{
+        position:relative;
+        z-index:9;
     }
     .divdatos{
         padding-bottom: 10px;
         margin: 6.5%;
     }
     .divdatos h2{
-        font-size: 280%;
+        font-size: 20px;
     }
     .saludtit{
         margin-top: 10px;
+        padding: 0px 20px;
     }
     .divdatos ul li, .datosmisvis{
-        width: 80%;
-        margin: 10px 10%;
-        font-size: 180%;
+        width: 88%;
+        margin: 10px 20px;
+        font-size: 12px;
     }
     .datosclave{
         display: block;
+    }
+    .dosparrafos p, .unparrafo p{
+        display:flex;
+        height:55px;
+        align-items:center;
+        font-size:12px;
     }
     .misyvis{
         margin: 0px;
@@ -295,8 +307,47 @@ iframe{
     #vervision{
         margin-top: 10px;
     }
+    .divdatos .misyvis{
+        font-size:20px;
+    }
     .datosclave img{
+        margin-right:0px;
         margin-left: 25%;
+        margin-bottom: 2.5%;
         width: 50%;
+    }
+    .funciones, .beneficios{
+        width:100%;
+        margin:10px 0%;
+        padding:0px;
+    }
+    .funciones h2, .beneficios h2{
+        margin-bottom:10px;
+        font-size:185%;
+    }
+    .beneficios h2{
+        margin-top:20px;
+    }
+    .unparrafo{
+        margin:15px;
+    }
+    #automedica{
+        padding:5px;
+    }
+    .card-deck{
+        margin:6.5%;
+        margin-bottom:0px;
+    }
+    .card-title{
+        font-size:12px;
+    }
+    iframe{
+        height:160px;
+    }
+    .card-deck .card{
+        margin-bottom:25px;
+    }
+    #ultimacard{
+        margin-bottom:0px;
     }
 }

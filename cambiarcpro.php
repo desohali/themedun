@@ -90,7 +90,7 @@ if ($urlactual=='https://themeduniverse.com/cambiarcpro') {
                 <input type='submit' value="Guardar" id="ccambiar" name="iniciar_sesion"><br>
                 <hr id="hr-login">
                 <div class="med-logos recuperar">
-                    <p id="fraselogin">EL FUTURO ES HOY... ACOMPÁÑANOS</p>
+                    <p id="fraselogin">ATENCIÓN MÉDICA SIN FRONTERAS</p>
                 </div>
             </form>
         </div>

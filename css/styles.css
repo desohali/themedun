@@ -168,7 +168,7 @@ textarea {
     display: flex;
     justify-content:center;
     margin-top:15px;
-    padding:10px;
+    padding:10px 5px;
     border-radius:10px;
     border:1px solid #ff0000;
 }

@@ -45,7 +45,7 @@
                 async function initAgenda() {
                     const response = await fetch("<?php echo $_ENV['APP_URL']; ?>php/eventoss.php?id=<?php echo $id ?>");
                     const json = await response.json();
-                    console.log('json', json)
+                    //R console.log('json', json)
 
                     const calendar = $('#CalendarioWeb').fullCalendar('getCalendar');
                     // extend object (could be its own function, etc.)
@@ -123,7 +123,7 @@
                         if (!document.querySelector('[src="https://sdk.mercadopago.com/js/v2"]')) {
                             let script = document.createElement('script');
                             script.addEventListener('load', (e) => {
-                                console.log('mercadopago is loading...');
+                                //R console.log('mercadopago is loading...');
                                 resolve();
                             });
                             script.src = 'https://sdk.mercadopago.com/js/v2';
@@ -136,7 +136,7 @@
                         if (!document.querySelector('[src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.8.2/fullcalendar.min.js"]')) {
                             let script = document.createElement('script');
                             script.addEventListener('load', (e) => {
-                                console.log('fullcalendar is loading...');
+                                //R console.log('fullcalendar is loading...');
                                 resolve();
                             });
                             script.src = 'https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.8.2/fullcalendar.min.js';
@@ -149,7 +149,7 @@
                         if (!document.querySelector('[src="<?php echo $_ENV['APP_URL']; ?>js/es.js"]')) {
                             let script = document.createElement('script');
                             script.addEventListener('load', (e) => {
-                                console.log('esCalendar is loading...');
+                                //R console.log('esCalendar is loading...');
                                 resolve();
                             });
                             script.src = '<?php echo $_ENV['APP_URL']; ?>js/es.js';

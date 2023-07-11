@@ -89,8 +89,7 @@
     #comprob-coleg button, #prog-cita button{
         padding: 7px 10px;
         font-size: 12px;
-        width:70%;
-        margin-left:15%;
+        width:100%;
     }
     #comprob-coleg button{
         margin-top:15px;

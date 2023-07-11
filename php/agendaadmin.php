@@ -39,19 +39,19 @@ if (isset($idcita)) {
         $cita = $row;
     }
 
+    
     $zoom_meeting = new Zoom_Api_New();
 
-    $data = array();
-    $data['topic']         = 'Cita The Med Universe';
-    $data['timezone']     = 'America/Lima';
-    $comienzo = strtotime('-6 hours', strtotime($cita->start));
-    $data['start_time'] = date('Y-m-d H:i:s', $comienzo);
-    $data['duration']     = 45;
-    $data['type']         = 2;
-    $data['password']     = "12345";
+    $meetingData = array();
+    $meetingData['topic']         = 'Cita The Med Universe';
+    $meetingData['timezone']     = 'America/Lima';
+    $meetingData['start_time'] = gmdate("Y-m-d\TH:i:s", strtotime($cita->start));
+    $meetingData['duration']     = 40;
+    $meetingData['type']         = 2;
+    $meetingData['password']     = "CITATMU";
 
     try {
-        $response = $zoom_meeting->createMeeting($data);
+        $response = $zoom_meeting->createMeeting($meetingData);
     } catch (Exception $ex) {
         echo $ex;
     };
@@ -340,7 +340,7 @@ if (isset($idcita)) {
                         if (!document.querySelector('[src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.8.2/fullcalendar.min.js"]')) {
                             let script = document.createElement('script');
                             script.addEventListener('load', (e) => {
-                                console.log('fullcalendar is loading...');
+                                //R console.log('fullcalendar is loading...');
                                 resolve();
                             });
                             script.src = 'https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.8.2/fullcalendar.min.js';
@@ -353,7 +353,7 @@ if (isset($idcita)) {
                         if (!document.querySelector('[src="<?php echo $_ENV['APP_URL']; ?>js/es.js"]')) {
                             let script = document.createElement('script');
                             script.addEventListener('load', (e) => {
-                                console.log('esCalendar is loading...');
+                                //R console.log('esCalendar is loading...');
                                 resolve();
                             });
                             script.src = '<?php echo $_ENV['APP_URL']; ?>js/es.js';

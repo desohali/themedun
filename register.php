@@ -86,7 +86,7 @@ if ($urlactual == 'https://themeduniverse.com/register') {
                                         })
                                         .then((response) => response.json())
                                         .then(async (json) => {
-                                            console.log('json', json);
+                                            //R console.log('json', json);
                                             const [primerCorreo] = json;
                                             await enviarCorreo(primerCorreo);
 

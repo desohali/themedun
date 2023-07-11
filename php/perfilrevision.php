@@ -217,7 +217,7 @@
                     await new Valoraciones().listarValoraciones();
                 }
             } catch (error) {
-                console.log('error', error)
+                //R console.log('error', error)
             }
         };
 

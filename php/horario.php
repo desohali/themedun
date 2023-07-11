@@ -59,6 +59,20 @@ if (isset($_GET['id']) && @$_SESSION['idpro'] == @$_GET['id']) {
     <link rel="stylesheet" href="<?php echo $_ENV['APP_URL']; ?>css/calendarpro.css">
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"></script>
+    <style>
+    .accordion-item {
+      margin-bottom: 10px;
+    }
+    .accordion-heading {
+      background-color: #f8f9fa;
+      padding: 10px;
+      cursor: pointer;
+    }
+    .accordion-content {
+      display: none;
+      padding: 10px;
+    }
+  </style>
 </head>
 
 <body id="body">
@@ -94,10 +108,10 @@ if (isset($_GET['id']) && @$_SESSION['idpro'] == @$_GET['id']) {
             calendar.refresh();
         }
 
-        console.log('socket', socket);
+        //R console.log('socket', socket);
 
         socket.on("cita", function(msg) {
-            console.log('socket listener', 'socket listener')
+            //R console.log('socket listener', 'socket listener')
             init();
         });
 
@@ -603,26 +617,28 @@ if (isset($_GET['id']) && @$_SESSION['idpro'] == @$_GET['id']) {
     </script>
     <main>
         <div class="ctn-fullc">
-            <div class="ctn-horario" id="ctn-horario">
-                <div class="ctn-editarpc">
-                    <h2>DISPONIBILIDAD HORARIA</h2>
-                </div>
-                <hr id="hrdis">
-                <div id="tablaPrueba"></div>
-                <!-- <table>
-                <tr>
-                    <th>Hora</th>
-                    <th>Lunes</th>
-                    <th>Martes</th>
-                    <th>Miércoles</th>
-                    <th>Jueves</th>
-                    <th>Viernes</th>
-                    <th>Sábado</th>
-                    <th>Domingo</th>
-                </tr>
-            </table> -->
-            </div>
-
+  <div class="ctn-horario container mt-3" id="ctn-horario">
+    <div class="accordion">
+      <div class="accordion-item">
+        <div class="accordion-heading">
+          <h2>DISPONIBILIDAD HORARIA</h2>
+          <i class="fas fa-chevron-down ml-2"></i>
+        </div>
+        <div class="accordion-content">
+          <div id="tablaPrueba"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://kit.fontawesome.com/your-fontawesome-kit.js"></script>
+  <script>
+    $(document).ready(function() {
+      $('.accordion-heading').click(function() {
+        $(this).toggleClass('active');
+        $(this).next('.accordion-content').slideToggle();
+      });
+    });
+  </script>
             <div class="ctn-agenda">
                 <div class="ctn-editarpc">
                     <h2>AGENDA DE CITAS</h2>
@@ -647,7 +663,7 @@ if (isset($_GET['id']) && @$_SESSION['idpro'] == @$_GET['id']) {
 
                             let script = document.createElement('script');
                             script.addEventListener('load', (e) => {
-                                console.log('fullcalendar is loading...');
+                                //R console.log('fullcalendar is loading...');
                                 resolve();
                             });
                             script.src = 'https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.8.2/fullcalendar.min.js';
@@ -661,7 +677,7 @@ if (isset($_GET['id']) && @$_SESSION['idpro'] == @$_GET['id']) {
 
                             let script = document.createElement('script');
                             script.addEventListener('load', (e) => {
-                                console.log('esCalendar is loading...');
+                                //R console.log('esCalendar is loading...');
                                 resolve();
                             });
                             script.src = '<?php echo $_ENV['APP_URL']; ?>js/es.js';

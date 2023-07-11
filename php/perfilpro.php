@@ -311,7 +311,7 @@ if (isset($_GET['id']) && @$_GET['id'] == @$_SESSION['idpro']) {
                     boxResponse.style.display = 'none';
                 }
             } catch (error) {
-                console.log('error', error)
+                //R console.log('error', error)
             }
         };
 
@@ -430,9 +430,7 @@ if (isset($_GET['id']) && @$_GET['id'] == @$_SESSION['idpro']) {
                             confirmButtonColor: '#0052d4',
                             confirmButtonText: 'Ok',
                         });
-                        if (isConfirmed) {
-                            return false;
-                        }
+                        return false;
                     }
                 }
             }

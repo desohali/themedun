@@ -1,18 +1,18 @@
 <?php
 class Zoom_Api_New
 {
-    private $account_id = "PgGahTagRrKZGWqzXChftA";
-    private $client_id = "T95yxD0eQoGRtILapMFEA";
-    private $client_secret = "5v7x8sRkHoQya3ZrQs8QU8Y5JU6ZH3Bv";
+    private $account_id = 'PgGahTagRrKZGWqzXChftA';
+    private $client_id = 'T95yxD0eQoGRtILapMFEA';
+    private $client_secret = '5v7x8sRkHoQya3ZrQs8QU8Y5JU6ZH3Bv';
 
-    private $accessToken = '';
-    private $user = "themeduniverseherramientas@gmail.com";
+    private $accessToken = '88888888';
+    private $user = 'themeduniverseherramientas@gmail.com';
 
 
     public function refreshAccessToken($clientId, $clientSecret)
     {
-        $url = "https://zoom.us/oauth/token?grant_type=account_credentials&account_id=" . $this->account_id;
-
+        $url = 'https://zoom.us/oauth/token?grant_type=account_credentials&account_id=' . $this->account_id;
+        
         $options = array(
             'http' => array(
                 'header' => "Content-Type: application/x-www-form-urlencoded\r\n",
@@ -23,19 +23,18 @@ class Zoom_Api_New
 
         $context = stream_context_create($options);
         $response = file_get_contents($url, false, $context);
-
         $responseData = json_decode($response, true);
 
         if (isset($responseData['access_token'])) {
             return $responseData['access_token'];
         }
-
+        
         return null;
     }
 
     public function isAccessTokenExpired($accessToken)
     {
-        @$tokenData = explode('.', $accessToken);
+        @$tokenData = explode('.', $this->accessToken);
         //$decodedHeader = base64_decode($tokenData[0]);
         @$decodedPayload = base64_decode($tokenData[1]);
 
@@ -48,7 +47,6 @@ class Zoom_Api_New
 
     public function createMeeting($meetingData = array())
     {
-
         if ($this->isAccessTokenExpired($this->accessToken)) {
             // Obtener un nuevo token de acceso
             $this->accessToken = $this->refreshAccessToken($this->client_id, $this->client_secret);
@@ -57,11 +55,15 @@ class Zoom_Api_New
             }
         }
 
-        $post_time  = $meetingData['start_time'];
-        $start_time = gmdate("Y-m-d\TH:i:s", strtotime($post_time));
+        $createMeetingArray = array();
+        $createMeetingArray['topic']      = $meetingData['topic'];
+		$createMeetingArray['type']       = !empty($meetingData['type']) ? $meetingData['type'] : 2; //Scheduled
+		$createMeetingArray['timezone']   = !empty($meetingData['timezone']) ? $meetingData['timezone'] : "America/Lima";
+		$createMeetingArray['start_time'] = $meetingData['start_time'];
+		$createMeetingArray['password']   = !empty($meetingData['password']) ? $meetingData['password'] : "";
+		$createMeetingArray['duration']   = $meetingData['duration'];
 
-        $meetingData['start_time'] = $start_time;
-        $meetingData['settings']   = array(
+        $createMeetingArray['settings']   = array(
             'allow_multiple_devices' => true,
             'auto_recording'    => "local",
             'host_video'        => false,
@@ -76,7 +78,7 @@ class Zoom_Api_New
             'Content-Type: application/json',
             'Authorization: Bearer ' . $this->accessToken,
         );
-
+        
         $curl = curl_init();
         curl_setopt_array($curl, array(
             CURLOPT_URL => "https://api.zoom.us/v2/users/" . $this->user . "/meetings",
@@ -86,20 +88,13 @@ class Zoom_Api_New
             CURLOPT_POSTFIELDS => json_encode($meetingData),
             CURLOPT_HTTPHEADER => $headers,
         ));
-
         $response = curl_exec($curl);
         $err = curl_error($curl);
         curl_close($curl);
-
-        if ($err) {
-            echo 'Error al realizar la solicitud: ' . $err . PHP_EOL;
-        } else {
-            $responseData = json_decode($response, true);
-            if (!isset($responseData['id']) || !isset($responseData['join_url'])) {
-                exit();
-            }
-            return $responseData;
-        }
+        if (!$response) {
+    		return $err;
+		}
+        return json_decode($response);
     }
 }
 
@@ -115,3 +110,5 @@ $response = $zoom->createMeeting(array(
     'agenda' => 'Agenda de la reunión' // Agenda de la reunión (opcional)
 ));
 var_dump($response); */
+
+?>

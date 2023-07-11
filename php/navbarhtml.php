@@ -23,12 +23,6 @@ function headernav()
             const minutos = Math.floor(segundos / 60);
             const horas = Math.floor(minutos / 60);
             const dias = Math.floor(horas / 24);
-            /*console.log('fechaNotificacion', fechaNotificacion);
-            console.log('moment().format("YYYY-MM-DD HH:mm:ss")', moment().format("YYYY-MM-DD HH:mm:ss"));
-            console.log('segundos', segundos);
-            console.log('minutos', minutos);
-            console.log('horas', horas);
-            console.log('dias', dias);*/
 
             const myDate = [
                 ['días', dias],
@@ -129,7 +123,7 @@ function headernav()
                 return (fechaNotificacionMilisegundos > fechaActualMilisegundosMenos7Dias);
             });
 
-            console.log('listaDeComentariosReducer', listaDeComentariosReducer)
+            //R console.log('listaDeComentariosReducer', listaDeComentariosReducer)
             return listaDeComentariosReducer;
 
         }
@@ -180,7 +174,7 @@ function headernav()
                 return json;
 
             } catch (error) {
-                console.log('error', error);
+                //R console.log('error', error);
             }
         };
 
@@ -204,7 +198,7 @@ function headernav()
                 return json;
 
             } catch (error) {
-                console.log('error', error);
+                //R console.log('error', error);
             }
         };
 
@@ -335,7 +329,7 @@ function headernav()
                         window.location.reload();
                     }); */
                 } else {
-                    console.log('sse', 'nada que actualizar...');
+                    //R console.log('sse', 'nada que actualizar...');
                 }
 
             };

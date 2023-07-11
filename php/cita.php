@@ -93,17 +93,16 @@ if (isset($_GET['payment_id']) && isset($_GET['status']) && isset($_GET['payment
 
 		$zoom_meeting = new Zoom_Api_New();
 
-		$data = array();
-		$data['topic'] 		= 'Cita The Med Universe';
-		$data['timezone'] 	= 'America/Lima';
-		$comienzo = strtotime('-6 hours', strtotime($cita->start));
-		$data['start_time'] = date('Y-m-d H:i:s', $comienzo);
-		$data['duration'] 	= 40;
-		$data['type'] 		= 2;
-		$data['password'] 	= "12345";
+		$meetingData = array();
+		$meetingData['topic']         = 'Cita The Med Universe';
+		$meetingData['timezone']     = 'America/Lima';
+		$meetingData['start_time'] = gmdate("Y-m-d\TH:i:s", strtotime($cita->start));
+		$meetingData['duration']     = 40;
+		$meetingData['type']         = 2;
+		$meetingData['password']     = "CITATMU";
 
 		try {
-			$response = $zoom_meeting->createMeeting($data);
+			$response = $zoom_meeting->createMeeting($meetingData);
 		} catch (Exception $ex) {
 			echo $ex;
 		};
@@ -316,7 +315,7 @@ if (isset($_GET['payment_id']) && isset($_GET['status']) && isset($_GET['payment
 			calendar.refresh();
 		}
 
-		console.log('socket', socket);
+		//R console.log('socket', socket);
 		socket.on("cita", function(msg) {
 			initCita();
 		});
@@ -579,7 +578,7 @@ if (isset($_GET['payment_id']) && isset($_GET['status']) && isset($_GET['payment
 				body: formData
 			});
 			const json = await response.json();
-			console.log('json', json)
+			//R console.log('json', json)
 
 			const DATA_MAP = DATA_INICIAL.map(({
 				DIAS
@@ -676,13 +675,6 @@ if (isset($_GET['payment_id']) && isset($_GET['status']) && isset($_GET['payment
 								return siLasFechasSonIguales && siLasHorasSonIguales;
 							});
 
-							console.log('isSelect', isSelect);
-							console.log('findMergeCita', findMergeCita);
-							console.log('horaActual', horaActual);
-							console.log('horaInicial', Number(horaInicial.split(":")[0]));
-							console.log('dateCurrentDos', dateCurrentDos);
-							console.log('sessionStorage.getItem("dateCurrent")', sessionStorage.getItem("dateCurrent"));
-
 							table += `<div class="ctn-1 ${ isSelect || findMergeCita ? 'ctn' : "ctn-si"}" onclick="setTimeCurrent('${DIAS[0]}', ${findMergeCita ? true : false})">
 															<label class="${ isSelect || findMergeCita ? 'si-disabled' : "si"}">Disponible</label>
 														</div>`;
@@ -738,7 +730,7 @@ if (isset($_GET['payment_id']) && isset($_GET['status']) && isset($_GET['payment
 				};
 			});
 
-			console.log('jsonMap', jsonMap);
+			//R console.log('jsonMap', jsonMap);
 			return jsonMap;
 		}
 	</script>
@@ -933,7 +925,7 @@ if (isset($_GET['payment_id']) && isset($_GET['status']) && isset($_GET['payment
 						if (!document.querySelector('[src="https://sdk.mercadopago.com/js/v2"]')) {
 							let script = document.createElement('script');
 							script.addEventListener('load', (e) => {
-								console.log('mercadopago is loading...');
+								//R console.log('mercadopago is loading...');
 								resolve();
 							});
 							script.src = 'https://sdk.mercadopago.com/js/v2';
@@ -946,7 +938,7 @@ if (isset($_GET['payment_id']) && isset($_GET['status']) && isset($_GET['payment
 						if (!document.querySelector('[src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.8.2/fullcalendar.min.js"]')) {
 							let script = document.createElement('script');
 							script.addEventListener('load', (e) => {
-								console.log('fullcalendar is loading...');
+								//R console.log('fullcalendar is loading...');
 								resolve();
 							});
 							script.src = 'https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.8.2/fullcalendar.min.js';
@@ -959,7 +951,7 @@ if (isset($_GET['payment_id']) && isset($_GET['status']) && isset($_GET['payment
 						if (!document.querySelector('[src="<?php echo $_ENV['APP_URL']; ?>js/es.js"]')) {
 							let script = document.createElement('script');
 							script.addEventListener('load', (e) => {
-								console.log('esCalendar is loading...');
+								//R console.log('esCalendar is loading...');
 								resolve();
 							});
 							script.src = '<?php echo $_ENV['APP_URL']; ?>js/es.js';
@@ -1082,7 +1074,7 @@ if (isset($_GET['payment_id']) && isset($_GET['status']) && isset($_GET['payment
 							const [data] = calendar.getEventSources();
 							const DATA_FULLCALENDAR_DISABLED = (data.rawEventDefs || []).filter((d) => d.rendering); */
 							const DATA_FULLCALENDAR_DISABLED = await listarFechasDesabilitadas();
-							console.log('DATA_FULLCALENDAR_DISABLED', DATA_FULLCALENDAR_DISABLED);
+							//R console.log('DATA_FULLCALENDAR_DISABLED', DATA_FULLCALENDAR_DISABLED);
 
 							// VERIFICAMOS SI SE DESE ELIMINAR LAS FECHAS DESABILITADAS
 							let laCitaIncluyeEnElRangoDeFechasDisabled = false;
@@ -1106,7 +1098,7 @@ if (isset($_GET['payment_id']) && isset($_GET['status']) && isset($_GET['payment
 								};
 							});
 
-							console.log('citasMapDisabled', citasMapDisabled);
+							//R console.log('citasMapDisabled', citasMapDisabled);
 
 							for (const [i, fechaDisabled] of citasMapDisabled.entries()) {
 								for (const fecha of [date.format()]) {
@@ -1117,7 +1109,7 @@ if (isset($_GET['payment_id']) && isset($_GET['status']) && isset($_GET['payment
 									}
 								}
 							}
-							console.log('laCitaIncluyeEnElRangoDeFechasDisabled', laCitaIncluyeEnElRangoDeFechasDisabled)
+							//R console.log('laCitaIncluyeEnElRangoDeFechasDisabled', laCitaIncluyeEnElRangoDeFechasDisabled)
 							if (laCitaIncluyeEnElRangoDeFechasDisabled) {
 								Swal.fire({
 									title: 'Fecha no disponible',
@@ -1186,7 +1178,7 @@ if (isset($_GET['payment_id']) && isset($_GET['status']) && isset($_GET['payment
 								"Programada... Únete con el link en la fecha y hora correspondientes.",
 							];
 
-							console.log('data.title', data.title);
+							//R console.log('data.title', data.title);
 
 							const $cancelarSolicitud = $("#cancelarSolicitud");
 							if (isCancel.includes(data.title)) {

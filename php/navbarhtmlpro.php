@@ -72,7 +72,7 @@ function headernav()
                 return json;
 
             } catch (error) {
-                console.log('error', error);
+                //R console.log('error', error);
             }
         };
 
@@ -91,7 +91,7 @@ function headernav()
                 return json;
 
             } catch (error) {
-                console.log('error', error);
+                //R console.log('error', error);
             }
         };
 
@@ -115,7 +115,7 @@ function headernav()
                 return json;
 
             } catch (error) {
-                console.log('error', error);
+                //R console.log('error', error);
             }
         };
 
@@ -129,12 +129,6 @@ function headernav()
             const minutos = Math.floor(segundos / 60);
             const horas = Math.floor(minutos / 60);
             const dias = Math.floor(horas / 24);
-            /*console.log('fechaNotificacion', fechaNotificacion);
-            console.log('moment().format("YYYY-MM-DD HH:mm:ss")', moment().format("YYYY-MM-DD HH:mm:ss"));
-            console.log('segundos', segundos);
-            console.log('minutos', minutos);
-            console.log('horas', horas);
-            console.log('dias', dias);*/
 
             const myDate = [
                 ['días', dias],
@@ -172,7 +166,7 @@ function headernav()
             const listaDeNotificacionesAbonos = await listarNotificationesDeAbonosAlMedico();
             const listaDeValoraciones = await listarNotificacionesValoracionMedico();
             const listaDeComentarios = await listarNotificacionesComentariosMedico();
-            console.log('listaDeNotificacionesAbonos', listaDeNotificacionesAbonos);
+            //R console.log('listaDeNotificacionesAbonos', listaDeNotificacionesAbonos);
 
             const listaDeComentariosMap = listaDeComentarios.map(({
                 comentarios,
@@ -200,7 +194,7 @@ function headernav()
                 };
             });
 
-                console.log('listaDeComentariosMap', listaDeComentariosMap);
+                //R console.log('listaDeComentariosMap', listaDeComentariosMap);
             const listaDeComentariosReducer = listaDeComentariosMap.reduce((previousValue, currentValue) => {
                 return [...previousValue, ...currentValue.comentarios];
             }, []).filter((comentario) => {
@@ -373,7 +367,7 @@ function headernav()
                         window.location.reload();
                     }); */
                 } else {
-                    console.log('sse', 'nada que actualizar...');
+                    //R console.log('sse', 'nada que actualizar...');
                 }
 
             };
@@ -391,11 +385,11 @@ function headernav()
                         body: formData
                     }),
                     json = await response.json();
-                console.log('json', json)
+                //R console.log('json', json)
                 return json;
 
             } catch (error) {
-                console.log('error', error);
+                //R console.log('error', error);
             }
         }
 
@@ -413,7 +407,7 @@ function headernav()
                 return json;
 
             } catch (error) {
-                console.log('error', error);
+                //R console.log('error', error);
             }
         }
     </script>

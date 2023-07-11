@@ -56,7 +56,6 @@
             }
         }
     </style>
-
 </head>
 
 <body id="body">
@@ -378,7 +377,7 @@
                         comentarios: ''
                     });
                     await new Valoraciones().listarValoraciones();
-                    console.log('response', response);
+                    //R console.log('response', response);
                 }
             });
 

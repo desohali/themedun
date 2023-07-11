@@ -299,7 +299,7 @@ select{
     padding: 2px;
     background: #00d418;
     color:white;
-    border: none;
+    border: 1px solid #00d418;
     transition: all 200ms;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
@@ -309,6 +309,7 @@ select{
 
 #calcularIMC:hover{
     background: #00ee1b;
+    border: 1px solid #00ee1b;
 }
 
 .boxhc .guardado{

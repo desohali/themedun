@@ -87,6 +87,17 @@ if (isset($_GET['id']) && @$_GET['id'] == @$_SESSION['idpro']) {
 
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.3.2/jquery.rateyo.min.css">
+    <style>
+        .isMovil {
+            display: block !important;
+        }
+
+        @media screen and (min-width: 768px) {
+            .isMovil {
+                display: none !important;
+            }
+        }
+    </style>
 
 </head>
 
@@ -263,7 +274,14 @@ if (isset($_GET['id']) && @$_GET['id'] == @$_SESSION['idpro']) {
                         } else {
                             var boxRes = "block";
                         }
-                        const inputRespuesta = `<textarea placeholder="Responder el comentario..." onkeypress="new Valoraciones().responseComentario(event, ${currentValue.id})" class="rescomentario" id="response${currentValue.id}" rows="3" style="display:${boxRes}"></textarea>`;
+                        const inputRespuesta = `<textarea 
+                        placeholder="Responder el comentario..." 
+                        onkeypress="event.keyCode == 13 && window.innerWidth > 768 ? new Valoraciones().responseComentario(event, ${currentValue.id}) : true" 
+                        class="rescomentario" 
+                        id="response${currentValue.id}" 
+                        rows="3" 
+                        style="display:${boxRes}"></textarea>
+                        <button class="btn btn-primary btn-block isMovil" onclick="new Valoraciones().responseComentario(event, ${currentValue.id})">Publicar</button>`;
                         return `${previousValue} <hr id="hrvc"><div class="box-comentario">${htmlComentarios}${inputRespuesta}</div>`;
                     }
 
@@ -275,8 +293,9 @@ if (isset($_GET['id']) && @$_GET['id'] == @$_SESSION['idpro']) {
 
         Valoraciones.prototype.responseComentario = async function(e, idComentario) {
             try {
-
-                if (!new RegExp("\\S{1,}").test(e.target.value)) {
+                const idComentarioTextarea = document.getElementById(`response${idComentario}`);
+                console.log('idComentarioTextarea', idComentarioTextarea)
+                if (!new RegExp("\\S{1,}").test(e?.target?.value || idComentarioTextarea?.value)) {
                     // quizas se agrega alguna laerta o texto
                     return;
                 }
@@ -286,30 +305,28 @@ if (isset($_GET['id']) && @$_GET['id'] == @$_SESSION['idpro']) {
                 $nombresMedico .= $nombrespro . " ";
                 $nombresMedico .= $apellidospro;
                 ?>
-                if (e.keyCode == 13 || e.which == 13) {
-                    const formData = new FormData();
-                    formData.append("method", "responseComentario");
-                    formData.append("idComentario", idComentario);
-                    formData.append("comentario", JSON.stringify({
-                        idUser: <?= $_SESSION['idpro'] ?>,
-                        nombres: "<?= $nombresMedico ?>",
-                        esMedicoOPaciente: "MEDICO",
-                        comentario: e.target.value.trim(),
-                        visto: "NO",
-                        fecha: moment().format("YYYY-MM-DD HH:mm:ss")
-                    }));
+                const formData = new FormData();
+                formData.append("method", "responseComentario");
+                formData.append("idComentario", idComentario);
+                formData.append("comentario", JSON.stringify({
+                    idUser: <?= $_SESSION['idpro'] ?>,
+                    nombres: "<?= $nombresMedico ?>",
+                    esMedicoOPaciente: "MEDICO",
+                    comentario: (e?.target?.value || idComentarioTextarea?.value).trim().replace(/[^\x20-\x7E]/gmi, "").replace(/(\r\n|\n|\r)/gm, ""),// remplazamos los saltos de linea y retornos de carro,
+                    visto: "NO",
+                    fecha: moment().format("YYYY-MM-DD HH:mm:ss")
+                }));
 
-                    const response = await fetch("<?php echo $_ENV['APP_URL']; ?>php/classValoraciones.php", {
-                        method: "post",
-                        body: formData
-                    });
-                    const valoraciones = await response.text();
+                const response = await fetch("<?php echo $_ENV['APP_URL']; ?>php/classValoraciones.php", {
+                    method: "post",
+                    body: formData
+                });
+                const valoraciones = await response.text();
 
-                    await new Valoraciones().listarValoraciones();
+                await new Valoraciones().listarValoraciones();
 
-                    const boxResponse = document.getElementById("response" + idComentario);
-                    boxResponse.style.display = 'none';
-                }
+                const boxResponse = document.getElementById("response" + idComentario);
+                boxResponse.style.display = 'none';
             } catch (error) {
                 //R console.log('error', error)
             }
